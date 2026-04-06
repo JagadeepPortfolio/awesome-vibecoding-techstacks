@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind CSS vs CSS Modules vs Vanilla Extract 2026 — Side-by-Side Comparison | Open TechStack</title>
+  <meta name="description" content="Tailwind CSS vs CSS Modules vs Vanilla Extract — comprehensive 2026 comparison of runtime cost, bundle size, TypeScript support, design systems, and when to pick each styling approach.">
+  <link rel="canonical" href="https://opentechstack.stitchwebsite.com/compare/tailwind-vs-css-modules.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Tailwind CSS vs CSS Modules vs Vanilla Extract — Which Styling in 2026?">
+  <meta property="og:description" content="In-depth 2026 comparison of Tailwind CSS, CSS Modules, and Vanilla Extract covering runtime cost, bundle size, TypeScript support, design systems, and decision guide.">
+  <meta property="og:url" content="https://opentechstack.stitchwebsite.com/compare/tailwind-vs-css-modules.html">
+  <meta property="og:site_name" content="Open TechStack">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Tailwind CSS vs CSS Modules vs Vanilla Extract — Which Styling in 2026?",
+    "description": "Comprehensive 2026 comparison of Tailwind CSS, CSS Modules, and Vanilla Extract covering runtime cost, bundle size, TypeScript support, design systems, responsive approach, and decision guide.",
+    "datePublished": "2026-04-06",
+    "dateModified": "2026-04-06",
+    "author": {
+      "@type": "Organization",
+      "name": "Open TechStack"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open TechStack"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://opentechstack.stitchwebsite.com/compare/tailwind-vs-css-modules.html"
+    }
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={darkMode:"class"}</script>
+<link rel="stylesheet" href="../dark-mode.css">
+<script src="../dark-mode.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .comparison-table th, .comparison-table td { border-bottom: 1px solid #e2e8f0; }
+    .winner { background-color: #f0fdf4; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
+
+  <!-- Nav -->
+  <nav class="bg-slate-900 text-white text-sm">
+    <div class="max-w-5xl mx-auto px-6 py-2.5 flex items-center justify-between">
+      <a href="../index.html" class="font-bold tracking-tight hover:text-slate-300 transition">&#9889; Open TechStack</a>
+      <div class="flex items-center gap-4 flex-wrap">
+        <a href="../index.html" class="hover:text-slate-300 transition">Home</a>
+        <a href="../Frontend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Frontend</a>
+        <a href="../Backend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Backend</a>
+        <a href="../AI-Coding-Tools-Visual-Guide.html" class="hover:text-slate-300 transition">AI Coding</a>
+        <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="hover:text-slate-300 transition">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- H1 -->
+    <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 leading-tight">
+      Tailwind CSS vs CSS Modules vs Vanilla Extract &mdash; Which Styling in 2026?
+    </h1>
+    <p class="text-slate-500 text-sm mb-10">Updated April 2026 &middot; Open TechStack Comparison Series</p>
+
+    <!-- TL;DR Verdict -->
+    <section class="bg-white border border-slate-200 rounded-xl p-6 mb-12 shadow-sm">
+      <h2 class="text-lg font-bold text-slate-900 mb-3">TL;DR Verdict</h2>
+      <ul class="space-y-2 text-sm text-slate-700">
+        <li><strong class="text-sky-600">Tailwind CSS</strong> &mdash; The dominant choice. Utility-first, JIT-compiled, 78%+ developer satisfaction. Pick it for rapid prototyping, consistent design systems, and the largest community of any CSS approach.</li>
+        <li><strong class="text-violet-600">CSS Modules</strong> &mdash; The zero-config safe bet. Scoped class names, zero runtime, built into Next.js and Vite out of the box. Pick it if you want plain CSS with guaranteed isolation and no extra dependencies.</li>
+        <li><strong class="text-amber-600">Vanilla Extract</strong> &mdash; The type-safe powerhouse. CSS-in-TypeScript with full autocomplete, zero runtime, build-time extraction. Pick it for large codebases that demand type safety and themeable design tokens.</li>
+      </ul>
+      <p class="mt-4 text-xs text-slate-400">All three produce zero-runtime CSS in production. The choice depends on your team's priorities. Read on for the data.</p>
+    </section>
+
+    <!-- Side-by-Side Comparison Table -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Side-by-Side Comparison</h2>
+      <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+        <table class="comparison-table w-full text-sm bg-white">
+          <thead>
+            <tr class="bg-slate-100 text-left">
+              <th class="px-5 py-3 font-semibold text-slate-600 w-1/4">Criteria</th>
+              <th class="px-5 py-3 font-semibold text-sky-700 w-1/4">Tailwind CSS</th>
+              <th class="px-5 py-3 font-semibold text-violet-700 w-1/4">CSS Modules</th>
+              <th class="px-5 py-3 font-semibold text-amber-700 w-1/4">Vanilla Extract</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-5 py-3 font-medium text-slate-700">Runtime Cost</td>
+              <td class="px-5 py-3 winner">Zero runtime. JIT compiles utility classes at build time</td>
+              <td class="px-5 py-3 winner">Zero runtime. Static CSS with hashed class names</td>
+              <td class="px-5 py-3 winner">Zero runtime. Extracts static CSS at build time</td>
+            </tr>
+            <tr class="bg-slate-50/50">
+              <td class="px-5 py-3 font-medium text-slate-700">Bundle Size</td>
+              <td class="px-5 py-3 winner">Tiny. JIT purges unused classes; typical &lt;10 kB gzipped</td>
+              <td class="px-5 py-3">Depends on your CSS. No framework overhead, but no dedup</td>
+              <td class="px-5 py-3">Small. Build-time extraction, atomic CSS via Sprinkles</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium text-slate-700">TypeScript Support</td>
+              <td class="px-5 py-3">Good. IntelliSense via VS Code plugin, but class strings are untyped</td>
+              <td class="px-5 py-3">Partial. Typed with <code>typed-css-modules</code> or <code>*.module.css.d.ts</code> generation</td>
+              <td class="px-5 py-3 winner">Excellent. Native TypeScript &mdash; styles are TS objects with full autocomplete</td>
+            </tr>
+            <tr class="bg-slate-50/50">
+              <td class="px-5 py-3 font-medium text-slate-700">Learning Curve</td>
+              <td class="px-5 py-3">Moderate. Must learn utility classes, but muscle memory builds fast</td>
+              <td class="px-5 py-3 winner">Minimal. It is just CSS with scoped class names</td>
+              <td class="px-5 py-3">Moderate-to-steep. Must learn the TS API, recipes, and Sprinkles</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium text-slate-700">Framework Support</td>
+              <td class="px-5 py-3 winner">Universal. React, Vue, Svelte, Astro, Angular, plain HTML</td>
+              <td class="px-5 py-3 winner">Universal. Built into Next.js, Vite, webpack, Parcel</td>
+              <td class="px-5 py-3">Good. Works with Vite, Next.js, esbuild, webpack via plugins</td>
+            </tr>
+            <tr class="bg-slate-50/50">
+              <td class="px-5 py-3 font-medium text-slate-700">Design System / Tokens</td>
+              <td class="px-5 py-3 winner">First-class. <code>tailwind.config</code> defines colors, spacing, typography as tokens</td>
+              <td class="px-5 py-3">Manual. Use CSS custom properties for tokens; no built-in system</td>
+              <td class="px-5 py-3 winner">First-class. Theme contracts enforce typed tokens at compile time</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium text-slate-700">Custom Properties</td>
+              <td class="px-5 py-3">Supported. <code>@apply</code> + arbitrary values <code>[var(--color)]</code></td>
+              <td class="px-5 py-3 winner">Native. Full CSS custom properties, no abstraction layer</td>
+              <td class="px-5 py-3">Supported. <code>createVar()</code> provides typed custom properties</td>
+            </tr>
+            <tr class="bg-slate-50/50">
+              <td class="px-5 py-3 font-medium text-slate-700">Responsive Approach</td>
+              <td class="px-5 py-3 winner">Inline breakpoint prefixes: <code>md:flex lg:grid</code></td>
+              <td class="px-5 py-3">Standard <code>@media</code> queries in CSS files</td>
+              <td class="px-5 py-3">Sprinkles conditions or standard <code>@media</code> in <code>style()</code></td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium text-slate-700">Community / Adoption</td>
+              <td class="px-5 py-3 winner">Massive. 84k+ GitHub stars, 78%+ satisfaction (State of CSS 2025)</td>
+              <td class="px-5 py-3">Ubiquitous. Built into every major bundler; no separate community needed</td>
+              <td class="px-5 py-3">Growing. 9k+ stars, strong in enterprise TypeScript teams</td>
+            </tr>
+            <tr class="bg-slate-50/50">
+              <td class="px-5 py-3 font-medium text-slate-700">Best For</td>
+              <td class="px-5 py-3">Rapid UI development, startups, design system consistency, AI-generated code</td>
+              <td class="px-5 py-3">Teams that prefer plain CSS, incremental adoption, co-located styles</td>
+              <td class="px-5 py-3">Large TypeScript codebases, multi-theme apps, design token governance</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- How They Work -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">How Each Approach Works</h2>
+      <div class="grid md:grid-cols-3 gap-5">
+
+        <!-- Tailwind -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+          <h3 class="text-base font-bold text-sky-700 mb-3">Tailwind CSS</h3>
+          <div class="space-y-3 text-sm text-slate-600">
+            <div>
+              <h4 class="font-semibold text-slate-700">Approach</h4>
+              <p>Utility-first: compose designs with atomic classes directly in markup. JIT compiler generates only the classes you use.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">Config &amp; Tokens</h4>
+              <p><code>tailwind.config.js</code> centralizes your design tokens &mdash; colors, spacing, fonts, screens, plugins.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">DX Highlights</h4>
+              <p>VS Code IntelliSense, Prettier plugin for class sorting, <code>@apply</code> for extraction, v4 lightning CSS engine.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">2026 Status</h4>
+              <p>Tailwind v4 (Oxide engine) &mdash; faster builds, CSS-first config, native cascade layers. Most popular CSS framework by satisfaction.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CSS Modules -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+          <h3 class="text-base font-bold text-violet-700 mb-3">CSS Modules</h3>
+          <div class="space-y-3 text-sm text-slate-600">
+            <div>
+              <h4 class="font-semibold text-slate-700">Approach</h4>
+              <p>Write standard CSS in <code>.module.css</code> files. Class names are locally scoped via hashing at build time &mdash; no leaks, no conflicts.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">Config &amp; Tokens</h4>
+              <p>No framework config. Use CSS custom properties and <code>:root</code> variables for shared tokens. Compose via <code>composes:</code> keyword.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">DX Highlights</h4>
+              <p>Zero setup in Next.js / Vite. Full CSS feature access (nesting, <code>:has()</code>, container queries). IDE CSS support works natively.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">2026 Status</h4>
+              <p>Battle-tested and stable. Default styling in Next.js. Benefits from native CSS improvements (nesting, scope, layers) without framework churn.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vanilla Extract -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+          <h3 class="text-base font-bold text-amber-700 mb-3">Vanilla Extract</h3>
+          <div class="space-y-3 text-sm text-slate-600">
+            <div>
+              <h4 class="font-semibold text-slate-700">Approach</h4>
+              <p>Write styles in <code>.css.ts</code> files using TypeScript. Build-time compiler extracts static CSS &mdash; zero runtime shipped to the browser.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">Config &amp; Tokens</h4>
+              <p><code>createTheme()</code> and <code>createThemeContract()</code> define typed design tokens. Sprinkles creates type-safe utility props.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">DX Highlights</h4>
+              <p>Full TypeScript autocomplete on every style property. Recipes API for variant-driven components (like CVA, built in). Co-locate styles with components.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">2026 Status</h4>
+              <p>Adopted by Shopify (Polaris), Atlassian, and other enterprise teams. Growing ecosystem with Rainbow Sprinkles and community plugins.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- When to Pick Each -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">When to Pick Each Approach</h2>
+      <div class="space-y-5">
+
+        <!-- Tailwind -->
+        <div class="bg-white rounded-xl border-l-4 border-sky-500 border border-slate-200 shadow-sm p-5">
+          <h3 class="text-lg font-bold text-sky-700 mb-2">Pick Tailwind CSS When&hellip;</h3>
+          <ul class="text-sm text-slate-600 space-y-1.5 list-disc pl-5">
+            <li>You want the fastest path from design to shipped UI</li>
+            <li>Your team values consistency enforced by constrained utility classes</li>
+            <li>You are building with AI coding tools &mdash; Tailwind classes are the most reliably generated CSS by LLMs</li>
+            <li>You need a rich plugin ecosystem (Typography, Forms, Animate, DaisyUI)</li>
+            <li>You are prototyping rapidly or building marketing / content sites</li>
+            <li>You want one styling system that works across React, Vue, Svelte, Astro, and plain HTML</li>
+          </ul>
+        </div>
+
+        <!-- CSS Modules -->
+        <div class="bg-white rounded-xl border-l-4 border-violet-500 border border-slate-200 shadow-sm p-5">
+          <h3 class="text-lg font-bold text-violet-700 mb-2">Pick CSS Modules When&hellip;</h3>
+          <ul class="text-sm text-slate-600 space-y-1.5 list-disc pl-5">
+            <li>Your team is strong in CSS and does not want a framework abstraction</li>
+            <li>You need zero additional dependencies &mdash; it is built into your bundler</li>
+            <li>You are migrating a legacy codebase incrementally (adopt file by file)</li>
+            <li>You want to leverage the latest native CSS features (nesting, <code>:has()</code>, container queries) directly</li>
+            <li>You prefer styles co-located alongside components without learning a new API</li>
+            <li>Bundle size is critical and you want full control over every byte of CSS shipped</li>
+          </ul>
+        </div>
+
+        <!-- Vanilla Extract -->
+        <div class="bg-white rounded-xl border-l-4 border-amber-500 border border-slate-200 shadow-sm p-5">
+          <h3 class="text-lg font-bold text-amber-700 mb-2">Pick Vanilla Extract When&hellip;</h3>
+          <ul class="text-sm text-slate-600 space-y-1.5 list-disc pl-5">
+            <li>You are building a large-scale TypeScript application where type safety matters everywhere &mdash; including styles</li>
+            <li>You need multi-theme support (light/dark/brand themes) with compile-time guarantees</li>
+            <li>You are creating a shared component library with strict design token governance</li>
+            <li>You want CSS-in-JS ergonomics without any runtime performance cost</li>
+            <li>Your team is already fluent in TypeScript and wants autocomplete for every style property</li>
+            <li>You need variant-driven component APIs (the Recipes pattern)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Decision Guide -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Quick Decision Guide</h2>
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 text-sm text-slate-700">
+        <div class="space-y-3">
+          <p><strong>Want the fastest development velocity?</strong> &rarr; <span class="font-semibold text-sky-600">Tailwind CSS</span></p>
+          <p><strong>Want zero dependencies and plain CSS?</strong> &rarr; <span class="font-semibold text-violet-600">CSS Modules</span></p>
+          <p><strong>Want type-safe styles with theme contracts?</strong> &rarr; <span class="font-semibold text-amber-600">Vanilla Extract</span></p>
+          <p><strong>Building with AI / vibe coding?</strong> &rarr; <span class="font-semibold text-sky-600">Tailwind CSS</span> (LLMs generate utility classes most reliably)</p>
+          <p><strong>Migrating away from CSS-in-JS runtime (styled-components, Emotion)?</strong> &rarr; <span class="font-semibold text-amber-600">Vanilla Extract</span> (same DX, zero runtime)</p>
+          <p><strong>Small team, simple app, tight deadline?</strong> &rarr; <span class="font-semibold text-violet-600">CSS Modules</span> (nothing to learn, nothing to configure)</p>
+          <p><strong>All three produce zero-runtime CSS.</strong> You can even combine them &mdash; many teams use Tailwind for layout utilities alongside CSS Modules or Vanilla Extract for component styles.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Comparisons -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Related Comparisons</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <a href="react-vs-vue-vs-svelte.html" class="block bg-white rounded-xl border border-slate-200 shadow-sm p-4 hover:border-slate-400 transition">
+          <h3 class="font-semibold text-slate-800 text-sm mb-1">React vs Vue vs Svelte</h3>
+          <p class="text-xs text-slate-500">Which UI framework pairs best with your styling choice?</p>
+        </a>
+        <a href="nextjs-vs-remix-vs-astro.html" class="block bg-white rounded-xl border border-slate-200 shadow-sm p-4 hover:border-slate-400 transition">
+          <h3 class="font-semibold text-slate-800 text-sm mb-1">Next.js vs Remix vs Astro</h3>
+          <p class="text-xs text-slate-500">Meta-frameworks and their built-in styling integrations.</p>
+        </a>
+        <a href="cursor-vs-copilot-vs-windsurf.html" class="block bg-white rounded-xl border border-slate-200 shadow-sm p-4 hover:border-slate-400 transition">
+          <h3 class="font-semibold text-slate-800 text-sm mb-1">Cursor vs Copilot vs Windsurf</h3>
+          <p class="text-xs text-slate-500">AI coding tools that generate Tailwind classes fastest.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 text-sm">
+    <div class="max-w-5xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>&copy; 2026 Open TechStack &middot; Comparison Series</p>
+      <div class="flex items-center gap-4">
+        <a href="../Frontend-Stacks-Visual-Guide.html" class="hover:text-white transition">Frontend Guide</a>
+        <a href="../index.html" class="hover:text-white transition">Home</a>
+        <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="hover:text-white transition">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

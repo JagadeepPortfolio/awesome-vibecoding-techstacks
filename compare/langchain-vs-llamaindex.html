@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LangChain vs LlamaIndex vs Haystack 2026 — Side-by-Side Comparison | Open TechStack</title>
+  <meta name="description" content="LangChain vs LlamaIndex vs Haystack — comprehensive 2026 comparison of AI framework orchestration, RAG quality, agents, data connectors, ecosystem, and when to pick each.">
+  <link rel="canonical" href="https://opentechstack.stitchwebsite.com/compare/langchain-vs-llamaindex.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="LangChain vs LlamaIndex vs Haystack — Which AI Framework in 2026?">
+  <meta property="og:description" content="In-depth 2026 comparison of LangChain, LlamaIndex, and Haystack covering orchestration, RAG, agents, data connectors, ecosystem, and decision guide.">
+  <meta property="og:url" content="https://opentechstack.stitchwebsite.com/compare/langchain-vs-llamaindex.html">
+  <meta property="og:site_name" content="Open TechStack">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "LangChain vs LlamaIndex vs Haystack — Which AI Framework in 2026?",
+    "description": "Comprehensive 2026 comparison of LangChain, LlamaIndex, and Haystack covering orchestration, RAG quality, agents, data connectors, production readiness, and decision guide.",
+    "datePublished": "2026-04-06",
+    "dateModified": "2026-04-06",
+    "author": {
+      "@type": "Organization",
+      "name": "Open TechStack"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open TechStack"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://opentechstack.stitchwebsite.com/compare/langchain-vs-llamaindex.html"
+    }
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={darkMode:"class"}</script>
+<link rel="stylesheet" href="../dark-mode.css">
+<script src="../dark-mode.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .comparison-table th, .comparison-table td { border-bottom: 1px solid #e2e8f0; }
+    .winner { background-color: #f0fdf4; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
+
+  <!-- Nav -->
+  <nav class="bg-slate-900 text-white text-sm">
+    <div class="max-w-5xl mx-auto px-6 py-2.5 flex items-center justify-between">
+      <a href="../index.html" class="font-bold tracking-tight hover:text-slate-300 transition">&#9889; Open TechStack</a>
+      <div class="flex items-center gap-4 flex-wrap">
+        <a href="../index.html" class="hover:text-slate-300 transition">Home</a>
+        <a href="../AIML-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">AI/ML</a>
+        <a href="../AI-Coding-Tools-Visual-Guide.html" class="hover:text-slate-300 transition">AI Coding</a>
+        <a href="../Backend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Backend</a>
+        <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="hover:text-slate-300 transition">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- H1 -->
+    <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 leading-tight">
+      LangChain vs LlamaIndex vs Haystack &mdash; Which AI Framework in 2026?
+    </h1>
+    <p class="text-slate-500 text-sm mb-10">Updated April 2026 &middot; Open TechStack Comparison Series</p>
+
+    <!-- TL;DR Verdict -->
+    <section class="bg-white border border-slate-200 rounded-xl p-6 mb-12 shadow-sm">
+      <h2 class="text-lg font-bold text-slate-900 mb-3">TL;DR Verdict</h2>
+      <ul class="space-y-2 text-sm text-slate-700">
+        <li><strong class="text-blue-600">LangChain</strong> &mdash; The general-purpose orchestrator. Largest ecosystem, LangGraph for stateful agents, LangSmith for observability. Pick it when you need maximum flexibility and broad integration coverage &mdash; but watch out for over-abstraction.</li>
+        <li><strong class="text-emerald-600">LlamaIndex</strong> &mdash; The RAG specialist. Best-in-class data connectors, LlamaParse for complex documents, and purpose-built indexing pipelines. Pick it when your core problem is connecting LLMs to your data.</li>
+        <li><strong class="text-orange-600">Haystack</strong> &mdash; The production pipeline framework. Built by deepset, pipeline-first design, strong typing, and enterprise focus. Pick it when you want a clean, composable architecture without hype-driven abstractions.</li>
+      </ul>
+      <p class="mt-4 text-xs text-slate-400">All three are production-viable in 2026. Your choice depends on whether you optimize for breadth, RAG depth, or pipeline clarity.</p>
+    </section>
+
+    <!-- Side-by-Side Comparison Table -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Side-by-Side Comparison</h2>
+      <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+        <table class="comparison-table w-full text-sm bg-white">
+          <thead>
+            <tr class="bg-slate-100 text-left">
+              <th class="px-5 py-3 font-semibold text-slate-600 w-1/4">Criteria</th>
+              <th class="px-5 py-3 font-semibold text-blue-700 w-1/4">LangChain</th>
+              <th class="px-5 py-3 font-semibold text-emerald-700 w-1/4">LlamaIndex</th>
+              <th class="px-5 py-3 font-semibold text-orange-700 w-1/4">Haystack</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-5 py-3 font-medium text-slate-700">Primary Focus</td>
+              <td class="px-5 py-3 winner">General LLM orchestration &amp; chaining</td>
+              <td class="px-5 py-3">Data ingestion &amp; RAG pipelines</td>
+              <td class="px-5 py-3">NLP / LLM pipeline composition</td>
+            </tr>
+            <tr class="bg-slate-50/50">
+              <td class="px-5 py-3 font-medium text-slate-700">Agents Support</td>
+              <td class="px-5 py-3 winner">Excellent. LangGraph for stateful, multi-step agents with cycles &amp; human-in-the-loop</td>
+              <td class="px-5 py-3">Good. Agent framework with tool use, ReAct, and multi-step reasoning</td>
+              <td class="px-5 py-3">Good. Agent components available, pipeline-based agent loops</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium text-slate-700">RAG Quality</td>
+              <td class="px-5 py-3">Good. Supports retrieval chains but requires manual tuning</td>
+              <td class="px-5 py-3 winner">Excellent. Purpose-built for RAG &mdash; advanced chunking, re-ranking, hybrid search, query engines</td>
+              <td class="px-5 py-3">Very good. Modular retrieval pipelines with strong evaluation</td>
+            </tr>
+            <tr class="bg-slate-50/50">
+              <td class="px-5 py-3 font-medium text-slate-700">Data Connectors</td>
+              <td class="px-5 py-3">Many via community. Document loaders for common formats</td>
+              <td class="px-5 py-3 winner">160+ connectors via LlamaHub &mdash; databases, APIs, SaaS, file formats</td>
+              <td class="px-5 py-3">Solid set of converters &amp; fetchers, fewer than LlamaIndex</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium text-slate-700">Ecosystem / Tooling</td>
+              <td class="px-5 py-3 winner">LangGraph (agents), LangSmith (tracing/eval), LangServe (deploy). Largest integration catalog</td>
+              <td class="px-5 py-3">LlamaParse (document parsing), LlamaCloud, LlamaHub. Focused but deep</td>
+              <td class="px-5 py-3">deepset Cloud (managed), Haystack Hub. Smaller but curated</td>
+            </tr>
+            <tr class="bg-slate-50/50">
+              <td class="px-5 py-3 font-medium text-slate-700">Ease of Use</td>
+              <td class="px-5 py-3">Moderate. Powerful but steep learning curve; many abstraction layers can confuse</td>
+              <td class="px-5 py-3 winner">Good. More focused API surface, clearer mental model for data-centric tasks</td>
+              <td class="px-5 py-3">Good. Pipeline metaphor is intuitive; strong typing catches errors early</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium text-slate-700">TypeScript SDK</td>
+              <td class="px-5 py-3 winner">Yes. LangChain.js is mature with near feature-parity to Python</td>
+              <td class="px-5 py-3">Yes. LlamaIndex.TS available, but Python SDK is more complete</td>
+              <td class="px-5 py-3">No. Python-only</td>
+            </tr>
+            <tr class="bg-slate-50/50">
+              <td class="px-5 py-3 font-medium text-slate-700">Community Size</td>
+              <td class="px-5 py-3 winner">~98k GitHub stars, largest Discord, most tutorials &amp; blog posts</td>
+              <td class="px-5 py-3">~38k GitHub stars, active Discord, strong RAG-focused community</td>
+              <td class="px-5 py-3">~18k GitHub stars, smaller but engaged enterprise community</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium text-slate-700">Production Readiness</td>
+              <td class="px-5 py-3">Good. LangSmith adds observability; some report abstraction churn between versions</td>
+              <td class="px-5 py-3">Good. Stable APIs for RAG; LlamaCloud for managed production</td>
+              <td class="px-5 py-3 winner">Excellent. Pipeline architecture, strong typing, built for production from day one</td>
+            </tr>
+            <tr class="bg-slate-50/50">
+              <td class="px-5 py-3 font-medium text-slate-700">Abstraction Level</td>
+              <td class="px-5 py-3">High. Many layers &mdash; powerful but can feel "over-abstracted"</td>
+              <td class="px-5 py-3">Medium. Focused abstractions around data &amp; retrieval</td>
+              <td class="px-5 py-3 winner">Low-medium. Explicit pipeline DAGs, minimal magic</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium text-slate-700">Best For</td>
+              <td class="px-5 py-3">Complex agent systems, multi-model orchestration, broad integrations</td>
+              <td class="px-5 py-3">RAG applications, document Q&amp;A, knowledge bases, data pipelines</td>
+              <td class="px-5 py-3">Production NLP/LLM pipelines, enterprise search, teams wanting explicit control</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Ecosystem Deep Dive -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">2026 Ecosystem Snapshot</h2>
+      <div class="grid md:grid-cols-3 gap-5">
+
+        <!-- LangChain -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+          <h3 class="text-base font-bold text-blue-700 mb-3">LangChain</h3>
+          <div class="space-y-3 text-sm text-slate-600">
+            <div>
+              <h4 class="font-semibold text-slate-700">Core Strength</h4>
+              <p>Largest ecosystem for LLM orchestration. Broadest set of integrations across models, vector stores, and tools.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">LangGraph</h4>
+              <p>Stateful, graph-based agent framework. Supports cycles, human-in-the-loop, persistence, and multi-agent patterns.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">LangSmith</h4>
+              <p>Tracing, evaluation, prompt management, and monitoring platform. Essential for debugging complex chains in production.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">Watch Out</h4>
+              <p>Can feel over-abstracted. Rapid API changes between versions. Some teams find the abstraction layers add complexity rather than reduce it.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- LlamaIndex -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+          <h3 class="text-base font-bold text-emerald-700 mb-3">LlamaIndex</h3>
+          <div class="space-y-3 text-sm text-slate-600">
+            <div>
+              <h4 class="font-semibold text-slate-700">Core Strength</h4>
+              <p>Purpose-built for connecting LLMs to data. Best RAG framework with advanced chunking, indexing, and retrieval strategies.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">LlamaParse</h4>
+              <p>State-of-the-art document parser for PDFs, tables, images, and complex layouts. Handles messy real-world documents better than alternatives.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">LlamaHub</h4>
+              <p>160+ data connectors &mdash; Notion, Slack, Google Drive, databases, APIs. One-line ingestion from virtually any source.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">Watch Out</h4>
+              <p>More focused scope &mdash; not as flexible for general orchestration. TypeScript SDK lags behind Python.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Haystack -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+          <h3 class="text-base font-bold text-orange-700 mb-3">Haystack</h3>
+          <div class="space-y-3 text-sm text-slate-600">
+            <div>
+              <h4 class="font-semibold text-slate-700">Core Strength</h4>
+              <p>Pipeline-first architecture by deepset. Explicit DAG-based composition with strong typing. Built for production clarity.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">Pipeline Design</h4>
+              <p>Components are strongly typed with clear input/output contracts. Pipelines are serializable, testable, and reproducible.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">deepset Cloud</h4>
+              <p>Managed deployment platform with built-in evaluation, file management, and pipeline hosting. Enterprise-ready out of the box.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">Watch Out</h4>
+              <p>Smaller community, less hype, fewer tutorials. Python-only. Fewer third-party integrations compared to LangChain.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- When to Pick Each -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">When to Pick Each Framework</h2>
+      <div class="space-y-5">
+
+        <!-- LangChain -->
+        <div class="bg-white rounded-xl border-l-4 border-blue-500 border border-slate-200 shadow-sm p-5">
+          <h3 class="text-lg font-bold text-blue-700 mb-2">Pick LangChain When&hellip;</h3>
+          <ul class="text-sm text-slate-600 space-y-1.5 list-disc pl-5">
+            <li>You are building complex agent systems with multi-step reasoning, tool use, and human-in-the-loop via LangGraph</li>
+            <li>You need to orchestrate across many LLM providers, vector stores, and external tools</li>
+            <li>Observability and evaluation matter &mdash; LangSmith provides production-grade tracing</li>
+            <li>Your team works in both Python and TypeScript and needs cross-language support</li>
+            <li>You want the largest community, most tutorials, and broadest ecosystem</li>
+            <li>You are prototyping rapidly and need pre-built chains for common patterns</li>
+          </ul>
+        </div>
+
+        <!-- LlamaIndex -->
+        <div class="bg-white rounded-xl border-l-4 border-emerald-500 border border-slate-200 shadow-sm p-5">
+          <h3 class="text-lg font-bold text-emerald-700 mb-2">Pick LlamaIndex When&hellip;</h3>
+          <ul class="text-sm text-slate-600 space-y-1.5 list-disc pl-5">
+            <li>RAG is your primary use case &mdash; document Q&amp;A, knowledge bases, or semantic search</li>
+            <li>You need to ingest data from many sources (databases, SaaS tools, APIs, file formats)</li>
+            <li>Your documents are complex &mdash; PDFs with tables, images, or mixed layouts (LlamaParse excels here)</li>
+            <li>You want advanced retrieval strategies: hybrid search, re-ranking, recursive retrieval, query routing</li>
+            <li>You are building a data-centric AI application where quality of retrieval is the bottleneck</li>
+            <li>You prefer a focused framework that does one thing exceptionally well</li>
+          </ul>
+        </div>
+
+        <!-- Haystack -->
+        <div class="bg-white rounded-xl border-l-4 border-orange-500 border border-slate-200 shadow-sm p-5">
+          <h3 class="text-lg font-bold text-orange-700 mb-2">Pick Haystack When&hellip;</h3>
+          <ul class="text-sm text-slate-600 space-y-1.5 list-disc pl-5">
+            <li>You want a clean, explicit pipeline architecture without hidden abstractions</li>
+            <li>Production reliability is paramount &mdash; strong typing and serializable pipelines reduce runtime surprises</li>
+            <li>You are building enterprise search or NLP pipelines where reproducibility matters</li>
+            <li>Your team values software engineering discipline over rapid prototyping speed</li>
+            <li>You want a managed deployment option with deepset Cloud</li>
+            <li>You prefer less hype and more substance &mdash; Haystack is battle-tested in enterprise NLP since 2020</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Decision Guide -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Quick Decision Guide</h2>
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 text-sm text-slate-700">
+        <div class="space-y-3">
+          <p><strong>Building complex agents with tool use and state?</strong> &rarr; <span class="font-semibold text-blue-600">LangChain + LangGraph</span></p>
+          <p><strong>Core problem is connecting an LLM to your data?</strong> &rarr; <span class="font-semibold text-emerald-600">LlamaIndex</span></p>
+          <p><strong>Want explicit, production-grade pipelines?</strong> &rarr; <span class="font-semibold text-orange-600">Haystack</span></p>
+          <p><strong>Need TypeScript support?</strong> &rarr; <span class="font-semibold text-blue-600">LangChain</span> (best TS SDK) or <span class="font-semibold text-emerald-600">LlamaIndex</span> (TS available)</p>
+          <p><strong>Ingesting messy PDFs, tables, and images?</strong> &rarr; <span class="font-semibold text-emerald-600">LlamaIndex + LlamaParse</span></p>
+          <p><strong>Want observability built into your workflow?</strong> &rarr; <span class="font-semibold text-blue-600">LangChain + LangSmith</span></p>
+          <p><strong>Enterprise NLP with managed hosting?</strong> &rarr; <span class="font-semibold text-orange-600">Haystack + deepset Cloud</span></p>
+          <p class="mt-2"><strong>All three are production-ready in 2026.</strong> Many teams combine them &mdash; e.g., LlamaIndex for ingestion + LangChain for orchestration.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 text-sm">
+    <div class="max-w-5xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>&copy; 2026 Open TechStack &middot; Comparison Series</p>
+      <div class="flex items-center gap-4">
+        <a href="../AIML-Stacks-Visual-Guide.html" class="hover:text-white transition">AI/ML Guide</a>
+        <a href="../index.html" class="hover:text-white transition">Home</a>
+        <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="hover:text-white transition">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 # Open TechStack
 
-> Interactive visual guides to 200+ modern technologies across frontend, backend, AI/ML, DevOps, and mobile for 2026.
+> Interactive visual guides to 280+ modern technologies across frontend, backend, AI/ML, DevOps, mobile, and AI coding for 2026.
 
 Open TechStack is a free, open-source resource that helps developers compare and choose the right tech stack. Each guide features interactive SVG mind maps, stage-based filtering (Hobby/MVP/Growth/Scale), full-text search, and decision cheat sheets.
 
@@ -13,6 +13,22 @@ Open TechStack is a free, open-source resource that helps developers compare and
 - [DevOps Stacks](https://opentechstack.stitchwebsite.com/DevOps-Stacks-Visual-Guide.html): 46+ DevOps technologies — GitHub Actions, Terraform, Docker, Kubernetes, AWS, GCP, Azure, Grafana, Datadog, Vault, ArgoCD, Helm, Backstage.
 - [Mobile Stacks](https://opentechstack.stitchwebsite.com/Mobile-Stacks-Visual-Guide.html): 46+ mobile technologies — React Native, Expo, Flutter, SwiftUI, Jetpack Compose, KMP, NativeWind, Detox, Fastlane, Firebase.
 - [Stack Combos](https://opentechstack.stitchwebsite.com/Stack-Combos.html): 12 pre-built full-stack recipes — Indie Hacker, AI Startup, SaaS Rocket, Enterprise Fortress, Realtime Machine, Content Empire, Mobile-First, E-commerce, Budget Warrior, TypeScript Purist, Data Platform, Open Source Stack.
+- [AI Coding Tools](https://opentechstack.stitchwebsite.com/AI-Coding-Tools-Visual-Guide.html): 80+ AI coding tools — Cursor, Copilot, Windsurf, Claude Code, OpenAI Codex, Gemini CLI, v0, Bolt, Lovable, Devin, Kiro, CodeRabbit, Codacy, MCP servers, LLM Ops.
+- [Stack Picker Wizard](https://opentechstack.stitchwebsite.com/stack-picker.html): Interactive 5-question quiz that recommends a full tech stack based on project type, team size, experience, budget, and priorities.
+
+## Comparisons
+- [Comparisons Hub](https://opentechstack.stitchwebsite.com/compare/): All head-to-head comparison pages.
+- [Cursor vs Copilot vs Windsurf](https://opentechstack.stitchwebsite.com/compare/cursor-vs-copilot-vs-windsurf.html)
+- [Claude Code vs Codex vs Gemini CLI](https://opentechstack.stitchwebsite.com/compare/claude-code-vs-codex-vs-gemini-cli.html)
+- [Next.js vs Remix vs Astro](https://opentechstack.stitchwebsite.com/compare/nextjs-vs-remix-vs-astro.html)
+- [React vs Vue vs Svelte](https://opentechstack.stitchwebsite.com/compare/react-vs-vue-vs-svelte.html)
+- [Supabase vs Firebase](https://opentechstack.stitchwebsite.com/compare/supabase-vs-firebase.html)
+- [Tailwind vs CSS Modules vs Vanilla Extract](https://opentechstack.stitchwebsite.com/compare/tailwind-vs-css-modules.html)
+- [Zustand vs Redux Toolkit vs Jotai](https://opentechstack.stitchwebsite.com/compare/zustand-vs-redux.html)
+- [Clerk vs Auth0 vs Supabase Auth](https://opentechstack.stitchwebsite.com/compare/clerk-vs-auth0.html)
+- [Vercel vs Cloudflare Pages vs Netlify](https://opentechstack.stitchwebsite.com/compare/vercel-vs-cloudflare-vs-netlify.html)
+- [Docker vs Podman vs Kubernetes](https://opentechstack.stitchwebsite.com/compare/docker-vs-podman-vs-kubernetes.html)
+- [LangChain vs LlamaIndex vs Haystack](https://opentechstack.stitchwebsite.com/compare/langchain-vs-llamaindex.html)
 
 ## Key Features
 - Interactive SVG mind maps generated at runtime

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vercel vs Cloudflare Pages vs Netlify 2026 — Hosting Platform Comparison | Open TechStack</title>
+  <meta name="description" content="Vercel vs Cloudflare Pages vs Netlify in 2026: detailed comparison of free tiers, edge functions, CDN performance, pricing at scale, and when to pick each hosting platform." />
+  <link rel="canonical" href="https://opentechstack.stitchwebsite.com/compare/vercel-vs-cloudflare-vs-netlify.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Vercel vs Cloudflare Pages vs Netlify 2026 — Which Hosting Platform?" />
+  <meta property="og:description" content="Comprehensive comparison of Vercel, Cloudflare Pages, and Netlify covering free tiers, edge functions, CDN, framework support, pricing, and best use cases for 2026." />
+  <meta property="og:url" content="https://opentechstack.stitchwebsite.com/compare/vercel-vs-cloudflare-vs-netlify.html" />
+  <meta property="og:site_name" content="Open TechStack" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vercel vs Cloudflare Pages vs Netlify 2026 — Which Hosting Platform?" />
+  <meta name="twitter:description" content="Comprehensive comparison of Vercel, Cloudflare Pages, and Netlify covering free tiers, edge functions, CDN, framework support, pricing, and best use cases for 2026." />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Vercel vs Cloudflare Pages vs Netlify — Which Hosting Platform in 2026?",
+    "description": "Detailed side-by-side comparison of Vercel, Cloudflare Pages, and Netlify in 2026 covering free tiers, edge functions, serverless, CDN, pricing at scale, and when to pick each platform.",
+    "url": "https://opentechstack.stitchwebsite.com/compare/vercel-vs-cloudflare-vs-netlify.html",
+    "datePublished": "2026-04-06",
+    "dateModified": "2026-04-06",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open TechStack"
+    }
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={darkMode:"class"}</script>
+<link rel="stylesheet" href="../dark-mode.css">
+<script src="../dark-mode.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .winner { background: #f0fdf4; }
+    .table-hover tr:hover { background: #f8fafc; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 leading-relaxed">
+
+  <!-- Nav -->
+  <nav class="bg-slate-900 text-white text-sm">
+    <div class="max-w-5xl mx-auto px-6 py-2.5 flex items-center justify-between">
+      <a href="../index.html" class="font-bold tracking-tight hover:text-slate-300 transition">⚡ Open TechStack</a>
+      <div class="flex items-center gap-4 flex-wrap">
+        <a href="../index.html" class="hover:text-slate-300 transition">Home</a>
+        <a href="../Frontend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Frontend</a>
+        <a href="../Backend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Backend</a>
+        <a href="../AI-Coding-Tools-Visual-Guide.html" class="hover:text-slate-300 transition">AI Coding</a>
+        <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="hover:text-slate-300 transition">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- H1 -->
+    <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Vercel vs Cloudflare Pages vs Netlify &mdash; Which Hosting Platform in 2026?</h1>
+    <p class="text-slate-500 text-sm mb-8">Last updated: April 6, 2026 &middot; 10 min read</p>
+
+    <!-- TL;DR Verdict -->
+    <section id="verdict" class="bg-emerald-50 border border-emerald-200 rounded-xl p-6 mb-12">
+      <h2 class="text-lg font-bold text-emerald-800 mb-2">TL;DR Verdict</h2>
+      <p class="text-slate-700 mb-3">
+        <strong>Pick Vercel</strong> if you are building with Next.js or want the best DX for React-based frameworks. Its edge middleware, instant rollbacks, and first-party Next.js integration are unmatched. Pro at $20/mo.
+      </p>
+      <p class="text-slate-700 mb-3">
+        <strong>Pick Cloudflare Pages</strong> if you want unlimited bandwidth on the free tier, the fastest global CDN, and access to the Workers ecosystem. Best raw price-to-performance ratio at $5/mo paid tier.
+      </p>
+      <p class="text-slate-700 mb-3">
+        <strong>Pick Netlify</strong> if you love the Jamstack workflow, need built-in form handling, or are deploying mostly static sites. The pioneer of git-based deploys, with Pro at $19/mo.
+      </p>
+      <p class="text-sm text-slate-500">All three are production-ready in 2026. Your decision comes down to framework choice, traffic volume, and which ecosystem features matter most.</p>
+    </section>
+
+    <!-- Jump Links -->
+    <nav class="flex flex-wrap gap-3 text-sm mb-10">
+      <a href="#comparison" class="bg-slate-200 hover:bg-slate-300 rounded-full px-4 py-1.5 transition">Feature Table</a>
+      <a href="#pricing" class="bg-slate-200 hover:bg-slate-300 rounded-full px-4 py-1.5 transition">Pricing</a>
+      <a href="#pricing-at-scale" class="bg-slate-200 hover:bg-slate-300 rounded-full px-4 py-1.5 transition">Pricing at Scale</a>
+      <a href="#when-to-pick" class="bg-slate-200 hover:bg-slate-300 rounded-full px-4 py-1.5 transition">When to Pick Each</a>
+    </nav>
+
+    <!-- ======== Side-by-Side Comparison Table ======== -->
+    <section id="comparison" class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Side-by-Side Feature Comparison</h2>
+      <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+        <table class="w-full text-sm table-hover">
+          <thead>
+            <tr class="bg-slate-800 text-white text-left">
+              <th class="px-5 py-3 font-semibold">Feature</th>
+              <th class="px-5 py-3 font-semibold">Vercel</th>
+              <th class="px-5 py-3 font-semibold">Cloudflare Pages</th>
+              <th class="px-5 py-3 font-semibold">Netlify</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr>
+              <td class="px-5 py-3 font-medium">Free Tier Bandwidth</td>
+              <td class="px-5 py-3">100 GB/mo</td>
+              <td class="px-5 py-3 winner">Unlimited</td>
+              <td class="px-5 py-3">100 GB/mo</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Free Tier Build Minutes</td>
+              <td class="px-5 py-3">6,000 min/mo</td>
+              <td class="px-5 py-3">500 builds/mo (no minute cap)</td>
+              <td class="px-5 py-3">300 min/mo</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Edge Functions</td>
+              <td class="px-5 py-3 winner">Edge Middleware &amp; Edge Functions (V8 isolates). First-class Next.js middleware</td>
+              <td class="px-5 py-3 winner">Workers (V8 isolates). Largest edge network, 300+ PoPs</td>
+              <td class="px-5 py-3">Edge Functions (Deno runtime). Good but smaller network</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Serverless Functions</td>
+              <td class="px-5 py-3">Node.js, Go, Python, Ruby. Up to 300s execution (Pro)</td>
+              <td class="px-5 py-3">Workers (JS/TS/Wasm). 30s CPU time on free, 15 min on paid</td>
+              <td class="px-5 py-3">Node.js, Go, Rust. 10s default, 26s max (background functions up to 15 min)</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Framework Support</td>
+              <td class="px-5 py-3 winner">Next.js (first-party), Nuxt, SvelteKit, Astro, Remix, Gatsby, Hugo, etc.</td>
+              <td class="px-5 py-3">Astro, Next.js (via @cloudflare/next-on-pages), Nuxt, SvelteKit, Remix, Qwik, Hugo</td>
+              <td class="px-5 py-3">Next.js (adapter), Astro, Nuxt, Gatsby, Hugo, Eleventy, Remix, SvelteKit</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">CDN / Network</td>
+              <td class="px-5 py-3">Global edge network (powered by AWS/Cloudflare). Fast but not the largest</td>
+              <td class="px-5 py-3 winner">300+ cities, 120+ countries. Arguably the fastest and largest CDN in 2026</td>
+              <td class="px-5 py-3">CDN via multiple providers. Solid performance, not the fastest</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Analytics</td>
+              <td class="px-5 py-3 winner">Web Vitals, Speed Insights, Audience analytics (built-in, privacy-friendly)</td>
+              <td class="px-5 py-3">Web Analytics (free, privacy-first, no JS required)</td>
+              <td class="px-5 py-3">Server-side analytics (Pro plan). Basic on free</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Forms</td>
+              <td class="px-5 py-3">No built-in forms</td>
+              <td class="px-5 py-3">No built-in forms</td>
+              <td class="px-5 py-3 winner">Built-in form handling (100 submissions/mo free, 1K on Pro)</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Preview Deployments</td>
+              <td class="px-5 py-3 winner">Per-commit previews, PR comments with screenshots, collaborative review</td>
+              <td class="px-5 py-3">Preview URLs per branch. GitHub/GitLab integration</td>
+              <td class="px-5 py-3">Deploy Previews per PR. Netlify Drawer for stakeholder review</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">DX / Developer Experience</td>
+              <td class="px-5 py-3 winner">Best-in-class. <code class="bg-slate-100 px-1 py-0.5 rounded text-xs">vercel dev</code> local emulation, instant rollbacks, environment variables UI</td>
+              <td class="px-5 py-3">Wrangler CLI, <code class="bg-slate-100 px-1 py-0.5 rounded text-xs">wrangler pages dev</code>. Steep learning curve but powerful</td>
+              <td class="px-5 py-3">Netlify CLI, <code class="bg-slate-100 px-1 py-0.5 rounded text-xs">netlify dev</code>. Clean UI, good docs</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Image Optimization</td>
+              <td class="px-5 py-3 winner">Built-in (next/image). Automatic WebP/AVIF, resizing at the edge</td>
+              <td class="px-5 py-3">Cloudflare Images (separate product, $5/mo + per-image). Polish for basic transforms</td>
+              <td class="px-5 py-3">Netlify Image CDN. Automatic transforms on Pro+</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Storage / KV / DB</td>
+              <td class="px-5 py-3">Vercel KV (Redis), Vercel Postgres, Vercel Blob</td>
+              <td class="px-5 py-3 winner">KV, R2 (S3-compatible, free egress), D1 (SQLite at edge), Durable Objects, Queues, Vectorize</td>
+              <td class="px-5 py-3">Netlify Blobs. No built-in database</td>
+            </tr>
+            <tr class="bg-slate-50 font-medium">
+              <td class="px-5 py-3">Best For</td>
+              <td class="px-5 py-3 text-emerald-700">Next.js apps, React teams, DX-obsessed developers, startups wanting polish</td>
+              <td class="px-5 py-3 text-orange-700">High-traffic sites, cost-conscious teams, full-stack edge apps, global performance</td>
+              <td class="px-5 py-3 text-blue-700">Jamstack / static sites, content sites with forms, agencies, quick deploys</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ======== Pricing Comparison ======== -->
+    <section id="pricing" class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Pricing Tiers (2026)</h2>
+      <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+        <table class="w-full text-sm table-hover">
+          <thead>
+            <tr class="bg-slate-800 text-white text-left">
+              <th class="px-5 py-3 font-semibold">Tier</th>
+              <th class="px-5 py-3 font-semibold">Vercel</th>
+              <th class="px-5 py-3 font-semibold">Cloudflare Pages</th>
+              <th class="px-5 py-3 font-semibold">Netlify</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr>
+              <td class="px-5 py-3 font-medium">Free</td>
+              <td class="px-5 py-3">
+                100 GB bandwidth<br>
+                6,000 build min<br>
+                100 GB-hrs serverless<br>
+                Hobby use only
+              </td>
+              <td class="px-5 py-3 winner">
+                Unlimited bandwidth<br>
+                500 builds/mo<br>
+                100K Workers requests/day<br>
+                1 build at a time
+              </td>
+              <td class="px-5 py-3">
+                100 GB bandwidth<br>
+                300 build min<br>
+                125K serverless invocations<br>
+                100 form submissions
+              </td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Paid / Pro</td>
+              <td class="px-5 py-3">
+                <strong>$20/mo per member</strong><br>
+                1 TB bandwidth<br>
+                24,000 build min<br>
+                1,000 GB-hrs serverless<br>
+                Password protection, SAML SSO
+              </td>
+              <td class="px-5 py-3 winner">
+                <strong>$5/mo (Workers Paid)</strong><br>
+                Unlimited bandwidth<br>
+                20,000 builds/mo<br>
+                10M Workers requests/mo included<br>
+                5 concurrent builds
+              </td>
+              <td class="px-5 py-3">
+                <strong>$19/mo per member</strong><br>
+                1 TB bandwidth<br>
+                25,000 build min<br>
+                Background functions<br>
+                Analytics, password protection
+              </td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Enterprise</td>
+              <td class="px-5 py-3">
+                <strong>Custom pricing</strong><br>
+                SLA guarantees<br>
+                Advanced RBAC<br>
+                Dedicated support<br>
+                Custom cache, firewall rules
+              </td>
+              <td class="px-5 py-3">
+                <strong>Enterprise: custom</strong><br>
+                SLA, priority support<br>
+                Unlimited Workers<br>
+                Advanced security (WAF, DDoS)<br>
+                Zero Trust integration
+              </td>
+              <td class="px-5 py-3">
+                <strong>Enterprise: custom</strong><br>
+                SLA, dedicated support<br>
+                Advanced RBAC<br>
+                Audit logs<br>
+                High-performance edge
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-slate-400 mt-3">Prices as of April 2026. Check official sites for the latest rates.</p>
+    </section>
+
+    <!-- ======== Pricing at Scale ======== -->
+    <section id="pricing-at-scale" class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Estimated Monthly Cost at Different Traffic Levels</h2>
+      <p class="text-slate-600 text-sm mb-4">Assumes a typical SSR/SSG site with serverless API routes. Costs vary by function usage, build frequency, and bandwidth overages.</p>
+      <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+        <table class="w-full text-sm table-hover">
+          <thead>
+            <tr class="bg-slate-800 text-white text-left">
+              <th class="px-5 py-3 font-semibold">Traffic Level</th>
+              <th class="px-5 py-3 font-semibold">Vercel</th>
+              <th class="px-5 py-3 font-semibold">Cloudflare Pages</th>
+              <th class="px-5 py-3 font-semibold">Netlify</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr>
+              <td class="px-5 py-3 font-medium">Hobby / Side Project<br><span class="text-slate-400 text-xs">&lt; 50K visits/mo</span></td>
+              <td class="px-5 py-3">$0 (free tier)</td>
+              <td class="px-5 py-3 winner">$0 (free tier, unlimited BW)</td>
+              <td class="px-5 py-3">$0 (free tier)</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Growing Startup<br><span class="text-slate-400 text-xs">100K&ndash;500K visits/mo</span></td>
+              <td class="px-5 py-3">$20&ndash;$60/mo (Pro + overages)</td>
+              <td class="px-5 py-3 winner">$5/mo (Workers Paid covers most usage)</td>
+              <td class="px-5 py-3">$19&ndash;$55/mo (Pro + BW overages)</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Scaling Product<br><span class="text-slate-400 text-xs">1M&ndash;5M visits/mo</span></td>
+              <td class="px-5 py-3">$150&ndash;$500/mo (BW + function overages)</td>
+              <td class="px-5 py-3 winner">$5&ndash;$30/mo (extra Workers requests at $0.30/M)</td>
+              <td class="px-5 py-3">$100&ndash;$400/mo (BW overages + functions)</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">High Traffic<br><span class="text-slate-400 text-xs">10M+ visits/mo</span></td>
+              <td class="px-5 py-3">Enterprise (custom, often $1K+/mo)</td>
+              <td class="px-5 py-3 winner">$50&ndash;$200/mo (still dramatically cheaper)</td>
+              <td class="px-5 py-3">Enterprise (custom, often $1K+/mo)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 mt-4 text-sm text-amber-800">
+        <strong>Key takeaway:</strong> Cloudflare Pages is significantly cheaper at scale due to unlimited free bandwidth and low Workers pricing. Vercel and Netlify bandwidth overages ($40/100 GB and $55/100 GB respectively) can add up fast on high-traffic sites.
+      </div>
+    </section>
+
+    <!-- ======== When to Pick Each ======== -->
+    <section id="when-to-pick" class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">When to Pick Each</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Vercel -->
+        <div class="bg-white border-2 border-emerald-200 rounded-xl p-6">
+          <h3 class="text-lg font-bold text-emerald-700 mb-4">Choose Vercel when&hellip;</h3>
+          <ul class="space-y-2 text-slate-700 text-sm">
+            <li class="flex gap-2"><span class="text-emerald-500 font-bold">+</span> You are building with Next.js (the creators of Next.js run Vercel)</li>
+            <li class="flex gap-2"><span class="text-emerald-500 font-bold">+</span> You want the best developer experience with zero-config deploys</li>
+            <li class="flex gap-2"><span class="text-emerald-500 font-bold">+</span> You need edge middleware for auth, A/B testing, or personalization</li>
+            <li class="flex gap-2"><span class="text-emerald-500 font-bold">+</span> Your team values built-in analytics and Web Vitals monitoring</li>
+            <li class="flex gap-2"><span class="text-emerald-500 font-bold">+</span> You need collaborative preview deployments with PR comments</li>
+            <li class="flex gap-2"><span class="text-emerald-500 font-bold">+</span> You want integrated storage (KV, Postgres, Blob) without leaving the platform</li>
+          </ul>
+        </div>
+
+        <!-- Cloudflare -->
+        <div class="bg-white border-2 border-orange-200 rounded-xl p-6">
+          <h3 class="text-lg font-bold text-orange-700 mb-4">Choose Cloudflare Pages when&hellip;</h3>
+          <ul class="space-y-2 text-slate-700 text-sm">
+            <li class="flex gap-2"><span class="text-orange-500 font-bold">+</span> You want unlimited bandwidth with no surprise bills</li>
+            <li class="flex gap-2"><span class="text-orange-500 font-bold">+</span> You need the fastest global CDN with 300+ edge locations</li>
+            <li class="flex gap-2"><span class="text-orange-500 font-bold">+</span> You are building full-stack edge apps with Workers, KV, R2, and D1</li>
+            <li class="flex gap-2"><span class="text-orange-500 font-bold">+</span> Cost efficiency matters &mdash; especially at high traffic volumes</li>
+            <li class="flex gap-2"><span class="text-orange-500 font-bold">+</span> You want free S3-compatible storage (R2) with zero egress fees</li>
+            <li class="flex gap-2"><span class="text-orange-500 font-bold">+</span> You are deploying Astro, Remix, SvelteKit, or static sites</li>
+          </ul>
+        </div>
+
+        <!-- Netlify -->
+        <div class="bg-white border-2 border-blue-200 rounded-xl p-6">
+          <h3 class="text-lg font-bold text-blue-700 mb-4">Choose Netlify when&hellip;</h3>
+          <ul class="space-y-2 text-slate-700 text-sm">
+            <li class="flex gap-2"><span class="text-blue-500 font-bold">+</span> You are building Jamstack or mostly-static content sites</li>
+            <li class="flex gap-2"><span class="text-blue-500 font-bold">+</span> You need built-in form handling without a third-party service</li>
+            <li class="flex gap-2"><span class="text-blue-500 font-bold">+</span> You are an agency deploying many client sites</li>
+            <li class="flex gap-2"><span class="text-blue-500 font-bold">+</span> You want a clean, simple UI with minimal configuration</li>
+            <li class="flex gap-2"><span class="text-blue-500 font-bold">+</span> You use Hugo, Eleventy, Gatsby, or other static site generators</li>
+            <li class="flex gap-2"><span class="text-blue-500 font-bold">+</span> You value the mature Jamstack ecosystem and community plugins</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======== Final Word ======== -->
+    <section class="bg-slate-100 rounded-xl p-6 mb-12">
+      <h2 class="text-xl font-bold text-slate-900 mb-3">The Bottom Line</h2>
+      <p class="text-slate-700 mb-3">
+        In 2026, <strong>Vercel</strong> is the default choice for Next.js teams and anyone who prioritizes developer experience and polish. Its tight framework integration and preview workflow are hard to beat.
+      </p>
+      <p class="text-slate-700 mb-3">
+        <strong>Cloudflare Pages</strong> has emerged as the best value proposition in hosting. Unlimited bandwidth, the fastest CDN, and an ever-growing ecosystem (Workers, R2, D1, Vectorize) make it the smart pick for cost-conscious teams and high-traffic sites.
+      </p>
+      <p class="text-slate-700">
+        <strong>Netlify</strong> pioneered git-based deploys and remains a strong choice for static-first sites, agencies, and teams that need built-in forms. It is showing its age compared to Vercel and Cloudflare on the edge computing front, but its simplicity is still a genuine advantage.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 text-sm">
+    <div class="max-w-5xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>&copy; 2026 Open TechStack. Built for developers who ship.</p>
+      <div class="flex items-center gap-4">
+        <a href="../Frontend-Stacks-Visual-Guide.html" class="hover:text-white transition">Frontend Guide</a>
+        <a href="../DevOps-Stacks-Visual-Guide.html" class="hover:text-white transition">DevOps Guide</a>
+        <a href="../index.html" class="hover:text-white transition">Home</a>
+        <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="hover:text-white transition">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
