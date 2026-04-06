@@ -105,56 +105,76 @@
 <!-- HERO -->
 <header class="relative overflow-hidden">
   <div class="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-cyan-50"></div>
-  <div class="relative max-w-5xl mx-auto px-6 py-20 text-center">
-    <div class="inline-flex items-center gap-2 text-xs font-medium text-indigo-700 bg-indigo-100 rounded-full px-3 py-1 mb-6">
-      <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
-      Open source · Community-driven · Updated for 2026
+  <div class="relative max-w-5xl mx-auto px-6 py-16 md:py-20">
+    <div class="text-center">
+      <div class="inline-flex items-center gap-2 text-xs font-medium text-indigo-700 bg-indigo-100 rounded-full px-3 py-1 mb-6">
+        <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+        Open source · Community-driven · Updated for 2026
+      </div>
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+        Stop Googling.<br/><span class="gradient-text">Start Building.</span>
+      </h1>
+      <p class="mt-5 text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+        Too many frameworks? Can't decide between X and Y? Not sure what fits your budget?<br class="hidden md:block"/>
+        We mapped <b>280+ technologies</b> so you don't have to research for days.
+      </p>
     </div>
-    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
-      The <span class="gradient-text">Tech Stack</span> Guide<br/>You Actually Need
-    </h1>
-    <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-      Interactive visual guides to <b>280+ technologies</b> across frontend, backend, AI/ML, AI coding, DevOps, and mobile.
-      Compare frameworks, filter by project stage, and find the stack that fits your team.
+
+    <!-- Three intent-driven paths -->
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+
+      <!-- Path 1: Deciding between options -->
+      <a href="compare/" class="group block rounded-2xl border-2 border-slate-200 bg-white p-5 shadow-sm hover:border-indigo-400 hover:shadow-lg transition-all">
+        <div class="text-2xl mb-2">&#9878;</div>
+        <h2 class="font-bold text-slate-900 mb-1 group-hover:text-indigo-600 transition">"Which one should I pick?"</h2>
+        <p class="text-sm text-slate-500 mb-3">Head-to-head comparisons with pricing, features, and clear verdicts.</p>
+        <div class="flex flex-wrap gap-1">
+          <span class="text-[10px] bg-slate-100 text-slate-600 rounded-full px-2 py-0.5">Cursor vs Copilot</span>
+          <span class="text-[10px] bg-slate-100 text-slate-600 rounded-full px-2 py-0.5">React vs Vue</span>
+          <span class="text-[10px] bg-slate-100 text-slate-600 rounded-full px-2 py-0.5">Supabase vs Firebase</span>
+          <span class="text-[10px] bg-indigo-100 text-indigo-600 rounded-full px-2 py-0.5 font-medium">11 comparisons &rarr;</span>
+        </div>
+      </a>
+
+      <!-- Path 2: Starting a new project -->
+      <a href="stack-picker.html" class="group block rounded-2xl border-2 border-amber-200 bg-amber-50/50 p-5 shadow-sm hover:border-amber-400 hover:shadow-lg transition-all">
+        <div class="text-2xl mb-2">&#9889;</div>
+        <h2 class="font-bold text-slate-900 mb-1 group-hover:text-amber-600 transition">"Just tell me what to use"</h2>
+        <p class="text-sm text-slate-500 mb-3">Answer 5 quick questions, get a full stack recommendation with reasons.</p>
+        <span class="inline-flex items-center gap-1 text-sm font-semibold text-amber-700 bg-amber-100 rounded-full px-3 py-1">
+          Stack Picker &rarr; 60 seconds
+        </span>
+      </a>
+
+      <!-- Path 3: Exploring the landscape -->
+      <a href="#guides" class="group block rounded-2xl border-2 border-slate-200 bg-white p-5 shadow-sm hover:border-cyan-400 hover:shadow-lg transition-all">
+        <div class="text-2xl mb-2">&#128506;</div>
+        <h2 class="font-bold text-slate-900 mb-1 group-hover:text-cyan-600 transition">"I want to explore everything"</h2>
+        <p class="text-sm text-slate-500 mb-3">Interactive visual guides with mind maps, filters, and cheat sheets.</p>
+        <div class="flex flex-wrap gap-1">
+          <span class="text-[10px] bg-cyan-100 text-cyan-700 rounded-full px-2 py-0.5">Frontend</span>
+          <span class="text-[10px] bg-indigo-100 text-indigo-700 rounded-full px-2 py-0.5">Backend</span>
+          <span class="text-[10px] bg-violet-100 text-violet-700 rounded-full px-2 py-0.5">AI/ML</span>
+          <span class="text-[10px] bg-rose-100 text-rose-700 rounded-full px-2 py-0.5">AI Coding</span>
+          <span class="text-[10px] bg-emerald-100 text-emerald-700 rounded-full px-2 py-0.5">DevOps</span>
+          <span class="text-[10px] bg-orange-100 text-orange-700 rounded-full px-2 py-0.5">Mobile</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Social proof line -->
+    <p class="mt-8 text-center text-xs text-slate-400">
+      8 interactive guides · 11 head-to-head comparisons · 12 stack recipes · 100% free &amp; open source
     </p>
-    <div class="mt-10 flex items-center justify-center gap-3 flex-wrap">
-      <a href="Frontend-Stacks-Visual-Guide.html"
-         class="inline-flex items-center gap-2 px-5 py-2.5 bg-cyan-600 text-white font-semibold rounded-xl hover:bg-cyan-700 transition shadow-lg shadow-cyan-600/25 text-sm">
-        Frontend
-      </a>
-      <a href="Backend-Stacks-Visual-Guide.html"
-         class="inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 transition shadow-lg shadow-indigo-600/25 text-sm">
-        Backend
-      </a>
-      <a href="AIML-Stacks-Visual-Guide.html"
-         class="inline-flex items-center gap-2 px-5 py-2.5 bg-violet-600 text-white font-semibold rounded-xl hover:bg-violet-700 transition shadow-lg shadow-violet-600/25 text-sm">
-        AI / ML
-      </a>
-      <a href="AI-Coding-Tools-Visual-Guide.html"
-         class="inline-flex items-center gap-2 px-5 py-2.5 bg-rose-600 text-white font-semibold rounded-xl hover:bg-rose-700 transition shadow-lg shadow-rose-600/25 text-sm">
-        AI Coding
-      </a>
-      <a href="DevOps-Stacks-Visual-Guide.html"
-         class="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 text-white font-semibold rounded-xl hover:bg-emerald-700 transition shadow-lg shadow-emerald-600/25 text-sm">
-        DevOps
-      </a>
-      <a href="Mobile-Stacks-Visual-Guide.html"
-         class="inline-flex items-center gap-2 px-5 py-2.5 bg-orange-600 text-white font-semibold rounded-xl hover:bg-orange-700 transition shadow-lg shadow-orange-600/25 text-sm">
-        Mobile
-      </a>
-    </div>
-    <div class="mt-6">
-      <a href="stack-picker.html"
-         class="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 text-white font-bold rounded-xl hover:bg-amber-600 transition shadow-lg shadow-amber-500/30 text-base animate-pulse">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
-        Find Your Stack in 60 Seconds
-      </a>
-    </div>
+
   </div>
 </header>
 
 <!-- GUIDE CARDS -->
-<section class="max-w-6xl mx-auto px-6 py-16">
+<section id="guides" class="max-w-6xl mx-auto px-6 py-16">
+  <h2 class="text-2xl font-bold text-slate-900 text-center mb-2">Explore by Domain</h2>
+  <p class="text-slate-500 text-center mb-10 text-sm">Each guide has an interactive mind map, stage-based filters, search, and decision cheat sheets.</p>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
     <!-- Frontend Card -->
@@ -286,6 +306,45 @@
   </div>
 </section>
 
+<!-- TRENDING COMPARISONS -->
+<section class="border-t border-slate-200 bg-white">
+  <div class="max-w-5xl mx-auto px-6 py-14">
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <h2 class="text-2xl font-bold text-slate-900">Trending Comparisons</h2>
+        <p class="text-sm text-slate-500 mt-1">The debates developers are searching for right now</p>
+      </div>
+      <a href="compare/" class="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition">View all 11 &rarr;</a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      <a href="compare/cursor-vs-copilot-vs-windsurf.html" class="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 hover:border-indigo-300 hover:bg-indigo-50/50 transition group">
+        <span class="text-xs font-bold text-rose-600 bg-rose-100 rounded-full px-2 py-0.5 shrink-0">AI</span>
+        <span class="text-sm font-medium text-slate-700 group-hover:text-indigo-700 transition">Cursor vs Copilot vs Windsurf</span>
+      </a>
+      <a href="compare/claude-code-vs-codex-vs-gemini-cli.html" class="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 hover:border-indigo-300 hover:bg-indigo-50/50 transition group">
+        <span class="text-xs font-bold text-rose-600 bg-rose-100 rounded-full px-2 py-0.5 shrink-0">AI</span>
+        <span class="text-sm font-medium text-slate-700 group-hover:text-indigo-700 transition">Claude Code vs Codex vs Gemini CLI</span>
+      </a>
+      <a href="compare/react-vs-vue-vs-svelte.html" class="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 hover:border-indigo-300 hover:bg-indigo-50/50 transition group">
+        <span class="text-xs font-bold text-cyan-600 bg-cyan-100 rounded-full px-2 py-0.5 shrink-0">FE</span>
+        <span class="text-sm font-medium text-slate-700 group-hover:text-indigo-700 transition">React vs Vue vs Svelte</span>
+      </a>
+      <a href="compare/nextjs-vs-remix-vs-astro.html" class="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 hover:border-indigo-300 hover:bg-indigo-50/50 transition group">
+        <span class="text-xs font-bold text-cyan-600 bg-cyan-100 rounded-full px-2 py-0.5 shrink-0">FE</span>
+        <span class="text-sm font-medium text-slate-700 group-hover:text-indigo-700 transition">Next.js vs Remix vs Astro</span>
+      </a>
+      <a href="compare/supabase-vs-firebase.html" class="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 hover:border-indigo-300 hover:bg-indigo-50/50 transition group">
+        <span class="text-xs font-bold text-indigo-600 bg-indigo-100 rounded-full px-2 py-0.5 shrink-0">BE</span>
+        <span class="text-sm font-medium text-slate-700 group-hover:text-indigo-700 transition">Supabase vs Firebase</span>
+      </a>
+      <a href="compare/vercel-vs-cloudflare-vs-netlify.html" class="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 hover:border-indigo-300 hover:bg-indigo-50/50 transition group">
+        <span class="text-xs font-bold text-violet-600 bg-violet-100 rounded-full px-2 py-0.5 shrink-0">Ops</span>
+        <span class="text-sm font-medium text-slate-700 group-hover:text-indigo-700 transition">Vercel vs Cloudflare vs Netlify</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- FEATURES -->
 <section class="border-t border-slate-200 bg-white">
   <div class="max-w-5xl mx-auto px-6 py-16">
@@ -321,20 +380,20 @@
   <div class="max-w-5xl mx-auto px-6 py-16">
     <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
       <div>
-        <div class="text-3xl font-extrabold text-slate-900">5</div>
+        <div class="text-3xl font-extrabold text-slate-900">8</div>
         <div class="text-sm text-slate-500 mt-1">Interactive Guides</div>
       </div>
       <div>
-        <div class="text-3xl font-extrabold text-slate-900">200+</div>
+        <div class="text-3xl font-extrabold text-slate-900">280+</div>
         <div class="text-sm text-slate-500 mt-1">Technologies</div>
       </div>
       <div>
-        <div class="text-3xl font-extrabold text-slate-900">50</div>
-        <div class="text-sm text-slate-500 mt-1">Categories</div>
+        <div class="text-3xl font-extrabold text-slate-900">11</div>
+        <div class="text-sm text-slate-500 mt-1">Comparisons</div>
       </div>
       <div>
-        <div class="text-3xl font-extrabold text-slate-900">4</div>
-        <div class="text-sm text-slate-500 mt-1">Project Stages</div>
+        <div class="text-3xl font-extrabold text-slate-900">12</div>
+        <div class="text-sm text-slate-500 mt-1">Stack Recipes</div>
       </div>
       <div>
         <div class="text-3xl font-extrabold text-slate-900">0</div>
