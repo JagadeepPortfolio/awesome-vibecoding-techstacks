@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Source docs (not needed for web)
+*.docx
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (in case build tools are added later)
+node_modules/

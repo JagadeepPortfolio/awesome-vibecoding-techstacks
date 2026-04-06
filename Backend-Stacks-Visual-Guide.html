@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Backend Stacks · Interactive Visual Guide 2026</title>
+<meta name="description" content="Interactive visual guide to backend tech stacks in 2026. Compare languages, BaaS, hosting, databases, auth, payments, and more — filtered by stage and constraints." />
+<meta property="og:title" content="Backend Tech Stacks 2026 — Interactive Visual Guide" />
+<meta property="og:description" content="Mind-map view of the modern backend universe. Pick your stage, filter by what matters, see exactly what stack fits." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://stacks.stitchwebsite.com/Backend-Stacks-Visual-Guide.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Backend Tech Stacks 2026 — Interactive Visual Guide" />
+<meta name="twitter:description" content="Mind-map view of the modern backend universe. Pick your stage, filter by what matters, see exactly what stack fits." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧱</text></svg>" />
+<link rel="canonical" href="https://stacks.stitchwebsite.com/Backend-Stacks-Visual-Guide.html" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .cat-lang  { --c:#6366f1; --cs:#eef2ff; }
+  .cat-baas  { --c:#10b981; --cs:#ecfdf5; }
+  .cat-host  { --c:#f59e0b; --cs:#fffbeb; }
+  .cat-db    { --c:#e11d48; --cs:#fff1f2; }
+  .cat-auth  { --c:#8b5cf6; --cs:#f5f3ff; }
+  .cat-jobs  { --c:#0ea5e9; --cs:#f0f9ff; }
+  .cat-store { --c:#14b8a6; --cs:#f0fdfa; }
+  .cat-obs   { --c:#64748b; --cs:#f8fafc; }
+  .cat-pay   { --c:#ec4899; --cs:#fdf2f8; }
+  .cat-email { --c:#f97316; --cs:#fff7ed; }
+
+  .chip { background: var(--cs); color: var(--c); border: 1px solid color-mix(in srgb, var(--c) 25%, transparent); }
+  .ring-cat { box-shadow: 0 0 0 2px color-mix(in srgb, var(--c) 35%, transparent); }
+  .bar-cat  { background: var(--c); }
+
+  .node { cursor: pointer; transition: transform .2s ease, opacity .3s ease; transform-origin: center; transform-box: fill-box; }
+  .node:hover { transform: scale(1.08); }
+  .node.dim { opacity: .18; }
+  .link { transition: opacity .3s ease, stroke-width .2s ease; }
+  .link.dim { opacity: .1; }
+
+  .card { transition: opacity .25s ease, transform .25s ease, box-shadow .25s ease; }
+  .card.hidden-card { opacity: 0; transform: scale(.96); pointer-events: none; position: absolute; }
+  .card.flash { animation: flash 1.2s ease; }
+  @keyframes flash {
+    0%,100% { box-shadow: 0 1px 2px rgba(0,0,0,.05); }
+    30%     { box-shadow: 0 0 0 4px #fde68a, 0 10px 30px rgba(245,158,11,.25); }
+  }
+
+  .stage-btn.active { background: #0f172a; color: white; box-shadow: 0 8px 20px rgba(15,23,42,.25); }
+  .filter-chip.active { background: #0f172a !important; color: white !important; border-color: #0f172a !important; }
+
+  @media print {
+    .no-print { display: none !important; }
+    .card.hidden-card { display: none !important; }
+  }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+<!-- ============ NAV ============ -->
+<nav class="bg-slate-900 text-white text-sm">
+  <div class="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between">
+    <a href="index.html" class="font-bold tracking-tight hover:text-indigo-300 transition">⚡ TechStacks 2026</a>
+    <div class="flex items-center gap-4">
+      <a href="index.html" class="hover:text-slate-300 transition">Home</a>
+      <a href="Frontend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Frontend</a>
+      <a href="Backend-Stacks-Visual-Guide.html" class="text-indigo-400 font-semibold">Backend</a>
+      <a href="https://github.com/JagadeepPortfolio/2026TechStack" target="_blank" rel="noopener" class="inline-flex items-center gap-1 hover:text-slate-300 transition">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="relative overflow-hidden border-b border-slate-200 bg-gradient-to-br from-white via-indigo-50 to-emerald-50">
+  <div class="max-w-7xl mx-auto px-6 py-10">
+    <div class="flex items-start justify-between gap-6 flex-wrap">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 text-xs font-medium text-indigo-700 bg-indigo-100 rounded-full px-3 py-1 mb-3">
+          <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+          Interactive guide · 2026 edition
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
+          Backend Tech Stacks, Visualised
+        </h1>
+        <p class="mt-3 text-slate-600 text-lg">
+          A mind-map view of the modern backend universe — languages, BaaS platforms, hosting, and every supporting service.
+          Pick your stage, filter by what matters, and see exactly what stack fits.
+        </p>
+      </div>
+      <div class="no-print flex items-center gap-2 text-xs text-slate-500">
+        <kbd class="px-2 py-1 bg-white border border-slate-300 rounded">/</kbd> search
+        <kbd class="px-2 py-1 bg-white border border-slate-300 rounded">1-4</kbd> stage
+        <kbd class="px-2 py-1 bg-white border border-slate-300 rounded">Esc</kbd> reset
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ CONTROLS ============ -->
+<section class="no-print sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3">
+    <div class="flex items-center gap-3 flex-wrap">
+      <div class="relative flex-1 min-w-[220px]">
+        <svg class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input id="search" type="text" placeholder="Search tech, framework, or service…"
+          class="w-full pl-9 pr-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-white text-sm" />
+      </div>
+      <label class="inline-flex items-center gap-2 text-sm text-slate-600"><input type="checkbox" id="f-free" class="rounded border-slate-300"> Free tier</label>
+      <label class="inline-flex items-center gap-2 text-sm text-slate-600"><input type="checkbox" id="f-self" class="rounded border-slate-300"> Self-hostable</label>
+      <label class="inline-flex items-center gap-2 text-sm text-slate-600"><input type="checkbox" id="f-prod" class="rounded border-slate-300"> Production-proven</label>
+      <button id="reset" class="ml-auto text-xs text-slate-500 hover:text-slate-900 underline">Reset all</button>
+    </div>
+    <div id="catChips" class="flex items-center gap-2 flex-wrap text-xs"></div>
+  </div>
+</section>
+
+<!-- ============ MIND MAP ============ -->
+<section class="max-w-7xl mx-auto px-6 pt-8">
+  <div class="flex items-center justify-between mb-3">
+    <h2 class="text-lg font-semibold text-slate-900">The landscape at a glance</h2>
+    <p class="text-xs text-slate-500"><span id="countLabel">—</span> · click a node to jump to its card</p>
+  </div>
+  <div class="rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+    <svg id="mindmap" viewBox="0 0 1200 720" class="w-full h-[540px]"></svg>
+  </div>
+</section>
+
+<!-- ============ STAGE SELECTOR ============ -->
+<section class="max-w-7xl mx-auto px-6 py-10">
+  <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+    <div>
+      <h2 class="text-lg font-semibold text-slate-900">Which stage are you at?</h2>
+      <p class="text-sm text-slate-500">Pick one — the stack below adapts, and cards fade to only what fits.</p>
+    </div>
+    <div id="stageTabs" class="flex gap-2 flex-wrap"></div>
+  </div>
+
+  <div id="stagePanel" class="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 shadow-sm p-6">
+    <!-- filled by JS -->
+  </div>
+</section>
+
+<!-- ============ CARD GRID ============ -->
+<section class="max-w-7xl mx-auto px-6 pb-10">
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-lg font-semibold text-slate-900">All technologies</h2>
+    <p class="text-xs text-slate-500" id="gridCount"></p>
+  </div>
+  <div id="grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+</section>
+
+<!-- ============ CHEAT SHEET ============ -->
+<section class="bg-white border-t border-slate-200">
+  <div class="max-w-7xl mx-auto px-6 py-12">
+    <h2 class="text-xl font-bold text-slate-900 mb-6">Decision cheat-sheet</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="rounded-xl border border-slate-200 p-5 bg-slate-50">
+        <h3 class="font-semibold text-slate-900 mb-3">Pick by team situation</h3>
+        <ul class="space-y-2 text-sm text-slate-700">
+          <li><b>Solo founder:</b> Next.js + Supabase on Vercel, or Rails 8 on Hetzner with Kamal.</li>
+          <li><b>Small TS team:</b> Hono/Fastify on Cloudflare or Vercel, Neon, Clerk, Inngest, Sentry.</li>
+          <li><b>AI-first product:</b> FastAPI + Postgres (pgvector) on Railway/Fly + Anthropic/OpenAI.</li>
+          <li><b>High-throughput API:</b> Go (Gin/Fiber) or Rust (Axum) on Fly/Cloud Run.</li>
+          <li><b>Realtime / collab:</b> Phoenix, Convex, or Supabase realtime.</li>
+          <li><b>Enterprise / regulated:</b> Spring Boot or .NET on AWS/Azure, Auth0/WorkOS.</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-slate-200 p-5 bg-slate-50">
+        <h3 class="font-semibold text-slate-900 mb-3">Pick by constraint</h3>
+        <ul class="space-y-2 text-sm text-slate-700">
+          <li><b>Zero ops:</b> Supabase + Vercel. No regrets for year one.</li>
+          <li><b>Lowest bill:</b> Hetzner VPS + Coolify/Dokploy + Postgres container.</li>
+          <li><b>Global low latency:</b> Cloudflare Workers + D1/R2, or Fly multi-region.</li>
+          <li><b>Can't lose data:</b> Managed Postgres with PITR — never DIY your primary DB early.</li>
+          <li><b>Future compliance:</b> Stay on AWS/GCP/Azure (directly or via Vercel/Supabase).</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-rose-200 p-5 bg-rose-50">
+        <h3 class="font-semibold text-rose-900 mb-3">Anti-patterns to avoid</h3>
+        <ul class="space-y-2 text-sm text-rose-900/90">
+          <li>Starting on Kubernetes without a platform team.</li>
+          <li>Picking BaaS just to dodge learning SQL — you'll hit the wall.</li>
+          <li>Microservices before product-market fit.</li>
+          <li>Chasing the framework of the month. Boring tech wins.</li>
+          <li>Free-tier roulette — know the paid price before you build.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-slate-900 text-slate-400 text-sm">
+  <div class="max-w-7xl mx-auto px-6 py-8">
+    <div class="flex items-center justify-between flex-wrap gap-4 mb-4">
+      <div class="font-semibold text-white">⚡ TechStacks 2026</div>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="hover:text-white transition">Home</a>
+        <a href="Frontend-Stacks-Visual-Guide.html" class="hover:text-white transition">Frontend Guide</a>
+        <a href="Backend-Stacks-Visual-Guide.html" class="text-slate-200">Backend Guide</a>
+      </div>
+    </div>
+    <div class="flex items-center justify-between flex-wrap gap-3 pt-4 border-t border-slate-800">
+      <div>Open source · <a href="https://github.com/JagadeepPortfolio/2026TechStack" class="text-indigo-400 hover:text-indigo-300 transition" target="_blank" rel="noopener">Star on GitHub</a> · Contributions welcome</div>
+      <div class="text-xs">Built with vanilla HTML, Tailwind CSS, and zero dependencies</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* =====================================================
+   DATA
+===================================================== */
+const CATEGORIES = [
+  { id:"lang",  label:"Languages & Frameworks", cls:"cat-lang" },
+  { id:"baas",  label:"BaaS",                   cls:"cat-baas" },
+  { id:"host",  label:"Hosting & Edge",         cls:"cat-host" },
+  { id:"db",    label:"Databases",              cls:"cat-db" },
+  { id:"auth",  label:"Auth",                   cls:"cat-auth" },
+  { id:"jobs",  label:"Jobs & Queues",          cls:"cat-jobs" },
+  { id:"store", label:"Storage / CDN",          cls:"cat-store" },
+  { id:"pay",   label:"Payments",               cls:"cat-pay" },
+  { id:"email", label:"Email",                  cls:"cat-email" },
+  { id:"obs",   label:"Observability",          cls:"cat-obs" },
+];
+
+const STAGES = [
+  { id:"hobby",  label:"Hobby",  cost:"$0",      tag:"Prototype",    desc:"Zero infra cost, ship a weekend project, everything on free tiers." },
+  { id:"mvp",    label:"MVP",    cost:"$25–$60", tag:"First users",  desc:"Paying customers, no cold starts, commercial-grade managed services." },
+  { id:"growth", label:"Growth", cost:"$50–$500",tag:"Scaling",      desc:"Thousands of users, real SLAs, backups, caches, proper monitoring." },
+  { id:"scale",  label:"Scale",  cost:"$500+",   tag:"Enterprise",   desc:"Multi-region, compliance, dedicated infra team, hyperscaler territory." },
+];
+
+const STAGE_STACKS = {
+  hobby:  { backend:"Next.js / Hono / FastAPI", db:"Supabase / Neon free", hosting:"Vercel Hobby / Cloudflare", auth:"Supabase Auth / Clerk free", jobs:"Inngest free", obs:"Sentry free" },
+  mvp:    { backend:"Fastify / FastAPI + Vercel Pro", db:"Supabase Pro ($25)", hosting:"Vercel Pro / Railway", auth:"Clerk", jobs:"Inngest", obs:"Sentry + Axiom" },
+  growth: { backend:"Fastify / Go / FastAPI + worker svc", db:"Supabase Pro + replicas / Neon Scale", hosting:"Railway / Fly / Cloudflare", auth:"Clerk / WorkOS", jobs:"Inngest / Trigger", obs:"Sentry + Grafana Cloud" },
+  scale:  { backend:"Go / Rust microservices", db:"AWS RDS/Aurora + ClickHouse", hosting:"AWS / GCP Cloud Run / Fly", auth:"WorkOS / Auth0", jobs:"Temporal", obs:"Datadog / OpenTelemetry" },
+};
+
+// tech entries — ~50
+const TECH = [
+  // Languages / frameworks
+  { id:"node",    name:"Node.js / TypeScript", cat:"lang", summary:"Still the most popular backend choice in 2026. Fastify, Hono, NestJS, tRPC — huge ecosystem, same language on client + server.", pros:["Massive ecosystem","JS + TS everywhere","Great edge/serverless story"], cons:["CPU-bound work awkward","Package hygiene matters"], bestFor:"SaaS APIs, web & mobile backends", free:true, self:true, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"python",  name:"Python (FastAPI / Django)", cat:"lang", summary:"FastAPI is the modern default for APIs; Django still wins for content-heavy apps. Python owns AI/ML tooling.", pros:["Best ML/AI integration","Readable","Django admin saves weeks"], cons:["Slower than Go/Rust","GIL limits CPU parallelism"], bestFor:"AI-powered products, data-heavy APIs, internal tools", free:true, self:true, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"go",      name:"Go (Gin / Fiber / stdlib)", cat:"lang", summary:"The quiet winner of cloud-native. Tiny binaries, brilliant concurrency, boring in the best way.", pros:["Fast cold starts","Low memory","Great concurrency"], cons:["More verbose","Smaller web ecosystem than Node"], bestFor:"High-throughput APIs, microservices, CLIs", free:true, self:true, prod:true, stages:["mvp","growth","scale"] },
+  { id:"rust",    name:"Rust (Axum / Actix)", cat:"lang", summary:"Graduated from experiment to production. Discord, Cloudflare, Figma, 1Password.", pros:["Memory-safe, no GC","Blistering performance","Great for WASM/edge"], cons:["Steep learning curve","Slower iteration early"], bestFor:"Latency-critical services, edge, fintech", free:true, self:true, prod:true, stages:["growth","scale"] },
+  { id:"java",    name:"Java / Kotlin (Spring / Ktor)", cat:"lang", summary:"Enterprise default. Modern JVM with virtual threads is very different from Java 8.", pros:["Battle-tested","Huge hiring pool","Great long-run perf"], cons:["Heavier tooling","Slower to start a project"], bestFor:"Enterprise, fintech, regulated industries", free:true, self:true, prod:true, stages:["growth","scale"] },
+  { id:"dotnet",  name:"C# / .NET (ASP.NET Core)", cat:"lang", summary:"One of the fastest mainstream frameworks. Concise, typed end-to-end, underrated outside MS shops.", pros:["Top-tier performance","Excellent tooling","Modern minimal APIs"], cons:["Smaller OSS community vs Node","Windows legacy baggage"], bestFor:"Enterprise, gaming backends, .NET shops", free:true, self:true, prod:true, stages:["mvp","growth","scale"] },
+  { id:"rails",   name:"Ruby on Rails 8", cat:"lang", summary:"Solo-founder renaissance. Built-in auth, Kamal deploy, Hotwire, even SQLite-in-prod.", pros:["Fastest idea→ship","Batteries included","Strong conventions"], cons:["Slower runtime","Hiring harder than it was"], bestFor:"Solo SaaS, CRUD-heavy products", free:true, self:true, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"elixir",  name:"Elixir / Phoenix", cat:"lang", summary:"Erlang VM. Discord uses it. Phoenix LiveView = reactive UI with no JS.", pros:["Millions of concurrent connections","Great for realtime","Fault-tolerant"], cons:["Small talent pool","Functional paradigm learning curve"], bestFor:"Chat, live dashboards, IoT", free:true, self:true, prod:true, stages:["mvp","growth","scale"] },
+
+  // BaaS
+  { id:"supabase",name:"Supabase", cat:"baas", summary:"Open-source Firebase alt on Postgres. Auth, storage, realtime, edge functions, pgvector — no lock-in.", pros:["Real Postgres underneath","Self-hostable","Honest pricing"], cons:["Cold starts on free tier","Edge functions less mature"], bestFor:"Most new SaaS projects in 2026", free:true, self:true, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"firebase",name:"Firebase", cat:"baas", summary:"Google's veteran BaaS. Firestore, Auth, Functions, Hosting, Messaging. Mobile SDKs are best-in-class.", pros:["Best mobile SDKs","Realtime sync is magical","Battle-tested"], cons:["NoSQL only","Vendor lock-in","Pricing surprises"], bestFor:"Mobile apps, realtime consumer apps", free:true, self:false, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"appwrite",name:"Appwrite", cat:"baas", summary:"OSS BaaS similar to Supabase with a document-DB model. Self-hostable + managed cloud.", pros:["Open source","Self-hostable","Good SDKs"], cons:["Smaller community","Document-first"], bestFor:"Teams wanting Firebase DX but self-hosted", free:true, self:true, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"convex",  name:"Convex", cat:"baas", summary:"Reactive TypeScript functions, live queries, end-to-end types. Firebase magic + relational model.", pros:["Reactive by default","Great TS types","Fast DX"], cons:["Newer platform","Some lock-in"], bestFor:"TS realtime / AI-agent apps", free:true, self:false, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"pocketbase",name:"PocketBase", cat:"baas", summary:"Single Go binary: SQLite, auth, realtime, storage, admin UI. Runs on a $5 VPS or Raspberry Pi.", pros:["One binary","Dead simple","Super cheap"], cons:["Single-node","Not for huge scale"], bestFor:"Indie projects, cheap MVPs", free:true, self:true, prod:true, stages:["hobby","mvp"] },
+  { id:"nhost",   name:"Nhost", cat:"baas", summary:"Postgres + Hasura GraphQL BaaS with auth, storage, functions.", pros:["GraphQL first","OSS core","Postgres underneath"], cons:["Niche audience","Smaller ecosystem"], bestFor:"GraphQL-first teams", free:true, self:true, prod:true, stages:["mvp","growth"] },
+
+  // Hosting
+  { id:"cloudflare",name:"Cloudflare (Workers/Pages/R2/D1)", cat:"host", summary:"Edge code on 300+ locations, no egress fees on R2, generous free tier, Workers AI.", pros:["Global low latency","No R2 egress","Huge free tier"], cons:["Constrained runtime","Not for long-running jobs"], bestFor:"Global APIs, media-heavy apps, edge AI", free:true, self:false, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"vercel",  name:"Vercel", cat:"host", summary:"Best-in-class Next.js hosting. Serverless + edge functions, preview deploys, Fluid Compute.", pros:["Unmatched DX","Instant previews","Great observability"], cons:["Bandwidth expensive at scale","Some lock-in"], bestFor:"Next.js apps, SaaS frontends", free:true, self:false, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"netlify", name:"Netlify", cat:"host", summary:"Framework-agnostic JAMstack host. Functions, edge, forms, decent free tier.", pros:["Framework-agnostic","Real free tier","Solid CDN"], cons:["Less trendy","Smaller function features"], bestFor:"JAMstack, static-first sites", free:true, self:false, prod:true, stages:["hobby","mvp"] },
+  { id:"railway", name:"Railway", cat:"host", summary:"Heroku successor that stuck. Push a repo, get a running service + database. Best DX for traditional servers.", pros:["Best PaaS DX","First-class DBs","Great for workers"], cons:["No real free tier","Can get pricey"], bestFor:"Early SaaS needing long-running servers", free:false, self:false, prod:true, stages:["mvp","growth"] },
+  { id:"render",  name:"Render", cat:"host", summary:"Direct Railway competitor with a real free tier (web services sleep when idle).", pros:["Real free tier","Simple UI","Managed DBs"], cons:["Free services sleep","Smaller ecosystem than Railway"], bestFor:"Small web services, hobby → MVP", free:true, self:false, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"fly",     name:"Fly.io", cat:"host", summary:"Run Docker containers as Fly Machines in 30+ regions. Excellent for multi-region apps.", pros:["Multi-region by default","Good Postgres replicas","Machines feel like servers"], cons:["Pricing complexity","Free tier shrank"], bestFor:"Multi-region apps, Phoenix/Elixir", free:true, self:false, prod:true, stages:["mvp","growth","scale"] },
+  { id:"aws",     name:"AWS", cat:"host", summary:"Lambda, Fargate, RDS, S3, SQS — infinite flexibility, infinite complexity.", pros:["Everything you'll ever need","Compliance","Proven at any scale"], cons:["Steep learning curve","Pricing traps","Slow iteration"], bestFor:"Post-Series-A, regulated, big teams", free:true, self:false, prod:true, stages:["growth","scale"] },
+  { id:"gcprun",  name:"GCP Cloud Run", cat:"host", summary:"Friendliest hyperscaler product. Deploy any container, scale to zero, pay per request.", pros:["Container-based","Scales to zero","Great free tier"], cons:["GCP learning curve","Vendor-specific extras"], bestFor:"Small teams going hyperscaler", free:true, self:false, prod:true, stages:["mvp","growth","scale"] },
+  { id:"hetzner", name:"Hetzner VPS", cat:"host", summary:"€5/mo boxes + Coolify/Dokploy/Kamal = DIY Heroku. Often the cheapest production option.", pros:["Unbeatable price","Full control","Real CPU/RAM"], cons:["You run ops","No automatic scaling"], bestFor:"Cost-sensitive founders, profitable side projects", free:false, self:true, prod:true, stages:["mvp","growth"] },
+
+  // Databases
+  { id:"postgres",name:"Postgres", cat:"db", summary:"The universal default. Relational, JSON, full-text search, vector (pgvector), queues, time-series.", pros:["Answer to every DB question","Massive ecosystem","Extensions galore"], cons:["Ops burden if self-hosted","Vertical scaling"], bestFor:"Literally any app", free:true, self:true, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"neon",    name:"Neon", cat:"db", summary:"Serverless Postgres with Git-style branching. Powers Vercel Postgres.", pros:["Database branching","Scales to zero","Generous free tier"], cons:["Cold starts","Newer platform"], bestFor:"Serverless TS stacks, preview envs", free:true, self:false, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"turso",   name:"Turso / libSQL", cat:"db", summary:"Distributed SQLite with edge replicas. Extremely cheap + fast for read-heavy workloads.", pros:["Edge replicas","Very cheap","Low latency reads"], cons:["SQLite write limits","Newer"], bestFor:"Read-heavy edge apps", free:true, self:true, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"planetscale",name:"PlanetScale", cat:"db", summary:"MySQL + Vitess. Lost free tier but strong for serious MySQL shops.", pros:["Vitess sharding","Branching","Production-grade"], cons:["No free tier","MySQL only"], bestFor:"Large MySQL apps", free:false, self:false, prod:true, stages:["growth","scale"] },
+  { id:"mongo",   name:"MongoDB Atlas", cat:"db", summary:"Still the go-to document DB for teams preferring schemaless.", pros:["Flexible schema","Good managed service","Mature SDKs"], cons:["Not relational","Cost at scale"], bestFor:"Document-heavy apps", free:true, self:true, prod:true, stages:["mvp","growth","scale"] },
+  { id:"clickhouse",name:"ClickHouse / Tinybird", cat:"db", summary:"Columnar analytics. Reach for it when dashboards start to hurt Postgres.", pros:["Insanely fast analytics","Scales horizontally","Great compression"], cons:["Not OLTP","Ops heavy if self-hosted"], bestFor:"Analytics dashboards, product metrics", free:true, self:true, prod:true, stages:["growth","scale"] },
+  { id:"redis",   name:"Redis / Upstash", cat:"db", summary:"Cache, sessions, rate limits, lightweight queues. Upstash = serverless Redis with free tier.", pros:["Blazing fast","Simple model","Serverless option"], cons:["RAM cost","Persistence gotchas"], bestFor:"Caching, rate limiting, sessions", free:true, self:true, prod:true, stages:["mvp","growth","scale"] },
+
+  // Auth
+  { id:"clerk",   name:"Clerk", cat:"auth", summary:"DX leader. Drop-in UI, social login, orgs, MFA. Free up to 10k MAU.", pros:["Best-in-class UI components","Great docs","Generous free tier"], cons:["Some lock-in","Pricier at scale"], bestFor:"TS/React SaaS", free:true, self:false, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"auth0",   name:"Auth0 / Okta", cat:"auth", summary:"Enterprise incumbent. Battle-tested, expensive, SSO/SCIM done.", pros:["Every enterprise feature","Compliance","Reliable"], cons:["Expensive","Heavy to set up"], bestFor:"Enterprise, regulated", free:true, self:false, prod:true, stages:["growth","scale"] },
+  { id:"workos",  name:"WorkOS", cat:"auth", summary:"Enterprise-ready auth: SSO, SCIM, audit logs. Plug in when closing B2B deals.", pros:["SSO/SCIM out of the box","Clean APIs","Fair pricing"], cons:["Niche use case","Not for consumer auth"], bestFor:"B2B SaaS unlocking enterprise", free:true, self:false, prod:true, stages:["growth","scale"] },
+  { id:"authjs",  name:"Auth.js / Better Auth / Lucia", cat:"auth", summary:"Self-hosted auth libraries. Free, you own the data and the bugs.", pros:["Free","No lock-in","Flexible"], cons:["You maintain it","Edge cases bite"], bestFor:"Teams that want full control", free:true, self:true, prod:true, stages:["hobby","mvp","growth"] },
+
+  // Jobs
+  { id:"inngest", name:"Inngest", cat:"jobs", summary:"Durable functions with retries, cron, fan-out. Favorite in the TS world.", pros:["Durable by default","Great DX","Generous free tier"], cons:["TS-centric","Newer"], bestFor:"TS background jobs & workflows", free:true, self:false, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"trigger", name:"Trigger.dev", cat:"jobs", summary:"Open source, developer-friendly durable jobs platform.", pros:["Open source","Good DX","Self-hostable"], cons:["Smaller community","Newer"], bestFor:"OSS-preferring TS teams", free:true, self:true, prod:true, stages:["mvp","growth"] },
+  { id:"temporal",name:"Temporal", cat:"jobs", summary:"The serious workflow engine. Stripe, Netflix, Coinbase.", pros:["Battle-tested at scale","Multi-language","Durable workflows"], cons:["Heavy for small apps","Learning curve"], bestFor:"Mission-critical workflows", free:true, self:true, prod:true, stages:["growth","scale"] },
+  { id:"bullmq",  name:"BullMQ + Redis", cat:"jobs", summary:"Classic Node queue with Redis backend.", pros:["Simple","Free","Battle-tested"], cons:["You run Redis","Not durable by default"], bestFor:"Self-hosted Node workers", free:true, self:true, prod:true, stages:["mvp","growth"] },
+  { id:"celery",  name:"Celery", cat:"jobs", summary:"Python's async task workhorse.", pros:["Python standard","Mature","Flexible brokers"], cons:["Config-heavy","Operational load"], bestFor:"Python background jobs", free:true, self:true, prod:true, stages:["mvp","growth","scale"] },
+
+  // Storage / CDN
+  { id:"r2",      name:"Cloudflare R2", cat:"store", summary:"S3-compatible object storage with zero egress fees. The price-sensitive default.", pros:["No egress fees","S3-compatible","Cheap storage"], cons:["Eventual consistency edge cases","Smaller ecosystem than S3"], bestFor:"Any media-heavy app", free:true, self:false, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"s3",      name:"AWS S3", cat:"store", summary:"Industry standard. Unmatched ecosystem, painful egress.", pros:["Gold standard","Infinite scale","Every tool integrates"], cons:["Egress cost","AWS complexity"], bestFor:"Anything on AWS", free:true, self:false, prod:true, stages:["mvp","growth","scale"] },
+  { id:"b2",      name:"Backblaze B2", cat:"store", summary:"Cheap S3-compatible storage. Often paired with Cloudflare for free egress.", pros:["Very cheap","S3-compatible","Bandwidth Alliance"], cons:["Smaller ecosystem","Less trendy"], bestFor:"Backups, large media libraries", free:true, self:false, prod:true, stages:["mvp","growth"] },
+  { id:"uploadthing",name:"UploadThing / Cloudinary", cat:"store", summary:"File upload + image processing as a service.", pros:["Turnkey uploads","Image transforms","Good DX"], cons:["Cost at scale","Some lock-in"], bestFor:"Fast media pipelines", free:true, self:false, prod:true, stages:["hobby","mvp","growth"] },
+
+  // Payments
+  { id:"stripe",  name:"Stripe", cat:"pay", summary:"Default payments API. Developer-first, global coverage.", pros:["Best APIs","Global","Huge ecosystem"], cons:["You handle tax","Fees"], bestFor:"Most SaaS and marketplaces", free:true, self:false, prod:true, stages:["mvp","growth","scale"] },
+  { id:"paddle",  name:"Paddle", cat:"pay", summary:"Merchant-of-record. Handles tax, fraud, chargebacks for you.", pros:["Tax handled","MoR","Good for indie SaaS"], cons:["Higher fees","Less flexible"], bestFor:"Indie SaaS that hates tax", free:true, self:false, prod:true, stages:["mvp","growth"] },
+  { id:"lemon",   name:"Lemon Squeezy", cat:"pay", summary:"MoR competitor to Paddle. Indie-friendly checkout.", pros:["Simple checkout","MoR","Easy setup"], cons:["Smaller than Paddle","Fees"], bestFor:"Solo founders selling digital", free:true, self:false, prod:true, stages:["hobby","mvp"] },
+
+  // Email
+  { id:"resend",  name:"Resend", cat:"email", summary:"Modern-DX transactional email. React Email templates.", pros:["Beautiful DX","Free tier","React Email"], cons:["Newer","Less deliverability history"], bestFor:"TS teams sending transactional email", free:true, self:false, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"postmark",name:"Postmark", cat:"email", summary:"Deliverability-obsessed transactional email.", pros:["Best deliverability","Simple API","Fast support"], cons:["No marketing email","Pricier"], bestFor:"Apps where email must arrive", free:true, self:false, prod:true, stages:["mvp","growth","scale"] },
+  { id:"ses",     name:"AWS SES", cat:"email", summary:"Cheap email at scale; you handle reputation.", pros:["Dirt cheap","Scales infinitely","AWS integration"], cons:["You manage reputation","DX is rough"], bestFor:"High-volume email at low cost", free:true, self:false, prod:true, stages:["growth","scale"] },
+
+  // Observability
+  { id:"sentry",  name:"Sentry", cat:"obs", summary:"Error tracking. Nearly universal.", pros:["Excellent error grouping","SDKs for everything","Good free tier"], cons:["Pricier than logs","Performance product still growing"], bestFor:"Every production app", free:true, self:true, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"axiom",   name:"Axiom / Better Stack", cat:"obs", summary:"Modern log platforms with generous free tiers.", pros:["Cheap logs","Fast queries","Good UX"], cons:["Smaller than Datadog","Newer"], bestFor:"TS / modern-stack teams", free:true, self:false, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"grafana", name:"Grafana Cloud", cat:"obs", summary:"Metrics, logs, traces in one place. Generous free tier.", pros:["Unified telemetry","Open-source core","Free tier works"], cons:["Can get complex","Alerting quirks"], bestFor:"Unified observability on a budget", free:true, self:true, prod:true, stages:["mvp","growth","scale"] },
+  { id:"datadog", name:"Datadog", cat:"obs", summary:"Enterprise standard. Expensive, comprehensive, everywhere.", pros:["Every signal","Every integration","Great dashboards"], cons:["Very expensive","Billing surprises"], bestFor:"Post-Series-B engineering orgs", free:false, self:false, prod:true, stages:["scale"] },
+];
+
+/* =====================================================
+   STATE
+===================================================== */
+const state = {
+  q: "",
+  cats: new Set(), // empty = all
+  free: false,
+  self: false,
+  prod: false,
+  stage: null,     // null = all stages
+};
+
+/* =====================================================
+   HELPERS
+===================================================== */
+function catOf(id) { return CATEGORIES.find(c=>c.id===id); }
+function matches(t) {
+  if (state.q) {
+    const q = state.q.toLowerCase();
+    const hay = (t.name+" "+t.summary+" "+t.bestFor+" "+t.cat).toLowerCase();
+    if (!hay.includes(q)) return false;
+  }
+  if (state.cats.size && !state.cats.has(t.cat)) return false;
+  if (state.free && !t.free) return false;
+  if (state.self && !t.self) return false;
+  if (state.prod && !t.prod) return false;
+  if (state.stage && !t.stages.includes(state.stage)) return false;
+  return true;
+}
+
+/* =====================================================
+   CATEGORY CHIPS
+===================================================== */
+const chipsEl = document.getElementById("catChips");
+CATEGORIES.forEach(c => {
+  const b = document.createElement("button");
+  b.className = `filter-chip ${c.cls} chip rounded-full px-3 py-1 font-medium`;
+  b.textContent = c.label;
+  b.dataset.cat = c.id;
+  b.addEventListener("click", () => {
+    if (state.cats.has(c.id)) { state.cats.delete(c.id); b.classList.remove("active"); }
+    else { state.cats.add(c.id); b.classList.add("active"); }
+    render();
+  });
+  chipsEl.appendChild(b);
+});
+
+/* =====================================================
+   MIND MAP (radial SVG)
+===================================================== */
+const svg = document.getElementById("mindmap");
+const SVG_NS = "http://www.w3.org/2000/svg";
+const CX = 600, CY = 360;
+
+const BRANCHES = [
+  { cat:"lang",  angle:-Math.PI/2,                 radius:220 },
+  { cat:"baas",  angle:-Math.PI/2 + (2*Math.PI/5), radius:220 },
+  { cat:"host",  angle:-Math.PI/2 + (4*Math.PI/5), radius:220 },
+  { cat:"db",    angle:-Math.PI/2 + (6*Math.PI/5), radius:220 },
+  { cat:"auth",  angle:-Math.PI/2 + (8*Math.PI/5), radius:220 },
+];
+// minor categories branch from "host"-ish region; put them as a second ring
+const MINOR = ["jobs","store","pay","email","obs"];
+
+function buildMindmap() {
+  svg.innerHTML = "";
+  // background glow
+  const bg = document.createElementNS(SVG_NS,"circle");
+  bg.setAttribute("cx",CX); bg.setAttribute("cy",CY); bg.setAttribute("r","260");
+  bg.setAttribute("fill","url(#g1)"); bg.setAttribute("opacity","0.15");
+  const defs = document.createElementNS(SVG_NS,"defs");
+  defs.innerHTML = `<radialGradient id="g1"><stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#6366f1" stop-opacity="0"/></radialGradient>`;
+  svg.appendChild(defs); svg.appendChild(bg);
+
+  // central node
+  const center = document.createElementNS(SVG_NS,"g");
+  const cc = document.createElementNS(SVG_NS,"circle");
+  cc.setAttribute("cx",CX); cc.setAttribute("cy",CY); cc.setAttribute("r","58");
+  cc.setAttribute("fill","#0f172a");
+  const ct = document.createElementNS(SVG_NS,"text");
+  ct.setAttribute("x",CX); ct.setAttribute("y",CY-4);
+  ct.setAttribute("text-anchor","middle"); ct.setAttribute("fill","white");
+  ct.setAttribute("font-weight","700"); ct.setAttribute("font-size","18");
+  ct.textContent = "Backend";
+  const cs = document.createElementNS(SVG_NS,"text");
+  cs.setAttribute("x",CX); cs.setAttribute("y",CY+16);
+  cs.setAttribute("text-anchor","middle"); cs.setAttribute("fill","#94a3b8");
+  cs.setAttribute("font-size","11");
+  cs.textContent = "2026";
+  center.appendChild(cc); center.appendChild(ct); center.appendChild(cs);
+  svg.appendChild(center);
+
+  // major branches
+  BRANCHES.forEach(br => {
+    const bx = CX + Math.cos(br.angle)*br.radius;
+    const by = CY + Math.sin(br.angle)*br.radius;
+    // branch line
+    const line = document.createElementNS(SVG_NS,"line");
+    line.setAttribute("x1",CX); line.setAttribute("y1",CY);
+    line.setAttribute("x2",bx); line.setAttribute("y2",by);
+    line.setAttribute("stroke",getCatColor(br.cat));
+    line.setAttribute("stroke-width","3"); line.setAttribute("opacity","0.5");
+    line.classList.add("link"); line.dataset.cat = br.cat;
+    svg.appendChild(line);
+
+    // branch hub
+    const hub = document.createElementNS(SVG_NS,"g");
+    hub.classList.add("node"); hub.dataset.cat = br.cat;
+    const hc = document.createElementNS(SVG_NS,"circle");
+    hc.setAttribute("cx",bx); hc.setAttribute("cy",by); hc.setAttribute("r","38");
+    hc.setAttribute("fill",getCatColor(br.cat));
+    const ht = document.createElementNS(SVG_NS,"text");
+    ht.setAttribute("x",bx); ht.setAttribute("y",by+4);
+    ht.setAttribute("text-anchor","middle"); ht.setAttribute("fill","white");
+    ht.setAttribute("font-weight","700"); ht.setAttribute("font-size","12");
+    ht.textContent = catOf(br.cat).label.split(" ")[0];
+    hub.appendChild(hc); hub.appendChild(ht);
+    svg.appendChild(hub);
+
+    // leaves
+    const items = TECH.filter(t=>t.cat===br.cat);
+    items.forEach((t,i) => {
+      const spread = Math.min(items.length,6);
+      const offset = (i - (spread-1)/2) * 0.28;
+      const leafAngle = br.angle + offset;
+      const lr = br.radius + 120;
+      const lx = CX + Math.cos(leafAngle)*lr;
+      const ly = CY + Math.sin(leafAngle)*lr;
+
+      const ll = document.createElementNS(SVG_NS,"line");
+      ll.setAttribute("x1",bx); ll.setAttribute("y1",by);
+      ll.setAttribute("x2",lx); ll.setAttribute("y2",ly);
+      ll.setAttribute("stroke",getCatColor(br.cat));
+      ll.setAttribute("stroke-width","1.5"); ll.setAttribute("opacity","0.4");
+      ll.classList.add("link"); ll.dataset.tech = t.id; ll.dataset.cat = t.cat;
+      svg.appendChild(ll);
+
+      const g = document.createElementNS(SVG_NS,"g");
+      g.classList.add("node"); g.dataset.tech = t.id; g.dataset.cat = t.cat;
+
+      const w = Math.max(70, Math.min(140, t.name.length*6.2));
+      const rect = document.createElementNS(SVG_NS,"rect");
+      rect.setAttribute("x",lx-w/2); rect.setAttribute("y",ly-14);
+      rect.setAttribute("rx","12"); rect.setAttribute("ry","12");
+      rect.setAttribute("width",w); rect.setAttribute("height","28");
+      rect.setAttribute("fill","white");
+      rect.setAttribute("stroke",getCatColor(br.cat));
+      rect.setAttribute("stroke-width","2");
+      const tx = document.createElementNS(SVG_NS,"text");
+      tx.setAttribute("x",lx); tx.setAttribute("y",ly+4);
+      tx.setAttribute("text-anchor","middle");
+      tx.setAttribute("fill","#0f172a");
+      tx.setAttribute("font-size","10.5");
+      tx.setAttribute("font-weight","600");
+      tx.textContent = t.name.length > 20 ? t.name.slice(0,19)+"…" : t.name;
+      g.appendChild(rect); g.appendChild(tx);
+
+      g.addEventListener("click", () => {
+        const card = document.getElementById("card-"+t.id);
+        if (card) {
+          card.scrollIntoView({ behavior:"smooth", block:"center" });
+          card.classList.remove("flash"); void card.offsetWidth; card.classList.add("flash");
+        }
+      });
+      svg.appendChild(g);
+    });
+  });
+
+  // minor ring (bottom arc)
+  MINOR.forEach((cid, i) => {
+    const angle = Math.PI*0.55 + (i-(MINOR.length-1)/2)*0.18;
+    const r = 330;
+    const x = CX + Math.cos(angle)*r;
+    const y = CY + Math.sin(angle)*r;
+    const line = document.createElementNS(SVG_NS,"line");
+    line.setAttribute("x1",CX); line.setAttribute("y1",CY);
+    line.setAttribute("x2",x);  line.setAttribute("y2",y);
+    line.setAttribute("stroke",getCatColor(cid));
+    line.setAttribute("stroke-width","2"); line.setAttribute("opacity","0.35");
+    line.classList.add("link"); line.dataset.cat = cid;
+    svg.appendChild(line);
+
+    const g = document.createElementNS(SVG_NS,"g");
+    g.classList.add("node"); g.dataset.cat = cid;
+    const c = document.createElementNS(SVG_NS,"circle");
+    c.setAttribute("cx",x); c.setAttribute("cy",y); c.setAttribute("r","26");
+    c.setAttribute("fill",getCatColor(cid));
+    const tx = document.createElementNS(SVG_NS,"text");
+    tx.setAttribute("x",x); tx.setAttribute("y",y+4);
+    tx.setAttribute("text-anchor","middle"); tx.setAttribute("fill","white");
+    tx.setAttribute("font-weight","700"); tx.setAttribute("font-size","10");
+    tx.textContent = catOf(cid).label.split(" ")[0];
+    g.appendChild(c); g.appendChild(tx);
+    g.addEventListener("click", () => {
+      if (state.cats.has(cid)) state.cats.delete(cid); else state.cats.add(cid);
+      document.querySelectorAll(".filter-chip").forEach(el=>{
+        if (el.dataset.cat===cid) el.classList.toggle("active", state.cats.has(cid));
+      });
+      render();
+    });
+    svg.appendChild(g);
+  });
+}
+
+function getCatColor(cid) {
+  return { lang:"#6366f1", baas:"#10b981", host:"#f59e0b", db:"#e11d48",
+           auth:"#8b5cf6", jobs:"#0ea5e9", store:"#14b8a6", pay:"#ec4899",
+           email:"#f97316", obs:"#64748b" }[cid];
+}
+
+function updateMindmap() {
+  svg.querySelectorAll(".node").forEach(n => {
+    const t = n.dataset.tech ? TECH.find(x=>x.id===n.dataset.tech) : null;
+    let visible = true;
+    if (t) visible = matches(t);
+    else if (n.dataset.cat) {
+      // category hub visible if any child matches OR no cat filter
+      const any = TECH.some(x => x.cat===n.dataset.cat && matches(x));
+      visible = any;
+    }
+    n.classList.toggle("dim", !visible);
+  });
+  svg.querySelectorAll(".link").forEach(l => {
+    const t = l.dataset.tech ? TECH.find(x=>x.id===l.dataset.tech) : null;
+    let visible = true;
+    if (t) visible = matches(t);
+    else if (l.dataset.cat) visible = TECH.some(x => x.cat===l.dataset.cat && matches(x));
+    l.classList.toggle("dim", !visible);
+  });
+}
+
+/* =====================================================
+   STAGE SELECTOR
+===================================================== */
+const stageTabsEl = document.getElementById("stageTabs");
+STAGES.forEach((s,i) => {
+  const b = document.createElement("button");
+  b.className = "stage-btn px-4 py-2 rounded-full border border-slate-300 bg-white text-sm font-semibold hover:border-slate-900 transition";
+  b.innerHTML = `<span class="mr-1">${i+1}</span>${s.label} <span class="text-slate-400 font-normal ml-1">${s.cost}</span>`;
+  b.addEventListener("click", () => {
+    state.stage = state.stage === s.id ? null : s.id;
+    render();
+  });
+  b.dataset.stage = s.id;
+  stageTabsEl.appendChild(b);
+});
+
+function renderStagePanel() {
+  const panel = document.getElementById("stagePanel");
+  const s = STAGES.find(x=>x.id===state.stage);
+  if (!s) {
+    panel.innerHTML = `
+      <div class="text-center py-6">
+        <div class="text-slate-500 text-sm">Pick a stage above to see the recommended stack and filter cards to what fits.</div>
+        <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto">
+          ${STAGES.map(st=>`
+            <div class="rounded-xl border border-slate-200 bg-white p-3 text-left">
+              <div class="text-xs text-slate-500">${st.tag}</div>
+              <div class="text-sm font-bold text-slate-900">${st.label}</div>
+              <div class="text-xs text-slate-500 mt-1">${st.cost}/mo</div>
+            </div>`).join("")}
+        </div>
+      </div>`;
+    return;
+  }
+  const stack = STAGE_STACKS[s.id];
+  panel.innerHTML = `
+    <div class="flex items-start justify-between gap-4 flex-wrap">
+      <div class="max-w-2xl">
+        <div class="text-xs uppercase tracking-wider text-indigo-600 font-semibold">${s.tag}</div>
+        <h3 class="text-2xl font-bold text-slate-900 mt-1">${s.label} stage · ${s.cost}/month</h3>
+        <p class="text-slate-600 mt-2">${s.desc}</p>
+      </div>
+      <div class="text-right">
+        <div class="text-5xl font-extrabold text-slate-900">${s.cost}</div>
+        <div class="text-xs text-slate-500">typical monthly spend</div>
+      </div>
+    </div>
+    <div class="mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+      ${Object.entries(stack).map(([k,v])=>`
+        <div class="rounded-lg border border-slate-200 bg-white p-3">
+          <div class="text-[10px] uppercase tracking-wide text-slate-500 font-semibold">${k}</div>
+          <div class="text-sm font-semibold text-slate-900 mt-1">${v}</div>
+        </div>`).join("")}
+    </div>`;
+}
+
+function updateStageTabs() {
+  document.querySelectorAll(".stage-btn").forEach(b => {
+    b.classList.toggle("active", b.dataset.stage === state.stage);
+  });
+}
+
+/* =====================================================
+   CARD GRID
+===================================================== */
+const grid = document.getElementById("grid");
+function buildGrid() {
+  grid.innerHTML = "";
+  TECH.forEach(t => {
+    const c = catOf(t.cat);
+    const el = document.createElement("div");
+    el.id = "card-"+t.id;
+    el.className = `card ${c.cls} bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md`;
+    el.innerHTML = `
+      <div class="flex items-start justify-between gap-2 mb-2">
+        <h3 class="text-base font-bold text-slate-900">${t.name}</h3>
+        <span class="chip text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full whitespace-nowrap">${c.label}</span>
+      </div>
+      <p class="text-sm text-slate-600 leading-relaxed">${t.summary}</p>
+      <div class="mt-3 grid grid-cols-2 gap-3 text-xs">
+        <div>
+          <div class="font-semibold text-emerald-700 mb-1">Pros</div>
+          <ul class="text-slate-600 space-y-0.5">${t.pros.map(p=>`<li>• ${p}</li>`).join("")}</ul>
+        </div>
+        <div>
+          <div class="font-semibold text-rose-700 mb-1">Cons</div>
+          <ul class="text-slate-600 space-y-0.5">${t.cons.map(p=>`<li>• ${p}</li>`).join("")}</ul>
+        </div>
+      </div>
+      <div class="mt-3 text-xs text-slate-500"><b class="text-slate-700">Best for:</b> ${t.bestFor}</div>
+      <div class="mt-3 flex flex-wrap gap-1">
+        ${t.free ? '<span class="text-[10px] bg-emerald-100 text-emerald-700 rounded px-1.5 py-0.5 font-semibold">FREE TIER</span>' : ''}
+        ${t.self ? '<span class="text-[10px] bg-slate-100 text-slate-700 rounded px-1.5 py-0.5 font-semibold">SELF-HOSTABLE</span>' : ''}
+        ${t.prod ? '<span class="text-[10px] bg-indigo-100 text-indigo-700 rounded px-1.5 py-0.5 font-semibold">PROD-PROVEN</span>' : ''}
+      </div>
+      <div class="mt-2 flex gap-1">
+        ${STAGES.map(s=>{
+          const ok = t.stages.includes(s.id);
+          return `<span class="text-[10px] px-1.5 py-0.5 rounded ${ok?'bg-slate-900 text-white':'bg-slate-100 text-slate-400'}">${s.label}</span>`;
+        }).join("")}
+      </div>`;
+    grid.appendChild(el);
+  });
+}
+
+function updateGrid() {
+  let shown = 0;
+  TECH.forEach(t => {
+    const el = document.getElementById("card-"+t.id);
+    if (!el) return;
+    const ok = matches(t);
+    el.classList.toggle("hidden-card", !ok);
+    if (ok) shown++;
+  });
+  document.getElementById("gridCount").textContent = `${shown} of ${TECH.length} shown`;
+  document.getElementById("countLabel").textContent = `${shown} of ${TECH.length} technologies`;
+}
+
+/* =====================================================
+   RENDER
+===================================================== */
+function render() {
+  updateStageTabs();
+  renderStagePanel();
+  updateMindmap();
+  updateGrid();
+  // URL hash
+  const params = [];
+  if (state.stage) params.push("stage="+state.stage);
+  history.replaceState(null,"",params.length?"#"+params.join("&"):"#");
+}
+
+/* =====================================================
+   EVENTS
+===================================================== */
+document.getElementById("search").addEventListener("input", e => { state.q = e.target.value; render(); });
+document.getElementById("f-free").addEventListener("change", e => { state.free = e.target.checked; render(); });
+document.getElementById("f-self").addEventListener("change", e => { state.self = e.target.checked; render(); });
+document.getElementById("f-prod").addEventListener("change", e => { state.prod = e.target.checked; render(); });
+document.getElementById("reset").addEventListener("click", () => {
+  state.q=""; state.cats.clear(); state.free=state.self=state.prod=false; state.stage=null;
+  document.getElementById("search").value="";
+  ["f-free","f-self","f-prod"].forEach(id=>document.getElementById(id).checked=false);
+  document.querySelectorAll(".filter-chip").forEach(el=>el.classList.remove("active"));
+  render();
+});
+
+document.addEventListener("keydown", e => {
+  if (e.key === "/" && document.activeElement.tagName !== "INPUT") {
+    e.preventDefault(); document.getElementById("search").focus();
+  }
+  if (e.key === "Escape") document.getElementById("reset").click();
+  if (["1","2","3","4"].includes(e.key) && document.activeElement.tagName !== "INPUT") {
+    const idx = parseInt(e.key,10)-1;
+    state.stage = STAGES[idx].id;
+    render();
+  }
+});
+
+// URL hash on load
+(function parseHash(){
+  const h = location.hash.slice(1);
+  if (h) h.split("&").forEach(p => {
+    const [k,v] = p.split("=");
+    if (k==="stage" && STAGES.find(s=>s.id===v)) state.stage = v;
+  });
+})();
+
+/* =====================================================
+   BOOT
+===================================================== */
+buildMindmap();
+buildGrid();
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>TechStacks 2026 — Interactive Visual Guides to Modern Tech Stacks</title>
+<meta name="description" content="Free, open-source interactive guides to frontend and backend tech stacks in 2026. Compare 100+ technologies, filter by project stage, and find the stack that fits." />
+<meta name="keywords" content="tech stack, 2026, frontend, backend, React, Next.js, Node.js, Python, Go, Supabase, Tailwind, framework comparison, developer guide" />
+<meta property="og:title" content="TechStacks 2026 — Interactive Visual Guides" />
+<meta property="og:description" content="Free, open-source interactive guides to frontend and backend tech stacks. Compare 100+ technologies across 20 categories." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://stacks.stitchwebsite.com" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="TechStacks 2026 — Interactive Visual Guides" />
+<meta name="twitter:description" content="Compare 100+ frontend and backend technologies. Interactive mind maps, stage-based filtering, decision cheat sheets." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .card-hover { transition: transform .2s ease, box-shadow .2s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,.1); }
+  .gradient-text { background: linear-gradient(135deg, #6366f1, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+<!-- NAV -->
+<nav class="bg-slate-900 text-white text-sm">
+  <div class="max-w-5xl mx-auto px-6 py-2.5 flex items-center justify-between">
+    <span class="font-bold tracking-tight">⚡ TechStacks 2026</span>
+    <div class="flex items-center gap-4">
+      <a href="Frontend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Frontend</a>
+      <a href="Backend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Backend</a>
+      <a href="https://github.com/JagadeepPortfolio/2026TechStack" target="_blank" rel="noopener" class="inline-flex items-center gap-1 hover:text-slate-300 transition">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        Star on GitHub
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-cyan-50"></div>
+  <div class="relative max-w-5xl mx-auto px-6 py-20 text-center">
+    <div class="inline-flex items-center gap-2 text-xs font-medium text-indigo-700 bg-indigo-100 rounded-full px-3 py-1 mb-6">
+      <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+      Open source · Community-driven · Updated for 2026
+    </div>
+    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+      The <span class="gradient-text">Tech Stack</span> Guide<br/>You Actually Need
+    </h1>
+    <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+      Interactive visual guides to <b>100+ technologies</b> across frontend and backend.
+      Compare frameworks, filter by project stage, and find the stack that fits your team.
+    </p>
+    <div class="mt-10 flex items-center justify-center gap-4 flex-wrap">
+      <a href="Frontend-Stacks-Visual-Guide.html"
+         class="inline-flex items-center gap-2 px-6 py-3 bg-cyan-600 text-white font-semibold rounded-xl hover:bg-cyan-700 transition shadow-lg shadow-cyan-600/25">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+        Frontend Guide
+      </a>
+      <a href="Backend-Stacks-Visual-Guide.html"
+         class="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 transition shadow-lg shadow-indigo-600/25">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Backend Guide
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- GUIDE CARDS -->
+<section class="max-w-5xl mx-auto px-6 py-16">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+    <!-- Frontend Card -->
+    <a href="Frontend-Stacks-Visual-Guide.html" class="card-hover block rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div>
+          <h2 class="text-xl font-bold text-slate-900">Frontend Stacks</h2>
+          <p class="text-sm text-slate-500">60+ technologies</p>
+        </div>
+      </div>
+      <p class="text-slate-600 text-sm leading-relaxed mb-4">
+        React, Vue, Svelte, Angular, Next.js, Nuxt, Astro, Tailwind, shadcn/ui, Zustand, TanStack Query, Vite, Vitest, Playwright, and more.
+      </p>
+      <div class="flex flex-wrap gap-2">
+        <span class="text-[11px] bg-cyan-100 text-cyan-700 rounded-full px-2.5 py-0.5 font-medium">UI Frameworks</span>
+        <span class="text-[11px] bg-indigo-100 text-indigo-700 rounded-full px-2.5 py-0.5 font-medium">Meta-Frameworks</span>
+        <span class="text-[11px] bg-pink-100 text-pink-700 rounded-full px-2.5 py-0.5 font-medium">Styling</span>
+        <span class="text-[11px] bg-emerald-100 text-emerald-700 rounded-full px-2.5 py-0.5 font-medium">State</span>
+        <span class="text-[11px] bg-violet-100 text-violet-700 rounded-full px-2.5 py-0.5 font-medium">Build Tools</span>
+        <span class="text-[11px] bg-sky-100 text-sky-700 rounded-full px-2.5 py-0.5 font-medium">Testing</span>
+        <span class="text-[11px] bg-orange-100 text-orange-700 rounded-full px-2.5 py-0.5 font-medium">UI Libraries</span>
+        <span class="text-[11px] bg-amber-100 text-amber-700 rounded-full px-2.5 py-0.5 font-medium">+3 more</span>
+      </div>
+    </a>
+
+    <!-- Backend Card -->
+    <a href="Backend-Stacks-Visual-Guide.html" class="card-hover block rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><circle cx="6" cy="6" r="1"/><circle cx="6" cy="18" r="1"/></svg>
+        </div>
+        <div>
+          <h2 class="text-xl font-bold text-slate-900">Backend Stacks</h2>
+          <p class="text-sm text-slate-500">50+ technologies</p>
+        </div>
+      </div>
+      <p class="text-slate-600 text-sm leading-relaxed mb-4">
+        Node.js, Python, Go, Rust, Rails, Supabase, Firebase, Postgres, Neon, Clerk, Stripe, Inngest, Sentry, and more.
+      </p>
+      <div class="flex flex-wrap gap-2">
+        <span class="text-[11px] bg-indigo-100 text-indigo-700 rounded-full px-2.5 py-0.5 font-medium">Languages</span>
+        <span class="text-[11px] bg-emerald-100 text-emerald-700 rounded-full px-2.5 py-0.5 font-medium">BaaS</span>
+        <span class="text-[11px] bg-amber-100 text-amber-700 rounded-full px-2.5 py-0.5 font-medium">Hosting</span>
+        <span class="text-[11px] bg-rose-100 text-rose-700 rounded-full px-2.5 py-0.5 font-medium">Databases</span>
+        <span class="text-[11px] bg-violet-100 text-violet-700 rounded-full px-2.5 py-0.5 font-medium">Auth</span>
+        <span class="text-[11px] bg-sky-100 text-sky-700 rounded-full px-2.5 py-0.5 font-medium">Jobs & Queues</span>
+        <span class="text-[11px] bg-pink-100 text-pink-700 rounded-full px-2.5 py-0.5 font-medium">Payments</span>
+        <span class="text-[11px] bg-slate-100 text-slate-700 rounded-full px-2.5 py-0.5 font-medium">+3 more</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="border-t border-slate-200 bg-white">
+  <div class="max-w-5xl mx-auto px-6 py-16">
+    <h2 class="text-2xl font-bold text-slate-900 text-center mb-10">What's inside each guide</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a15 15 0 010 20M2 12h20"/></svg>
+        </div>
+        <h3 class="font-semibold text-slate-900 mb-2">Interactive Mind Map</h3>
+        <p class="text-sm text-slate-600">Visual overview of the entire landscape. Click nodes to jump to details. Filters dim irrelevant tech.</p>
+      </div>
+      <div class="text-center">
+        <div class="w-12 h-12 rounded-xl bg-cyan-100 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </div>
+        <h3 class="font-semibold text-slate-900 mb-2">Stage-Based Filtering</h3>
+        <p class="text-sm text-slate-600">Hobby, MVP, Growth, or Scale — pick your stage and see only the tech that fits your budget and team.</p>
+      </div>
+      <div class="text-center">
+        <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+        </div>
+        <h3 class="font-semibold text-slate-900 mb-2">Decision Cheat Sheets</h3>
+        <p class="text-sm text-slate-600">Quick recommendations by team situation, constraints, and anti-patterns to avoid.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMING SOON -->
+<section class="border-t border-slate-200">
+  <div class="max-w-5xl mx-auto px-6 py-16 text-center">
+    <h2 class="text-2xl font-bold text-slate-900 mb-3">More guides coming soon</h2>
+    <p class="text-slate-600 mb-8 max-w-xl mx-auto">We're building visual guides for every layer of the modern stack. Star the repo to get notified.</p>
+    <div class="flex items-center justify-center gap-4 flex-wrap">
+      <div class="rounded-xl border border-dashed border-slate-300 bg-slate-50 px-6 py-4 text-sm text-slate-500">
+        <div class="font-semibold text-slate-700">DevOps & Infra</div>
+        <div class="text-xs mt-1">CI/CD, IaC, Containers, Monitoring</div>
+      </div>
+      <div class="rounded-xl border border-dashed border-slate-300 bg-slate-50 px-6 py-4 text-sm text-slate-500">
+        <div class="font-semibold text-slate-700">AI / ML Stacks</div>
+        <div class="text-xs mt-1">LLMs, Vector DBs, RAG, Agents</div>
+      </div>
+      <div class="rounded-xl border border-dashed border-slate-300 bg-slate-50 px-6 py-4 text-sm text-slate-500">
+        <div class="font-semibold text-slate-700">Mobile Stacks</div>
+        <div class="text-xs mt-1">React Native, Flutter, SwiftUI, KMP</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-slate-900 text-white">
+  <div class="max-w-5xl mx-auto px-6 py-16 text-center">
+    <h2 class="text-3xl font-bold mb-4">Built by developers, for developers</h2>
+    <p class="text-slate-400 mb-8 max-w-lg mx-auto">
+      This is an open-source project. Found something outdated? Know a tool we missed? Contribute on GitHub.
+    </p>
+    <div class="flex items-center justify-center gap-4 flex-wrap">
+      <a href="https://github.com/JagadeepPortfolio/2026TechStack" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2 px-6 py-3 bg-white text-slate-900 font-semibold rounded-xl hover:bg-slate-100 transition">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        Star on GitHub
+      </a>
+      <a href="https://github.com/JagadeepPortfolio/2026TechStack/issues" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2 px-6 py-3 border border-slate-600 text-slate-300 font-semibold rounded-xl hover:border-slate-400 hover:text-white transition">
+        Suggest a Technology
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-slate-950 text-slate-500 text-sm">
+  <div class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between flex-wrap gap-3">
+    <div>⚡ TechStacks 2026 · <a href="https://stitchwebsite.com" class="hover:text-slate-300 transition">stitchwebsite.com</a></div>
+    <div class="text-xs">MIT License · Zero dependencies · No tracking</div>
+  </div>
+</footer>
+
+</body>
+</html>
