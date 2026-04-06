@@ -85,7 +85,7 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 No build step needed. Just open the HTML files:
 
 ```bash
-git clone https://github.com/JagadeepPortfolio/awesome-vibecoding-stacks.git
+git clone https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks.git
 cd 2026TechStack
 open index.html
 # or use any local server:
