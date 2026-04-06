@@ -424,77 +424,62 @@ let dnsRecords = { a:[], cname:[], mx:[], txt:[], ns:[] };
 let pathResponses = {};
 let stepsCompleted = 0;
 
-// ========== CORS PROXY FETCHING ==========
+// ========== FETCHING LAYER ==========
 
-// Strategy 1: allorigins /get returns JSON with headers info
-// Strategy 2: corsproxy.io for raw HTML
-// Strategy 3: headers.scrapeup.com for response headers (fallback)
-const RAW_PROXIES = [
+// Primary: Our own Cloudflare Worker (returns HTML + ALL response headers as JSON)
+const WORKER_URL = 'https://stack-detector-proxy.totsyclicks.workers.dev/';
+
+// Fallback: Free CORS proxies (less reliable, strips headers)
+const FALLBACK_PROXIES = [
   url => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
   url => `https://corsproxy.io/?${encodeURIComponent(url)}`,
 ];
 
 async function fetchWithHeaders(url) {
-  // Primary: Use multiple header-inspection services in parallel
-  const results = await Promise.allSettled([
-    // Service 1: allorigins /get (returns content + some metadata)
-    (async () => {
-      const r = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`, { signal: AbortSignal.timeout(15000) });
-      if (!r.ok) throw new Error('not ok');
+  // Primary: Our Cloudflare Worker — returns JSON with {html, headers, status}
+  try {
+    const r = await fetch(`${WORKER_URL}?url=${encodeURIComponent(url)}`, { signal: AbortSignal.timeout(20000) });
+    if (r.ok) {
       const data = await r.json();
-      return { content: data.contents || '', source: 'allorigins' };
-    })(),
-    // Service 2: Use a CORS proxy that may expose some headers
-    (async () => {
-      const r = await fetch(`https://corsproxy.io/?${encodeURIComponent(url)}`, { signal: AbortSignal.timeout(15000) });
-      if (!r.ok) throw new Error('not ok');
-      const hdrs = {};
-      r.headers.forEach((v, k) => { hdrs[k.toLowerCase()] = v; });
-      const text = await r.text();
-      return { content: text, headers: hdrs, source: 'corsproxy' };
-    })(),
-  ]);
-
-  let html = '';
-  let hdrs = {};
-
-  results.forEach(r => {
-    if (r.status === 'fulfilled') {
-      if (r.value.content && r.value.content.length > html.length) html = r.value.content;
-      if (r.value.headers) Object.assign(hdrs, r.value.headers);
+      if (data.ok && data.html) {
+        return { content: data.html, headers: data.headers || {}, ok: true, source: 'worker' };
+      }
     }
-  });
+  } catch(e) { console.warn('Worker fetch failed, trying fallbacks:', e); }
 
-  return { content: html, headers: hdrs, ok: html.length > 0 };
+  // Fallback: Free CORS proxies (headers will be limited)
+  for (const mkUrl of FALLBACK_PROXIES) {
+    try {
+      const r = await fetch(mkUrl(url), { signal: AbortSignal.timeout(15000) });
+      if (r.ok) {
+        const hdrs = {};
+        r.headers.forEach((v, k) => { hdrs[k.toLowerCase()] = v; });
+        const text = await r.text();
+        if (text.length > 100) return { content: text, headers: hdrs, ok: true, source: 'fallback' };
+      }
+    } catch(e) { continue; }
+  }
+
+  return { content: '', headers: {}, ok: false };
 }
 
 async function proxyFetch(url) {
-  for (const mkUrl of RAW_PROXIES) {
+  // For path probing, also use worker first
+  try {
+    const r = await fetch(`${WORKER_URL}?url=${encodeURIComponent(url)}`, { signal: AbortSignal.timeout(12000) });
+    if (r.ok) {
+      const data = await r.json();
+      if (data.ok) return { content: data.html || '', ok: true };
+    }
+  } catch(e) {}
+  // Fallback
+  for (const mkUrl of FALLBACK_PROXIES) {
     try {
-      const r = await fetch(mkUrl(url), { signal: AbortSignal.timeout(12000) });
-      if (r.ok) return { content: await r.text(), ok: true };
+      const r = await fetch(mkUrl(url), { signal: AbortSignal.timeout(10000) });
+      if (r.ok) { const t = await r.text(); if (t.length > 10) return { content: t, ok: true }; }
     } catch(e) { continue; }
   }
   return { content: '', ok: false };
-}
-
-// Extract headers from HTML itself — many sites embed server info
-function extractHeadersFromHtml(html) {
-  const extracted = {};
-  // Some proxies embed original headers in comments or meta tags
-  // Also detect from HTML patterns what headers WOULD have said
-
-  // Detect server from generator meta
-  const gen = html.match(/<meta[^>]+name=["']generator["'][^>]+content=["']([^"']+)["']/i)
-             || html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+name=["']generator["']/i);
-  if (gen) extracted['x-generator'] = gen[1];
-
-  // Detect X-Powered-By from common patterns
-  if (/__NEXT_DATA__|_next\/static/i.test(html)) extracted['x-meta-framework'] = 'Next.js';
-  if (/__NUXT__|_nuxt\//i.test(html)) extracted['x-meta-framework'] = 'Nuxt';
-  if (/___gatsby/i.test(html)) extracted['x-meta-framework'] = 'Gatsby';
-
-  return extracted;
 }
 
 // ========== DETECTION METHODS ==========
