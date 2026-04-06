@@ -2,7 +2,7 @@
 name: Suggest a Technology
 about: Suggest a technology to add to one of the guides
 title: "[Add] "
-labels: enhancement
+labels: enhancement, good first issue
 ---
 
 ## Technology Name
@@ -11,12 +11,16 @@ labels: enhancement
 ## Guide
 - [ ] Frontend
 - [ ] Backend
+- [ ] AI/ML
+- [ ] AI Coding Tools
+- [ ] DevOps
+- [ ] Mobile
 
 ## Category
-<!-- e.g., UI Framework, Database, Hosting, etc. -->
+<!-- e.g., UI Framework, Database, Hosting, LLM Provider, Container Tool, etc. -->
 
 ## Why should it be included?
-<!-- Brief explanation of why this belongs in the 2026 guide -->
+<!-- Brief explanation: adoption level, unique value, relevance in 2026 -->
 
 ## Suggested Details
 - **Summary:** 
@@ -25,3 +29,4 @@ labels: enhancement
 - **Best for:** 
 - **Free tier?** Yes / No
 - **Stages:** Hobby / MVP / Growth / Scale
+- **Source/Link:** <!-- Official site or docs -->

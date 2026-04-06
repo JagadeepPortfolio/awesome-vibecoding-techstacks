@@ -6,136 +6,457 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks/pulls)
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-**The open-source, interactive visual guide to modern tech stacks for vibe coding.**
+**The open-source, community-driven visual guide to modern tech stacks.**
 
-> Compare 200+ technologies across 50 categories. Filter by project stage (Hobby / MVP / Growth / Scale), search by keyword, and find the stack that fits your team. Zero dependencies. No sign-up. Just open and explore.
+> 280+ technologies across 8 guides. 11 head-to-head comparisons. An interactive stack picker. Filter by project stage, search by keyword, find the stack that fits. Zero dependencies. No sign-up. Just open and explore.
 
-**🌐 Live site:** [opentechstack.stitchwebsite.com](https://opentechstack.stitchwebsite.com)
-
-**⭐ If this is useful, star the repo — it helps others find it!**
+**🌐 Live:** [opentechstack.stitchwebsite.com](https://opentechstack.stitchwebsite.com) · **⭐ Star to help others find it!**
 
 ---
 
-## What's Inside
+## Table of Contents
 
-### [Frontend Stacks Guide](https://opentechstack.stitchwebsite.com/Frontend-Stacks-Visual-Guide.html)
-60+ technologies across UI frameworks, meta-frameworks, styling, state management, data fetching, forms, build tools, testing, UI libraries, and hosting.
-
-**Covers:** React, Vue, Svelte, Solid, Angular, Next.js, Nuxt, Astro, SvelteKit, Tailwind, shadcn/ui, Zustand, TanStack Query, tRPC, Vite, Vitest, Playwright, and more.
-
-### [Backend Stacks Guide](https://opentechstack.stitchwebsite.com/Backend-Stacks-Visual-Guide.html)
-50+ technologies across languages/frameworks, BaaS, hosting, databases, auth, jobs/queues, storage, payments, email, and observability.
-
-**Covers:** Node.js, Python, Go, Rust, Rails, Elixir, Supabase, Firebase, Postgres, Neon, Clerk, Auth0, Stripe, Inngest, Temporal, Sentry, and more.
-
-### [AI/ML Stacks Guide](https://opentechstack.stitchwebsite.com/AIML-Stacks-Visual-Guide.html)
-40+ technologies across LLM providers, orchestration frameworks, vector databases, embeddings, RAG, agents, fine-tuning, eval, inference infra, and data labeling.
-
-**Covers:** OpenAI, Claude, Gemini, Llama, LangChain, LlamaIndex, Pinecone, Qdrant, pgvector, CrewAI, vLLM, Modal, Hugging Face, LangSmith, and more.
-
-### [DevOps & Infra Stacks Guide](https://opentechstack.stitchwebsite.com/DevOps-Stacks-Visual-Guide.html)
-40+ technologies across CI/CD, infrastructure as code, containers, cloud platforms, monitoring, security, networking, GitOps, registries, and platform engineering.
-
-**Covers:** GitHub Actions, Terraform, Docker, Kubernetes, AWS, Grafana, Datadog, Vault, ArgoCD, Helm, Backstage, and more.
-
-### [Mobile Stacks Guide](https://opentechstack.stitchwebsite.com/Mobile-Stacks-Visual-Guide.html)
-40+ technologies across cross-platform frameworks, native development, UI components, navigation, state management, backend integration, testing, build/deploy, analytics, and design.
-
-**Covers:** React Native, Expo, Flutter, SwiftUI, Jetpack Compose, KMP, NativeWind, Detox, Fastlane, Firebase, and more.
+- [Guides](#-guides)
+- [Head-to-Head Comparisons](#-head-to-head-comparisons)
+- [Stack Picker Wizard](#-stack-picker-wizard)
+- [Technology Directory](#-technology-directory)
+- [Features](#-features)
+- [Contributing](#-contributing)
+- [Running Locally](#-running-locally)
+- [Roadmap](#-roadmap)
+- [Share It](#-share-it)
+- [License](#license)
 
 ---
 
-## Features
+## 📚 Guides
 
-- **Interactive Mind Map** — Visual overview of the landscape. Click nodes to jump to detail cards.
-- **Stage-Based Filtering** — Hobby ($0), MVP ($25-60), Growth ($50-500), Scale ($500+). Pick your stage to see what fits.
-- **Search & Filter** — Full-text search, category chips, filter by free tier / self-hostable / production-proven / TypeScript-first.
-- **Decision Cheat Sheets** — Quick picks by team situation, constraints, and anti-patterns to avoid.
-- **Keyboard Shortcuts** — `/` to search, `1-4` for stages, `Esc` to reset.
-- **Zero Dependencies** — Pure HTML + Tailwind CDN + vanilla JS. No build step. Just open the HTML.
-
----
-
-## Tech Stack (meta!)
-
-- Vanilla HTML / CSS / JavaScript
-- Tailwind CSS (CDN)
-- SVG mind maps (generated at runtime)
-- No frameworks, no build tools, no node_modules
+| Guide | Technologies | Highlights |
+|-------|-------------|------------|
+| [**Frontend Stacks**](https://opentechstack.stitchwebsite.com/Frontend-Stacks-Visual-Guide.html) | 60+ | React, Vue, Svelte, Solid, Next.js, Astro, Tailwind, Zustand, Vite, Playwright |
+| [**Backend Stacks**](https://opentechstack.stitchwebsite.com/Backend-Stacks-Visual-Guide.html) | 50+ | Node.js, Python, Go, Rust, Rails, Supabase, Firebase, Postgres, Stripe, Sentry |
+| [**AI/ML Stacks**](https://opentechstack.stitchwebsite.com/AIML-Stacks-Visual-Guide.html) | 45+ | OpenAI, Claude, Gemini, Llama, LangChain, LlamaIndex, Pinecone, vLLM, Modal |
+| [**AI Coding Tools**](https://opentechstack.stitchwebsite.com/AI-Coding-Tools-Visual-Guide.html) | 80+ | Cursor, Copilot, Windsurf, Claude Code, Codex CLI, Gemini CLI, v0, Bolt, Devin |
+| [**DevOps & Infra**](https://opentechstack.stitchwebsite.com/DevOps-Stacks-Visual-Guide.html) | 46+ | GitHub Actions, Terraform, Docker, Kubernetes, AWS, Grafana, ArgoCD, Backstage |
+| [**Mobile Stacks**](https://opentechstack.stitchwebsite.com/Mobile-Stacks-Visual-Guide.html) | 46+ | React Native, Expo, Flutter, SwiftUI, Jetpack Compose, KMP, Fastlane |
+| [**Stack Combos**](https://opentechstack.stitchwebsite.com/Stack-Combos.html) | 12 recipes | Indie Hacker, AI Startup, SaaS Rocket, Enterprise Fortress, Budget Warrior |
 
 ---
 
-## Contributing
+## ⚔️ Head-to-Head Comparisons
 
-We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+Side-by-side breakdowns with pricing, features, benchmarks, and clear verdicts.
 
-**Quick ways to contribute:**
-- Add a new technology entry (just add an object to the `TECH` array)
-- Update outdated information (pricing, features, stages)
-- Fix typos or improve descriptions
-- Suggest new guide categories (DevOps, AI/ML, Mobile)
+| Comparison | Category |
+|-----------|----------|
+| [Cursor vs GitHub Copilot vs Windsurf](https://opentechstack.stitchwebsite.com/compare/cursor-vs-copilot-vs-windsurf.html) | AI Coding |
+| [Claude Code vs OpenAI Codex vs Gemini CLI](https://opentechstack.stitchwebsite.com/compare/claude-code-vs-codex-vs-gemini-cli.html) | AI Coding |
+| [Next.js vs Remix vs Astro](https://opentechstack.stitchwebsite.com/compare/nextjs-vs-remix-vs-astro.html) | Frontend |
+| [React vs Vue vs Svelte](https://opentechstack.stitchwebsite.com/compare/react-vs-vue-vs-svelte.html) | Frontend |
+| [Tailwind CSS vs CSS Modules vs Vanilla Extract](https://opentechstack.stitchwebsite.com/compare/tailwind-vs-css-modules.html) | Frontend |
+| [Zustand vs Redux Toolkit vs Jotai](https://opentechstack.stitchwebsite.com/compare/zustand-vs-redux.html) | Frontend |
+| [Supabase vs Firebase](https://opentechstack.stitchwebsite.com/compare/supabase-vs-firebase.html) | Backend |
+| [Clerk vs Auth0 vs Supabase Auth](https://opentechstack.stitchwebsite.com/compare/clerk-vs-auth0.html) | Backend |
+| [Vercel vs Cloudflare Pages vs Netlify](https://opentechstack.stitchwebsite.com/compare/vercel-vs-cloudflare-vs-netlify.html) | DevOps |
+| [Docker vs Podman vs Kubernetes](https://opentechstack.stitchwebsite.com/compare/docker-vs-podman-vs-kubernetes.html) | DevOps |
+| [LangChain vs LlamaIndex vs Haystack](https://opentechstack.stitchwebsite.com/compare/langchain-vs-llamaindex.html) | AI/ML |
+
+> **Want a comparison we haven't covered?** [Open an issue →](https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks/issues/new?template=comparison-request.md)
 
 ---
 
-## Roadmap
+## 🧭 Stack Picker Wizard
 
-- [x] DevOps & Infrastructure Stacks Guide
-- [x] AI / ML Stacks Guide
-- [x] Mobile Stacks Guide
-- [x] Full-Stack Combo Recommendations
-- [ ] Stack Comparison Tool (side-by-side)
+**[Try it →](https://opentechstack.stitchwebsite.com/stack-picker.html)** Answer 5 questions, get a full-stack recommendation with per-layer reasoning. Shareable results.
+
+---
+
+## 📖 Technology Directory
+
+A browsable reference of every technology covered. **PRs welcome** to add, update, or correct entries!
+
+### Frontend (60+)
+
+<details>
+<summary><strong>UI Frameworks</strong></summary>
+
+| Technology | Stages | Free | TS-first |
+|-----------|--------|------|----------|
+| React | Hobby → Scale | ✅ | ✅ |
+| Vue 3 | Hobby → Scale | ✅ | ✅ |
+| Svelte 5 | Hobby → Growth | ✅ | ✅ |
+| Solid.js | Hobby → Growth | ✅ | ✅ |
+| Angular | MVP → Scale | ✅ | ✅ |
+| Preact | Hobby → MVP | ✅ | ✅ |
+| Qwik | Hobby → Growth | ✅ | ✅ |
+| HTMX | Hobby → MVP | ✅ | ❌ |
+| Lit | Hobby → Growth | ✅ | ✅ |
+
+</details>
+
+<details>
+<summary><strong>Meta-Frameworks</strong></summary>
+
+| Technology | Stages | Free | TS-first |
+|-----------|--------|------|----------|
+| Next.js 15 | Hobby → Scale | ✅ | ✅ |
+| Nuxt 3 | Hobby → Scale | ✅ | ✅ |
+| Astro | Hobby → Growth | ✅ | ✅ |
+| SvelteKit | Hobby → Growth | ✅ | ✅ |
+| Remix | MVP → Scale | ✅ | ✅ |
+| Gatsby | Hobby → Growth | ✅ | ✅ |
+
+</details>
+
+<details>
+<summary><strong>Styling</strong></summary>
+
+| Technology | Stages | Free | TS-first |
+|-----------|--------|------|----------|
+| Tailwind CSS | Hobby → Scale | ✅ | ❌ |
+| CSS Modules | Hobby → Scale | ✅ | ❌ |
+| Vanilla Extract | MVP → Scale | ✅ | ✅ |
+| Panda CSS | MVP → Scale | ✅ | ✅ |
+| UnoCSS | Hobby → Growth | ✅ | ✅ |
+| StyleX | Growth → Scale | ✅ | ✅ |
+
+</details>
+
+<details>
+<summary><strong>State Management</strong></summary>
+
+| Technology | Stages | Free | TS-first |
+|-----------|--------|------|----------|
+| Zustand | Hobby → Scale | ✅ | ✅ |
+| Redux Toolkit | MVP → Scale | ✅ | ✅ |
+| Jotai | Hobby → Growth | ✅ | ✅ |
+| TanStack Query | Hobby → Scale | ✅ | ✅ |
+| Pinia | Hobby → Scale | ✅ | ✅ |
+| Signals (various) | Hobby → Growth | ✅ | ✅ |
+
+</details>
+
+<details>
+<summary><strong>Build Tools & Testing</strong></summary>
+
+| Technology | Stages | Free | TS-first |
+|-----------|--------|------|----------|
+| Vite | Hobby → Scale | ✅ | ✅ |
+| Turbopack | MVP → Scale | ✅ | ✅ |
+| Vitest | Hobby → Scale | ✅ | ✅ |
+| Playwright | MVP → Scale | ✅ | ✅ |
+| Cypress | MVP → Scale | ✅ | ✅ |
+| Biome | Hobby → Scale | ✅ | ✅ |
+| ESLint | Hobby → Scale | ✅ | ✅ |
+
+</details>
+
+<details>
+<summary><strong>UI Libraries</strong></summary>
+
+| Technology | Stages | Free | TS-first |
+|-----------|--------|------|----------|
+| shadcn/ui | Hobby → Scale | ✅ | ✅ |
+| Radix UI | Hobby → Scale | ✅ | ✅ |
+| Headless UI | Hobby → Growth | ✅ | ✅ |
+| MUI (Material) | MVP → Scale | ✅ | ✅ |
+| Ant Design | MVP → Scale | ✅ | ✅ |
+| Mantine | Hobby → Growth | ✅ | ✅ |
+
+</details>
+
+### Backend (50+)
+
+<details>
+<summary><strong>Languages & Frameworks</strong></summary>
+
+| Technology | Stages | Free | Self-host |
+|-----------|--------|------|-----------|
+| Node.js / Express | Hobby → Scale | ✅ | ✅ |
+| Python / FastAPI | Hobby → Scale | ✅ | ✅ |
+| Python / Django | MVP → Scale | ✅ | ✅ |
+| Go | MVP → Scale | ✅ | ✅ |
+| Rust / Actix | Growth → Scale | ✅ | ✅ |
+| Ruby on Rails | Hobby → Scale | ✅ | ✅ |
+| Elixir / Phoenix | MVP → Scale | ✅ | ✅ |
+| Hono | Hobby → Growth | ✅ | ✅ |
+| tRPC | Hobby → Growth | ✅ | ✅ |
+
+</details>
+
+<details>
+<summary><strong>BaaS & Databases</strong></summary>
+
+| Technology | Stages | Free | Self-host |
+|-----------|--------|------|-----------|
+| Supabase | Hobby → Scale | ✅ | ✅ |
+| Firebase | Hobby → Growth | ✅ | ❌ |
+| Appwrite | Hobby → Growth | ✅ | ✅ |
+| PostgreSQL | Hobby → Scale | ✅ | ✅ |
+| Neon | Hobby → Growth | ✅ | ❌ |
+| PlanetScale | MVP → Scale | ✅ | ❌ |
+| MongoDB | Hobby → Scale | ✅ | ✅ |
+| Redis | Hobby → Scale | ✅ | ✅ |
+| Turso (libSQL) | Hobby → Growth | ✅ | ✅ |
+
+</details>
+
+<details>
+<summary><strong>Auth, Payments & Infra</strong></summary>
+
+| Technology | Stages | Free | Self-host |
+|-----------|--------|------|-----------|
+| Clerk | Hobby → Scale | ✅ | ❌ |
+| Auth0 | MVP → Scale | ✅ | ❌ |
+| Supabase Auth | Hobby → Growth | ✅ | ✅ |
+| Stripe | MVP → Scale | ✅ | ❌ |
+| Sentry | Hobby → Scale | ✅ | ✅ |
+| Inngest | MVP → Growth | ✅ | ✅ |
+| Resend | Hobby → Growth | ✅ | ❌ |
+
+</details>
+
+### AI/ML (45+)
+
+<details>
+<summary><strong>LLM Providers & Orchestration</strong></summary>
+
+| Technology | Stages | Free | Open Source |
+|-----------|--------|------|-------------|
+| OpenAI (GPT-4o) | Hobby → Scale | ✅ | ❌ |
+| Anthropic Claude | Hobby → Scale | ✅ | ❌ |
+| Google Gemini | Hobby → Scale | ✅ | ❌ |
+| Meta Llama 3 | Hobby → Scale | ✅ | ✅ |
+| Mistral | Hobby → Scale | ✅ | ✅ |
+| LangChain | Hobby → Scale | ✅ | ✅ |
+| LlamaIndex | Hobby → Scale | ✅ | ✅ |
+| CrewAI | MVP → Growth | ✅ | ✅ |
+| Haystack | MVP → Scale | ✅ | ✅ |
+
+</details>
+
+<details>
+<summary><strong>Vector DBs & Inference</strong></summary>
+
+| Technology | Stages | Free | Self-host |
+|-----------|--------|------|-----------|
+| Pinecone | MVP → Scale | ✅ | ❌ |
+| Qdrant | Hobby → Scale | ✅ | ✅ |
+| Weaviate | MVP → Scale | ✅ | ✅ |
+| pgvector | Hobby → Scale | ✅ | ✅ |
+| ChromaDB | Hobby → Growth | ✅ | ✅ |
+| vLLM | Growth → Scale | ✅ | ✅ |
+| Modal | MVP → Scale | ✅ | ❌ |
+| Hugging Face | Hobby → Scale | ✅ | ✅ |
+
+</details>
+
+### AI Coding Tools (80+)
+
+<details>
+<summary><strong>AI Code Editors</strong></summary>
+
+| Technology | Price | Best For |
+|-----------|-------|----------|
+| Cursor | $20/mo | AI-first full IDE |
+| GitHub Copilot | $10/mo | Inline completions in VS Code |
+| Windsurf (Codeium) | Free–$15/mo | Budget-friendly AI editor |
+| Zed + AI | Free | Performance-first editor |
+| Cody (Sourcegraph) | Free–$9/mo | Large codebase context |
+| Continue.dev | Free (OSS) | Open-source copilot |
+| Tabnine | Free–$12/mo | Privacy-focused completions |
+| AugmentCode | $30/mo | Enterprise context engine |
+
+</details>
+
+<details>
+<summary><strong>Coding Agents & CLI</strong></summary>
+
+| Technology | Price | Best For |
+|-----------|-------|----------|
+| Claude Code | Usage-based | Terminal agentic coding |
+| OpenAI Codex CLI | Usage-based | Open-source terminal agent |
+| Gemini CLI | Free (preview) | Google ecosystem agent |
+| Devin (Cognition) | $500/mo | Autonomous software engineer |
+| Amazon Q Developer | Free–$19/mo | AWS-integrated AI |
+| Aider | Free (OSS) | Git-aware pair programming |
+| OpenHands | Free (OSS) | Open-source Devin alternative |
+| Kilo Code | Free (OSS) | VS Code autonomous agent |
+
+</details>
+
+<details>
+<summary><strong>Vibe Coding / App Builders</strong></summary>
+
+| Technology | Price | Best For |
+|-----------|-------|----------|
+| v0 (Vercel) | Free–$20/mo | UI component generation |
+| Bolt.new | Free–$20/mo | Full-stack app from prompt |
+| Lovable | Free–$20/mo | Idea-to-app builder |
+| Replit Agent | Free–$25/mo | Cloud IDE with AI agent |
+| Firebase Genkit | Free (OSS) | AI-powered backend flows |
+| Create.xyz | Free tier | No-code AI app builder |
+
+</details>
+
+### DevOps (46+)
+
+<details>
+<summary><strong>CI/CD, Containers & Cloud</strong></summary>
+
+| Technology | Stages | Free | Self-host |
+|-----------|--------|------|-----------|
+| GitHub Actions | Hobby → Scale | ✅ | ✅ |
+| Terraform | MVP → Scale | ✅ | ✅ |
+| Docker | Hobby → Scale | ✅ | ✅ |
+| Kubernetes | Growth → Scale | ✅ | ✅ |
+| AWS | Hobby → Scale | ✅ | ❌ |
+| GCP | Hobby → Scale | ✅ | ❌ |
+| Azure | MVP → Scale | ✅ | ❌ |
+| Vercel | Hobby → Scale | ✅ | ❌ |
+| Cloudflare | Hobby → Scale | ✅ | ❌ |
+| Grafana | Hobby → Scale | ✅ | ✅ |
+| ArgoCD | Growth → Scale | ✅ | ✅ |
+| Backstage | Growth → Scale | ✅ | ✅ |
+
+</details>
+
+### Mobile (46+)
+
+<details>
+<summary><strong>Cross-Platform & Native</strong></summary>
+
+| Technology | Stages | Free | Best For |
+|-----------|--------|------|----------|
+| React Native | Hobby → Scale | ✅ | JS teams going mobile |
+| Expo | Hobby → Scale | ✅ | React Native supercharged |
+| Flutter | Hobby → Scale | ✅ | Beautiful cross-platform |
+| SwiftUI | Hobby → Scale | ✅ | iOS-native |
+| Jetpack Compose | Hobby → Scale | ✅ | Android-native |
+| KMP | MVP → Scale | ✅ | Shared Kotlin logic |
+| .NET MAUI | MVP → Scale | ✅ | C# cross-platform |
+
+</details>
+
+---
+
+## ✨ Features
+
+- **Interactive Mind Maps** — Visual overview of each landscape. Click nodes to jump to detail cards.
+- **Stage-Based Filtering** — Hobby ($0) · MVP ($25-60) · Growth ($50-500) · Scale ($500+)
+- **Search & Filter** — Full-text search, category chips, free tier / self-hostable / production-proven / TypeScript-first
+- **Decision Cheat Sheets** — Quick picks by team situation, constraints, and anti-patterns
+- **Dark Mode** — System-aware with manual toggle
+- **Keyboard Shortcuts** — `/` search · `1-4` stages · `Esc` reset
+- **Zero Dependencies** — Pure HTML + Tailwind CDN + vanilla JS. No build step.
+
+---
+
+## 🤝 Contributing
+
+We're building this **as a community**. Every contribution matters — from fixing a typo to adding an entire guide.
+
+### Quick Start (5 minutes)
+
+```bash
+# 1. Fork & clone
+git clone https://github.com/YOUR-USERNAME/awesome-vibecoding-techstacks.git
+cd awesome-vibecoding-techstacks
+
+# 2. Open in browser — no build step!
+open index.html
+# or: python3 -m http.server 8080
+
+# 3. Edit, test, PR
+```
+
+### Ways to Contribute
+
+| What | Difficulty | Template |
+|------|-----------|----------|
+| Fix a typo or outdated info | 🟢 Easy | [Correction →](https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks/issues/new?template=correction.md) |
+| Add a technology | 🟢 Easy | [Add Tech →](https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks/issues/new?template=add-technology.md) |
+| Request a comparison | 🟡 Medium | [Request →](https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks/issues/new?template=comparison-request.md) |
+| Suggest a stack combo | 🟡 Medium | [Suggest →](https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks/issues/new?template=stack-combo.md) |
+| Build a new comparison page | 🔴 Advanced | [Guide](CONTRIBUTING.md#building-a-comparison-page) |
+
+### How to Add a Technology (1 minute)
+
+Find the right HTML file, locate the `TECH` array, and add an object:
+
+```js
+{
+  id: "my-tool",
+  name: "My Tool",
+  cat: "fw",                    // category code
+  summary: "What it does and why it matters in 2026.",
+  pros: ["Fast", "Great DX", "Active community"],
+  cons: ["Small ecosystem", "Breaking changes"],
+  bestFor: "When to reach for this tool",
+  free: true,
+  ts: true,
+  prod: true,
+  stages: ["hobby", "mvp", "growth"]
+}
+```
+
+Open the file in a browser to verify, then submit a PR!
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines and all category codes.
+
+---
+
+## 🗺️ Roadmap
+
+- [x] Frontend, Backend, AI/ML, DevOps, Mobile guides
+- [x] Stack Combos (12 recipes)
+- [x] AI Coding Tools guide (80+ tools)
+- [x] Stack Picker Wizard
+- [x] 11 head-to-head comparison pages
+- [x] Dark mode
+- [x] SEO + AI search optimization (llms.txt, JSON-LD)
 - [ ] Community voting on technologies
+- [ ] "Alternatives to X" on each tech card
+- [ ] Newsletter / changelog
+- [ ] Embeddable comparison widgets
+- [ ] Community-submitted stack combos
+
+> **Have an idea?** [Start a discussion →](https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks/discussions)
+
+---
+
+## 📢 Share It
+
+Help others discover this resource:
+
+**Twitter/X:**
+> Just found Open TechStack — 280+ technologies compared across Frontend, Backend, AI/ML, DevOps, Mobile, and AI Coding. Interactive mind maps, comparisons, stack picker.
+>
+> Fully open source. Zero dependencies.
+>
+> https://opentechstack.stitchwebsite.com
+>
+> #vibecoding #techstack #webdev #opensource
+
+**Reddit:** Post to r/webdev, r/programming, r/reactjs, r/devops, r/MachineLearning
+
+**Hacker News:**
+> Title: Show HN: Open TechStack – 280+ technologies compared with interactive visual guides
+> URL: https://opentechstack.stitchwebsite.com
 
 ---
 
 ## Running Locally
 
-No build step needed. Just open the HTML files:
-
 ```bash
 git clone https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks.git
-cd 2026TechStack
+cd awesome-vibecoding-techstacks
 open index.html
 # or use any local server:
 python3 -m http.server 8080
 ```
 
----
-
-## Share It
-
-Help others discover this resource! Here are ready-to-use posts:
-
-**Twitter/X:**
-> Just found Open TechStack — interactive visual guides comparing 200+ technologies across Frontend, Backend, AI/ML, DevOps, and Mobile for 2026.
->
-> Mind maps, stage-based filtering, decision cheat sheets. Zero dependencies, fully open source.
->
-> https://opentechstack.stitchwebsite.com
->
-> #vibecoding #techstack #webdev #opensource #buildinpublic
-
-**Reddit (r/webdev, r/programming, r/reactjs):**
-> **Open TechStack — Interactive visual guides to 200+ modern technologies (2026)**
->
-> I built an open-source, interactive guide covering Frontend, Backend, AI/ML, DevOps, and Mobile tech stacks. Each guide has a mind map, stage-based filtering (Hobby/MVP/Growth/Scale), search, and decision cheat sheets. Pure HTML, zero dependencies, no sign-up.
->
-> Live: https://opentechstack.stitchwebsite.com
-> GitHub: https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks
-
-**Hacker News:**
-> Title: Show HN: Open TechStack – Interactive visual guides to 200+ technologies for 2026
-> URL: https://opentechstack.stitchwebsite.com
-
-**LinkedIn:**
-> Excited to share Open TechStack — an open-source project with interactive visual guides to 200+ modern technologies across Frontend, Backend, AI/ML, DevOps, and Mobile.
->
-> Each guide features an interactive mind map, stage-based filtering (Hobby to Enterprise), full-text search, and decision cheat sheets to help you pick the right stack.
->
-> Built with zero dependencies. Fully open source. Contributions welcome.
->
-> Check it out: https://opentechstack.stitchwebsite.com
-> Star on GitHub: https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks
+No build step. No node_modules. No frameworks. Just HTML.
 
 ---
 
@@ -145,4 +466,4 @@ Help others discover this resource! Here are ready-to-use posts:
 
 ---
 
-**Found this useful? [Give it a star!](https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks)**
+**Found this useful? [Give it a ⭐](https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks)** — it helps others find it!

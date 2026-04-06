@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Start a Discussion
+    url: https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks/discussions
+    about: Ask questions, share your stack, or suggest ideas
+  - name: Visit the Live Site
+    url: https://opentechstack.stitchwebsite.com
+    about: Browse the interactive guides
