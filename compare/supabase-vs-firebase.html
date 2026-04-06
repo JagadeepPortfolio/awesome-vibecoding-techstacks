@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supabase vs Firebase 2026 — Side-by-Side BaaS Comparison | Open TechStack</title>
+  <meta name="description" content="Supabase vs Firebase in 2026: detailed side-by-side comparison of database, auth, realtime, pricing, open-source status, and when to pick each Backend-as-a-Service." />
+  <link rel="canonical" href="https://opentechstack.stitchwebsite.com/compare/supabase-vs-firebase.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Supabase vs Firebase 2026 — Which BaaS Should You Choose?" />
+  <meta property="og:description" content="Comprehensive side-by-side comparison of Supabase and Firebase covering database, auth, realtime, pricing, vendor lock-in, and migration paths." />
+  <meta property="og:url" content="https://opentechstack.stitchwebsite.com/compare/supabase-vs-firebase.html" />
+  <meta property="og:site_name" content="Open TechStack" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Supabase vs Firebase 2026 — Which BaaS Should You Choose?" />
+  <meta name="twitter:description" content="Comprehensive side-by-side comparison of Supabase and Firebase covering database, auth, realtime, pricing, vendor lock-in, and migration paths." />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Supabase vs Firebase — Which Backend-as-a-Service in 2026?",
+    "description": "Detailed side-by-side comparison of Supabase and Firebase in 2026 covering database type, auth, realtime, pricing, open-source status, and migration.",
+    "url": "https://opentechstack.stitchwebsite.com/compare/supabase-vs-firebase.html",
+    "datePublished": "2026-04-06",
+    "dateModified": "2026-04-06",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open TechStack"
+    }
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .winner { background: #f0fdf4; }
+    .table-hover tr:hover { background: #f8fafc; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 leading-relaxed">
+
+  <!-- Nav -->
+  <nav class="bg-slate-900 text-white text-sm">
+    <div class="max-w-5xl mx-auto px-6 py-2.5 flex items-center justify-between">
+      <a href="../index.html" class="font-bold tracking-tight hover:text-slate-300 transition">⚡ Open TechStack</a>
+      <div class="flex items-center gap-4 flex-wrap">
+        <a href="../index.html" class="hover:text-slate-300 transition">Home</a>
+        <a href="../Frontend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Frontend</a>
+        <a href="../Backend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Backend</a>
+        <a href="../AIML-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">AI/ML</a>
+        <a href="../AI-Coding-Tools-Visual-Guide.html" class="hover:text-slate-300 transition">AI Coding</a>
+        <a href="../DevOps-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">DevOps</a>
+        <a href="../Mobile-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Mobile</a>
+        <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="hover:text-slate-300 transition">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- H1 -->
+    <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Supabase vs Firebase &mdash; Which Backend-as-a-Service in 2026?</h1>
+    <p class="text-slate-500 text-sm mb-8">Last updated: April 6, 2026 &middot; 8 min read</p>
+
+    <!-- TL;DR Verdict -->
+    <section id="verdict" class="bg-emerald-50 border border-emerald-200 rounded-xl p-6 mb-12">
+      <h2 class="text-lg font-bold text-emerald-800 mb-2">TL;DR Verdict</h2>
+      <p class="text-slate-700 mb-3">
+        <strong>Pick Supabase</strong> if you want an open-source, PostgreSQL-based backend you can self-host, with SQL power, row-level security, and zero vendor lock-in. It's the top choice for indie hackers, startups, and teams that value data ownership.
+      </p>
+      <p class="text-slate-700 mb-3">
+        <strong>Pick Firebase</strong> if you need a battle-tested Google ecosystem with best-in-class mobile SDKs, Crashlytics, ML Kit, and you're fine with a proprietary NoSQL model. It's still unmatched for rapid mobile prototyping and Google Cloud integration.
+      </p>
+      <p class="text-sm text-slate-500">Both are excellent. Your choice depends on database philosophy (SQL vs NoSQL), open-source preference, and target platform.</p>
+    </section>
+
+    <!-- Jump Links -->
+    <nav class="flex flex-wrap gap-3 text-sm mb-10">
+      <a href="#comparison" class="bg-slate-200 hover:bg-slate-300 rounded-full px-4 py-1.5 transition">Comparison Table</a>
+      <a href="#pricing" class="bg-slate-200 hover:bg-slate-300 rounded-full px-4 py-1.5 transition">Pricing</a>
+      <a href="#migration" class="bg-slate-200 hover:bg-slate-300 rounded-full px-4 py-1.5 transition">Migration</a>
+      <a href="#when-to-pick" class="bg-slate-200 hover:bg-slate-300 rounded-full px-4 py-1.5 transition">When to Pick Each</a>
+    </nav>
+
+    <!-- ======== Side-by-Side Comparison Table ======== -->
+    <section id="comparison" class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Side-by-Side Feature Comparison</h2>
+      <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+        <table class="w-full text-sm table-hover">
+          <thead>
+            <tr class="bg-slate-800 text-white text-left">
+              <th class="px-5 py-3 font-semibold">Feature</th>
+              <th class="px-5 py-3 font-semibold">Supabase</th>
+              <th class="px-5 py-3 font-semibold">Firebase</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr>
+              <td class="px-5 py-3 font-medium">Database Type</td>
+              <td class="px-5 py-3 winner">PostgreSQL (relational)</td>
+              <td class="px-5 py-3">Firestore (NoSQL document) + Realtime DB</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">SQL Support</td>
+              <td class="px-5 py-3 winner">Full SQL &mdash; joins, views, stored procedures, extensions</td>
+              <td class="px-5 py-3">No SQL. Query via SDK filters only</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Auth</td>
+              <td class="px-5 py-3">Email, OAuth, magic link, phone, SAML. Row-level security (RLS) built-in</td>
+              <td class="px-5 py-3">Email, OAuth, phone, anonymous, multi-factor. Firebase Auth + Identity Platform</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Realtime</td>
+              <td class="px-5 py-3">Postgres changes via websockets (listen to row inserts/updates/deletes)</td>
+              <td class="px-5 py-3">Native realtime sync (Firestore &amp; Realtime DB). Offline-first with local caching</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Storage</td>
+              <td class="px-5 py-3">S3-compatible object storage with RLS policies</td>
+              <td class="px-5 py-3">Cloud Storage for Firebase (backed by GCS). Security rules</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Functions</td>
+              <td class="px-5 py-3 winner">Edge Functions (Deno runtime, globally distributed)</td>
+              <td class="px-5 py-3">Cloud Functions (Node.js, Python). 2nd gen on Cloud Run</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Pricing Model</td>
+              <td class="px-5 py-3">Usage-based. Free tier &rarr; Pro $25/mo &rarr; Team $599/mo</td>
+              <td class="px-5 py-3">Usage-based (pay-as-you-go). Spark free &rarr; Blaze (pay per use)</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Open Source</td>
+              <td class="px-5 py-3 winner">Yes &mdash; Apache 2.0. Fully open</td>
+              <td class="px-5 py-3">No. SDKs are open source; backend is proprietary</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Self-Hostable</td>
+              <td class="px-5 py-3 winner">Yes &mdash; Docker Compose, Kubernetes, any cloud</td>
+              <td class="px-5 py-3">No (Firebase Emulator for local dev only)</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Vendor Lock-in Risk</td>
+              <td class="px-5 py-3 winner">Low &mdash; standard Postgres. Migrate data with pg_dump</td>
+              <td class="px-5 py-3">High &mdash; Firestore data model is proprietary. Deep Google coupling</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Community / Ecosystem</td>
+              <td class="px-5 py-3">Fast-growing. 75K+ GitHub stars. Strong indie/startup community</td>
+              <td class="px-5 py-3">Massive. 10+ years. Huge plugin ecosystem, tutorials, StackOverflow answers</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Extra Services</td>
+              <td class="px-5 py-3">Vector embeddings (pgvector), cron jobs, database branching</td>
+              <td class="px-5 py-3">Crashlytics, Analytics, ML Kit, Remote Config, A/B Testing, App Check</td>
+            </tr>
+            <tr class="bg-slate-50 font-medium">
+              <td class="px-5 py-3">Best For</td>
+              <td class="px-5 py-3 text-emerald-700">Web apps, SaaS, startups, AI/vector workloads, data ownership</td>
+              <td class="px-5 py-3 text-blue-700">Mobile apps, rapid prototyping, Google ecosystem, analytics-heavy apps</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ======== Pricing Comparison ======== -->
+    <section id="pricing" class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Pricing Comparison (2026)</h2>
+      <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+        <table class="w-full text-sm table-hover">
+          <thead>
+            <tr class="bg-slate-800 text-white text-left">
+              <th class="px-5 py-3 font-semibold">Tier</th>
+              <th class="px-5 py-3 font-semibold">Supabase</th>
+              <th class="px-5 py-3 font-semibold">Firebase</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr>
+              <td class="px-5 py-3 font-medium">Free</td>
+              <td class="px-5 py-3">
+                500 MB database<br>
+                1 GB storage<br>
+                50K monthly active auth users<br>
+                500K edge function invocations<br>
+                2 projects
+              </td>
+              <td class="px-5 py-3">
+                1 GB Firestore storage<br>
+                5 GB Cloud Storage<br>
+                10K auth verifications/month<br>
+                125K Cloud Function invocations<br>
+                10 GB hosting transfer
+              </td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Pro / Pay-as-you-go</td>
+              <td class="px-5 py-3">
+                <strong>$25/mo per project</strong><br>
+                8 GB database<br>
+                100 GB storage<br>
+                100K MAU auth<br>
+                2M edge function invocations<br>
+                Daily backups (7 day retention)
+              </td>
+              <td class="px-5 py-3">
+                <strong>Blaze &mdash; pay per use</strong><br>
+                $0.108/GB Firestore storage<br>
+                $0.026/GB Cloud Storage<br>
+                $0.01/10K Firestore reads<br>
+                $0.40/M Cloud Function invocations<br>
+                No fixed monthly fee
+              </td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium">Scale / Enterprise</td>
+              <td class="px-5 py-3">
+                <strong>Team: $599/mo</strong><br>
+                SOC2, SSO/SAML<br>
+                Priority support<br>
+                Database branching<br>
+                28 day backup retention<br>
+                <em>Enterprise: custom pricing</em>
+              </td>
+              <td class="px-5 py-3">
+                <strong>Enterprise (custom)</strong><br>
+                Committed use discounts<br>
+                Premium support SLAs<br>
+                Advanced security rules audit<br>
+                Google Cloud credits bundled
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-slate-400 mt-3">Prices as of April 2026. Check official sites for the latest rates.</p>
+    </section>
+
+    <!-- ======== Migration ======== -->
+    <section id="migration" class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Migrating from Firebase to Supabase</h2>
+      <div class="bg-white border border-slate-200 rounded-xl p-6 space-y-4">
+        <p class="text-slate-700">Supabase provides official migration tooling. Here is the general path:</p>
+        <ol class="list-decimal list-inside space-y-3 text-slate-700">
+          <li>
+            <strong>Export Firestore data</strong> &mdash; Use <code class="bg-slate-100 px-1.5 py-0.5 rounded text-sm">firebase export</code> or the Firestore REST API to dump collections as JSON.
+          </li>
+          <li>
+            <strong>Design relational schema</strong> &mdash; Map Firestore documents/subcollections to Postgres tables with proper foreign keys and indexes.
+          </li>
+          <li>
+            <strong>Import into Supabase</strong> &mdash; Use the Supabase dashboard CSV import, <code class="bg-slate-100 px-1.5 py-0.5 rounded text-sm">psql COPY</code>, or the migration scripts from <code class="bg-slate-100 px-1.5 py-0.5 rounded text-sm">supabase/firebase-to-supabase</code> repo.
+          </li>
+          <li>
+            <strong>Migrate Auth users</strong> &mdash; Supabase provides a Firebase Auth migration tool that preserves password hashes so users don't need to reset passwords.
+          </li>
+          <li>
+            <strong>Migrate Storage</strong> &mdash; Transfer files from Cloud Storage to Supabase Storage (S3-compatible). Use <code class="bg-slate-100 px-1.5 py-0.5 rounded text-sm">gsutil</code> to export, then upload via Supabase SDK or CLI.
+          </li>
+          <li>
+            <strong>Update client code</strong> &mdash; Replace Firebase SDK calls with Supabase client. The API surface is intentionally similar, so many patterns map 1:1.
+          </li>
+          <li>
+            <strong>Set up Row-Level Security</strong> &mdash; Translate Firebase Security Rules to Postgres RLS policies. This is the biggest conceptual shift.
+          </li>
+        </ol>
+        <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 mt-4 text-sm text-amber-800">
+          <strong>Heads up:</strong> The hardest part is restructuring nested Firestore documents into normalized relational tables. Budget extra time for schema design and data transformation.
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== When to Pick Each ======== -->
+    <section id="when-to-pick" class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">When to Pick Each</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <!-- Supabase -->
+        <div class="bg-white border-2 border-emerald-200 rounded-xl p-6">
+          <h3 class="text-lg font-bold text-emerald-700 mb-4">Choose Supabase when&hellip;</h3>
+          <ul class="space-y-2 text-slate-700 text-sm">
+            <li class="flex gap-2"><span class="text-emerald-500 font-bold">+</span> You need relational data with joins, views, and complex queries</li>
+            <li class="flex gap-2"><span class="text-emerald-500 font-bold">+</span> Data ownership and avoiding vendor lock-in matter to you</li>
+            <li class="flex gap-2"><span class="text-emerald-500 font-bold">+</span> You want to self-host for compliance, latency, or cost reasons</li>
+            <li class="flex gap-2"><span class="text-emerald-500 font-bold">+</span> You're building a SaaS product, dashboard, or internal tool</li>
+            <li class="flex gap-2"><span class="text-emerald-500 font-bold">+</span> You need vector search / AI embeddings (pgvector)</li>
+            <li class="flex gap-2"><span class="text-emerald-500 font-bold">+</span> You prefer open-source and want to inspect/contribute to the code</li>
+            <li class="flex gap-2"><span class="text-emerald-500 font-bold">+</span> You want edge functions with Deno for low-latency global compute</li>
+            <li class="flex gap-2"><span class="text-emerald-500 font-bold">+</span> You're an indie hacker or startup that values predictable pricing</li>
+          </ul>
+        </div>
+
+        <!-- Firebase -->
+        <div class="bg-white border-2 border-blue-200 rounded-xl p-6">
+          <h3 class="text-lg font-bold text-blue-700 mb-4">Choose Firebase when&hellip;</h3>
+          <ul class="space-y-2 text-slate-700 text-sm">
+            <li class="flex gap-2"><span class="text-blue-500 font-bold">+</span> You're building a mobile-first app (iOS/Android) with offline sync</li>
+            <li class="flex gap-2"><span class="text-blue-500 font-bold">+</span> You need Crashlytics, Analytics, Remote Config, or A/B Testing</li>
+            <li class="flex gap-2"><span class="text-blue-500 font-bold">+</span> Your data is naturally document-shaped (social feeds, chat, IoT events)</li>
+            <li class="flex gap-2"><span class="text-blue-500 font-bold">+</span> You want ML Kit for on-device machine learning</li>
+            <li class="flex gap-2"><span class="text-blue-500 font-bold">+</span> Your team already lives in the Google Cloud ecosystem</li>
+            <li class="flex gap-2"><span class="text-blue-500 font-bold">+</span> You need static hosting with a CDN baked in</li>
+            <li class="flex gap-2"><span class="text-blue-500 font-bold">+</span> You prefer a mature platform with a decade of battle-testing</li>
+            <li class="flex gap-2"><span class="text-blue-500 font-bold">+</span> You need pay-per-use with no fixed monthly cost at small scale</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======== Final Word ======== -->
+    <section class="bg-slate-100 rounded-xl p-6 mb-12">
+      <h2 class="text-xl font-bold text-slate-900 mb-3">The Bottom Line</h2>
+      <p class="text-slate-700">
+        In 2026, Supabase has closed the gap significantly and is now the default BaaS for new web projects, especially in the startup and indie hacker space. Firebase remains the stronger choice for mobile-heavy apps and teams deep in the Google ecosystem. If you're starting fresh and value open source, SQL, and portability, Supabase is the safer long-term bet. If you need the broadest mobile toolkit with offline-first sync, Firebase still leads.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 text-sm">
+    <div class="max-w-5xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>&copy; 2026 Open TechStack. Built for developers who ship.</p>
+      <div class="flex items-center gap-4">
+        <a href="../Backend-Stacks-Visual-Guide.html" class="hover:text-white transition">Backend Guide</a>
+        <a href="../index.html" class="hover:text-white transition">Home</a>
+        <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="hover:text-white transition">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

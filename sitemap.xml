@@ -40,4 +40,34 @@
     <lastmod>2026-04-06</lastmod>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://opentechstack.stitchwebsite.com/compare/</loc>
+    <lastmod>2026-04-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://opentechstack.stitchwebsite.com/compare/cursor-vs-copilot-vs-windsurf.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://opentechstack.stitchwebsite.com/compare/claude-code-vs-codex-vs-gemini-cli.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://opentechstack.stitchwebsite.com/compare/nextjs-vs-remix-vs-astro.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://opentechstack.stitchwebsite.com/compare/react-vs-vue-vs-svelte.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://opentechstack.stitchwebsite.com/compare/supabase-vs-firebase.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <priority>0.9</priority>
+  </url>
 </urlset>

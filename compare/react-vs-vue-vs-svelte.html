@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React vs Vue vs Svelte 2026 — Side-by-Side Comparison | Open TechStack</title>
+  <meta name="description" content="React 19 vs Vue 3.5 vs Svelte 5 — comprehensive 2026 comparison of architecture, performance, bundle size, ecosystem, job market, and when to pick each framework.">
+  <link rel="canonical" href="https://opentechstack.stitchwebsite.com/compare/react-vs-vue-vs-svelte.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="React vs Vue vs Svelte — Which UI Framework in 2026?">
+  <meta property="og:description" content="In-depth 2026 comparison of React 19, Vue 3.5, and Svelte 5 covering architecture, performance, ecosystem, job market, and decision guide.">
+  <meta property="og:url" content="https://opentechstack.stitchwebsite.com/compare/react-vs-vue-vs-svelte.html">
+  <meta property="og:site_name" content="Open TechStack">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "React vs Vue vs Svelte — Which UI Framework in 2026?",
+    "description": "Comprehensive 2026 comparison of React 19, Vue 3.5, and Svelte 5 covering architecture, performance, bundle size, ecosystem, job market demand, and decision guide.",
+    "datePublished": "2026-04-06",
+    "dateModified": "2026-04-06",
+    "author": {
+      "@type": "Organization",
+      "name": "Open TechStack"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open TechStack"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://opentechstack.stitchwebsite.com/compare/react-vs-vue-vs-svelte.html"
+    }
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .comparison-table th, .comparison-table td { border-bottom: 1px solid #e2e8f0; }
+    .winner { background-color: #f0fdf4; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
+
+  <!-- Nav -->
+  <nav class="bg-slate-900 text-white text-sm">
+    <div class="max-w-5xl mx-auto px-6 py-2.5 flex items-center justify-between">
+      <a href="../index.html" class="font-bold tracking-tight hover:text-slate-300 transition">&#9889; Open TechStack</a>
+      <div class="flex items-center gap-4 flex-wrap">
+        <a href="../index.html" class="hover:text-slate-300 transition">Home</a>
+        <a href="../Frontend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Frontend</a>
+        <a href="../Backend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Backend</a>
+        <a href="../AIML-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">AI/ML</a>
+        <a href="../AI-Coding-Tools-Visual-Guide.html" class="hover:text-slate-300 transition">AI Coding</a>
+        <a href="../DevOps-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">DevOps</a>
+        <a href="../Mobile-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Mobile</a>
+        <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="hover:text-slate-300 transition">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- H1 -->
+    <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 leading-tight">
+      React vs Vue vs Svelte &mdash; Which UI Framework in 2026?
+    </h1>
+    <p class="text-slate-500 text-sm mb-10">Updated April 2026 &middot; Open TechStack Comparison Series</p>
+
+    <!-- TL;DR Verdict -->
+    <section class="bg-white border border-slate-200 rounded-xl p-6 mb-12 shadow-sm">
+      <h2 class="text-lg font-bold text-slate-900 mb-3">TL;DR Verdict</h2>
+      <ul class="space-y-2 text-sm text-slate-700">
+        <li><strong class="text-blue-600">React 19</strong> &mdash; The safe, dominant choice. Unmatched ecosystem, most jobs, Server Components via Next.js. Pick it if you want maximum hiring pool and library support.</li>
+        <li><strong class="text-emerald-600">Vue 3.5</strong> &mdash; The productive middle ground. Best docs, gentlest learning curve, Vapor mode closing the perf gap. Pick it if your team values simplicity and fast onboarding.</li>
+        <li><strong class="text-orange-600">Svelte 5</strong> &mdash; The performance leader. Compiler-first, smallest bundles, Runes for fine-grained reactivity. Pick it if you prioritize runtime speed and developer happiness.</li>
+      </ul>
+      <p class="mt-4 text-xs text-slate-400">No single answer fits every team. Read on for the data.</p>
+    </section>
+
+    <!-- Side-by-Side Comparison Table -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Side-by-Side Comparison</h2>
+      <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+        <table class="comparison-table w-full text-sm bg-white">
+          <thead>
+            <tr class="bg-slate-100 text-left">
+              <th class="px-5 py-3 font-semibold text-slate-600 w-1/4">Criteria</th>
+              <th class="px-5 py-3 font-semibold text-blue-700 w-1/4">React 19</th>
+              <th class="px-5 py-3 font-semibold text-emerald-700 w-1/4">Vue 3.5</th>
+              <th class="px-5 py-3 font-semibold text-orange-700 w-1/4">Svelte 5</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-5 py-3 font-medium text-slate-700">Architecture</td>
+              <td class="px-5 py-3">Virtual DOM + React Compiler (auto-memoization)</td>
+              <td class="px-5 py-3">Virtual DOM + Vapor mode (optional compiler, no VDOM)</td>
+              <td class="px-5 py-3 winner">Compiler-first, no Virtual DOM. Outputs vanilla JS at build time</td>
+            </tr>
+            <tr class="bg-slate-50/50">
+              <td class="px-5 py-3 font-medium text-slate-700">Bundle Size (min+gz)</td>
+              <td class="px-5 py-3">~42 kB (react + react-dom)</td>
+              <td class="px-5 py-3">~33 kB (vue core)</td>
+              <td class="px-5 py-3 winner">~2 kB runtime; components compile away</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium text-slate-700">Performance (JS Framework Benchmark)</td>
+              <td class="px-5 py-3">Good. React Compiler eliminates most re-render waste</td>
+              <td class="px-5 py-3">Very good. Vapor mode on par with Svelte</td>
+              <td class="px-5 py-3 winner">Excellent. Consistently tops benchmarks for DOM updates</td>
+            </tr>
+            <tr class="bg-slate-50/50">
+              <td class="px-5 py-3 font-medium text-slate-700">Learning Curve</td>
+              <td class="px-5 py-3">Moderate. JSX, hooks, Server Components add concepts</td>
+              <td class="px-5 py-3 winner">Gentle. Single-file components, clear API, best official docs</td>
+              <td class="px-5 py-3">Easy to start, Runes require mental model shift</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium text-slate-700">TypeScript Support</td>
+              <td class="px-5 py-3 winner">Excellent. First-class TS, huge DefinitelyTyped coverage</td>
+              <td class="px-5 py-3">Excellent. Built-in TS since Vue 3, Volar IDE support</td>
+              <td class="px-5 py-3">Very good. Native TS in &lt;script lang="ts"&gt;</td>
+            </tr>
+            <tr class="bg-slate-50/50">
+              <td class="px-5 py-3 font-medium text-slate-700">Ecosystem Size</td>
+              <td class="px-5 py-3 winner">Massive. 1M+ npm packages, MUI, Radix, shadcn/ui, Framer Motion</td>
+              <td class="px-5 py-3">Large. Vuetify, PrimeVue, Quasar, Naive UI</td>
+              <td class="px-5 py-3">Growing. Skeleton, Melt UI, Bits UI, Threlte (3D)</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium text-slate-700">Job Market Demand</td>
+              <td class="px-5 py-3 winner">Dominant ~65% of front-end job postings</td>
+              <td class="px-5 py-3">Solid ~15%, strong in Asia &amp; Europe</td>
+              <td class="px-5 py-3">Niche ~5%, but fastest-growing satisfaction scores</td>
+            </tr>
+            <tr class="bg-slate-50/50">
+              <td class="px-5 py-3 font-medium text-slate-700">Meta-Framework</td>
+              <td class="px-5 py-3 winner">Next.js (App Router, RSC, PPR). Also Remix, Astro</td>
+              <td class="px-5 py-3">Nuxt 3 (Nitro server, hybrid rendering). Also Astro</td>
+              <td class="px-5 py-3">SvelteKit (adapters, SSR, prerender). Also Astro</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium text-slate-700">State Management</td>
+              <td class="px-5 py-3">Built-in: useState, useReducer, Context. External: Zustand, Jotai, Redux Toolkit</td>
+              <td class="px-5 py-3">Built-in: ref(), reactive(), provide/inject. External: Pinia (official)</td>
+              <td class="px-5 py-3 winner">Built-in: Runes ($state, $derived, $effect). Rarely need external libs</td>
+            </tr>
+            <tr class="bg-slate-50/50">
+              <td class="px-5 py-3 font-medium text-slate-700">Community / GitHub Stars</td>
+              <td class="px-5 py-3 winner">~232k stars, largest community</td>
+              <td class="px-5 py-3">~213k stars, passionate community</td>
+              <td class="px-5 py-3">~82k stars, rapidly growing</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-medium text-slate-700">Company Backing</td>
+              <td class="px-5 py-3">Meta (Facebook)</td>
+              <td class="px-5 py-3">Independent (Evan You / community-funded)</td>
+              <td class="px-5 py-3">Independent (Rich Harris, funded by Vercel)</td>
+            </tr>
+            <tr class="bg-slate-50/50">
+              <td class="px-5 py-3 font-medium text-slate-700">Best For</td>
+              <td class="px-5 py-3">Any web app, enterprise at scale, Next.js full-stack</td>
+              <td class="px-5 py-3">Teams wanting productivity with less complexity</td>
+              <td class="px-5 py-3">Performance-critical apps, developer happiness</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Performance Comparison -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Performance Comparison</h2>
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-6">
+        <p class="text-sm text-slate-600 mb-6">Based on JS Framework Benchmark 2026 results (lower is better for most metrics).</p>
+
+        <!-- Visual bars -->
+        <div class="space-y-6">
+          <!-- Startup Time -->
+          <div>
+            <h3 class="text-sm font-semibold text-slate-700 mb-2">Startup Time (ms)</h3>
+            <div class="space-y-1.5">
+              <div class="flex items-center gap-3">
+                <span class="text-xs w-16 text-right text-slate-500">React</span>
+                <div class="h-5 rounded bg-blue-500" style="width:70%"></div>
+                <span class="text-xs text-slate-500">~38ms</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xs w-16 text-right text-slate-500">Vue</span>
+                <div class="h-5 rounded bg-emerald-500" style="width:55%"></div>
+                <span class="text-xs text-slate-500">~30ms</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xs w-16 text-right text-slate-500">Svelte</span>
+                <div class="h-5 rounded bg-orange-500" style="width:30%"></div>
+                <span class="text-xs text-slate-500">~16ms</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Memory Usage -->
+          <div>
+            <h3 class="text-sm font-semibold text-slate-700 mb-2">Memory Usage (MB, 1k rows)</h3>
+            <div class="space-y-1.5">
+              <div class="flex items-center gap-3">
+                <span class="text-xs w-16 text-right text-slate-500">React</span>
+                <div class="h-5 rounded bg-blue-500" style="width:75%"></div>
+                <span class="text-xs text-slate-500">~8.2 MB</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xs w-16 text-right text-slate-500">Vue</span>
+                <div class="h-5 rounded bg-emerald-500" style="width:60%"></div>
+                <span class="text-xs text-slate-500">~6.5 MB</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xs w-16 text-right text-slate-500">Svelte</span>
+                <div class="h-5 rounded bg-orange-500" style="width:40%"></div>
+                <span class="text-xs text-slate-500">~4.3 MB</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- DOM Update Speed -->
+          <div>
+            <h3 class="text-sm font-semibold text-slate-700 mb-2">Partial DOM Update (ms, swap 1k rows)</h3>
+            <div class="space-y-1.5">
+              <div class="flex items-center gap-3">
+                <span class="text-xs w-16 text-right text-slate-500">React</span>
+                <div class="h-5 rounded bg-blue-500" style="width:65%"></div>
+                <span class="text-xs text-slate-500">~120ms</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xs w-16 text-right text-slate-500">Vue</span>
+                <div class="h-5 rounded bg-emerald-500" style="width:50%"></div>
+                <span class="text-xs text-slate-500">~95ms</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xs w-16 text-right text-slate-500">Svelte</span>
+                <div class="h-5 rounded bg-orange-500" style="width:35%"></div>
+                <span class="text-xs text-slate-500">~65ms</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-xs text-slate-400 mt-6">Note: Real-world performance depends heavily on application architecture, SSR strategy, and code-splitting. Benchmarks measure raw framework overhead.</p>
+      </div>
+    </section>
+
+    <!-- Ecosystem Comparison -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Ecosystem Comparison</h2>
+      <div class="grid md:grid-cols-3 gap-5">
+
+        <!-- React Ecosystem -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+          <h3 class="text-base font-bold text-blue-700 mb-3">React 19 Ecosystem</h3>
+          <div class="space-y-3 text-sm text-slate-600">
+            <div>
+              <h4 class="font-semibold text-slate-700">Meta-Framework</h4>
+              <p>Next.js 15 (App Router, RSC, PPR), Remix, Astro</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">UI Libraries</h4>
+              <p>MUI, Radix UI, shadcn/ui, Chakra UI, Ant Design, Mantine</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">State Management</h4>
+              <p>Zustand, Jotai, Redux Toolkit, Recoil, Valtio</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">Animation</h4>
+              <p>Framer Motion, React Spring, Auto Animate</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">Data Fetching</h4>
+              <p>TanStack Query, SWR, tRPC, Apollo GraphQL</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">Key 2026 Features</h4>
+              <p>Server Components, use() hook, React Compiler (auto-memoization), Actions</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vue Ecosystem -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+          <h3 class="text-base font-bold text-emerald-700 mb-3">Vue 3.5 Ecosystem</h3>
+          <div class="space-y-3 text-sm text-slate-600">
+            <div>
+              <h4 class="font-semibold text-slate-700">Meta-Framework</h4>
+              <p>Nuxt 3 (Nitro, hybrid rendering), Astro, VitePress</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">UI Libraries</h4>
+              <p>Vuetify, PrimeVue, Quasar, Naive UI, Element Plus, Radix Vue</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">State Management</h4>
+              <p>Pinia (official), VueUse (composables collection)</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">Animation</h4>
+              <p>Built-in &lt;Transition&gt;, Motion One, GSAP</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">Data Fetching</h4>
+              <p>TanStack Query (Vue), useFetch (Nuxt), Apollo</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">Key 2026 Features</h4>
+              <p>Vapor mode (compiler, no VDOM), Composition API, Reactive Props Destructure</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Svelte Ecosystem -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+          <h3 class="text-base font-bold text-orange-700 mb-3">Svelte 5 Ecosystem</h3>
+          <div class="space-y-3 text-sm text-slate-600">
+            <div>
+              <h4 class="font-semibold text-slate-700">Meta-Framework</h4>
+              <p>SvelteKit (SSR, prerender, adapters), Astro</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">UI Libraries</h4>
+              <p>Skeleton, Melt UI, Bits UI, Flowbite Svelte, shadcn-svelte</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">State Management</h4>
+              <p>Runes ($state, $derived, $effect) &mdash; built-in, rarely need external</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">Animation</h4>
+              <p>Built-in transitions &amp; animations, svelte/motion</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">Data Fetching</h4>
+              <p>SvelteKit load functions, TanStack Query (Svelte)</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700">Key 2026 Features</h4>
+              <p>Runes (fine-grained reactivity), Snippets, compiler-first, no VDOM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- When to Pick Each -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">When to Pick Each Framework</h2>
+      <div class="space-y-5">
+
+        <!-- React -->
+        <div class="bg-white rounded-xl border-l-4 border-blue-500 border border-slate-200 shadow-sm p-5">
+          <h3 class="text-lg font-bold text-blue-700 mb-2">Pick React 19 When&hellip;</h3>
+          <ul class="text-sm text-slate-600 space-y-1.5 list-disc pl-5">
+            <li>You need the largest hiring pool and contractor availability</li>
+            <li>Your project requires a massive ecosystem of third-party libraries</li>
+            <li>You are building a full-stack app with Next.js and Server Components</li>
+            <li>Enterprise buy-in matters &mdash; React is the safe corporate choice</li>
+            <li>You want maximum community support and Stack Overflow answers</li>
+            <li>Your team already knows React and switching cost is not justified</li>
+          </ul>
+        </div>
+
+        <!-- Vue -->
+        <div class="bg-white rounded-xl border-l-4 border-emerald-500 border border-slate-200 shadow-sm p-5">
+          <h3 class="text-lg font-bold text-emerald-700 mb-2">Pick Vue 3.5 When&hellip;</h3>
+          <ul class="text-sm text-slate-600 space-y-1.5 list-disc pl-5">
+            <li>You want the fastest developer onboarding and gentlest learning curve</li>
+            <li>Your team values clear, opinionated conventions over flexibility</li>
+            <li>You are building internal tools, admin panels, or dashboards</li>
+            <li>You need excellent documentation that covers every edge case</li>
+            <li>You want progressive adoption &mdash; drop Vue into an existing page</li>
+            <li>You are targeting Asian or European markets where Vue adoption is strong</li>
+          </ul>
+        </div>
+
+        <!-- Svelte -->
+        <div class="bg-white rounded-xl border-l-4 border-orange-500 border border-slate-200 shadow-sm p-5">
+          <h3 class="text-lg font-bold text-orange-700 mb-2">Pick Svelte 5 When&hellip;</h3>
+          <ul class="text-sm text-slate-600 space-y-1.5 list-disc pl-5">
+            <li>Performance and bundle size are top priorities (embedded, mobile web, IoT)</li>
+            <li>Developer happiness and less boilerplate matter to your team</li>
+            <li>You are building a new greenfield project without legacy constraints</li>
+            <li>You want fine-grained reactivity without the mental overhead of memoization</li>
+            <li>You are building interactive content sites, visualizations, or animations</li>
+            <li>Your team is small and you want to move fast with less abstraction</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Decision Flowchart -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Quick Decision Guide</h2>
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 text-sm text-slate-700">
+        <div class="space-y-3">
+          <p><strong>Need maximum hiring pool &amp; enterprise support?</strong> &rarr; <span class="font-semibold text-blue-600">React</span></p>
+          <p><strong>Want the easiest onboarding for a mixed-skill team?</strong> &rarr; <span class="font-semibold text-emerald-600">Vue</span></p>
+          <p><strong>Prioritize smallest bundle &amp; raw speed?</strong> &rarr; <span class="font-semibold text-orange-600">Svelte</span></p>
+          <p><strong>Building full-stack with RSC / Server Components?</strong> &rarr; <span class="font-semibold text-blue-600">React + Next.js</span></p>
+          <p><strong>Building a content-heavy site with islands?</strong> &rarr; Consider <span class="font-semibold text-purple-600">Astro</span> with any of the three</p>
+          <p><strong>All three are production-ready in 2026.</strong> The "wrong" choice is spending months deciding instead of building.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 text-sm">
+    <div class="max-w-5xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>&copy; 2026 Open TechStack &middot; Comparison Series</p>
+      <div class="flex items-center gap-4">
+        <a href="../Frontend-Stacks-Visual-Guide.html" class="hover:text-white transition">Frontend Guide</a>
+        <a href="../index.html" class="hover:text-white transition">Home</a>
+        <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="hover:text-white transition">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

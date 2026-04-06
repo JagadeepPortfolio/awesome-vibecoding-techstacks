@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Code vs OpenAI Codex CLI vs Gemini CLI — 2026 AI Coding Agent Comparison</title>
+  <meta name="description" content="In-depth 2026 comparison of Claude Code (Opus 4.6), OpenAI Codex CLI (GPT-5-Codex), and Gemini CLI (Gemini 3). SWE-bench scores, pricing, features, and real-world performance side by side.">
+  <link rel="canonical" href="https://opentechstack.stitchwebsite.com/compare/claude-code-vs-codex-vs-gemini-cli.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Code vs OpenAI Codex CLI vs Gemini CLI — 2026 Comparison">
+  <meta property="og:description" content="Side-by-side comparison of the three leading AI coding agents in 2026. SWE-bench scores, pricing, features, and when to pick each.">
+  <meta property="og:url" content="https://opentechstack.stitchwebsite.com/compare/claude-code-vs-codex-vs-gemini-cli.html">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Claude Code vs OpenAI Codex CLI vs Gemini CLI — Which AI Coding Agent in 2026?",
+    "description": "In-depth 2026 comparison of Claude Code, OpenAI Codex CLI, and Gemini CLI covering SWE-bench scores, pricing, context windows, and real-world performance.",
+    "datePublished": "2026-04-06",
+    "dateModified": "2026-04-06",
+    "author": { "@type": "Organization", "name": "Open TechStack" },
+    "publisher": { "@type": "Organization", "name": "Open TechStack" }
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .highlight-row:nth-child(odd) { background-color: rgba(248, 250, 252, 1); }
+    .highlight-row:nth-child(even) { background-color: rgba(241, 245, 249, 1); }
+  </style>
+</head>
+<body class="bg-white text-slate-800 font-sans leading-relaxed">
+
+  <!-- Nav -->
+  <nav class="bg-slate-900 text-white text-sm">
+    <div class="max-w-5xl mx-auto px-6 py-2.5 flex items-center justify-between">
+      <a href="../index.html" class="font-bold tracking-tight hover:text-slate-300 transition">⚡ Open TechStack</a>
+      <div class="flex items-center gap-4 flex-wrap">
+        <a href="../index.html" class="hover:text-slate-300 transition">Home</a>
+        <a href="../Frontend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Frontend</a>
+        <a href="../Backend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Backend</a>
+        <a href="../AIML-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">AI/ML</a>
+        <a href="../AI-Coding-Tools-Visual-Guide.html" class="hover:text-slate-300 transition">AI Coding</a>
+        <a href="../DevOps-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">DevOps</a>
+        <a href="../Mobile-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Mobile</a>
+        <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="hover:text-slate-300 transition">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-16">
+    <div class="max-w-5xl mx-auto px-6">
+      <p class="text-sm uppercase tracking-widest text-slate-400 mb-3">AI Coding Agents &middot; April 2026</p>
+      <h1 class="text-3xl md:text-4xl font-extrabold leading-tight mb-4">Claude Code vs OpenAI Codex CLI vs Gemini CLI<br><span class="text-slate-400 text-2xl md:text-3xl font-semibold">Which AI Coding Agent in 2026?</span></h1>
+      <p class="text-slate-300 max-w-2xl text-lg">An opinionated, data-driven comparison of the three terminal-based AI coding agents that matter most right now.</p>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 py-12 space-y-16">
+
+    <!-- TL;DR Verdict -->
+    <section id="verdict">
+      <div class="rounded-xl border-2 border-slate-800 bg-slate-50 p-8">
+        <h2 class="text-2xl font-bold mb-4">TL;DR Verdict</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-lg p-5 border border-amber-300 shadow-sm">
+            <p class="text-xs font-bold uppercase tracking-wider text-amber-600 mb-2">Best Accuracy &amp; Power</p>
+            <p class="text-xl font-extrabold text-slate-900 mb-1">Claude Code</p>
+            <p class="text-sm text-slate-600">80.8% SWE-bench. Opus 4.6. Agent Teams. If you want the most capable agent and don't mind paying for it, this is the one.</p>
+          </div>
+          <div class="bg-white rounded-lg p-5 border border-blue-300 shadow-sm">
+            <p class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-2">Best Open-Source from Big Lab</p>
+            <p class="text-xl font-extrabold text-slate-900 mb-1">OpenAI Codex CLI</p>
+            <p class="text-sm text-slate-600">Open-source Rust codebase. Local execution with human oversight. Solid choice if you want transparency and already use OpenAI.</p>
+          </div>
+          <div class="bg-white rounded-lg p-5 border border-green-300 shadow-sm">
+            <p class="text-xs font-bold uppercase tracking-wider text-green-600 mb-2">Best Free Tier</p>
+            <p class="text-xl font-extrabold text-slate-900 mb-1">Gemini CLI</p>
+            <p class="text-sm text-slate-600">1,000 requests/day FREE. Gemini 3. Built-in Google Search. The obvious pick for budget-conscious developers.</p>
+          </div>
+        </div>
+        <p class="mt-6 text-sm text-slate-500"><strong>Bottom line:</strong> Pick Claude Code for raw capability, Codex CLI for open-source transparency, and Gemini CLI if you want a powerful free tool.</p>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section id="comparison">
+      <h2 class="text-2xl font-bold mb-6">Side-by-Side Comparison</h2>
+      <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-slate-800 text-white text-left">
+              <th class="px-5 py-3 font-semibold">Feature</th>
+              <th class="px-5 py-3 font-semibold">Claude Code</th>
+              <th class="px-5 py-3 font-semibold">OpenAI Codex CLI</th>
+              <th class="px-5 py-3 font-semibold">Gemini CLI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td class="px-5 py-3 font-medium">Maker</td>
+              <td class="px-5 py-3">Anthropic</td>
+              <td class="px-5 py-3">OpenAI</td>
+              <td class="px-5 py-3">Google</td>
+            </tr>
+            <tr class="highlight-row">
+              <td class="px-5 py-3 font-medium">Underlying Model</td>
+              <td class="px-5 py-3"><strong>Opus 4.6</strong></td>
+              <td class="px-5 py-3"><strong>GPT-5-Codex</strong></td>
+              <td class="px-5 py-3"><strong>Gemini 3</strong></td>
+            </tr>
+            <tr class="highlight-row">
+              <td class="px-5 py-3 font-medium">SWE-bench Verified</td>
+              <td class="px-5 py-3 text-amber-700 font-bold">80.8%</td>
+              <td class="px-5 py-3">~67.7%</td>
+              <td class="px-5 py-3">78%</td>
+            </tr>
+            <tr class="highlight-row">
+              <td class="px-5 py-3 font-medium">Context Window</td>
+              <td class="px-5 py-3">1M tokens</td>
+              <td class="px-5 py-3">Varies by model</td>
+              <td class="px-5 py-3">1M tokens</td>
+            </tr>
+            <tr class="highlight-row">
+              <td class="px-5 py-3 font-medium">Open Source</td>
+              <td class="px-5 py-3 text-red-600">No</td>
+              <td class="px-5 py-3 text-green-700 font-semibold">Yes (Rust)</td>
+              <td class="px-5 py-3 text-green-700 font-semibold">Yes</td>
+            </tr>
+            <tr class="highlight-row">
+              <td class="px-5 py-3 font-medium">Pricing</td>
+              <td class="px-5 py-3">Claude Pro/Team/Enterprise<br><span class="text-xs text-slate-500">Usage-based</span></td>
+              <td class="px-5 py-3">OpenAI API key or ChatGPT Plus<br><span class="text-xs text-slate-500">Pay per token</span></td>
+              <td class="px-5 py-3 text-green-700 font-semibold">FREE 1,000 req/day<br><span class="text-xs text-slate-500">Google account</span></td>
+            </tr>
+            <tr class="highlight-row">
+              <td class="px-5 py-3 font-medium">Agent Teams / Multi-Agent</td>
+              <td class="px-5 py-3 text-green-700 font-semibold">Yes &mdash; parallel Agent Teams</td>
+              <td class="px-5 py-3">Multi-step agentic execution</td>
+              <td class="px-5 py-3">Single agent</td>
+            </tr>
+            <tr class="highlight-row">
+              <td class="px-5 py-3 font-medium">Git Integration Depth</td>
+              <td class="px-5 py-3 font-semibold">Deep &mdash; commit, PR, diff, blame</td>
+              <td class="px-5 py-3">Good &mdash; local repo awareness</td>
+              <td class="px-5 py-3">Basic &mdash; file-level ops</td>
+            </tr>
+            <tr class="highlight-row">
+              <td class="px-5 py-3 font-medium">Built-in Tools</td>
+              <td class="px-5 py-3">Search, file ops, bash, browser</td>
+              <td class="px-5 py-3">File ops, shell, code execution</td>
+              <td class="px-5 py-3">Google Search, file ops, shell, web fetch</td>
+            </tr>
+            <tr class="highlight-row">
+              <td class="px-5 py-3 font-medium">IDE Integration</td>
+              <td class="px-5 py-3">VS Code, JetBrains, terminal</td>
+              <td class="px-5 py-3">Terminal-first</td>
+              <td class="px-5 py-3">Terminal-first</td>
+            </tr>
+            <tr class="highlight-row">
+              <td class="px-5 py-3 font-medium">MCP Support</td>
+              <td class="px-5 py-3 text-green-700 font-semibold">Yes</td>
+              <td class="px-5 py-3">Limited</td>
+              <td class="px-5 py-3">Yes</td>
+            </tr>
+            <tr class="highlight-row">
+              <td class="px-5 py-3 font-medium">Codebase Scale</td>
+              <td class="px-5 py-3 font-semibold">30K+ line repos</td>
+              <td class="px-5 py-3">Medium repos</td>
+              <td class="px-5 py-3">Large repos (1M context)</td>
+            </tr>
+            <tr class="bg-slate-100 border-t-2 border-slate-300">
+              <td class="px-5 py-3 font-bold">Best For</td>
+              <td class="px-5 py-3 font-bold text-amber-700">Max accuracy, complex refactors, enterprise teams</td>
+              <td class="px-5 py-3 font-bold text-blue-700">Open-source advocates, local-first workflows</td>
+              <td class="px-5 py-3 font-bold text-green-700">Budget-conscious devs, quick tasks, Google ecosystem</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Real-World Performance -->
+    <section id="performance">
+      <h2 class="text-2xl font-bold mb-6">Real-World Performance</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold text-lg mb-3 text-slate-900">Claude Code</h3>
+          <ul class="space-y-2 text-sm text-slate-700">
+            <li><strong>Complex refactors:</strong> Excels at multi-file, cross-module refactoring across 30K+ line codebases.</li>
+            <li><strong>Bug hunting:</strong> Highest first-pass fix rate thanks to 80.8% SWE-bench score.</li>
+            <li><strong>Parallel work:</strong> Agent Teams let you spin up multiple sub-agents working on different parts of a codebase simultaneously.</li>
+            <li><strong>Git workflows:</strong> Creates commits, PRs, handles merge conflicts, reviews diffs natively.</li>
+            <li><strong>Weakness:</strong> Closed source. Usage costs can add up on heavy workloads.</li>
+          </ul>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold text-lg mb-3 text-slate-900">OpenAI Codex CLI</h3>
+          <ul class="space-y-2 text-sm text-slate-700">
+            <li><strong>Transparency:</strong> Open-source Rust codebase means you can audit, fork, and extend.</li>
+            <li><strong>Human oversight:</strong> Designed for local execution with explicit approval steps.</li>
+            <li><strong>Multi-step tasks:</strong> Agentic execution handles chained operations well.</li>
+            <li><strong>OpenAI ecosystem:</strong> Tight integration with GPT-5-Codex and OpenAI APIs.</li>
+            <li><strong>Weakness:</strong> Lower SWE-bench score (67.7%) means more iterations on hard bugs.</li>
+          </ul>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold text-lg mb-3 text-slate-900">Gemini CLI</h3>
+          <ul class="space-y-2 text-sm text-slate-700">
+            <li><strong>Free tier:</strong> 1,000 requests/day at zero cost is unmatched.</li>
+            <li><strong>Built-in search:</strong> Google Search integration lets it pull live docs and references.</li>
+            <li><strong>Large context:</strong> 1M token window handles entire repos without chunking.</li>
+            <li><strong>Web fetch:</strong> Can pull content from URLs directly during execution.</li>
+            <li><strong>Weakness:</strong> Single agent only &mdash; no multi-agent orchestration. Less mature git integration.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Deep Dive -->
+    <section id="pricing">
+      <h2 class="text-2xl font-bold mb-6">Pricing Deep Dive</h2>
+      <p class="text-slate-600 mb-6">What each tool actually costs for different usage patterns (estimated monthly).</p>
+      <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-slate-800 text-white text-left">
+              <th class="px-5 py-3 font-semibold">Usage Scenario</th>
+              <th class="px-5 py-3 font-semibold">Claude Code</th>
+              <th class="px-5 py-3 font-semibold">OpenAI Codex CLI</th>
+              <th class="px-5 py-3 font-semibold">Gemini CLI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td class="px-5 py-3 font-medium">Light (hobby, ~200 req/mo)</td>
+              <td class="px-5 py-3">$20/mo (Claude Pro)</td>
+              <td class="px-5 py-3">$20/mo (ChatGPT Plus) or ~$5-10 API</td>
+              <td class="px-5 py-3 text-green-700 font-bold">$0 (FREE tier)</td>
+            </tr>
+            <tr class="highlight-row">
+              <td class="px-5 py-3 font-medium">Moderate (daily use, ~1K req/mo)</td>
+              <td class="px-5 py-3">$20-50/mo (Pro, usage-based overage)</td>
+              <td class="px-5 py-3">~$30-60/mo API costs</td>
+              <td class="px-5 py-3 text-green-700 font-bold">$0 (within daily limit)</td>
+            </tr>
+            <tr class="highlight-row">
+              <td class="px-5 py-3 font-medium">Heavy (full-time dev, ~5K req/mo)</td>
+              <td class="px-5 py-3">$100-200/mo (Team/Enterprise)</td>
+              <td class="px-5 py-3">~$150-300/mo API costs</td>
+              <td class="px-5 py-3">~$0-50/mo (may exceed free tier)</td>
+            </tr>
+            <tr class="highlight-row">
+              <td class="px-5 py-3 font-medium">Team (5 devs, enterprise)</td>
+              <td class="px-5 py-3">Custom Enterprise pricing</td>
+              <td class="px-5 py-3">Volume API discounts</td>
+              <td class="px-5 py-3">Google Cloud billing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4 text-xs text-slate-500">Estimates based on typical usage patterns as of April 2026. Actual costs vary by request complexity and token usage.</p>
+    </section>
+
+    <!-- When to Pick Each -->
+    <section id="when-to-pick">
+      <h2 class="text-2xl font-bold mb-6">When to Pick Each</h2>
+      <div class="space-y-6">
+
+        <div class="border-l-4 border-amber-500 bg-amber-50 rounded-r-lg p-6">
+          <h3 class="font-bold text-lg mb-2">Pick Claude Code when...</h3>
+          <ul class="list-disc list-inside text-sm text-slate-700 space-y-1">
+            <li>You need the <strong>highest accuracy</strong> on complex bugs and refactors</li>
+            <li>You work on <strong>large codebases</strong> (30K+ lines) that need cross-file understanding</li>
+            <li>You want <strong>Agent Teams</strong> to parallelize work across multiple tasks</li>
+            <li>Your team needs <strong>deep git integration</strong> &mdash; commits, PRs, reviews from the CLI</li>
+            <li>You are on an <strong>enterprise team</strong> and need structured, auditable AI workflows</li>
+            <li>You use <strong>MCP servers</strong> to extend the agent with custom tools</li>
+          </ul>
+        </div>
+
+        <div class="border-l-4 border-blue-500 bg-blue-50 rounded-r-lg p-6">
+          <h3 class="font-bold text-lg mb-2">Pick OpenAI Codex CLI when...</h3>
+          <ul class="list-disc list-inside text-sm text-slate-700 space-y-1">
+            <li>You value <strong>open-source transparency</strong> &mdash; you want to read, fork, and modify the agent</li>
+            <li>You prefer <strong>local-first execution</strong> with explicit human approval steps</li>
+            <li>You are already deep in the <strong>OpenAI ecosystem</strong> (GPT-5, API keys, ChatGPT Plus)</li>
+            <li>You want to <strong>self-host</strong> or customize the agent for your team's workflow</li>
+            <li>Your tasks are <strong>moderate complexity</strong> and don't require top-tier SWE-bench accuracy</li>
+          </ul>
+        </div>
+
+        <div class="border-l-4 border-green-500 bg-green-50 rounded-r-lg p-6">
+          <h3 class="font-bold text-lg mb-2">Pick Gemini CLI when...</h3>
+          <ul class="list-disc list-inside text-sm text-slate-700 space-y-1">
+            <li>You want a <strong>powerful free tool</strong> &mdash; 1,000 requests/day costs nothing</li>
+            <li>You need <strong>built-in web search</strong> to pull live documentation and references</li>
+            <li>You work in the <strong>Google ecosystem</strong> (GCP, Firebase, Android)</li>
+            <li>You are a <strong>student, indie dev, or hobbyist</strong> watching your budget</li>
+            <li>You need <strong>1M token context</strong> to load entire repos without chunking</li>
+            <li>You want a <strong>quick setup</strong> &mdash; just a Google account, no credit card</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Final Verdict -->
+    <section id="final">
+      <div class="bg-slate-900 text-white rounded-xl p-8">
+        <h2 class="text-2xl font-bold mb-4">Final Take</h2>
+        <p class="text-slate-300 mb-4">All three tools are production-ready in 2026. The "best" one depends entirely on your priorities:</p>
+        <div class="grid md:grid-cols-3 gap-4 text-sm">
+          <div class="bg-slate-800 rounded-lg p-4">
+            <p class="font-bold text-amber-400 mb-1">Accuracy &rarr; Claude Code</p>
+            <p class="text-slate-400">80.8% SWE-bench, Agent Teams, deep git ops. The premium choice.</p>
+          </div>
+          <div class="bg-slate-800 rounded-lg p-4">
+            <p class="font-bold text-blue-400 mb-1">Open Source &rarr; Codex CLI</p>
+            <p class="text-slate-400">Full Rust source, local execution, OpenAI ecosystem. The transparent choice.</p>
+          </div>
+          <div class="bg-slate-800 rounded-lg p-4">
+            <p class="font-bold text-green-400 mb-1">Free &rarr; Gemini CLI</p>
+            <p class="text-slate-400">1,000 req/day free, Google Search built in, 1M context. The budget choice.</p>
+          </div>
+        </div>
+        <p class="text-slate-400 text-sm mt-6">Many developers use two or even all three. They are complementary, not mutually exclusive.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-100 border-t border-slate-200 mt-16">
+    <div class="max-w-5xl mx-auto px-6 py-8 text-center text-sm text-slate-500">
+      <p class="mb-2">Part of the <a href="../AI-Coding-Tools-Visual-Guide.html" class="text-slate-700 underline hover:text-slate-900 transition">AI Coding Tools Visual Guide</a> on Open TechStack.</p>
+      <p>Data current as of April 2026. <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="text-slate-700 underline hover:text-slate-900 transition">Contribute on GitHub</a>.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
