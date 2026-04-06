@@ -4,18 +4,18 @@
 
 > Compare 100+ technologies across 20 categories. Filter by project stage (Hobby / MVP / Growth / Scale), search, and find the stack that fits.
 
-**Live site:** [stacks.stitchwebsite.com](https://stacks.stitchwebsite.com)
+**Live site:** [techstacks.stitchwebsite.com](https://techstacks.stitchwebsite.com)
 
 ---
 
 ## What's Inside
 
-### [Frontend Stacks Guide](https://stacks.stitchwebsite.com/Frontend-Stacks-Visual-Guide.html)
+### [Frontend Stacks Guide](https://techstacks.stitchwebsite.com/Frontend-Stacks-Visual-Guide.html)
 60+ technologies across UI frameworks, meta-frameworks, styling, state management, data fetching, forms, build tools, testing, UI libraries, and hosting.
 
 **Covers:** React, Vue, Svelte, Solid, Angular, Next.js, Nuxt, Astro, SvelteKit, Tailwind, shadcn/ui, Zustand, TanStack Query, tRPC, Vite, Vitest, Playwright, and more.
 
-### [Backend Stacks Guide](https://stacks.stitchwebsite.com/Backend-Stacks-Visual-Guide.html)
+### [Backend Stacks Guide](https://techstacks.stitchwebsite.com/Backend-Stacks-Visual-Guide.html)
 50+ technologies across languages/frameworks, BaaS, hosting, databases, auth, jobs/queues, storage, payments, email, and observability.
 
 **Covers:** Node.js, Python, Go, Rust, Rails, Elixir, Supabase, Firebase, Postgres, Neon, Clerk, Auth0, Stripe, Inngest, Temporal, Sentry, and more.
