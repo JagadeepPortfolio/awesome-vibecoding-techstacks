@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Your AI Agent Picked the Wrong Stack — Here's How to Audit It | Open TechStack</title>
+<meta name="description" content="AI coding agents like Claude Code, Cursor, and Copilot silently choose your tech stack. Learn the 10 most common AI defaults, when they're wrong, and a 5-minute audit checklist to verify what your agent built." />
+<meta name="keywords" content="AI coding agent, tech stack audit, Claude Code, Cursor, GitHub Copilot, Codex CLI, Windsurf, Aider, AI defaults, framework choice, React, Next.js, Tailwind, Prisma, Vercel, 2026" />
+<link rel="canonical" href="https://opentechstack.stitchwebsite.com/blog/ai-agent-stack-audit.html" />
+
+<meta property="og:title" content="Your AI Agent Picked the Wrong Stack — Here's How to Audit It" />
+<meta property="og:description" content="AI coding agents silently choose your tech stack. Learn the 10 most common defaults, when they're wrong, and how to audit what your agent built." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://opentechstack.stitchwebsite.com/blog/ai-agent-stack-audit.html" />
+<meta property="og:site_name" content="Open TechStack" />
+<meta property="og:locale" content="en_US" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Your AI Agent Picked the Wrong Stack — Here's How to Audit It" />
+<meta name="twitter:description" content="AI coding agents silently choose your tech stack. Learn the 10 most common defaults, when they're wrong, and how to audit what your agent built." />
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Your AI Agent Picked the Wrong Stack — Here's How to Audit It",
+  "description": "AI coding agents silently choose your tech stack. Learn the 10 most common defaults, when they're wrong, and a 5-minute audit checklist to verify what your agent built.",
+  "datePublished": "2026-04-06",
+  "dateModified": "2026-04-06",
+  "author": {
+    "@type": "Organization",
+    "name": "Open TechStack",
+    "url": "https://opentechstack.stitchwebsite.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Open TechStack",
+    "url": "https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://opentechstack.stitchwebsite.com/blog/ai-agent-stack-audit.html"
+  }
+}
+</script>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={darkMode:"class"}</script>
+<link rel="stylesheet" href="../dark-mode.css">
+<script src="../dark-mode.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .gradient-text { background: linear-gradient(135deg, #6366f1, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+<!-- NAV -->
+<nav class="bg-slate-900 text-white text-sm sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto px-6 py-2.5 flex items-center justify-between">
+    <a href="../index.html" class="font-bold tracking-tight hover:text-slate-300 transition">⚡ Open TechStack</a>
+    <div class="flex items-center gap-4 flex-wrap">
+      <a href="../Frontend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Frontend</a>
+      <a href="../Backend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Backend</a>
+      <a href="../AIML-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">AI/ML</a>
+      <a href="../AI-Coding-Tools-Visual-Guide.html" class="hover:text-slate-300 transition">AI Coding</a>
+      <a href="../DevOps-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">DevOps</a>
+      <a href="../Mobile-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Mobile</a>
+      <a href="../Stack-Combos.html" class="hover:text-slate-300 transition">Combos</a>
+      <a href="../stack-picker.html" class="hover:text-slate-300 transition">Picker</a>
+      <a href="./" class="hover:text-slate-300 transition">Blog</a>
+      <a href="../compare/" class="hover:text-slate-300 transition">Compare</a>
+      <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="hover:text-slate-300 transition">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ARTICLE -->
+<article class="max-w-3xl mx-auto px-6 py-12">
+
+  <!-- Header -->
+  <header class="mb-12">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-bold rounded-full uppercase tracking-wide">AI Coding</span>
+      <span class="text-slate-400 text-sm">April 6, 2026</span>
+      <span class="text-slate-400 text-sm">~14 min read</span>
+    </div>
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight mb-6">Your AI Agent Picked the Wrong Stack &mdash; Here&rsquo;s How to Audit It</h1>
+    <p class="text-xl text-slate-600 leading-relaxed">
+      Claude Code, Cursor, Copilot, Codex CLI, Windsurf, Aider &mdash; they can scaffold an entire project in minutes. But they have hidden biases. They default to what&rsquo;s most common in their training data, not what&rsquo;s best for <em>your</em> specific situation. This guide helps you question every choice.
+    </p>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- Section 1 -->
+  <!-- ============================================================ -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Your Agent Has Opinions (And They Might Be Wrong)</h2>
+    <p class="text-slate-700 leading-relaxed mb-4">
+      AI coding agents are incredible productivity multipliers. Ask one to "build me a blog" and you&rsquo;ll get a fully functional Next.js app with Prisma, PostgreSQL, Tailwind, and Vercel deployment &mdash; in under five minutes.
+    </p>
+    <p class="text-slate-700 leading-relaxed mb-4">
+      But here&rsquo;s the problem: <strong>a blog doesn&rsquo;t need any of that.</strong> <a href="../compare/nextjs-vs-remix-vs-astro.html" class="text-indigo-600 hover:text-indigo-800 underline">Astro</a> with a folder of markdown files would be 10x simpler, 10x faster, and cost $0 to host on <a href="../compare/vercel-vs-cloudflare-vs-netlify.html" class="text-indigo-600 hover:text-indigo-800 underline">Cloudflare Pages</a>.
+    </p>
+    <p class="text-slate-700 leading-relaxed mb-4">
+      The agent didn&rsquo;t pick Next.js because it analyzed your requirements. It picked Next.js because that combination appears thousands of times in its training data. It&rsquo;s pattern-matching, not architecture.
+    </p>
+    <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 my-6">
+      <p class="text-amber-900 font-semibold mb-1">The core problem</p>
+      <p class="text-amber-800 text-sm">AI agents optimize for "works" not "right." A working app with the wrong stack is technical debt from day one. You need to audit what your agent chose &mdash; every time.</p>
+    </div>
+    <p class="text-slate-700 leading-relaxed">
+      This post gives you a concrete framework: the 10 most common AI defaults, a 5-minute audit checklist, red flags to watch for, and links to our <a href="../compare/" class="text-indigo-600 hover:text-indigo-800 underline">head-to-head comparisons</a> so you can verify each choice.
+    </p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Section 2: The 10 Most Common AI Agent Defaults -->
+  <!-- ============================================================ -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold text-slate-900 mb-6">2. The 10 Most Common AI Agent Defaults (And When They&rsquo;re Wrong)</h2>
+    <p class="text-slate-600 mb-8">For each default, we show what agents typically pick, when it&rsquo;s justified, when it&rsquo;s not, and what to use instead.</p>
+
+    <!-- Card 1 -->
+    <div class="bg-white border border-slate-200 rounded-xl p-6 mb-5">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex items-center justify-center w-8 h-8 bg-indigo-100 text-indigo-700 font-bold text-sm rounded-full">1</span>
+        <h3 class="text-lg font-bold text-slate-900">Frontend: React / Next.js</h3>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4 text-sm">
+        <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3">
+          <p class="font-semibold text-emerald-800 mb-1">Right when</p>
+          <p class="text-emerald-700">SaaS apps, dashboards, highly dynamic UIs with complex state, teams already invested in the React ecosystem.</p>
+        </div>
+        <div class="bg-rose-50 border border-rose-200 rounded-lg p-3">
+          <p class="font-semibold text-rose-800 mb-1">Wrong when</p>
+          <p class="text-rose-700">Content sites, blogs, marketing pages (use <strong>Astro</strong>). Simple interactive apps (use <strong>Svelte</strong> or <strong>Vue</strong>). Static sites that don&rsquo;t need hydration.</p>
+        </div>
+      </div>
+      <p class="text-sm text-slate-500 mt-3">Our comparison: <a href="../compare/nextjs-vs-remix-vs-astro.html" class="text-indigo-600 hover:text-indigo-800 underline">Next.js vs Remix vs Astro</a> &middot; <a href="../compare/react-vs-vue-vs-svelte.html" class="text-indigo-600 hover:text-indigo-800 underline">React vs Vue vs Svelte</a></p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white border border-slate-200 rounded-xl p-6 mb-5">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex items-center justify-center w-8 h-8 bg-indigo-100 text-indigo-700 font-bold text-sm rounded-full">2</span>
+        <h3 class="text-lg font-bold text-slate-900">Styling: Tailwind CSS</h3>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4 text-sm">
+        <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3">
+          <p class="font-semibold text-emerald-800 mb-1">Right when</p>
+          <p class="text-emerald-700">Almost always in 2026. Rapid prototyping, utility-first workflows, AI-generated UIs (agents love Tailwind because it&rsquo;s inline and predictable).</p>
+        </div>
+        <div class="bg-rose-50 border border-rose-200 rounded-lg p-3">
+          <p class="font-semibold text-rose-800 mb-1">Wrong when</p>
+          <p class="text-rose-700">Design systems with strict tokens and compile-time type safety. In that case consider <strong>Vanilla Extract</strong> or <strong>CSS Modules</strong> with a shared token file.</p>
+        </div>
+      </div>
+      <p class="text-sm text-slate-500 mt-3">Our comparison: <a href="../compare/tailwind-vs-css-modules.html" class="text-indigo-600 hover:text-indigo-800 underline">Tailwind vs CSS Modules vs Vanilla Extract</a></p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white border border-slate-200 rounded-xl p-6 mb-5">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex items-center justify-center w-8 h-8 bg-indigo-100 text-indigo-700 font-bold text-sm rounded-full">3</span>
+        <h3 class="text-lg font-bold text-slate-900">State Management: useState / useContext Everywhere</h3>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4 text-sm">
+        <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3">
+          <p class="font-semibold text-emerald-800 mb-1">Right when</p>
+          <p class="text-emerald-700">Simple apps with 2&ndash;3 pieces of state. Local component state. Prototypes where you&rsquo;ll refactor later.</p>
+        </div>
+        <div class="bg-rose-50 border border-rose-200 rounded-lg p-3">
+          <p class="font-semibold text-rose-800 mb-1">Wrong when</p>
+          <p class="text-rose-700">Complex state shared across many components. Frequent re-renders from context. Use <strong>Zustand</strong> (simple, tiny) or <strong>Jotai</strong> (atomic).</p>
+        </div>
+      </div>
+      <p class="text-sm text-slate-500 mt-3">Our comparison: <a href="../compare/zustand-vs-redux.html" class="text-indigo-600 hover:text-indigo-800 underline">Zustand vs Redux vs Jotai</a></p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-white border border-slate-200 rounded-xl p-6 mb-5">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex items-center justify-center w-8 h-8 bg-indigo-100 text-indigo-700 font-bold text-sm rounded-full">4</span>
+        <h3 class="text-lg font-bold text-slate-900">Database: PostgreSQL via Prisma</h3>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4 text-sm">
+        <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3">
+          <p class="font-semibold text-emerald-800 mb-1">Right when</p>
+          <p class="text-emerald-700">Relational data with complex queries. Production apps that need ACID. Teams that want managed Postgres (Supabase, Neon, RDS).</p>
+        </div>
+        <div class="bg-rose-50 border border-rose-200 rounded-lg p-3">
+          <p class="font-semibold text-rose-800 mb-1">Wrong when</p>
+          <p class="text-rose-700">Simple key-value data (use <strong>Redis/KV</strong>). Document data (use <strong>MongoDB</strong>). Edge deployment (use <strong>SQLite/Turso</strong>). The agent rarely considers if you even need a database.</p>
+        </div>
+      </div>
+      <p class="text-sm text-slate-500 mt-3">Our guide: <a href="../Backend-Stacks-Visual-Guide.html" class="text-indigo-600 hover:text-indigo-800 underline">Backend Stacks Visual Guide</a> &middot; <a href="../compare/supabase-vs-firebase.html" class="text-indigo-600 hover:text-indigo-800 underline">Supabase vs Firebase</a></p>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="bg-white border border-slate-200 rounded-xl p-6 mb-5">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex items-center justify-center w-8 h-8 bg-indigo-100 text-indigo-700 font-bold text-sm rounded-full">5</span>
+        <h3 class="text-lg font-bold text-slate-900">ORM: Prisma</h3>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4 text-sm">
+        <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3">
+          <p class="font-semibold text-emerald-800 mb-1">Right when</p>
+          <p class="text-emerald-700">Teams that want auto-generated types and migrations. Developer experience is the priority. You&rsquo;re deploying to traditional Node.js servers.</p>
+        </div>
+        <div class="bg-rose-50 border border-rose-200 rounded-lg p-3">
+          <p class="font-semibold text-rose-800 mb-1">Wrong when</p>
+          <p class="text-rose-700">Performance-critical queries (Prisma adds overhead). Edge runtimes (Prisma client is large). Use <strong>Drizzle ORM</strong> &mdash; it&rsquo;s lighter, SQL-like, and edge-compatible.</p>
+        </div>
+      </div>
+      <div class="bg-amber-50 border border-amber-200 rounded-lg p-3 mt-3 text-sm">
+        <p class="text-amber-800"><strong>Agent bias:</strong> Prisma dominates training data. Drizzle is the 2026 choice for new projects, but agents haven&rsquo;t caught up.</p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="bg-white border border-slate-200 rounded-xl p-6 mb-5">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex items-center justify-center w-8 h-8 bg-indigo-100 text-indigo-700 font-bold text-sm rounded-full">6</span>
+        <h3 class="text-lg font-bold text-slate-900">Auth: NextAuth (Auth.js)</h3>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4 text-sm">
+        <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3">
+          <p class="font-semibold text-emerald-800 mb-1">Right when</p>
+          <p class="text-emerald-700">Simple social login in Next.js apps. You want free, self-hosted auth. Low user counts where you don&rsquo;t need a management UI.</p>
+        </div>
+        <div class="bg-rose-50 border border-rose-200 rounded-lg p-3">
+          <p class="font-semibold text-rose-800 mb-1">Wrong when</p>
+          <p class="text-rose-700">You need a user management dashboard (use <strong>Clerk</strong>). Enterprise SSO/SAML (use <strong>Auth0</strong>). Free at scale (use <strong>Supabase Auth</strong>).</p>
+        </div>
+      </div>
+      <p class="text-sm text-slate-500 mt-3">Our comparison: <a href="../compare/clerk-vs-auth0.html" class="text-indigo-600 hover:text-indigo-800 underline">Clerk vs Auth0 vs Supabase Auth</a></p>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="bg-white border border-slate-200 rounded-xl p-6 mb-5">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex items-center justify-center w-8 h-8 bg-indigo-100 text-indigo-700 font-bold text-sm rounded-full">7</span>
+        <h3 class="text-lg font-bold text-slate-900">Hosting: Vercel</h3>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4 text-sm">
+        <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3">
+          <p class="font-semibold text-emerald-800 mb-1">Right when</p>
+          <p class="text-emerald-700">Next.js apps. Teams that value preview deployments and great DX. Projects where cost isn&rsquo;t the primary concern.</p>
+        </div>
+        <div class="bg-rose-50 border border-rose-200 rounded-lg p-3">
+          <p class="font-semibold text-rose-800 mb-1">Wrong when</p>
+          <p class="text-rose-700">High traffic on a budget (<strong>Cloudflare</strong> is 10x cheaper at scale). Static sites (<strong>Cloudflare Pages</strong> is free with unlimited bandwidth). Docker-based apps.</p>
+        </div>
+      </div>
+      <p class="text-sm text-slate-500 mt-3">Our comparison: <a href="../compare/vercel-vs-cloudflare-vs-netlify.html" class="text-indigo-600 hover:text-indigo-800 underline">Vercel vs Cloudflare vs Netlify</a></p>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="bg-white border border-slate-200 rounded-xl p-6 mb-5">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex items-center justify-center w-8 h-8 bg-indigo-100 text-indigo-700 font-bold text-sm rounded-full">8</span>
+        <h3 class="text-lg font-bold text-slate-900">Backend: Express.js</h3>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4 text-sm">
+        <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3">
+          <p class="font-semibold text-emerald-800 mb-1">Right when</p>
+          <p class="text-emerald-700">Simple REST APIs. Learning projects. You need the widest ecosystem of middleware. Legacy codebases already on Express.</p>
+        </div>
+        <div class="bg-rose-50 border border-rose-200 rounded-lg p-3">
+          <p class="font-semibold text-rose-800 mb-1">Wrong when</p>
+          <p class="text-rose-700">New 2026 projects should use <strong>Hono</strong> (lighter, edge-native), <strong>Fastify</strong> (faster), or just <strong>Next.js API routes</strong>. Express is showing its age.</p>
+        </div>
+      </div>
+      <div class="bg-amber-50 border border-amber-200 rounded-lg p-3 mt-3 text-sm">
+        <p class="text-amber-800"><strong>Agent bias:</strong> Express has the most training data of any Node.js framework. Agents pick it reflexively, not strategically.</p>
+      </div>
+      <p class="text-sm text-slate-500 mt-3">Our guide: <a href="../Backend-Stacks-Visual-Guide.html" class="text-indigo-600 hover:text-indigo-800 underline">Backend Stacks Visual Guide</a></p>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="bg-white border border-slate-200 rounded-xl p-6 mb-5">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex items-center justify-center w-8 h-8 bg-indigo-100 text-indigo-700 font-bold text-sm rounded-full">9</span>
+        <h3 class="text-lg font-bold text-slate-900">Testing: Jest</h3>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4 text-sm">
+        <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3">
+          <p class="font-semibold text-emerald-800 mb-1">Right when</p>
+          <p class="text-emerald-700">Legacy projects already using Jest. CJS-heavy codebases. You need a very mature ecosystem of matchers and plugins.</p>
+        </div>
+        <div class="bg-rose-50 border border-rose-200 rounded-lg p-3">
+          <p class="font-semibold text-rose-800 mb-1">Wrong when</p>
+          <p class="text-rose-700">New projects. <strong>Vitest</strong> is faster, has native ESM support, is Vite-compatible, and is the 2026 standard. There is almost no reason to start a new project with Jest.</p>
+        </div>
+      </div>
+      <div class="bg-amber-50 border border-amber-200 rounded-lg p-3 mt-3 text-sm">
+        <p class="text-amber-800"><strong>Agent bias:</strong> Jest appears in orders of magnitude more training data than Vitest. This is a pure recency gap &mdash; the agent is behind the industry.</p>
+      </div>
+    </div>
+
+    <!-- Card 10 -->
+    <div class="bg-white border border-slate-200 rounded-xl p-6 mb-5">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="flex items-center justify-center w-8 h-8 bg-indigo-100 text-indigo-700 font-bold text-sm rounded-full">10</span>
+        <h3 class="text-lg font-bold text-slate-900">Package Manager: npm</h3>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4 text-sm">
+        <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3">
+          <p class="font-semibold text-emerald-800 mb-1">Right when</p>
+          <p class="text-emerald-700">Default Node.js tooling. Widest compatibility. Single-package repos where speed isn&rsquo;t critical.</p>
+        </div>
+        <div class="bg-rose-50 border border-rose-200 rounded-lg p-3">
+          <p class="font-semibold text-rose-800 mb-1">Wrong when</p>
+          <p class="text-rose-700">Monorepos (use <strong>pnpm</strong>). Speed priority (use <strong>pnpm</strong> or <strong>bun</strong>). Disk space matters (pnpm&rsquo;s content-addressable store saves gigabytes).</p>
+        </div>
+      </div>
+      <div class="bg-amber-50 border border-amber-200 rounded-lg p-3 mt-3 text-sm">
+        <p class="text-amber-800"><strong>Agent bias:</strong> Nearly every agent defaults to <code class="bg-amber-100 px-1 rounded">npm install</code> because it&rsquo;s the most common command in training data. Always check if pnpm or bun would be better for your project.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Section 3: 5-Minute Stack Audit Checklist -->
+  <!-- ============================================================ -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">3. The 5-Minute Stack Audit Checklist</h2>
+    <p class="text-slate-600 mb-6">Run through this after every AI-generated project. It takes five minutes and can save you weeks of refactoring.</p>
+
+    <div class="bg-white border-2 border-indigo-200 rounded-xl p-6 sm:p-8">
+      <div class="space-y-4">
+
+        <label class="flex items-start gap-3 cursor-pointer group">
+          <input type="checkbox" class="mt-1 w-4 h-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
+          <div>
+            <p class="font-semibold text-slate-900 group-hover:text-indigo-700 transition">Read package.json</p>
+            <p class="text-sm text-slate-500">Do you recognize every dependency? Google any you don&rsquo;t. If there are 30+ packages for a simple app, something is wrong.</p>
+          </div>
+        </label>
+
+        <label class="flex items-start gap-3 cursor-pointer group">
+          <input type="checkbox" class="mt-1 w-4 h-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
+          <div>
+            <p class="font-semibold text-slate-900 group-hover:text-indigo-700 transition">Check bundle size</p>
+            <p class="text-sm text-slate-500">Is the agent importing heavy libraries for simple tasks? Lodash for one function? Moment.js instead of date-fns (or native Intl)? Check with <code class="bg-slate-100 px-1 rounded text-xs">bundlephobia.com</code>.</p>
+          </div>
+        </label>
+
+        <label class="flex items-start gap-3 cursor-pointer group">
+          <input type="checkbox" class="mt-1 w-4 h-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
+          <div>
+            <p class="font-semibold text-slate-900 group-hover:text-indigo-700 transition">Verify the database choice</p>
+            <p class="text-sm text-slate-500">Does your data model need relations (SQL) or flexibility (NoSQL)? Does it need a database at all? A blog can use markdown files. A config app can use JSON.</p>
+          </div>
+        </label>
+
+        <label class="flex items-start gap-3 cursor-pointer group">
+          <input type="checkbox" class="mt-1 w-4 h-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
+          <div>
+            <p class="font-semibold text-slate-900 group-hover:text-indigo-700 transition">Question the auth</p>
+            <p class="text-sm text-slate-500">How many users? Social login needed? SSO? Self-hosted? Check our <a href="../compare/clerk-vs-auth0.html" class="text-indigo-600 underline">Clerk vs Auth0</a> comparison before accepting the default.</p>
+          </div>
+        </label>
+
+        <label class="flex items-start gap-3 cursor-pointer group">
+          <input type="checkbox" class="mt-1 w-4 h-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
+          <div>
+            <p class="font-semibold text-slate-900 group-hover:text-indigo-700 transition">Check hosting costs at scale</p>
+            <p class="text-sm text-slate-500">Free tier now doesn&rsquo;t mean cheap later. Vercel&rsquo;s bandwidth costs add up. Check our <a href="../compare/vercel-vs-cloudflare-vs-netlify.html" class="text-indigo-600 underline">Vercel vs Cloudflare vs Netlify</a> comparison.</p>
+          </div>
+        </label>
+
+        <label class="flex items-start gap-3 cursor-pointer group">
+          <input type="checkbox" class="mt-1 w-4 h-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
+          <div>
+            <p class="font-semibold text-slate-900 group-hover:text-indigo-700 transition">Look for over-engineering</p>
+            <p class="text-sm text-slate-500">Does a blog need a database? Does a landing page need React? Does a prototype need auth? If the answer is no, strip it out.</p>
+          </div>
+        </label>
+
+        <label class="flex items-start gap-3 cursor-pointer group">
+          <input type="checkbox" class="mt-1 w-4 h-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
+          <div>
+            <p class="font-semibold text-slate-900 group-hover:text-indigo-700 transition">Check for outdated choices</p>
+            <p class="text-sm text-slate-500">Create React App instead of Vite? Class components instead of hooks? CommonJS instead of ESM? Jest instead of Vitest? These are signals the agent is using stale patterns.</p>
+          </div>
+        </label>
+
+        <label class="flex items-start gap-3 cursor-pointer group">
+          <input type="checkbox" class="mt-1 w-4 h-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
+          <div>
+            <p class="font-semibold text-slate-900 group-hover:text-indigo-700 transition">Verify TypeScript config</p>
+            <p class="text-sm text-slate-500">Agents sometimes generate a loose <code class="bg-slate-100 px-1 rounded text-xs">tsconfig.json</code>. Check that <code class="bg-slate-100 px-1 rounded text-xs">strict: true</code> is enabled. Loose TypeScript is barely better than JavaScript.</p>
+          </div>
+        </label>
+
+        <label class="flex items-start gap-3 cursor-pointer group">
+          <input type="checkbox" class="mt-1 w-4 h-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
+          <div>
+            <p class="font-semibold text-slate-900 group-hover:text-indigo-700 transition">Review API design</p>
+            <p class="text-sm text-slate-500">REST when GraphQL makes more sense? Over-fetching data? Missing pagination? Agents tend to build the simplest possible API, which often means the least efficient one.</p>
+          </div>
+        </label>
+
+        <label class="flex items-start gap-3 cursor-pointer group">
+          <input type="checkbox" class="mt-1 w-4 h-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
+          <div>
+            <p class="font-semibold text-slate-900 group-hover:text-indigo-700 transition">Test the deployment</p>
+            <p class="text-sm text-slate-500">Does it actually deploy? Or are there env vars the agent forgot? Missing build scripts? A <code class="bg-slate-100 px-1 rounded text-xs">.env.example</code> that doesn&rsquo;t exist? Always deploy before you celebrate.</p>
+          </div>
+        </label>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Section 4: Red Flags in AI-Generated Architecture -->
+  <!-- ============================================================ -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">4. Red Flags in AI-Generated Architecture</h2>
+    <p class="text-slate-600 mb-6">These anti-patterns show up constantly in AI-scaffolded projects. If you spot one, pause and rethink.</p>
+
+    <div class="space-y-4">
+
+      <div class="bg-rose-50 border border-rose-200 rounded-xl p-5">
+        <p class="font-bold text-rose-900 mb-1">The Kitchen Sink</p>
+        <p class="text-rose-800 text-sm">The agent installs 30+ dependencies for a simple app. If <code class="bg-rose-100 px-1 rounded">node_modules</code> is bigger than your actual code, something is wrong. Every dependency is a security surface, a version conflict waiting to happen, and weight your users download.</p>
+      </div>
+
+      <div class="bg-rose-50 border border-rose-200 rounded-xl p-5">
+        <p class="font-bold text-rose-900 mb-1">The Premature Monolith</p>
+        <p class="text-rose-800 text-sm">Building microservices for a prototype. Kubernetes for a side project. Event-driven architecture for an app with 10 users. Agents love to build "scalable" systems because that&rsquo;s what appears in tutorials. Start with a monolith. Split when you have actual scale problems.</p>
+      </div>
+
+      <div class="bg-rose-50 border border-rose-200 rounded-xl p-5">
+        <p class="font-bold text-rose-900 mb-1">The Auth Overkill</p>
+        <p class="text-rose-800 text-sm">Implementing OAuth, MFA, and role-based access control for an app that only you will use. Ask: who are the actual users? If it&rsquo;s just you, a simple API key or even no auth at all is fine for now.</p>
+      </div>
+
+      <div class="bg-rose-50 border border-rose-200 rounded-xl p-5">
+        <p class="font-bold text-rose-900 mb-1">The Framework Mismatch</p>
+        <p class="text-rose-800 text-sm"><a href="../compare/nextjs-vs-remix-vs-astro.html" class="text-rose-700 underline font-semibold">Next.js</a> for a static marketing site. <a href="../compare/react-vs-vue-vs-svelte.html" class="text-rose-700 underline font-semibold">React</a> for a blog. Angular for a prototype. The framework should match the use case, not the agent&rsquo;s muscle memory.</p>
+      </div>
+
+      <div class="bg-rose-50 border border-rose-200 rounded-xl p-5">
+        <p class="font-bold text-rose-900 mb-1">The Stale Stack</p>
+        <p class="text-rose-800 text-sm">Create React App (deprecated). Moment.js (use date-fns or native Intl). The <code class="bg-rose-100 px-1 rounded">request</code> library (use fetch). Express when Hono or Fastify exist. These are signals your agent is generating 2021 code in 2026.</p>
+      </div>
+
+      <div class="bg-rose-50 border border-rose-200 rounded-xl p-5">
+        <p class="font-bold text-rose-900 mb-1">The Missing Error Handling</p>
+        <p class="text-rose-800 text-sm">The agent builds the happy path beautifully &mdash; but there are no error boundaries, no 404 pages, no API error handling, no loading states, no retry logic. Production apps fail. Your code needs to handle that gracefully.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Section 5: How to Tell Your Agent What You Actually Need -->
+  <!-- ============================================================ -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">5. How to Tell Your Agent What You Actually Need</h2>
+    <p class="text-slate-600 mb-6">The quality of your stack depends on the quality of your prompt. Be specific about constraints. Here are the dimensions that matter:</p>
+
+    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
+      <div class="divide-y divide-slate-100">
+
+        <div class="p-5">
+          <p class="font-semibold text-slate-900 mb-1">Specify your scale</p>
+          <p class="text-sm text-slate-600"><span class="text-slate-400">Instead of:</span> "Build me a web app"</p>
+          <p class="text-sm text-slate-700"><span class="text-emerald-600 font-medium">Try:</span> "This will have ~100 users" or "This needs to handle 1M requests/day"</p>
+        </div>
+
+        <div class="p-5">
+          <p class="font-semibold text-slate-900 mb-1">Specify your budget</p>
+          <p class="text-sm text-slate-600"><span class="text-slate-400">Instead of:</span> "Deploy it somewhere"</p>
+          <p class="text-sm text-slate-700"><span class="text-emerald-600 font-medium">Try:</span> "Use only free tiers" or "Budget is $200/month for infrastructure"</p>
+        </div>
+
+        <div class="p-5">
+          <p class="font-semibold text-slate-900 mb-1">Specify constraints</p>
+          <p class="text-sm text-slate-600"><span class="text-slate-400">Instead of:</span> "Choose a good database"</p>
+          <p class="text-sm text-slate-700"><span class="text-emerald-600 font-medium">Try:</span> "Must deploy to Cloudflare Workers" or "Must use existing PostgreSQL instance" or "No external services &mdash; everything self-hosted"</p>
+        </div>
+
+        <div class="p-5">
+          <p class="font-semibold text-slate-900 mb-1">Specify simplicity</p>
+          <p class="text-sm text-slate-600"><span class="text-slate-400">Instead of:</span> "Build it properly"</p>
+          <p class="text-sm text-slate-700"><span class="text-emerald-600 font-medium">Try:</span> "Use the simplest possible stack" or "Minimize dependencies &mdash; I want fewer than 10 packages" or "No ORM, raw SQL is fine"</p>
+        </div>
+
+        <div class="p-5">
+          <p class="font-semibold text-slate-900 mb-1">Reference our guides</p>
+          <p class="text-sm text-slate-600"><span class="text-slate-400">Instead of:</span> "Use best practices"</p>
+          <p class="text-sm text-slate-700"><span class="text-emerald-600 font-medium">Try:</span> "Choose technologies appropriate for an MVP-stage project" or "Pick frameworks that work at the edge" or "Use the stack from Open TechStack&rsquo;s <a href="../Stack-Combos.html" class="text-indigo-600 underline">Stack Combos</a>"</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Section 6: Use Our Tools to Verify -->
+  <!-- ============================================================ -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">6. Use Our Tools to Verify</h2>
+    <p class="text-slate-600 mb-6">Open TechStack has 280+ technologies across 8 guides, 11 comparisons, and a Stack Picker. Use them to cross-check every AI-generated choice.</p>
+
+    <div class="grid sm:grid-cols-2 gap-4">
+
+      <a href="../stack-picker.html" class="block bg-white border border-slate-200 rounded-xl p-5 hover:border-indigo-300 hover:shadow-md transition group">
+        <p class="font-bold text-slate-900 group-hover:text-indigo-700 transition mb-1">Stack Picker</p>
+        <p class="text-sm text-slate-500">Answer 5 questions, get a recommended stack. Compare the result against what your agent built. If they disagree, investigate why.</p>
+      </a>
+
+      <a href="../compare/" class="block bg-white border border-slate-200 rounded-xl p-5 hover:border-indigo-300 hover:shadow-md transition group">
+        <p class="font-bold text-slate-900 group-hover:text-indigo-700 transition mb-1">Head-to-Head Comparisons</p>
+        <p class="text-sm text-slate-500">For every technology X your agent chose, check our X vs Y page. See trade-offs the agent didn&rsquo;t mention: performance, cost, ecosystem, edge support.</p>
+      </a>
+
+      <a href="../Frontend-Stacks-Visual-Guide.html" class="block bg-white border border-slate-200 rounded-xl p-5 hover:border-indigo-300 hover:shadow-md transition group">
+        <p class="font-bold text-slate-900 group-hover:text-indigo-700 transition mb-1">Visual Guides</p>
+        <p class="text-sm text-slate-500">Deep-dive into <a href="../Frontend-Stacks-Visual-Guide.html" class="text-indigo-600 underline">Frontend</a>, <a href="../Backend-Stacks-Visual-Guide.html" class="text-indigo-600 underline">Backend</a>, <a href="../AIML-Stacks-Visual-Guide.html" class="text-indigo-600 underline">AI/ML</a>, <a href="../DevOps-Stacks-Visual-Guide.html" class="text-indigo-600 underline">DevOps</a>, and <a href="../Mobile-Stacks-Visual-Guide.html" class="text-indigo-600 underline">Mobile</a> stacks with interactive filtering.</p>
+      </a>
+
+      <a href="../Stack-Combos.html" class="block bg-white border border-slate-200 rounded-xl p-5 hover:border-indigo-300 hover:shadow-md transition group">
+        <p class="font-bold text-slate-900 group-hover:text-indigo-700 transition mb-1">Stack Combos</p>
+        <p class="text-sm text-slate-500">Battle-tested full-stack recipes. See how technologies actually work together, instead of trusting an agent&rsquo;s ad-hoc assembly.</p>
+      </a>
+
+    </div>
+  </section>
+
+</article>
+
+<!-- CTA -->
+<section class="bg-slate-900 text-white">
+  <div class="max-w-3xl mx-auto px-6 py-16 text-center">
+    <h2 class="text-3xl font-bold mb-4">Stop trusting defaults. Start auditing.</h2>
+    <p class="text-slate-400 mb-8 max-w-lg mx-auto">
+      Open TechStack is free, open-source, and built by developers who care about getting the stack right. Star us on GitHub, share this post, or contribute a correction.
+    </p>
+    <div class="flex items-center justify-center gap-4 flex-wrap">
+      <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2 px-6 py-3 bg-white text-slate-900 font-semibold rounded-xl hover:bg-slate-100 transition">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        Star on GitHub
+      </a>
+      <a href="../compare/" class="inline-flex items-center gap-2 px-6 py-3 border border-slate-600 text-slate-300 font-semibold rounded-xl hover:border-slate-400 hover:text-white transition">
+        Browse Comparisons
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-slate-950 text-slate-500 text-sm">
+  <div class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between flex-wrap gap-3">
+    <div>⚡ <a href="../index.html" class="hover:text-slate-300 transition">Open TechStack</a> · <a href="./" class="hover:text-slate-300 transition">Blog</a> · <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" class="hover:text-slate-300 transition">GitHub</a></div>
+    <div class="text-xs">MIT License · Zero dependencies · No tracking</div>
+  </div>
+</footer>
+
+</body>
+</html>

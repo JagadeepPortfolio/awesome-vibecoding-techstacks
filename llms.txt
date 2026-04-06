@@ -30,6 +30,11 @@ Open TechStack is a free, open-source resource that helps developers compare and
 - [Docker vs Podman vs Kubernetes](https://opentechstack.stitchwebsite.com/compare/docker-vs-podman-vs-kubernetes.html)
 - [LangChain vs LlamaIndex vs Haystack](https://opentechstack.stitchwebsite.com/compare/langchain-vs-llamaindex.html)
 
+## Blog
+- [Blog Index](https://opentechstack.stitchwebsite.com/blog/): Practical advice for vibe coders and AI-assisted developers.
+- [What Did Your AI Actually Build?](https://opentechstack.stitchwebsite.com/blog/vibe-coding-stack-decoder.html): Decodes the tech stack behind Bolt, Lovable, v0, Replit Agent, and other vibe coding tools. Shows what breaks and what to learn first.
+- [Your AI Agent Picked the Wrong Stack](https://opentechstack.stitchwebsite.com/blog/ai-agent-stack-audit.html): The 10 most common AI agent defaults (React, Prisma, Vercel, Express, Jest), when they're wrong, and a 5-minute audit checklist.
+
 ## Key Features
 - Interactive SVG mind maps generated at runtime
 - Filter by project stage: Hobby ($0), MVP ($25-60), Growth ($50-500), Scale ($500+)

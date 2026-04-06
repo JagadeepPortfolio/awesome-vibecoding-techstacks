@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>What Did Your AI Actually Build? A Vibe Coder's Stack Decoder — Open TechStack</title>
+<meta name="description" content="You used Bolt, Lovable, v0, or Replit Agent to build an app — but what tech stack did it generate? This guide decodes what's inside your AI-built app, layer by layer, and shows you what to learn when things break." />
+<meta name="keywords" content="vibe coding, bolt.new stack, lovable stack, v0 vercel, replit agent, create.xyz, cursor ai, claude code, AI generated app, tech stack decoder, what did AI build, supabase, react, tailwind, next.js, vibe coder guide 2026" />
+<link rel="canonical" href="https://opentechstack.stitchwebsite.com/blog/vibe-coding-stack-decoder.html" />
+<meta property="og:title" content="What Did Your AI Actually Build? A Vibe Coder's Stack Decoder" />
+<meta property="og:description" content="You used Bolt, Lovable, v0, or Replit Agent to build an app — but what tech stack did it generate? Decode what's inside, layer by layer." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://opentechstack.stitchwebsite.com/blog/vibe-coding-stack-decoder.html" />
+<meta property="og:site_name" content="Open TechStack" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="What Did Your AI Actually Build? A Vibe Coder's Stack Decoder" />
+<meta name="twitter:description" content="You used Bolt, Lovable, v0, or Replit Agent to build an app — but what tech stack did it generate? Decode what's inside, layer by layer." />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What Did Your AI Actually Build? A Vibe Coder's Stack Decoder",
+  "description": "You used Bolt, Lovable, v0, or Replit Agent to build an app — but what tech stack did it generate? This guide decodes what's inside your AI-built app, layer by layer.",
+  "datePublished": "2026-04-06",
+  "dateModified": "2026-04-06",
+  "author": {
+    "@type": "Organization",
+    "name": "Open TechStack",
+    "url": "https://opentechstack.stitchwebsite.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Open TechStack",
+    "url": "https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://opentechstack.stitchwebsite.com/blog/vibe-coding-stack-decoder.html"
+  }
+}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={darkMode:"class"}</script>
+<link rel="stylesheet" href="../dark-mode.css">
+<script src="../dark-mode.js"></script>
+<style>
+  .prose h2 { scroll-margin-top: 4rem; }
+  .tool-card { transition: transform 0.15s ease; }
+  .tool-card:hover { transform: translateY(-2px); }
+</style>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+<!-- NAV -->
+<nav class="bg-slate-900 text-white text-sm sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto px-6 py-2.5 flex items-center justify-between">
+    <a href="../index.html" class="font-bold tracking-tight hover:text-slate-300 transition">⚡ Open TechStack</a>
+    <div class="flex items-center gap-4 flex-wrap">
+      <a href="../Frontend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Frontend</a>
+      <a href="../Backend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Backend</a>
+      <a href="../AIML-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">AI/ML</a>
+      <a href="../AI-Coding-Tools-Visual-Guide.html" class="hover:text-slate-300 transition">AI Coding</a>
+      <a href="../DevOps-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">DevOps</a>
+      <a href="../Mobile-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Mobile</a>
+      <a href="../Stack-Combos.html" class="hover:text-slate-300 transition">Combos</a>
+      <a href="../stack-picker.html" class="hover:text-slate-300 transition">Picker</a>
+      <a href="./" class="hover:text-slate-300 transition">Blog</a>
+      <a href="../compare/" class="hover:text-slate-300 transition">Compare</a>
+      <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="hover:text-slate-300 transition">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO / HEADER -->
+<header class="bg-gradient-to-br from-indigo-50 via-white to-violet-50">
+  <div class="max-w-3xl mx-auto px-6 pt-16 pb-12">
+    <div class="flex items-center gap-3 mb-6">
+      <span class="inline-block px-3 py-1 bg-violet-100 text-violet-700 text-xs font-bold rounded-full tracking-wide uppercase">Vibe Coding</span>
+      <span class="text-slate-400 text-sm">April 6, 2026</span>
+      <span class="text-slate-400 text-sm">&middot;</span>
+      <span class="text-slate-400 text-sm">14 min read</span>
+    </div>
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight mb-6">
+      What Did Your AI Actually Build?<br>
+      <span class="text-violet-600">A Vibe Coder's Stack Decoder</span>
+    </h1>
+    <p class="text-lg text-slate-600 leading-relaxed max-w-2xl">
+      You told Bolt to "build me a task manager" and it worked. You shipped it. People are using it.
+      But now something broke, and you're staring at a wall of files you didn't write, using words you've never seen.
+      <strong>This guide tells you exactly what's inside your app</strong> — and where to look when things go wrong.
+    </p>
+  </div>
+</header>
+
+<!-- ARTICLE -->
+<main class="max-w-3xl mx-auto px-6 py-12">
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SECTION 1: YOU BUILT AN APP -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="mb-16">
+  <h2 class="text-3xl font-bold text-slate-900 mb-6">You Built an App. But What's Inside?</h2>
+
+  <p class="text-slate-700 leading-relaxed mb-4">
+    Vibe coding tools like <strong>Bolt</strong>, <strong>Lovable</strong>, <strong>v0</strong>, and <strong>Replit Agent</strong> are incredible. You describe what you want in plain English, and minutes later you have a working application. No computer science degree required.
+  </p>
+  <p class="text-slate-700 leading-relaxed mb-4">
+    But here's what these tools don't tell you: under the hood, your "simple" app has <strong>5 to 8 layers of technology</strong> you've never heard of. A frontend framework. A CSS library. A database. An authentication system. A hosting platform. Environment variables. API keys. Each one made by a different company, with its own dashboard, its own documentation, and its own way of breaking.
+  </p>
+  <p class="text-slate-700 leading-relaxed mb-6">
+    When everything works, you don't need to know any of this. But when something breaks — and it will — you're stuck. You don't even know which layer to look at, let alone how to fix it.
+  </p>
+
+  <div class="bg-violet-50 border border-violet-200 rounded-xl p-6 mb-6">
+    <p class="text-violet-900 font-semibold mb-2">This post is your map.</p>
+    <p class="text-violet-800 text-sm leading-relaxed">
+      We'll decode exactly what each major vibe coding tool generates, explain the 7 layers every web app has, give you a troubleshooting guide for common failures, and point you to the right learning resources. No jargon without explanation. No judgment. You built something — now let's help you understand it.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SECTION 2: TOOL-BY-TOOL STACK DECODER -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="mb-16">
+  <h2 class="text-3xl font-bold text-slate-900 mb-4">Tool-by-Tool Stack Decoder</h2>
+  <p class="text-slate-600 mb-8">Find the tool you used below. Each card shows exactly what technologies it put in your app and what to learn first when you need to fix something.</p>
+
+  <!-- BOLT.NEW -->
+  <div class="tool-card bg-white border border-slate-200 rounded-2xl shadow-sm p-6 mb-6">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="inline-flex items-center justify-center w-10 h-10 bg-amber-100 text-amber-700 font-bold rounded-lg text-lg">B</span>
+      <h3 class="text-2xl font-bold text-slate-900">Bolt.new</h3>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm mb-4">
+        <tbody>
+          <tr class="border-b border-slate-100">
+            <td class="py-2 pr-4 font-semibold text-slate-600 w-40">Frontend</td>
+            <td class="py-2 text-slate-800"><strong>React</strong> (a JavaScript library for building user interfaces) + <strong>Vite</strong> (a fast build tool that bundles your code)</td>
+          </tr>
+          <tr class="border-b border-slate-100">
+            <td class="py-2 pr-4 font-semibold text-slate-600">Styling</td>
+            <td class="py-2 text-slate-800"><strong>Tailwind CSS</strong> (utility classes like <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">bg-blue-500</code> instead of writing CSS files)</td>
+          </tr>
+          <tr class="border-b border-slate-100">
+            <td class="py-2 pr-4 font-semibold text-slate-600">Backend / Database</td>
+            <td class="py-2 text-slate-800"><strong>Supabase</strong> (a hosted PostgreSQL database with built-in APIs — think of it as your app's storage + brain)</td>
+          </tr>
+          <tr class="border-b border-slate-100">
+            <td class="py-2 pr-4 font-semibold text-slate-600">Authentication</td>
+            <td class="py-2 text-slate-800"><strong>Supabase Auth</strong> (handles login, signup, password reset)</td>
+          </tr>
+          <tr>
+            <td class="py-2 pr-4 font-semibold text-slate-600">Hosting</td>
+            <td class="py-2 text-slate-800">Bolt cloud or <strong>Netlify</strong> (where your app actually runs on the internet)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4 mt-4">
+      <div class="bg-rose-50 border border-rose-200 rounded-lg p-4">
+        <p class="text-rose-700 font-semibold text-sm mb-1">What typically breaks</p>
+        <ul class="text-rose-800 text-sm space-y-1 list-disc list-inside">
+          <li>Database migrations (schema changes that don't apply)</li>
+          <li>Auth token expiry (users get randomly logged out)</li>
+          <li>Environment variables missing after deploy</li>
+        </ul>
+      </div>
+      <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
+        <p class="text-emerald-700 font-semibold text-sm mb-1">What to learn first</p>
+        <ul class="text-emerald-800 text-sm space-y-1 list-disc list-inside">
+          <li><a href="../Frontend-Stacks-Visual-Guide.html" class="underline hover:text-emerald-600">React basics</a> (components, state, props)</li>
+          <li>The Supabase dashboard (Table Editor, Auth tab)</li>
+          <li>Environment variables (.env files)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOVABLE -->
+  <div class="tool-card bg-white border border-slate-200 rounded-2xl shadow-sm p-6 mb-6">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="inline-flex items-center justify-center w-10 h-10 bg-pink-100 text-pink-700 font-bold rounded-lg text-lg">L</span>
+      <h3 class="text-2xl font-bold text-slate-900">Lovable</h3>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm mb-4">
+        <tbody>
+          <tr class="border-b border-slate-100">
+            <td class="py-2 pr-4 font-semibold text-slate-600 w-40">Frontend</td>
+            <td class="py-2 text-slate-800"><strong>React</strong> + <strong>Vite</strong></td>
+          </tr>
+          <tr class="border-b border-slate-100">
+            <td class="py-2 pr-4 font-semibold text-slate-600">Styling</td>
+            <td class="py-2 text-slate-800"><strong>Tailwind CSS</strong> + <strong>shadcn/ui</strong> (a collection of pre-built, polished UI components like buttons, modals, and forms)</td>
+          </tr>
+          <tr class="border-b border-slate-100">
+            <td class="py-2 pr-4 font-semibold text-slate-600">Backend / Database</td>
+            <td class="py-2 text-slate-800"><strong>Supabase</strong> (PostgreSQL database + auto-generated API)</td>
+          </tr>
+          <tr class="border-b border-slate-100">
+            <td class="py-2 pr-4 font-semibold text-slate-600">Authentication</td>
+            <td class="py-2 text-slate-800"><strong>Supabase Auth</strong></td>
+          </tr>
+          <tr>
+            <td class="py-2 pr-4 font-semibold text-slate-600">Hosting</td>
+            <td class="py-2 text-slate-800">Lovable cloud or <strong>Netlify</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4 mt-4">
+      <div class="bg-rose-50 border border-rose-200 rounded-lg p-4">
+        <p class="text-rose-700 font-semibold text-sm mb-1">What typically breaks</p>
+        <ul class="text-rose-800 text-sm space-y-1 list-disc list-inside">
+          <li>Component state bugs (UI not updating when data changes)</li>
+          <li>Supabase RLS policies (Row Level Security — rules that control who can read/write which rows in your database)</li>
+          <li>API rate limits (too many requests too fast)</li>
+        </ul>
+      </div>
+      <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
+        <p class="text-emerald-700 font-semibold text-sm mb-1">What to learn first</p>
+        <ul class="text-emerald-800 text-sm space-y-1 list-disc list-inside">
+          <li><a href="../Frontend-Stacks-Visual-Guide.html" class="underline hover:text-emerald-600">React components</a> (how they render and re-render)</li>
+          <li>Supabase Row Level Security (the #1 thing that blocks data)</li>
+          <li>How shadcn/ui components work</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- V0 -->
+  <div class="tool-card bg-white border border-slate-200 rounded-2xl shadow-sm p-6 mb-6">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="inline-flex items-center justify-center w-10 h-10 bg-slate-900 text-white font-bold rounded-lg text-lg">v0</span>
+      <h3 class="text-2xl font-bold text-slate-900">v0 (by Vercel)</h3>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm mb-4">
+        <tbody>
+          <tr class="border-b border-slate-100">
+            <td class="py-2 pr-4 font-semibold text-slate-600 w-40">Frontend</td>
+            <td class="py-2 text-slate-800"><strong>React</strong> / <strong>Next.js</strong> (a React framework that adds routing, server rendering, and more)</td>
+          </tr>
+          <tr class="border-b border-slate-100">
+            <td class="py-2 pr-4 font-semibold text-slate-600">Styling</td>
+            <td class="py-2 text-slate-800"><strong>Tailwind CSS</strong> + <strong>shadcn/ui</strong> + <strong>Radix</strong> (accessible, unstyled primitives that shadcn builds on)</td>
+          </tr>
+          <tr class="border-b border-slate-100">
+            <td class="py-2 pr-4 font-semibold text-slate-600">Backend / Database</td>
+            <td class="py-2 text-slate-800"><strong>You add your own.</strong> v0 generates UI only. You can use Next.js API routes for backend logic.</td>
+          </tr>
+          <tr>
+            <td class="py-2 pr-4 font-semibold text-slate-600">Hosting</td>
+            <td class="py-2 text-slate-800"><strong>Vercel</strong> (natural fit since v0 is made by Vercel)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 mt-4 mb-4">
+      <p class="text-amber-800 text-sm"><strong>Important:</strong> v0 generates beautiful UI components, but it does <em>not</em> give you a database, authentication, or backend. If your app needs to save data or have user accounts, you'll need to add those yourself. Think of v0 as a designer, not a full-stack builder.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div class="bg-rose-50 border border-rose-200 rounded-lg p-4">
+        <p class="text-rose-700 font-semibold text-sm mb-1">What typically breaks</p>
+        <ul class="text-rose-800 text-sm space-y-1 list-disc list-inside">
+          <li>Expecting it to handle backend (it won't)</li>
+          <li>Integration issues when you add your own DB/auth</li>
+          <li>Next.js routing confusion</li>
+        </ul>
+      </div>
+      <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
+        <p class="text-emerald-700 font-semibold text-sm mb-1">What to learn first</p>
+        <ul class="text-emerald-800 text-sm space-y-1 list-disc list-inside">
+          <li><a href="../Frontend-Stacks-Visual-Guide.html" class="underline hover:text-emerald-600">Next.js basics</a> (pages, layouts, routing)</li>
+          <li>How to <a href="../Backend-Stacks-Visual-Guide.html" class="underline hover:text-emerald-600">connect a backend</a></li>
+          <li>Vercel deployment settings</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPLIT AGENT -->
+  <div class="tool-card bg-white border border-slate-200 rounded-2xl shadow-sm p-6 mb-6">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="inline-flex items-center justify-center w-10 h-10 bg-orange-100 text-orange-700 font-bold rounded-lg text-lg">R</span>
+      <h3 class="text-2xl font-bold text-slate-900">Replit Agent</h3>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm mb-4">
+        <tbody>
+          <tr class="border-b border-slate-100">
+            <td class="py-2 pr-4 font-semibold text-slate-600 w-40">Frontend</td>
+            <td class="py-2 text-slate-800"><strong>React</strong> or <strong>vanilla JavaScript</strong> (varies based on what you asked for)</td>
+          </tr>
+          <tr class="border-b border-slate-100">
+            <td class="py-2 pr-4 font-semibold text-slate-600">Backend</td>
+            <td class="py-2 text-slate-800"><strong>Node.js / Express</strong> (JavaScript) or <strong>Python / Flask</strong> — the agent picks based on your request</td>
+          </tr>
+          <tr class="border-b border-slate-100">
+            <td class="py-2 pr-4 font-semibold text-slate-600">Database</td>
+            <td class="py-2 text-slate-800"><strong>Replit DB</strong> (simple key-value storage) or <strong>PostgreSQL</strong> (full relational database)</td>
+          </tr>
+          <tr>
+            <td class="py-2 pr-4 font-semibold text-slate-600">Hosting</td>
+            <td class="py-2 text-slate-800"><strong>Replit Deployments</strong> (runs directly on Replit's infrastructure)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4 mt-4">
+      <div class="bg-rose-50 border border-rose-200 rounded-lg p-4">
+        <p class="text-rose-700 font-semibold text-sm mb-1">What typically breaks</p>
+        <ul class="text-rose-800 text-sm space-y-1 list-disc list-inside">
+          <li>Replit-specific dependencies that don't work elsewhere</li>
+          <li>Cold starts (app is slow after being idle)</li>
+          <li>Database persistence issues on free tier</li>
+        </ul>
+      </div>
+      <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
+        <p class="text-emerald-700 font-semibold text-sm mb-1">What to learn first</p>
+        <ul class="text-emerald-800 text-sm space-y-1 list-disc list-inside">
+          <li>Whatever language it picked (check the file extensions: <code class="bg-slate-100 px-1 rounded text-xs">.js</code> = JavaScript, <code class="bg-slate-100 px-1 rounded text-xs">.py</code> = Python)</li>
+          <li><a href="../DevOps-Stacks-Visual-Guide.html" class="underline hover:text-emerald-600">Deployment basics</a></li>
+          <li>Replit's Secrets tab (for environment variables)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- CREATE.XYZ -->
+  <div class="tool-card bg-white border border-slate-200 rounded-2xl shadow-sm p-6 mb-6">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="inline-flex items-center justify-center w-10 h-10 bg-cyan-100 text-cyan-700 font-bold rounded-lg text-lg">C</span>
+      <h3 class="text-2xl font-bold text-slate-900">Create.xyz</h3>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm mb-4">
+        <tbody>
+          <tr class="border-b border-slate-100">
+            <td class="py-2 pr-4 font-semibold text-slate-600 w-40">Frontend</td>
+            <td class="py-2 text-slate-800"><strong>React</strong></td>
+          </tr>
+          <tr class="border-b border-slate-100">
+            <td class="py-2 pr-4 font-semibold text-slate-600">Backend</td>
+            <td class="py-2 text-slate-800"><strong>Serverless functions</strong> (small pieces of backend code that run on-demand, without you managing a server)</td>
+          </tr>
+          <tr>
+            <td class="py-2 pr-4 font-semibold text-slate-600">Hosting</td>
+            <td class="py-2 text-slate-800">Create.xyz cloud</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4 mt-4">
+      <div class="bg-rose-50 border border-rose-200 rounded-lg p-4">
+        <p class="text-rose-700 font-semibold text-sm mb-1">What typically breaks</p>
+        <ul class="text-rose-800 text-sm space-y-1 list-disc list-inside">
+          <li>API integrations (third-party services it connected to)</li>
+          <li>Scaling limits on the free/starter tier</li>
+          <li>Limited ability to customize beyond what the tool offers</li>
+        </ul>
+      </div>
+      <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
+        <p class="text-emerald-700 font-semibold text-sm mb-1">What to learn first</p>
+        <ul class="text-emerald-800 text-sm space-y-1 list-disc list-inside">
+          <li><a href="../Backend-Stacks-Visual-Guide.html" class="underline hover:text-emerald-600">How APIs work</a> (requests, responses, status codes)</li>
+          <li>Serverless concepts (functions that run without a dedicated server)</li>
+          <li>Reading error messages in the browser console</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- CURSOR / CLAUDE CODE / COPILOT -->
+  <div class="tool-card bg-white border border-slate-200 rounded-2xl shadow-sm p-6 mb-6">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="inline-flex items-center justify-center w-10 h-10 bg-indigo-100 text-indigo-700 font-bold rounded-lg text-lg">AI</span>
+      <h3 class="text-2xl font-bold text-slate-900">Cursor / Claude Code / Copilot</h3>
+      <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full">AI Agents in IDE</span>
+    </div>
+
+    <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-4 mb-4">
+      <p class="text-indigo-800 text-sm"><strong>Key difference:</strong> These tools don't have a fixed stack. They build with whatever <em>you</em> already have in your project, or whatever they decide is a good fit. Every project will be different.</p>
+    </div>
+
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm mb-4">
+        <tbody>
+          <tr class="border-b border-slate-100">
+            <td class="py-2 pr-4 font-semibold text-slate-600 w-40">Common defaults</td>
+            <td class="py-2 text-slate-800"><strong>Next.js</strong> + <strong>Tailwind CSS</strong> + <strong>Prisma</strong> (a tool that lets your code talk to databases) + <strong>PostgreSQL</strong> + <strong>NextAuth</strong> (authentication for Next.js apps)</td>
+          </tr>
+          <tr class="border-b border-slate-100">
+            <td class="py-2 pr-4 font-semibold text-slate-600">But also...</td>
+            <td class="py-2 text-slate-800">Could be Python + FastAPI, or Ruby on Rails, or anything. It depends on what you asked for and what was in your project already.</td>
+          </tr>
+          <tr>
+            <td class="py-2 pr-4 font-semibold text-slate-600">Hosting</td>
+            <td class="py-2 text-slate-800">You choose — the agent generates code, not infrastructure</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4 mt-4">
+      <div class="bg-rose-50 border border-rose-200 rounded-lg p-4">
+        <p class="text-rose-700 font-semibold text-sm mb-1">What typically breaks</p>
+        <ul class="text-rose-800 text-sm space-y-1 list-disc list-inside">
+          <li>The agent's assumptions about your project structure</li>
+          <li>Dependency conflicts (it adds packages that clash)</li>
+          <li>Code that works in isolation but breaks with your existing code</li>
+        </ul>
+      </div>
+      <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
+        <p class="text-emerald-700 font-semibold text-sm mb-1">What to learn first</p>
+        <ul class="text-emerald-800 text-sm space-y-1 list-disc list-inside">
+          <li>Read what the agent generated (seriously, read the files)</li>
+          <li>Understand your <code class="bg-slate-100 px-1 rounded text-xs">package.json</code> (it lists every dependency)</li>
+          <li>Check our <a href="../AI-Coding-Tools-Visual-Guide.html" class="underline hover:text-emerald-600">AI Coding Tools guide</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SECTION 3: THE 7 LAYERS -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="mb-16">
+  <h2 class="text-3xl font-bold text-slate-900 mb-4">The 7 Layers of Your App</h2>
+  <p class="text-slate-600 mb-8">Every web app — whether you built it with vibe coding or by hand — has these layers. When something breaks, figure out <em>which layer</em> is the problem, and you're halfway to fixing it.</p>
+
+  <div class="space-y-4">
+    <!-- Layer 1 -->
+    <div class="bg-white border border-slate-200 rounded-xl p-5 flex gap-4 items-start">
+      <div class="flex-shrink-0 w-10 h-10 bg-blue-100 text-blue-700 font-bold rounded-lg flex items-center justify-center">1</div>
+      <div class="flex-1">
+        <h3 class="font-bold text-slate-900 mb-1">Frontend Framework <span class="text-sm font-normal text-slate-500">(React, Vue, Svelte)</span></h3>
+        <p class="text-slate-600 text-sm mb-2">This is what users see and interact with — buttons, forms, pages, navigation. It's the "face" of your app.</p>
+        <p class="text-rose-600 text-sm"><strong>When it breaks:</strong> Blank white screen, buttons that don't respond, pages that won't load.</p>
+        <p class="text-sm mt-1"><a href="../Frontend-Stacks-Visual-Guide.html" class="text-blue-600 underline hover:text-blue-800">Explore frontend technologies &rarr;</a></p>
+      </div>
+    </div>
+
+    <!-- Layer 2 -->
+    <div class="bg-white border border-slate-200 rounded-xl p-5 flex gap-4 items-start">
+      <div class="flex-shrink-0 w-10 h-10 bg-violet-100 text-violet-700 font-bold rounded-lg flex items-center justify-center">2</div>
+      <div class="flex-1">
+        <h3 class="font-bold text-slate-900 mb-1">Styling <span class="text-sm font-normal text-slate-500">(Tailwind CSS, CSS Modules)</span></h3>
+        <p class="text-slate-600 text-sm mb-2">Controls how your app looks — colors, spacing, fonts, responsive layout. It's cosmetic but important.</p>
+        <p class="text-rose-600 text-sm"><strong>When it breaks:</strong> Layout looks wrong, elements overlap, mobile view is broken, styles missing after deploy.</p>
+        <p class="text-sm mt-1"><a href="../Frontend-Stacks-Visual-Guide.html" class="text-blue-600 underline hover:text-blue-800">Styling tools in the Frontend guide &rarr;</a></p>
+      </div>
+    </div>
+
+    <!-- Layer 3 -->
+    <div class="bg-white border border-slate-200 rounded-xl p-5 flex gap-4 items-start">
+      <div class="flex-shrink-0 w-10 h-10 bg-emerald-100 text-emerald-700 font-bold rounded-lg flex items-center justify-center">3</div>
+      <div class="flex-1">
+        <h3 class="font-bold text-slate-900 mb-1">Backend / API <span class="text-sm font-normal text-slate-500">(Node.js, Python, serverless functions)</span></h3>
+        <p class="text-slate-600 text-sm mb-2">The business logic of your app. It processes data, talks to the database, handles payments, sends emails — everything that happens "behind the scenes."</p>
+        <p class="text-rose-600 text-sm"><strong>When it breaks:</strong> 500 errors, data not saving, features silently failing, API timeout messages.</p>
+        <p class="text-sm mt-1"><a href="../Backend-Stacks-Visual-Guide.html" class="text-blue-600 underline hover:text-blue-800">Explore backend technologies &rarr;</a></p>
+      </div>
+    </div>
+
+    <!-- Layer 4 -->
+    <div class="bg-white border border-slate-200 rounded-xl p-5 flex gap-4 items-start">
+      <div class="flex-shrink-0 w-10 h-10 bg-amber-100 text-amber-700 font-bold rounded-lg flex items-center justify-center">4</div>
+      <div class="flex-1">
+        <h3 class="font-bold text-slate-900 mb-1">Database <span class="text-sm font-normal text-slate-500">(PostgreSQL, MongoDB, SQLite)</span></h3>
+        <p class="text-slate-600 text-sm mb-2">Where your app's data actually lives — user accounts, posts, settings, everything. If the database goes down, your app has amnesia.</p>
+        <p class="text-rose-600 text-sm"><strong>When it breaks:</strong> Data disappears, old data shows up, "connection refused" errors, slow queries.</p>
+        <p class="text-sm mt-1"><a href="../Backend-Stacks-Visual-Guide.html" class="text-blue-600 underline hover:text-blue-800">Database options in the Backend guide &rarr;</a></p>
+      </div>
+    </div>
+
+    <!-- Layer 5 -->
+    <div class="bg-white border border-slate-200 rounded-xl p-5 flex gap-4 items-start">
+      <div class="flex-shrink-0 w-10 h-10 bg-pink-100 text-pink-700 font-bold rounded-lg flex items-center justify-center">5</div>
+      <div class="flex-1">
+        <h3 class="font-bold text-slate-900 mb-1">Authentication <span class="text-sm font-normal text-slate-500">(Clerk, Supabase Auth, NextAuth)</span></h3>
+        <p class="text-slate-600 text-sm mb-2">Controls who can access what. Handles login, signup, sessions, and permissions. This is your app's bouncer.</p>
+        <p class="text-rose-600 text-sm"><strong>When it breaks:</strong> Can't log in, sessions expire randomly, "unauthorized" errors, redirect loops.</p>
+        <p class="text-sm mt-1"><a href="../Backend-Stacks-Visual-Guide.html" class="text-blue-600 underline hover:text-blue-800">Auth providers in the Backend guide &rarr;</a></p>
+      </div>
+    </div>
+
+    <!-- Layer 6 -->
+    <div class="bg-white border border-slate-200 rounded-xl p-5 flex gap-4 items-start">
+      <div class="flex-shrink-0 w-10 h-10 bg-sky-100 text-sky-700 font-bold rounded-lg flex items-center justify-center">6</div>
+      <div class="flex-1">
+        <h3 class="font-bold text-slate-900 mb-1">Hosting / Deployment <span class="text-sm font-normal text-slate-500">(Vercel, Netlify, Replit)</span></h3>
+        <p class="text-slate-600 text-sm mb-2">Where your app physically runs on the internet. It takes your code and makes it available at a URL for anyone to visit.</p>
+        <p class="text-rose-600 text-sm"><strong>When it breaks:</strong> Site is down entirely, deploy fails, "502 Bad Gateway" errors, slow load times.</p>
+        <p class="text-sm mt-1"><a href="../DevOps-Stacks-Visual-Guide.html" class="text-blue-600 underline hover:text-blue-800">Hosting options in the DevOps guide &rarr;</a></p>
+      </div>
+    </div>
+
+    <!-- Layer 7 -->
+    <div class="bg-white border border-slate-200 rounded-xl p-5 flex gap-4 items-start">
+      <div class="flex-shrink-0 w-10 h-10 bg-slate-200 text-slate-700 font-bold rounded-lg flex items-center justify-center">7</div>
+      <div class="flex-1">
+        <h3 class="font-bold text-slate-900 mb-1">Domain & DNS <span class="text-sm font-normal text-slate-500">(Namecheap, Cloudflare, Google Domains)</span></h3>
+        <p class="text-slate-600 text-sm mb-2">How people find your app. DNS (Domain Name System) is like the internet's phone book — it translates "yourapp.com" into the server address where your app lives.</p>
+        <p class="text-rose-600 text-sm"><strong>When it breaks:</strong> "Site can't be reached," custom domain not working, SSL certificate errors (the padlock icon).</p>
+        <p class="text-sm mt-1"><a href="../DevOps-Stacks-Visual-Guide.html" class="text-blue-600 underline hover:text-blue-800">DNS & deployment in the DevOps guide &rarr;</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SECTION 4: TROUBLESHOOTING -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="mb-16">
+  <h2 class="text-3xl font-bold text-slate-900 mb-4">My App Broke — Where Do I Look?</h2>
+  <p class="text-slate-600 mb-8">Don't panic. Find your symptom below, and we'll point you to the right layer and the first thing to check.</p>
+
+  <div class="space-y-4">
+    <!-- Issue 1 -->
+    <div class="bg-white border-l-4 border-blue-500 rounded-r-xl shadow-sm p-5">
+      <p class="font-bold text-slate-900 mb-1">"Page is blank / white screen"</p>
+      <p class="text-slate-600 text-sm mb-2"><strong>Layer:</strong> Frontend (JavaScript error crashed the page)</p>
+      <p class="text-slate-700 text-sm"><strong>First step:</strong> Open your browser's Developer Console (right-click the page, click "Inspect", then go to the "Console" tab). Look for red error messages. The error will usually tell you which file and line number broke. Google the exact error message — someone else has had it before.</p>
+    </div>
+
+    <!-- Issue 2 -->
+    <div class="bg-white border-l-4 border-amber-500 rounded-r-xl shadow-sm p-5">
+      <p class="font-bold text-slate-900 mb-1">"Data isn't saving"</p>
+      <p class="text-slate-600 text-sm mb-2"><strong>Layer:</strong> Database or Backend</p>
+      <p class="text-slate-700 text-sm"><strong>First step:</strong> If you're using Supabase, open the Supabase dashboard and check the Table Editor — is the data there? If not, check the Supabase logs (under Database > Logs). Common cause: Row Level Security (RLS) policies are blocking writes. Also check that your API keys in environment variables are correct.</p>
+    </div>
+
+    <!-- Issue 3 -->
+    <div class="bg-white border-l-4 border-pink-500 rounded-r-xl shadow-sm p-5">
+      <p class="font-bold text-slate-900 mb-1">"Login doesn't work"</p>
+      <p class="text-slate-600 text-sm mb-2"><strong>Layer:</strong> Authentication</p>
+      <p class="text-slate-700 text-sm"><strong>First step:</strong> Go to your auth provider's dashboard (Supabase Auth tab, Clerk dashboard, etc.). Check if the user account exists. Check if email confirmation is required but not set up. Check if auth tokens have expired. Also verify your auth-related environment variables (like <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">SUPABASE_URL</code> and <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">SUPABASE_ANON_KEY</code>) are set correctly in your hosting platform.</p>
+    </div>
+
+    <!-- Issue 4 -->
+    <div class="bg-white border-l-4 border-orange-500 rounded-r-xl shadow-sm p-5">
+      <p class="font-bold text-slate-900 mb-1">"Site is slow"</p>
+      <p class="text-slate-600 text-sm mb-2"><strong>Layer:</strong> Hosting or Database queries</p>
+      <p class="text-slate-700 text-sm"><strong>First step:</strong> Check your hosting dashboard for resource usage. If you're on Replit's free tier, cold starts (the server sleeping and waking up) cause delays. If it's slow after loading, the problem is likely database queries — you might be fetching too much data at once. Check the Network tab in browser DevTools to see which requests are slow.</p>
+    </div>
+
+    <!-- Issue 5 -->
+    <div class="bg-white border-l-4 border-violet-500 rounded-r-xl shadow-sm p-5">
+      <p class="font-bold text-slate-900 mb-1">"Works locally but not after deploy"</p>
+      <p class="text-slate-600 text-sm mb-2"><strong>Layer:</strong> Environment variables</p>
+      <p class="text-slate-700 text-sm"><strong>First step:</strong> This is almost always missing environment variables. Your local machine has a <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">.env</code> file with secrets (API keys, database URLs). Your hosting platform needs these too, but they don't transfer automatically. Go to your hosting dashboard (Vercel, Netlify, Replit) and add each variable from your <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">.env</code> file to the environment settings.</p>
+    </div>
+
+    <!-- Issue 6 -->
+    <div class="bg-white border-l-4 border-red-500 rounded-r-xl shadow-sm p-5">
+      <p class="font-bold text-slate-900 mb-1">"API errors / 500 errors"</p>
+      <p class="text-slate-600 text-sm mb-2"><strong>Layer:</strong> Backend</p>
+      <p class="text-slate-700 text-sm"><strong>First step:</strong> A "500" error means something crashed on the server side. Check your hosting platform's function logs or server logs (Vercel: Functions tab; Netlify: Functions log; Replit: Console). The error message in the logs will tell you exactly what went wrong. Common causes: missing environment variables, database connection issues, or a bug in the server code.</p>
+    </div>
+
+    <!-- Issue 7 -->
+    <div class="bg-white border-l-4 border-emerald-500 rounded-r-xl shadow-sm p-5">
+      <p class="font-bold text-slate-900 mb-1">"Styling looks broken / layout is weird"</p>
+      <p class="text-slate-600 text-sm mb-2"><strong>Layer:</strong> CSS / Styling</p>
+      <p class="text-slate-700 text-sm"><strong>First step:</strong> If you're using Tailwind CSS, make sure the Tailwind config file includes all your source files (so it generates the right CSS classes). If styles work locally but not in production, your build step might be stripping unused classes. Check the browser's "Elements" panel in DevTools — inspect the broken element and see what CSS is being applied.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SECTION 5: WHAT TO LEARN FIRST -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="mb-16">
+  <h2 class="text-3xl font-bold text-slate-900 mb-4">What Should I Learn First?</h2>
+  <p class="text-slate-600 mb-8">You don't need to learn everything. Here's a priority order that applies no matter which tool you used. Each step builds on the last.</p>
+
+  <div class="space-y-6">
+    <!-- Priority 1 -->
+    <div class="flex gap-4 items-start">
+      <div class="flex-shrink-0 w-12 h-12 bg-violet-600 text-white font-bold rounded-full flex items-center justify-center text-lg">1</div>
+      <div class="flex-1">
+        <h3 class="font-bold text-slate-900 text-lg mb-1">Learn what's in your package.json <span class="text-slate-400 font-normal text-sm">(5 minutes)</span></h3>
+        <p class="text-slate-600 text-sm mb-2">
+          Open the file called <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">package.json</code> in the root of your project. Under <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">"dependencies"</code>, you'll see a list of every technology your app uses. Google each name — just knowing what they are gives you a huge head start. This is your app's ingredient list.
+        </p>
+        <div class="bg-slate-50 border border-slate-200 rounded-lg p-3">
+          <p class="text-xs font-mono text-slate-600">
+            "dependencies": {<br>
+            &nbsp;&nbsp;"react": "^18.2.0", &nbsp;&nbsp;&nbsp;<span class="text-slate-400">// Your frontend framework</span><br>
+            &nbsp;&nbsp;"@supabase/supabase-js": "^2.0.0", &nbsp;<span class="text-slate-400">// Your database client</span><br>
+            &nbsp;&nbsp;"tailwindcss": "^3.4.0" &nbsp;&nbsp;<span class="text-slate-400">// Your styling tool</span><br>
+            }
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Priority 2 -->
+    <div class="flex gap-4 items-start">
+      <div class="flex-shrink-0 w-12 h-12 bg-violet-600 text-white font-bold rounded-full flex items-center justify-center text-lg">2</div>
+      <div class="flex-1">
+        <h3 class="font-bold text-slate-900 text-lg mb-1">Understand your database</h3>
+        <p class="text-slate-600 text-sm mb-2">
+          Your database is where all your app's data lives. If you're using Supabase, log into the dashboard and explore the Table Editor. If you're using something else, find its dashboard. Understand what tables exist, what data is in them, and what happens when you add or delete a row. This is the most critical thing to understand because data problems cause the most confusing bugs.
+        </p>
+        <p class="text-sm"><a href="../Backend-Stacks-Visual-Guide.html" class="text-violet-600 underline hover:text-violet-800">Read the Backend guide to understand database options &rarr;</a></p>
+      </div>
+    </div>
+
+    <!-- Priority 3 -->
+    <div class="flex gap-4 items-start">
+      <div class="flex-shrink-0 w-12 h-12 bg-violet-600 text-white font-bold rounded-full flex items-center justify-center text-lg">3</div>
+      <div class="flex-1">
+        <h3 class="font-bold text-slate-900 text-lg mb-1">Learn your frontend framework basics</h3>
+        <p class="text-slate-600 text-sm mb-2">
+          If your app uses React (most vibe-coded apps do), spend an hour on the official React tutorial. You don't need to master it — just understand components (reusable pieces of UI), props (data passed to components), and state (data that changes over time). This will make 80% of the generated code readable to you.
+        </p>
+        <p class="text-sm"><a href="../Frontend-Stacks-Visual-Guide.html" class="text-violet-600 underline hover:text-violet-800">Explore all frontend frameworks in our guide &rarr;</a></p>
+      </div>
+    </div>
+
+    <!-- Priority 4 -->
+    <div class="flex gap-4 items-start">
+      <div class="flex-shrink-0 w-12 h-12 bg-violet-600 text-white font-bold rounded-full flex items-center justify-center text-lg">4</div>
+      <div class="flex-1">
+        <h3 class="font-bold text-slate-900 text-lg mb-1">Understand deployment</h3>
+        <p class="text-slate-600 text-sm mb-2">
+          Learn how your code goes from "files on your computer" to "a live website." Understand environment variables, build commands, and how to read deploy logs. Most "works locally but not in production" problems come from not understanding this step.
+        </p>
+        <p class="text-sm"><a href="../DevOps-Stacks-Visual-Guide.html" class="text-violet-600 underline hover:text-violet-800">Read the DevOps guide for deployment tools &rarr;</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-violet-50 border border-violet-200 rounded-xl p-6 mt-8">
+    <p class="text-violet-900 font-semibold mb-2">You don't need to become an expert.</p>
+    <p class="text-violet-800 text-sm leading-relaxed">
+      The goal isn't to learn everything from scratch. It's to know enough to <strong>read error messages</strong>, <strong>find the right dashboard</strong>, and <strong>ask the right questions</strong> when you paste an error into ChatGPT or Claude. That's a superpower.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SECTION 6: CTA -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="mb-8">
+  <h2 class="text-3xl font-bold text-slate-900 mb-6">What's Next?</h2>
+
+  <div class="grid sm:grid-cols-2 gap-4 mb-6">
+    <a href="../stack-picker.html" class="block bg-gradient-to-br from-violet-500 to-indigo-600 text-white rounded-2xl p-6 hover:shadow-lg transition group">
+      <p class="font-bold text-lg mb-2 group-hover:underline">Find the right stack for your next project</p>
+      <p class="text-violet-100 text-sm">Use the Stack Picker to answer a few questions and get a personalized technology recommendation.</p>
+    </a>
+    <a href="../index.html" class="block bg-gradient-to-br from-slate-700 to-slate-900 text-white rounded-2xl p-6 hover:shadow-lg transition group">
+      <p class="font-bold text-lg mb-2 group-hover:underline">Explore all 280+ technologies</p>
+      <p class="text-slate-300 text-sm">Browse interactive visual guides across Frontend, Backend, AI/ML, DevOps, Mobile, and more.</p>
+    </a>
+  </div>
+
+  <div class="text-center">
+    <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener"
+       class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white font-semibold rounded-xl hover:bg-slate-800 transition">
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+      Star on GitHub to help others find this
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-slate-950 text-slate-500 text-sm">
+  <div class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between flex-wrap gap-3">
+    <div>⚡ <a href="../index.html" class="hover:text-slate-300 transition">Open TechStack</a> · <a href="./" class="hover:text-slate-300 transition">Blog</a> · <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="hover:text-slate-300 transition">GitHub</a></div>
+    <div class="text-xs">MIT License · Zero dependencies · No tracking</div>
+  </div>
+</footer>
+
+</body>
+</html>
