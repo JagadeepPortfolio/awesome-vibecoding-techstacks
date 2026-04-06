@@ -2,7 +2,7 @@
 
 **Interactive visual guides to modern frontend and backend tech stacks.**
 
-> Compare 100+ technologies across 20 categories. Filter by project stage (Hobby / MVP / Growth / Scale), search, and find the stack that fits.
+> Compare 200+ technologies across 50 categories. Filter by project stage (Hobby / MVP / Growth / Scale), search, and find the stack that fits.
 
 **Live site:** [techstacks.stitchwebsite.com](https://techstacks.stitchwebsite.com)
 
@@ -19,6 +19,21 @@
 50+ technologies across languages/frameworks, BaaS, hosting, databases, auth, jobs/queues, storage, payments, email, and observability.
 
 **Covers:** Node.js, Python, Go, Rust, Rails, Elixir, Supabase, Firebase, Postgres, Neon, Clerk, Auth0, Stripe, Inngest, Temporal, Sentry, and more.
+
+### [AI/ML Stacks Guide](https://techstacks.stitchwebsite.com/AIML-Stacks-Visual-Guide.html)
+40+ technologies across LLM providers, orchestration frameworks, vector databases, embeddings, RAG, agents, fine-tuning, eval, inference infra, and data labeling.
+
+**Covers:** OpenAI, Claude, Gemini, Llama, LangChain, LlamaIndex, Pinecone, Qdrant, pgvector, CrewAI, vLLM, Modal, Hugging Face, LangSmith, and more.
+
+### [DevOps & Infra Stacks Guide](https://techstacks.stitchwebsite.com/DevOps-Stacks-Visual-Guide.html)
+40+ technologies across CI/CD, infrastructure as code, containers, cloud platforms, monitoring, security, networking, GitOps, registries, and platform engineering.
+
+**Covers:** GitHub Actions, Terraform, Docker, Kubernetes, AWS, Grafana, Datadog, Vault, ArgoCD, Helm, Backstage, and more.
+
+### [Mobile Stacks Guide](https://techstacks.stitchwebsite.com/Mobile-Stacks-Visual-Guide.html)
+40+ technologies across cross-platform frameworks, native development, UI components, navigation, state management, backend integration, testing, build/deploy, analytics, and design.
+
+**Covers:** React Native, Expo, Flutter, SwiftUI, Jetpack Compose, KMP, NativeWind, Detox, Fastlane, Firebase, and more.
 
 ---
 
@@ -56,9 +71,9 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## Roadmap
 
-- [ ] DevOps & Infrastructure Stacks Guide
-- [ ] AI / ML Stacks Guide
-- [ ] Mobile Stacks Guide
+- [x] DevOps & Infrastructure Stacks Guide
+- [x] AI / ML Stacks Guide
+- [x] Mobile Stacks Guide
 - [ ] Full-Stack Combo Recommendations
 - [ ] Stack Comparison Tool (side-by-side)
 - [ ] Community voting on technologies

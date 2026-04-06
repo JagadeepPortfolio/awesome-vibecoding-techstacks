@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>DevOps Stacks · Interactive Visual Guide 2026</title>
+<meta name="description" content="Interactive visual guide to DevOps & Infrastructure tech stacks in 2026. Compare CI/CD, IaC, containers, cloud platforms, monitoring, security, and more." />
+<meta name="keywords" content="devops, tech stack, 2026, CI/CD, Kubernetes, Docker, Terraform, AWS, monitoring, infrastructure" />
+<meta property="og:title" content="DevOps Tech Stacks · Visual Guide 2026" />
+<meta property="og:description" content="Mind-map view of the 2026 DevOps universe — CI/CD, IaC, containers, cloud, monitoring, security, networking, GitOps, registries, and platform engineering." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://techstacks.stitchwebsite.com/DevOps-Stacks-Visual-Guide.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="DevOps Tech Stacks · Visual Guide 2026" />
+<meta name="twitter:description" content="Interactive guide to the 2026 DevOps stack landscape. Compare 40+ technologies across 10 categories." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .cat-cicd { --c:#6366f1; --cs:#eef2ff; }
+  .cat-iac  { --c:#06b6d4; --cs:#ecfeff; }
+  .cat-cont { --c:#10b981; --cs:#ecfdf5; }
+  .cat-cloud{ --c:#f59e0b; --cs:#fffbeb; }
+  .cat-mon  { --c:#e11d48; --cs:#fff1f2; }
+  .cat-sec  { --c:#8b5cf6; --cs:#f5f3ff; }
+  .cat-net  { --c:#ec4899; --cs:#fdf2f8; }
+  .cat-git  { --c:#0ea5e9; --cs:#f0f9ff; }
+  .cat-reg  { --c:#14b8a6; --cs:#f0fdfa; }
+  .cat-plat { --c:#f97316; --cs:#fff7ed; }
+
+  .chip { background: var(--cs); color: var(--c); border: 1px solid color-mix(in srgb, var(--c) 25%, transparent); }
+
+  .node { cursor: pointer; transition: transform .2s ease, opacity .3s ease; transform-origin: center; transform-box: fill-box; }
+  .node:hover { transform: scale(1.08); }
+  .node.dim { opacity: .18; }
+  .link { transition: opacity .3s ease, stroke-width .2s ease; }
+  .link.dim { opacity: .1; }
+
+  .card { transition: opacity .25s ease, transform .25s ease, box-shadow .25s ease; }
+  .card.hidden-card { opacity: 0; transform: scale(.96); pointer-events: none; position: absolute; }
+  .card.flash { animation: flash 1.2s ease; }
+  @keyframes flash {
+    0%,100% { box-shadow: 0 1px 2px rgba(0,0,0,.05); }
+    30%     { box-shadow: 0 0 0 4px #a7f3d0, 0 10px 30px rgba(16,185,129,.25); }
+  }
+
+  .stage-btn.active { background: #0f172a; color: white; box-shadow: 0 8px 20px rgba(15,23,42,.25); }
+  .filter-chip.active { background: #0f172a !important; color: white !important; border-color: #0f172a !important; }
+
+  @media print {
+    .no-print { display: none !important; }
+    .card.hidden-card { display: none !important; }
+  }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+<!-- ============ NAV ============ -->
+<nav class="bg-slate-900 text-white text-sm">
+  <div class="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between">
+    <a href="index.html" class="font-bold tracking-tight hover:text-emerald-300 transition">⚡ TechStacks 2026</a>
+    <div class="flex items-center gap-4">
+      <a href="index.html" class="hover:text-slate-300 transition">Home</a>
+      <a href="Frontend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Frontend</a>
+      <a href="Backend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Backend</a>
+      <a href="AIML-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">AI/ML</a>
+      <a href="DevOps-Stacks-Visual-Guide.html" class="text-emerald-400 font-semibold">DevOps</a>
+      <a href="Mobile-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Mobile</a>
+      <a href="https://github.com/JagadeepPortfolio/2026TechStack" target="_blank" rel="noopener" class="inline-flex items-center gap-1 hover:text-slate-300 transition">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</nav>
+
+<header class="relative overflow-hidden border-b border-slate-200 bg-gradient-to-br from-white via-emerald-50 to-cyan-50">
+  <div class="max-w-7xl mx-auto px-6 py-10">
+    <div class="flex items-start justify-between gap-6 flex-wrap">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 text-xs font-medium text-emerald-700 bg-emerald-100 rounded-full px-3 py-1 mb-3">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          Interactive guide · 2026 edition
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">DevOps & Infrastructure, Visualised</h1>
+        <p class="mt-3 text-slate-600 text-lg">
+          A mind-map view of the 2026 DevOps universe — CI/CD, Infrastructure as Code, containers, cloud platforms, monitoring, security, networking, GitOps, registries, and platform engineering.
+          Pick your stage, filter by what matters, and see the stack that fits.
+        </p>
+      </div>
+      <div class="no-print flex items-center gap-2 text-xs text-slate-500">
+        <kbd class="px-2 py-1 bg-white border border-slate-300 rounded">/</kbd> search
+        <kbd class="px-2 py-1 bg-white border border-slate-300 rounded">1-4</kbd> stage
+        <kbd class="px-2 py-1 bg-white border border-slate-300 rounded">Esc</kbd> reset
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="no-print sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3">
+    <div class="flex items-center gap-3 flex-wrap">
+      <div class="relative flex-1 min-w-[220px]">
+        <svg class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input id="search" type="text" placeholder="Search tool, platform, or technology…"
+          class="w-full pl-9 pr-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-400 bg-white text-sm" />
+      </div>
+      <label class="inline-flex items-center gap-2 text-sm text-slate-600"><input type="checkbox" id="f-free" class="rounded border-slate-300"> Free tier</label>
+      <label class="inline-flex items-center gap-2 text-sm text-slate-600"><input type="checkbox" id="f-oss" class="rounded border-slate-300"> Open source</label>
+      <label class="inline-flex items-center gap-2 text-sm text-slate-600"><input type="checkbox" id="f-prod" class="rounded border-slate-300"> Production-proven</label>
+      <button id="reset" class="ml-auto text-xs text-slate-500 hover:text-slate-900 underline">Reset all</button>
+    </div>
+    <div id="catChips" class="flex items-center gap-2 flex-wrap text-xs"></div>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 pt-8">
+  <div class="flex items-center justify-between mb-3">
+    <h2 class="text-lg font-semibold text-slate-900">The landscape at a glance</h2>
+    <p class="text-xs text-slate-500"><span id="countLabel">—</span> · click a node to jump to its card</p>
+  </div>
+  <div class="rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+    <svg id="mindmap" viewBox="0 0 1200 760" class="w-full h-[560px]"></svg>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 py-10">
+  <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+    <div>
+      <h2 class="text-lg font-semibold text-slate-900">Which stage are you at?</h2>
+      <p class="text-sm text-slate-500">Pick one — the stack below adapts, and cards fade to only what fits.</p>
+    </div>
+    <div id="stageTabs" class="flex gap-2 flex-wrap"></div>
+  </div>
+  <div id="stagePanel" class="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 shadow-sm p-6"></div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 pb-10">
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-lg font-semibold text-slate-900">All technologies</h2>
+    <p class="text-xs text-slate-500" id="gridCount"></p>
+  </div>
+  <div id="grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+</section>
+
+<section class="bg-white border-t border-slate-200">
+  <div class="max-w-7xl mx-auto px-6 py-12">
+    <h2 class="text-xl font-bold text-slate-900 mb-6">Decision cheat-sheet</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="rounded-xl border border-slate-200 p-5 bg-slate-50">
+        <h3 class="font-semibold text-slate-900 mb-3">Pick by team size</h3>
+        <ul class="space-y-2 text-sm text-slate-700">
+          <li><b>Solo:</b> GitHub Actions + Docker Compose + single VPS.</li>
+          <li><b>Small team:</b> GitHub Actions + Terraform + Railway/Fly.</li>
+          <li><b>Medium team:</b> ArgoCD + Kubernetes + Terraform + Grafana.</li>
+          <li><b>Large org:</b> Multi-cloud + service mesh + platform team + Backstage.</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-slate-200 p-5 bg-slate-50">
+        <h3 class="font-semibold text-slate-900 mb-3">Pick by constraint</h3>
+        <ul class="space-y-2 text-sm text-slate-700">
+          <li><b>Cheapest:</b> Hetzner + Coolify + GitHub Actions free.</li>
+          <li><b>Fastest deploy:</b> Kamal + GitHub Actions.</li>
+          <li><b>Most reliable:</b> Managed K8s + Datadog + multi-region.</li>
+          <li><b>Compliance:</b> AWS/Azure + Vault + OPA + audit logs.</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-rose-200 p-5 bg-rose-50">
+        <h3 class="font-semibold text-rose-900 mb-3">Anti-patterns to avoid</h3>
+        <ul class="space-y-2 text-sm text-rose-900/90">
+          <li>Kubernetes before 10 engineers.</li>
+          <li>Microservices before product-market fit.</li>
+          <li>Manual deploys to production.</li>
+          <li>No monitoring until incidents happen.</li>
+          <li>Storing secrets in git.</li>
+          <li>Skipping staging environments.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-slate-900 text-slate-400 text-sm">
+  <div class="max-w-7xl mx-auto px-6 py-8">
+    <div class="flex items-center justify-between flex-wrap gap-4 mb-4">
+      <div class="font-semibold text-white">⚡ TechStacks 2026</div>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="hover:text-white transition">Home</a>
+        <a href="Frontend-Stacks-Visual-Guide.html" class="hover:text-white transition">Frontend Guide</a>
+        <a href="Backend-Stacks-Visual-Guide.html" class="hover:text-white transition">Backend Guide</a>
+        <a href="AIML-Stacks-Visual-Guide.html" class="hover:text-white transition">AI/ML Guide</a>
+        <a href="DevOps-Stacks-Visual-Guide.html" class="text-slate-200">DevOps Guide</a>
+        <a href="Mobile-Stacks-Visual-Guide.html" class="hover:text-white transition">Mobile Guide</a>
+      </div>
+    </div>
+    <div class="flex items-center justify-between flex-wrap gap-3 pt-4 border-t border-slate-800">
+      <div>Open source · <a href="https://github.com/JagadeepPortfolio/2026TechStack" class="text-emerald-400 hover:text-emerald-300 transition" target="_blank" rel="noopener">Star on GitHub</a> · Contributions welcome</div>
+      <div class="text-xs">Built with vanilla HTML, Tailwind CSS, and zero dependencies</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ================= DATA ================= */
+const CATEGORIES = [
+  { id:"cicd",  label:"CI/CD",                      cls:"cat-cicd" },
+  { id:"iac",   label:"Infrastructure as Code",      cls:"cat-iac" },
+  { id:"cont",  label:"Containers & Orchestration",  cls:"cat-cont" },
+  { id:"cloud", label:"Cloud Platforms",              cls:"cat-cloud" },
+  { id:"mon",   label:"Monitoring & Observability",   cls:"cat-mon" },
+  { id:"sec",   label:"Security & Compliance",        cls:"cat-sec" },
+  { id:"net",   label:"Networking & Service Mesh",    cls:"cat-net" },
+  { id:"git",   label:"GitOps & Config",              cls:"cat-git" },
+  { id:"reg",   label:"Registries & Artifacts",       cls:"cat-reg" },
+  { id:"plat",  label:"Platform Engineering",          cls:"cat-plat" },
+];
+
+const STAGES = [
+  { id:"hobby",  label:"Hobby",  cost:"$0",        tag:"Side project",  desc:"Free CI, manual deploys, single server." },
+  { id:"mvp",    label:"MVP",    cost:"$20\u2013$100", tag:"First users",   desc:"Automated deploys, basic monitoring, managed services." },
+  { id:"growth", label:"Growth", cost:"$100\u2013$2k", tag:"Scaling",       desc:"IaC, container orchestration, proper observability, staging environments." },
+  { id:"scale",  label:"Scale",  cost:"$2k+",      tag:"Enterprise",    desc:"Multi-cloud, service mesh, compliance, platform team, SRE practices." },
+];
+
+const STAGE_STACKS = {
+  hobby:  { cicd:"GitHub Actions free", containers:"Docker Compose", cloud:"Single VPS / free tier", monitoring:"UptimeRobot / free Sentry", iac:"Shell scripts", security:"GitHub Dependabot" },
+  mvp:    { cicd:"GitHub Actions", containers:"Docker + Compose", cloud:"Railway / Render / Fly.io", monitoring:"Sentry + Grafana Cloud free", iac:"Terraform / SST", security:"Dependabot + Trivy" },
+  growth: { cicd:"GitHub Actions + ArgoCD", containers:"Kubernetes (managed)", cloud:"AWS / GCP / Azure", monitoring:"Grafana + Prometheus + Sentry", iac:"Terraform + Pulumi", security:"Vault + Trivy + OPA" },
+  scale:  { cicd:"ArgoCD + Tekton", containers:"Kubernetes multi-cluster", cloud:"Multi-cloud / hybrid", monitoring:"Datadog / Grafana Enterprise", iac:"Terraform + Crossplane", security:"Full zero-trust + compliance" },
+};
+
+const TECH = [
+  // CI/CD
+  { id:"ghactions", name:"GitHub Actions", cat:"cicd", summary:"The default CI/CD. YAML workflows, massive marketplace, tight GitHub integration.", pros:["Free for public repos","Huge marketplace","Native GitHub integration"], cons:["YAML complexity","Debugging painful","Vendor lock-in"], bestFor:"Most teams already on GitHub", free:true, oss:false, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"gitlab", name:"GitLab CI/CD", cat:"cicd", summary:"Built into GitLab. Auto DevOps, container registry, security scanning included.", pros:["All-in-one platform","Auto DevOps","Self-hostable"], cons:["Heavier than GitHub Actions","UI complexity"], bestFor:"Teams wanting integrated DevSecOps", free:true, oss:true, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"circleci", name:"CircleCI", cat:"cicd", summary:"Performance-focused CI. Powerful caching, parallelism, orbs.", pros:["Fast builds","Great caching","Docker layer caching"], cons:["Pricing complexity","Past security incidents"], bestFor:"Performance-sensitive CI", free:true, oss:false, prod:true, stages:["mvp","growth","scale"] },
+  { id:"argocd", name:"ArgoCD", cat:"cicd", summary:"GitOps continuous delivery for Kubernetes. Declarative, auditable.", pros:["GitOps native","Great UI","K8s-native"], cons:["K8s only","Learning curve"], bestFor:"Kubernetes GitOps deployments", free:true, oss:true, prod:true, stages:["growth","scale"] },
+  { id:"dagger", name:"Dagger", cat:"cicd", summary:"CI/CD pipelines as code (Go/Python/TypeScript). Run locally and in CI.", pros:["Portable pipelines","Local testing","Language-native"], cons:["Newer","Smaller ecosystem"], bestFor:"Teams wanting testable CI", free:true, oss:true, prod:true, stages:["mvp","growth"] },
+  { id:"tekton", name:"Tekton", cat:"cicd", summary:"Cloud-native CI/CD building blocks for Kubernetes.", pros:["K8s-native","Modular","CNCF project"], cons:["Low-level","Steep learning curve","Verbose"], bestFor:"Platform teams building custom CI/CD", free:true, oss:true, prod:true, stages:["scale"] },
+
+  // Infrastructure as Code
+  { id:"terraform", name:"Terraform / OpenTofu", cat:"iac", summary:"The IaC standard. HCL language, massive provider ecosystem. OpenTofu is the open fork.", pros:["Huge provider ecosystem","Battle-tested","Great state management"], cons:["HCL learning curve","State file management","Drift detection"], bestFor:"Multi-cloud infrastructure", free:true, oss:true, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"pulumi", name:"Pulumi", cat:"iac", summary:"IaC in real programming languages (TypeScript, Python, Go, C#). No DSL.", pros:["Real programming languages","Testing with standard tools","Good abstractions"], cons:["More complex than Terraform","Smaller community"], bestFor:"Developer-first IaC", free:true, oss:true, prod:true, stages:["mvp","growth","scale"] },
+  { id:"cdk", name:"AWS CDK / CDKTF", cat:"iac", summary:"Define AWS infra in TypeScript/Python. Generates CloudFormation.", pros:["Full AWS integration","TypeScript","L2/L3 constructs"], cons:["AWS-only (CDK)","CloudFormation limits","Slow deploys"], bestFor:"AWS-heavy teams", free:true, oss:true, prod:true, stages:["mvp","growth","scale"] },
+  { id:"sst", name:"SST (Serverless Stack)", cat:"iac", summary:"Modern serverless framework. Live Lambda dev, IaC, great DX.", pros:["Incredible DX","Live debugging","Full-stack"], cons:["AWS-focused","Smaller community","Rapid changes"], bestFor:"Serverless-first teams", free:true, oss:true, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"crossplane", name:"Crossplane", cat:"iac", summary:"Manage any cloud resource via Kubernetes CRDs. Control plane of control planes.", pros:["K8s-native","Multi-cloud","Composable"], cons:["Complex","K8s required","Steep learning curve"], bestFor:"Platform teams, multi-cloud K8s", free:true, oss:true, prod:true, stages:["scale"] },
+  { id:"ansible", name:"Ansible", cat:"iac", summary:"Agentless configuration management. SSH-based, YAML playbooks.", pros:["Agentless","Simple to start","Huge module library"], cons:["Slow at scale","YAML complexity","Imperative-ish"], bestFor:"Server configuration, legacy infra", free:true, oss:true, prod:true, stages:["mvp","growth","scale"] },
+
+  // Containers & Orchestration
+  { id:"docker", name:"Docker", cat:"cont", summary:"The container standard. Build, ship, run anywhere.", pros:["Universal standard","Great DX","Huge ecosystem"], cons:["Desktop licensing","Security surface","Image bloat"], bestFor:"Every containerized app", free:true, oss:true, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"k8s", name:"Kubernetes", cat:"cont", summary:"Container orchestration standard. Managed options (EKS/GKE/AKS) or self-hosted.", pros:["Industry standard","Massive ecosystem","Auto-scaling"], cons:["Complexity","Overkill for small teams","Steep learning curve"], bestFor:"Microservices at scale", free:true, oss:true, prod:true, stages:["growth","scale"] },
+  { id:"compose", name:"Docker Compose", cat:"cont", summary:"Multi-container apps on a single host. Perfect for dev and small deploys.", pros:["Simple","Great for dev","Single-file config"], cons:["Single host only","No orchestration","Manual scaling"], bestFor:"Local dev, small deployments", free:true, oss:true, prod:true, stages:["hobby","mvp"] },
+  { id:"nomad", name:"HashiCorp Nomad", cat:"cont", summary:"Simpler alternative to Kubernetes. Schedules containers, VMs, and more.", pros:["Simpler than K8s","Multi-workload","Good Vault integration"], cons:["Smaller ecosystem","Less community","BSL license"], bestFor:"Teams wanting orchestration without K8s complexity", free:true, oss:false, prod:true, stages:["growth","scale"] },
+  { id:"kamal", name:"Kamal", cat:"cont", summary:"Deploy containers to bare metal/VPS via SSH. Made by 37signals (Basecamp).", pros:["Simple","No K8s needed","Great for Rails"], cons:["Single-host focus","Less ecosystem","Newer"], bestFor:"VPS deployments, Rails apps", free:true, oss:true, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"coolify", name:"Coolify", cat:"cont", summary:"Self-hosted Vercel/Heroku alternative. Docker-based PaaS.", pros:["Self-hosted PaaS","Great UI","Docker-native"], cons:["Single maintainer risk","Smaller community"], bestFor:"Self-hosted app deployment", free:true, oss:true, prod:true, stages:["hobby","mvp","growth"] },
+
+  // Cloud Platforms
+  { id:"aws", name:"AWS", cat:"cloud", summary:"The cloud giant. Infinite services, infinite complexity. Default enterprise choice.", pros:["Everything you need","Compliance","Largest market share"], cons:["Complexity","Billing surprises","Slow innovation cycles"], bestFor:"Enterprise, regulated industries", free:true, oss:false, prod:true, stages:["growth","scale"] },
+  { id:"gcp", name:"Google Cloud", cat:"cloud", summary:"Best Kubernetes (GKE), BigQuery, AI/ML. Friendlier than AWS.", pros:["Best managed K8s","Great data/AI","Simpler than AWS"], cons:["Smaller market share","Fewer services","Enterprise support gaps"], bestFor:"Data-heavy, K8s-native teams", free:true, oss:false, prod:true, stages:["growth","scale"] },
+  { id:"azure", name:"Azure", cat:"cloud", summary:"Microsoft's cloud. Enterprise default for .NET/Windows shops. Strong hybrid.", pros:["Enterprise features","Hybrid cloud","Active Directory"], cons:["Portal UX","Naming confusion","Inconsistent DX"], bestFor:"Enterprise, .NET, hybrid cloud", free:true, oss:false, prod:true, stages:["growth","scale"] },
+  { id:"cloudflare", name:"Cloudflare", cat:"cloud", summary:"Edge compute, R2 storage, D1 database, Workers. Zero egress.", pros:["No egress fees","Global edge","Great free tier"], cons:["Runtime constraints","Not full cloud","Limited compute"], bestFor:"Edge-first, cost-sensitive apps", free:true, oss:false, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"hetzner", name:"Hetzner", cat:"cloud", summary:"Cheapest quality cloud in Europe. Bare metal and VPS.", pros:["Unbeatable price","Real hardware","EU data sovereignty"], cons:["Manual ops","Fewer managed services","EU-only"], bestFor:"Cost-sensitive, EU-based teams", free:false, oss:false, prod:true, stages:["mvp","growth"] },
+  { id:"digitalocean", name:"DigitalOcean", cat:"cloud", summary:"Developer-friendly cloud. Droplets, managed K8s, App Platform.", pros:["Simple","Good docs","Predictable pricing"], cons:["Fewer services","Scaling limits"], bestFor:"Small teams, straightforward infra", free:true, oss:false, prod:true, stages:["hobby","mvp","growth"] },
+
+  // Monitoring & Observability
+  { id:"grafana", name:"Grafana + Prometheus", cat:"mon", summary:"Open-source monitoring stack. Metrics, logs (Loki), traces (Tempo).", pros:["Open source","Unified platform","Huge community"], cons:["Ops burden self-hosted","Alert fatigue","Config complexity"], bestFor:"Most teams, any scale", free:true, oss:true, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"datadog", name:"Datadog", cat:"mon", summary:"Enterprise observability. Metrics, traces, logs, RUM, security, everything.", pros:["Comprehensive","Great UX","Every integration"], cons:["Very expensive","Billing surprises","Vendor lock-in"], bestFor:"Well-funded teams wanting one platform", free:true, oss:false, prod:true, stages:["growth","scale"] },
+  { id:"sentry", name:"Sentry", cat:"mon", summary:"Error tracking and performance monitoring. Nearly universal.", pros:["Best error grouping","Every SDK","Good free tier"], cons:["Performance features still growing","Can be noisy"], bestFor:"Every production app", free:true, oss:true, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"betterstack", name:"Better Stack", cat:"mon", summary:"Modern incident management, uptime monitoring, and log management.", pros:["Beautiful UI","Good free tier","Integrated status pages"], cons:["Newer","Smaller ecosystem"], bestFor:"Status pages + uptime + logs", free:true, oss:false, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"otel", name:"OpenTelemetry", cat:"mon", summary:"Vendor-neutral telemetry standard. Traces, metrics, logs.", pros:["Vendor neutral","CNCF standard","Future-proof"], cons:["Complex setup","Ecosystem still maturing"], bestFor:"Avoiding vendor lock-in in observability", free:true, oss:true, prod:true, stages:["growth","scale"] },
+  { id:"newrelic", name:"New Relic", cat:"mon", summary:"Full-stack observability with generous free tier (100GB/month).", pros:["Generous free tier","Full stack","Good AI features"], cons:["Complex pricing","Heavy agent","UI learning curve"], bestFor:"Teams wanting free full-stack observability", free:true, oss:false, prod:true, stages:["mvp","growth","scale"] },
+
+  // Security & Compliance
+  { id:"vault", name:"HashiCorp Vault", cat:"sec", summary:"Secrets management, encryption, PKI. The enterprise standard.", pros:["Battle-tested","Dynamic secrets","Encryption as a service"], cons:["Complex","BSL license change","Ops-heavy"], bestFor:"Enterprise secrets management", free:true, oss:false, prod:true, stages:["growth","scale"] },
+  { id:"trivy", name:"Trivy", cat:"sec", summary:"Open-source vulnerability scanner. Containers, IaC, code, dependencies.", pros:["Comprehensive","Fast","CI-friendly"], cons:["False positives","Limited remediation"], bestFor:"Container and dependency scanning", free:true, oss:true, prod:true, stages:["mvp","growth","scale"] },
+  { id:"snyk", name:"Snyk", cat:"sec", summary:"Developer security platform. Code, containers, IaC, open source scanning.", pros:["Developer-friendly","Good integrations","Auto-fix PRs"], cons:["Expensive at scale","Can be noisy"], bestFor:"Developer-first security", free:true, oss:false, prod:true, stages:["mvp","growth","scale"] },
+  { id:"opa", name:"OPA / Kyverno", cat:"sec", summary:"Policy as code. Enforce rules on K8s, APIs, Terraform.", pros:["Flexible policies","K8s-native (Kyverno)","Declarative"], cons:["Rego language (OPA)","Learning curve"], bestFor:"Kubernetes policy enforcement", free:true, oss:true, prod:true, stages:["growth","scale"] },
+  { id:"dependabot", name:"Dependabot / Renovate", cat:"sec", summary:"Automated dependency updates. PRs for outdated packages.", pros:["Automated","GitHub-native (Dependabot)","Configurable"], cons:["PR noise","Breaking updates"], bestFor:"Every project with dependencies", free:true, oss:true, prod:true, stages:["hobby","mvp","growth","scale"] },
+
+  // Networking & Service Mesh
+  { id:"nginx", name:"NGINX / Caddy", cat:"net", summary:"Reverse proxy and web server. Caddy has automatic HTTPS.", pros:["Battle-tested (NGINX)","Auto HTTPS (Caddy)","Fast"], cons:["Config complexity (NGINX)","Single point of failure"], bestFor:"Reverse proxy, load balancing", free:true, oss:true, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"istio", name:"Istio / Linkerd", cat:"net", summary:"Service mesh for Kubernetes. mTLS, traffic management, observability.", pros:["mTLS everywhere","Traffic control","Observability"], cons:["Complexity","Resource overhead","Steep learning curve"], bestFor:"Microservices security and observability", free:true, oss:true, prod:true, stages:["scale"] },
+  { id:"traefik", name:"Traefik", cat:"net", summary:"Cloud-native reverse proxy. Auto-discovery, Let's Encrypt, K8s ingress.", pros:["Auto-discovery","Great K8s support","Docker-native"], cons:["Enterprise features paid","Config quirks"], bestFor:"Docker/K8s environments", free:true, oss:true, prod:true, stages:["mvp","growth","scale"] },
+  { id:"cloudflarezt", name:"Cloudflare Zero Trust", cat:"net", summary:"Zero trust network access. Replace VPN with identity-based access.", pros:["No VPN needed","Good free tier","Easy setup"], cons:["Cloudflare lock-in","Enterprise features paid"], bestFor:"Remote team access", free:true, oss:false, prod:true, stages:["mvp","growth","scale"] },
+
+  // GitOps & Config
+  { id:"flux", name:"Flux CD", cat:"git", summary:"GitOps for Kubernetes. Reconciles cluster state from Git.", pros:["CNCF graduated","Lightweight","Multi-tenancy"], cons:["K8s only","Less UI than ArgoCD"], bestFor:"Lightweight K8s GitOps", free:true, oss:true, prod:true, stages:["growth","scale"] },
+  { id:"helmchart", name:"Helm", cat:"git", summary:"Kubernetes package manager. Charts for templated K8s manifests.", pros:["Standard K8s packaging","Huge chart library","Versioned releases"], cons:["Template complexity","Debugging YAML","Security of public charts"], bestFor:"K8s application packaging", free:true, oss:true, prod:true, stages:["growth","scale"] },
+  { id:"kustomize", name:"Kustomize", cat:"git", summary:"Template-free K8s customization. Overlays and patches.", pros:["No templating","Built into kubectl","Simple overlays"], cons:["Limited logic","Patch complexity at scale"], bestFor:"Simple K8s config management", free:true, oss:true, prod:true, stages:["growth","scale"] },
+
+  // Registries & Artifacts
+  { id:"ghcr", name:"GitHub Container Registry", cat:"reg", summary:"Container registry built into GitHub. Free for public repos.", pros:["GitHub-native","Free public repos","Good integration"], cons:["Basic features","Slower than alternatives"], bestFor:"GitHub-based workflows", free:true, oss:false, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"ecr", name:"AWS ECR", cat:"reg", summary:"AWS container registry. Tight integration with ECS/EKS.", pros:["AWS-native","Scanning built-in","IAM integration"], cons:["AWS-only","Cross-region cost"], bestFor:"AWS-based container workflows", free:true, oss:false, prod:true, stages:["growth","scale"] },
+  { id:"harbor", name:"Harbor", cat:"reg", summary:"Enterprise container registry. Vulnerability scanning, RBAC, replication.", pros:["Feature-rich","Self-hostable","CNCF graduated"], cons:["Ops overhead","Resource-heavy"], bestFor:"Enterprise self-hosted registry", free:true, oss:true, prod:true, stages:["growth","scale"] },
+
+  // Platform Engineering
+  { id:"backstage", name:"Backstage", cat:"plat", summary:"Spotify's developer portal. Service catalog, templates, plugins.", pros:["Extensible","Service catalog","Great plugin ecosystem"], cons:["Complex setup","Maintenance burden","React/TS required"], bestFor:"Large engineering orgs", free:true, oss:true, prod:true, stages:["scale"] },
+  { id:"portdev", name:"Port / Humanitec", cat:"plat", summary:"Internal developer portals. Self-service infrastructure.", pros:["Self-service infra","Scorecards","No-code portals"], cons:["Expensive","Enterprise sales cycle"], bestFor:"Platform teams serving internal devs", free:true, oss:false, prod:true, stages:["scale"] },
+  { id:"dokploy", name:"Dokploy", cat:"plat", summary:"Open-source Vercel/Netlify alternative. Self-hosted app platform.", pros:["Open source","Simple UI","Docker-native"], cons:["Newer","Smaller community"], bestFor:"Self-hosted PaaS alternative", free:true, oss:true, prod:true, stages:["hobby","mvp","growth"] },
+];
+
+/* ================= STATE ================= */
+const state = { q:"", cats:new Set(), free:false, oss:false, prod:false, stage:null };
+
+function catOf(id){return CATEGORIES.find(c=>c.id===id);}
+function matches(t){
+  if (state.q){
+    const q=state.q.toLowerCase();
+    const hay=(t.name+" "+t.summary+" "+t.bestFor+" "+t.cat).toLowerCase();
+    if (!hay.includes(q)) return false;
+  }
+  if (state.cats.size && !state.cats.has(t.cat)) return false;
+  if (state.free && !t.free) return false;
+  if (state.oss && !t.oss) return false;
+  if (state.prod && !t.prod) return false;
+  if (state.stage && !t.stages.includes(state.stage)) return false;
+  return true;
+}
+
+/* ================= CHIPS ================= */
+const chipsEl = document.getElementById("catChips");
+CATEGORIES.forEach(c=>{
+  const b=document.createElement("button");
+  b.className=`filter-chip ${c.cls} chip rounded-full px-3 py-1 font-medium`;
+  b.textContent=c.label; b.dataset.cat=c.id;
+  b.addEventListener("click",()=>{
+    if (state.cats.has(c.id)){state.cats.delete(c.id);b.classList.remove("active");}
+    else {state.cats.add(c.id);b.classList.add("active");}
+    render();
+  });
+  chipsEl.appendChild(b);
+});
+
+/* ================= MINDMAP ================= */
+const svg=document.getElementById("mindmap");
+const NS="http://www.w3.org/2000/svg";
+const CX=600, CY=380;
+const PRIMARY=[
+  {cat:"cicd", a:-Math.PI/2,                r:220},
+  {cat:"iac",  a:-Math.PI/2+(2*Math.PI/5),  r:220},
+  {cat:"cont", a:-Math.PI/2+(4*Math.PI/5),  r:220},
+  {cat:"cloud",a:-Math.PI/2+(6*Math.PI/5),  r:220},
+  {cat:"mon",  a:-Math.PI/2+(8*Math.PI/5),  r:220},
+];
+const SECONDARY=["sec","net","git","reg","plat"];
+const COLORS={cicd:"#6366f1",iac:"#06b6d4",cont:"#10b981",cloud:"#f59e0b",mon:"#e11d48",sec:"#8b5cf6",net:"#ec4899",git:"#0ea5e9",reg:"#14b8a6",plat:"#f97316"};
+
+function buildMindmap(){
+  svg.innerHTML="";
+  const defs=document.createElementNS(NS,"defs");
+  defs.innerHTML=`<radialGradient id="g1"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#10b981" stop-opacity="0"/></radialGradient>`;
+  svg.appendChild(defs);
+  const bg=document.createElementNS(NS,"circle");
+  bg.setAttribute("cx",CX);bg.setAttribute("cy",CY);bg.setAttribute("r","260");
+  bg.setAttribute("fill","url(#g1)");bg.setAttribute("opacity","0.15");
+  svg.appendChild(bg);
+
+  // center
+  const g=document.createElementNS(NS,"g");
+  const c=document.createElementNS(NS,"circle");
+  c.setAttribute("cx",CX);c.setAttribute("cy",CY);c.setAttribute("r","58");c.setAttribute("fill","#0f172a");
+  const t=document.createElementNS(NS,"text");
+  t.setAttribute("x",CX);t.setAttribute("y",CY-4);t.setAttribute("text-anchor","middle");t.setAttribute("fill","white");t.setAttribute("font-weight","700");t.setAttribute("font-size","18");t.textContent="DevOps";
+  const s=document.createElementNS(NS,"text");
+  s.setAttribute("x",CX);s.setAttribute("y",CY+16);s.setAttribute("text-anchor","middle");s.setAttribute("fill","#94a3b8");s.setAttribute("font-size","11");s.textContent="2026";
+  g.appendChild(c);g.appendChild(t);g.appendChild(s);svg.appendChild(g);
+
+  PRIMARY.forEach(br=>{
+    const bx=CX+Math.cos(br.a)*br.r, by=CY+Math.sin(br.a)*br.r;
+    const line=document.createElementNS(NS,"line");
+    line.setAttribute("x1",CX);line.setAttribute("y1",CY);line.setAttribute("x2",bx);line.setAttribute("y2",by);
+    line.setAttribute("stroke",COLORS[br.cat]);line.setAttribute("stroke-width","3");line.setAttribute("opacity","0.5");
+    line.classList.add("link");line.dataset.cat=br.cat;svg.appendChild(line);
+
+    const hub=document.createElementNS(NS,"g");
+    hub.classList.add("node");hub.dataset.cat=br.cat;
+    const hc=document.createElementNS(NS,"circle");
+    hc.setAttribute("cx",bx);hc.setAttribute("cy",by);hc.setAttribute("r","38");hc.setAttribute("fill",COLORS[br.cat]);
+    const ht=document.createElementNS(NS,"text");
+    ht.setAttribute("x",bx);ht.setAttribute("y",by+4);ht.setAttribute("text-anchor","middle");ht.setAttribute("fill","white");ht.setAttribute("font-weight","700");ht.setAttribute("font-size","11");
+    ht.textContent=catOf(br.cat).label.split(" ")[0];
+    hub.appendChild(hc);hub.appendChild(ht);
+    hub.addEventListener("click",()=>{
+      if (state.cats.has(br.cat)) state.cats.delete(br.cat); else state.cats.add(br.cat);
+      document.querySelectorAll(".filter-chip").forEach(el=>{if(el.dataset.cat===br.cat) el.classList.toggle("active",state.cats.has(br.cat));});
+      render();
+    });
+    svg.appendChild(hub);
+
+    const items=TECH.filter(x=>x.cat===br.cat);
+    items.forEach((it,i)=>{
+      const spread=Math.min(items.length,6);
+      const off=(i-(spread-1)/2)*0.26;
+      const la=br.a+off;
+      const lr=br.r+125;
+      const lx=CX+Math.cos(la)*lr, ly=CY+Math.sin(la)*lr;
+
+      const ll=document.createElementNS(NS,"line");
+      ll.setAttribute("x1",bx);ll.setAttribute("y1",by);ll.setAttribute("x2",lx);ll.setAttribute("y2",ly);
+      ll.setAttribute("stroke",COLORS[br.cat]);ll.setAttribute("stroke-width","1.5");ll.setAttribute("opacity","0.4");
+      ll.classList.add("link");ll.dataset.tech=it.id;ll.dataset.cat=it.cat;svg.appendChild(ll);
+
+      const lg=document.createElementNS(NS,"g");
+      lg.classList.add("node");lg.dataset.tech=it.id;lg.dataset.cat=it.cat;
+      const w=Math.max(70,Math.min(150,it.name.length*6.3));
+      const r=document.createElementNS(NS,"rect");
+      r.setAttribute("x",lx-w/2);r.setAttribute("y",ly-14);r.setAttribute("rx","12");r.setAttribute("ry","12");
+      r.setAttribute("width",w);r.setAttribute("height","28");
+      r.setAttribute("fill","white");r.setAttribute("stroke",COLORS[br.cat]);r.setAttribute("stroke-width","2");
+      const tx=document.createElementNS(NS,"text");
+      tx.setAttribute("x",lx);tx.setAttribute("y",ly+4);tx.setAttribute("text-anchor","middle");
+      tx.setAttribute("fill","#0f172a");tx.setAttribute("font-size","10.5");tx.setAttribute("font-weight","600");
+      tx.textContent=it.name.length>20?it.name.slice(0,19)+"\u2026":it.name;
+      lg.appendChild(r);lg.appendChild(tx);
+      lg.addEventListener("click",()=>{
+        const card=document.getElementById("card-"+it.id);
+        if (card){card.scrollIntoView({behavior:"smooth",block:"center"});card.classList.remove("flash");void card.offsetWidth;card.classList.add("flash");}
+      });
+      svg.appendChild(lg);
+    });
+  });
+
+  SECONDARY.forEach((cid,i)=>{
+    const angle=Math.PI*0.58+(i-(SECONDARY.length-1)/2)*0.17;
+    const r=340;
+    const x=CX+Math.cos(angle)*r, y=CY+Math.sin(angle)*r;
+    const line=document.createElementNS(NS,"line");
+    line.setAttribute("x1",CX);line.setAttribute("y1",CY);line.setAttribute("x2",x);line.setAttribute("y2",y);
+    line.setAttribute("stroke",COLORS[cid]);line.setAttribute("stroke-width","2");line.setAttribute("opacity","0.35");
+    line.classList.add("link");line.dataset.cat=cid;svg.appendChild(line);
+
+    const g=document.createElementNS(NS,"g");
+    g.classList.add("node");g.dataset.cat=cid;
+    const c=document.createElementNS(NS,"circle");
+    c.setAttribute("cx",x);c.setAttribute("cy",y);c.setAttribute("r","26");c.setAttribute("fill",COLORS[cid]);
+    const tx=document.createElementNS(NS,"text");
+    tx.setAttribute("x",x);tx.setAttribute("y",y+4);tx.setAttribute("text-anchor","middle");tx.setAttribute("fill","white");tx.setAttribute("font-weight","700");tx.setAttribute("font-size","10");
+    tx.textContent=catOf(cid).label.split(" ")[0];
+    g.appendChild(c);g.appendChild(tx);
+    g.addEventListener("click",()=>{
+      if (state.cats.has(cid)) state.cats.delete(cid); else state.cats.add(cid);
+      document.querySelectorAll(".filter-chip").forEach(el=>{if(el.dataset.cat===cid) el.classList.toggle("active",state.cats.has(cid));});
+      render();
+    });
+    svg.appendChild(g);
+  });
+}
+
+function updateMindmap(){
+  svg.querySelectorAll(".node").forEach(n=>{
+    const t=n.dataset.tech?TECH.find(x=>x.id===n.dataset.tech):null;
+    let visible=true;
+    if (t) visible=matches(t);
+    else if (n.dataset.cat) visible=TECH.some(x=>x.cat===n.dataset.cat&&matches(x));
+    n.classList.toggle("dim",!visible);
+  });
+  svg.querySelectorAll(".link").forEach(l=>{
+    const t=l.dataset.tech?TECH.find(x=>x.id===l.dataset.tech):null;
+    let visible=true;
+    if (t) visible=matches(t);
+    else if (l.dataset.cat) visible=TECH.some(x=>x.cat===l.dataset.cat&&matches(x));
+    l.classList.toggle("dim",!visible);
+  });
+}
+
+/* ================= STAGES ================= */
+const stageTabsEl=document.getElementById("stageTabs");
+STAGES.forEach((s,i)=>{
+  const b=document.createElement("button");
+  b.className="stage-btn px-4 py-2 rounded-full border border-slate-300 bg-white text-sm font-semibold hover:border-slate-900 transition";
+  b.innerHTML=`<span class="mr-1">${i+1}</span>${s.label} <span class="text-slate-400 font-normal ml-1">${s.cost}</span>`;
+  b.dataset.stage=s.id;
+  b.addEventListener("click",()=>{state.stage=state.stage===s.id?null:s.id;render();});
+  stageTabsEl.appendChild(b);
+});
+
+function renderStagePanel(){
+  const panel=document.getElementById("stagePanel");
+  const s=STAGES.find(x=>x.id===state.stage);
+  if (!s){
+    panel.innerHTML=`
+      <div class="text-center py-6">
+        <div class="text-slate-500 text-sm">Pick a stage above to see the recommended stack and filter cards to what fits.</div>
+        <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto">
+          ${STAGES.map(st=>`
+            <div class="rounded-xl border border-slate-200 bg-white p-3 text-left">
+              <div class="text-xs text-slate-500">${st.tag}</div>
+              <div class="text-sm font-bold text-slate-900">${st.label}</div>
+              <div class="text-xs text-slate-500 mt-1">${st.cost}/mo</div>
+            </div>`).join("")}
+        </div>
+      </div>`;
+    return;
+  }
+  const stack=STAGE_STACKS[s.id];
+  panel.innerHTML=`
+    <div class="flex items-start justify-between gap-4 flex-wrap">
+      <div class="max-w-2xl">
+        <div class="text-xs uppercase tracking-wider text-emerald-600 font-semibold">${s.tag}</div>
+        <h3 class="text-2xl font-bold text-slate-900 mt-1">${s.label} stage · ${s.cost}/month</h3>
+        <p class="text-slate-600 mt-2">${s.desc}</p>
+      </div>
+      <div class="text-right">
+        <div class="text-5xl font-extrabold text-slate-900">${s.cost}</div>
+        <div class="text-xs text-slate-500">typical monthly spend</div>
+      </div>
+    </div>
+    <div class="mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+      ${Object.entries(stack).map(([k,v])=>`
+        <div class="rounded-lg border border-slate-200 bg-white p-3">
+          <div class="text-[10px] uppercase tracking-wide text-slate-500 font-semibold">${k}</div>
+          <div class="text-sm font-semibold text-slate-900 mt-1">${v}</div>
+        </div>`).join("")}
+    </div>`;
+}
+
+function updateStageTabs(){
+  document.querySelectorAll(".stage-btn").forEach(b=>b.classList.toggle("active",b.dataset.stage===state.stage));
+}
+
+/* ================= GRID ================= */
+const grid=document.getElementById("grid");
+function buildGrid(){
+  grid.innerHTML="";
+  TECH.forEach(t=>{
+    const c=catOf(t.cat);
+    const el=document.createElement("div");
+    el.id="card-"+t.id;
+    el.className=`card ${c.cls} bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md`;
+    el.innerHTML=`
+      <div class="flex items-start justify-between gap-2 mb-2">
+        <h3 class="text-base font-bold text-slate-900">${t.name}</h3>
+        <span class="chip text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full whitespace-nowrap">${c.label}</span>
+      </div>
+      <p class="text-sm text-slate-600 leading-relaxed">${t.summary}</p>
+      <div class="mt-3 grid grid-cols-2 gap-3 text-xs">
+        <div>
+          <div class="font-semibold text-emerald-700 mb-1">Pros</div>
+          <ul class="text-slate-600 space-y-0.5">${t.pros.map(p=>`<li>• ${p}</li>`).join("")}</ul>
+        </div>
+        <div>
+          <div class="font-semibold text-rose-700 mb-1">Cons</div>
+          <ul class="text-slate-600 space-y-0.5">${t.cons.map(p=>`<li>• ${p}</li>`).join("")}</ul>
+        </div>
+      </div>
+      <div class="mt-3 text-xs text-slate-500"><b class="text-slate-700">Best for:</b> ${t.bestFor}</div>
+      <div class="mt-3 flex flex-wrap gap-1">
+        ${t.free ? '<span class="text-[10px] bg-emerald-100 text-emerald-700 rounded px-1.5 py-0.5 font-semibold">FREE</span>' : ''}
+        ${t.oss  ? '<span class="text-[10px] bg-sky-100 text-sky-700 rounded px-1.5 py-0.5 font-semibold">OPEN SOURCE</span>' : ''}
+        ${t.prod ? '<span class="text-[10px] bg-indigo-100 text-indigo-700 rounded px-1.5 py-0.5 font-semibold">PROD-PROVEN</span>' : ''}
+      </div>
+      <div class="mt-2 flex gap-1">
+        ${STAGES.map(s=>{
+          const ok=t.stages.includes(s.id);
+          return `<span class="text-[10px] px-1.5 py-0.5 rounded ${ok?'bg-slate-900 text-white':'bg-slate-100 text-slate-400'}">${s.label}</span>`;
+        }).join("")}
+      </div>`;
+    grid.appendChild(el);
+  });
+}
+
+function updateGrid(){
+  let shown=0;
+  TECH.forEach(t=>{
+    const el=document.getElementById("card-"+t.id);
+    if (!el) return;
+    const ok=matches(t);
+    el.classList.toggle("hidden-card",!ok);
+    if (ok) shown++;
+  });
+  document.getElementById("gridCount").textContent=`${shown} of ${TECH.length} shown`;
+  document.getElementById("countLabel").textContent=`${shown} of ${TECH.length} technologies`;
+}
+
+/* ================= RENDER ================= */
+function render(){
+  updateStageTabs();
+  renderStagePanel();
+  updateMindmap();
+  updateGrid();
+  const p=[];
+  if (state.stage) p.push("stage="+state.stage);
+  history.replaceState(null,"",p.length?"#"+p.join("&"):"#");
+}
+
+/* ================= EVENTS ================= */
+document.getElementById("search").addEventListener("input",e=>{state.q=e.target.value;render();});
+document.getElementById("f-free").addEventListener("change",e=>{state.free=e.target.checked;render();});
+document.getElementById("f-oss").addEventListener("change",e=>{state.oss=e.target.checked;render();});
+document.getElementById("f-prod").addEventListener("change",e=>{state.prod=e.target.checked;render();});
+document.getElementById("reset").addEventListener("click",()=>{
+  state.q="";state.cats.clear();state.free=state.oss=state.prod=false;state.stage=null;
+  document.getElementById("search").value="";
+  ["f-free","f-oss","f-prod"].forEach(id=>document.getElementById(id).checked=false);
+  document.querySelectorAll(".filter-chip").forEach(el=>el.classList.remove("active"));
+  render();
+});
+document.addEventListener("keydown",e=>{
+  if (e.key==="/" && document.activeElement.tagName!=="INPUT"){e.preventDefault();document.getElementById("search").focus();}
+  if (e.key==="Escape") document.getElementById("reset").click();
+  if (["1","2","3","4"].includes(e.key) && document.activeElement.tagName!=="INPUT"){
+    state.stage=STAGES[parseInt(e.key,10)-1].id;render();
+  }
+});
+(function(){const h=location.hash.slice(1);if (h) h.split("&").forEach(p=>{const[k,v]=p.split("=");if(k==="stage"&&STAGES.find(s=>s.id===v)) state.stage=v;});})();
+
+buildMindmap();
+buildGrid();
+render();
+</script>
+</body>
+</html>

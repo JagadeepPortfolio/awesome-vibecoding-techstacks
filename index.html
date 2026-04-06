@@ -7,7 +7,7 @@
 <meta name="description" content="Free, open-source interactive guides to frontend and backend tech stacks in 2026. Compare 100+ technologies, filter by project stage, and find the stack that fits." />
 <meta name="keywords" content="tech stack, 2026, frontend, backend, React, Next.js, Node.js, Python, Go, Supabase, Tailwind, framework comparison, developer guide" />
 <meta property="og:title" content="TechStacks 2026 — Interactive Visual Guides" />
-<meta property="og:description" content="Free, open-source interactive guides to frontend and backend tech stacks. Compare 100+ technologies across 20 categories." />
+<meta property="og:description" content="Free, open-source interactive guides to frontend, backend, AI/ML, DevOps, and mobile tech stacks. Compare 200+ technologies across 50 categories." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://techstacks.stitchwebsite.com" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -32,6 +32,9 @@
     <div class="flex items-center gap-4">
       <a href="Frontend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Frontend</a>
       <a href="Backend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Backend</a>
+      <a href="AIML-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">AI/ML</a>
+      <a href="DevOps-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">DevOps</a>
+      <a href="Mobile-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Mobile</a>
       <a href="https://github.com/JagadeepPortfolio/2026TechStack" target="_blank" rel="noopener" class="inline-flex items-center gap-1 hover:text-slate-300 transition">
         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
         Star on GitHub
@@ -52,79 +55,143 @@
       The <span class="gradient-text">Tech Stack</span> Guide<br/>You Actually Need
     </h1>
     <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-      Interactive visual guides to <b>100+ technologies</b> across frontend and backend.
+      Interactive visual guides to <b>200+ technologies</b> across frontend, backend, AI/ML, DevOps, and mobile.
       Compare frameworks, filter by project stage, and find the stack that fits your team.
     </p>
-    <div class="mt-10 flex items-center justify-center gap-4 flex-wrap">
+    <div class="mt-10 flex items-center justify-center gap-3 flex-wrap">
       <a href="Frontend-Stacks-Visual-Guide.html"
-         class="inline-flex items-center gap-2 px-6 py-3 bg-cyan-600 text-white font-semibold rounded-xl hover:bg-cyan-700 transition shadow-lg shadow-cyan-600/25">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
-        Frontend Guide
+         class="inline-flex items-center gap-2 px-5 py-2.5 bg-cyan-600 text-white font-semibold rounded-xl hover:bg-cyan-700 transition shadow-lg shadow-cyan-600/25 text-sm">
+        Frontend
       </a>
       <a href="Backend-Stacks-Visual-Guide.html"
-         class="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 transition shadow-lg shadow-indigo-600/25">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        Backend Guide
+         class="inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 transition shadow-lg shadow-indigo-600/25 text-sm">
+        Backend
+      </a>
+      <a href="AIML-Stacks-Visual-Guide.html"
+         class="inline-flex items-center gap-2 px-5 py-2.5 bg-violet-600 text-white font-semibold rounded-xl hover:bg-violet-700 transition shadow-lg shadow-violet-600/25 text-sm">
+        AI / ML
+      </a>
+      <a href="DevOps-Stacks-Visual-Guide.html"
+         class="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 text-white font-semibold rounded-xl hover:bg-emerald-700 transition shadow-lg shadow-emerald-600/25 text-sm">
+        DevOps
+      </a>
+      <a href="Mobile-Stacks-Visual-Guide.html"
+         class="inline-flex items-center gap-2 px-5 py-2.5 bg-orange-600 text-white font-semibold rounded-xl hover:bg-orange-700 transition shadow-lg shadow-orange-600/25 text-sm">
+        Mobile
       </a>
     </div>
   </div>
 </header>
 
 <!-- GUIDE CARDS -->
-<section class="max-w-5xl mx-auto px-6 py-16">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<section class="max-w-6xl mx-auto px-6 py-16">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
     <!-- Frontend Card -->
-    <a href="Frontend-Stacks-Visual-Guide.html" class="card-hover block rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-      <div class="flex items-center gap-3 mb-4">
-        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+    <a href="Frontend-Stacks-Visual-Guide.html" class="card-hover block rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
         </div>
         <div>
-          <h2 class="text-xl font-bold text-slate-900">Frontend Stacks</h2>
-          <p class="text-sm text-slate-500">60+ technologies</p>
+          <h2 class="text-lg font-bold text-slate-900">Frontend</h2>
+          <p class="text-xs text-slate-500">60+ technologies</p>
         </div>
       </div>
-      <p class="text-slate-600 text-sm leading-relaxed mb-4">
-        React, Vue, Svelte, Angular, Next.js, Nuxt, Astro, Tailwind, shadcn/ui, Zustand, TanStack Query, Vite, Vitest, Playwright, and more.
-      </p>
-      <div class="flex flex-wrap gap-2">
-        <span class="text-[11px] bg-cyan-100 text-cyan-700 rounded-full px-2.5 py-0.5 font-medium">UI Frameworks</span>
-        <span class="text-[11px] bg-indigo-100 text-indigo-700 rounded-full px-2.5 py-0.5 font-medium">Meta-Frameworks</span>
-        <span class="text-[11px] bg-pink-100 text-pink-700 rounded-full px-2.5 py-0.5 font-medium">Styling</span>
-        <span class="text-[11px] bg-emerald-100 text-emerald-700 rounded-full px-2.5 py-0.5 font-medium">State</span>
-        <span class="text-[11px] bg-violet-100 text-violet-700 rounded-full px-2.5 py-0.5 font-medium">Build Tools</span>
-        <span class="text-[11px] bg-sky-100 text-sky-700 rounded-full px-2.5 py-0.5 font-medium">Testing</span>
-        <span class="text-[11px] bg-orange-100 text-orange-700 rounded-full px-2.5 py-0.5 font-medium">UI Libraries</span>
-        <span class="text-[11px] bg-amber-100 text-amber-700 rounded-full px-2.5 py-0.5 font-medium">+3 more</span>
+      <p class="text-slate-600 text-sm leading-relaxed mb-3">React, Vue, Svelte, Next.js, Nuxt, Astro, Tailwind, shadcn/ui, Vite, Playwright, and more.</p>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="text-[10px] bg-cyan-100 text-cyan-700 rounded-full px-2 py-0.5 font-medium">Frameworks</span>
+        <span class="text-[10px] bg-indigo-100 text-indigo-700 rounded-full px-2 py-0.5 font-medium">Meta-Frameworks</span>
+        <span class="text-[10px] bg-pink-100 text-pink-700 rounded-full px-2 py-0.5 font-medium">Styling</span>
+        <span class="text-[10px] bg-emerald-100 text-emerald-700 rounded-full px-2 py-0.5 font-medium">State</span>
+        <span class="text-[10px] bg-slate-100 text-slate-600 rounded-full px-2 py-0.5 font-medium">+6 more</span>
       </div>
     </a>
 
     <!-- Backend Card -->
-    <a href="Backend-Stacks-Visual-Guide.html" class="card-hover block rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-      <div class="flex items-center gap-3 mb-4">
-        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><circle cx="6" cy="6" r="1"/><circle cx="6" cy="18" r="1"/></svg>
+    <a href="Backend-Stacks-Visual-Guide.html" class="card-hover block rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><circle cx="6" cy="6" r="1"/><circle cx="6" cy="18" r="1"/></svg>
         </div>
         <div>
-          <h2 class="text-xl font-bold text-slate-900">Backend Stacks</h2>
-          <p class="text-sm text-slate-500">50+ technologies</p>
+          <h2 class="text-lg font-bold text-slate-900">Backend</h2>
+          <p class="text-xs text-slate-500">50+ technologies</p>
         </div>
       </div>
-      <p class="text-slate-600 text-sm leading-relaxed mb-4">
-        Node.js, Python, Go, Rust, Rails, Supabase, Firebase, Postgres, Neon, Clerk, Stripe, Inngest, Sentry, and more.
-      </p>
-      <div class="flex flex-wrap gap-2">
-        <span class="text-[11px] bg-indigo-100 text-indigo-700 rounded-full px-2.5 py-0.5 font-medium">Languages</span>
-        <span class="text-[11px] bg-emerald-100 text-emerald-700 rounded-full px-2.5 py-0.5 font-medium">BaaS</span>
-        <span class="text-[11px] bg-amber-100 text-amber-700 rounded-full px-2.5 py-0.5 font-medium">Hosting</span>
-        <span class="text-[11px] bg-rose-100 text-rose-700 rounded-full px-2.5 py-0.5 font-medium">Databases</span>
-        <span class="text-[11px] bg-violet-100 text-violet-700 rounded-full px-2.5 py-0.5 font-medium">Auth</span>
-        <span class="text-[11px] bg-sky-100 text-sky-700 rounded-full px-2.5 py-0.5 font-medium">Jobs & Queues</span>
-        <span class="text-[11px] bg-pink-100 text-pink-700 rounded-full px-2.5 py-0.5 font-medium">Payments</span>
-        <span class="text-[11px] bg-slate-100 text-slate-700 rounded-full px-2.5 py-0.5 font-medium">+3 more</span>
+      <p class="text-slate-600 text-sm leading-relaxed mb-3">Node.js, Python, Go, Rust, Rails, Supabase, Postgres, Neon, Clerk, Stripe, Sentry, and more.</p>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="text-[10px] bg-indigo-100 text-indigo-700 rounded-full px-2 py-0.5 font-medium">Languages</span>
+        <span class="text-[10px] bg-emerald-100 text-emerald-700 rounded-full px-2 py-0.5 font-medium">BaaS</span>
+        <span class="text-[10px] bg-rose-100 text-rose-700 rounded-full px-2 py-0.5 font-medium">Databases</span>
+        <span class="text-[10px] bg-amber-100 text-amber-700 rounded-full px-2 py-0.5 font-medium">Hosting</span>
+        <span class="text-[10px] bg-slate-100 text-slate-600 rounded-full px-2 py-0.5 font-medium">+6 more</span>
       </div>
     </a>
+
+    <!-- AI/ML Card -->
+    <a href="AIML-Stacks-Visual-Guide.html" class="card-hover block rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2a4 4 0 014 4v1a3 3 0 013 3v1a2 2 0 01-2 2h-1M12 2a4 4 0 00-4 4v1a3 3 0 00-3 3v1a2 2 0 002 2h1M12 2v4M7 13l-2 7h14l-2-7"/></svg>
+        </div>
+        <div>
+          <h2 class="text-lg font-bold text-slate-900">AI / ML</h2>
+          <p class="text-xs text-slate-500">40+ technologies</p>
+        </div>
+      </div>
+      <p class="text-slate-600 text-sm leading-relaxed mb-3">OpenAI, Claude, LangChain, Pinecone, RAG pipelines, agent frameworks, vLLM, fine-tuning, and more.</p>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="text-[10px] bg-violet-100 text-violet-700 rounded-full px-2 py-0.5 font-medium">LLM Providers</span>
+        <span class="text-[10px] bg-cyan-100 text-cyan-700 rounded-full px-2 py-0.5 font-medium">Frameworks</span>
+        <span class="text-[10px] bg-emerald-100 text-emerald-700 rounded-full px-2 py-0.5 font-medium">Vector DBs</span>
+        <span class="text-[10px] bg-rose-100 text-rose-700 rounded-full px-2 py-0.5 font-medium">Agents</span>
+        <span class="text-[10px] bg-slate-100 text-slate-600 rounded-full px-2 py-0.5 font-medium">+6 more</span>
+      </div>
+    </a>
+
+    <!-- DevOps Card -->
+    <a href="DevOps-Stacks-Visual-Guide.html" class="card-hover block rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div>
+          <h2 class="text-lg font-bold text-slate-900">DevOps & Infra</h2>
+          <p class="text-xs text-slate-500">40+ technologies</p>
+        </div>
+      </div>
+      <p class="text-slate-600 text-sm leading-relaxed mb-3">GitHub Actions, Terraform, Docker, Kubernetes, Grafana, Datadog, Vault, ArgoCD, and more.</p>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="text-[10px] bg-indigo-100 text-indigo-700 rounded-full px-2 py-0.5 font-medium">CI/CD</span>
+        <span class="text-[10px] bg-cyan-100 text-cyan-700 rounded-full px-2 py-0.5 font-medium">IaC</span>
+        <span class="text-[10px] bg-emerald-100 text-emerald-700 rounded-full px-2 py-0.5 font-medium">Containers</span>
+        <span class="text-[10px] bg-rose-100 text-rose-700 rounded-full px-2 py-0.5 font-medium">Monitoring</span>
+        <span class="text-[10px] bg-slate-100 text-slate-600 rounded-full px-2 py-0.5 font-medium">+6 more</span>
+      </div>
+    </a>
+
+    <!-- Mobile Card -->
+    <a href="Mobile-Stacks-Visual-Guide.html" class="card-hover block rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+        </div>
+        <div>
+          <h2 class="text-lg font-bold text-slate-900">Mobile</h2>
+          <p class="text-xs text-slate-500">40+ technologies</p>
+        </div>
+      </div>
+      <p class="text-slate-600 text-sm leading-relaxed mb-3">React Native, Expo, Flutter, SwiftUI, KMP, Detox, Fastlane, Firebase, and more.</p>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="text-[10px] bg-indigo-100 text-indigo-700 rounded-full px-2 py-0.5 font-medium">Cross-Platform</span>
+        <span class="text-[10px] bg-cyan-100 text-cyan-700 rounded-full px-2 py-0.5 font-medium">Native</span>
+        <span class="text-[10px] bg-amber-100 text-amber-700 rounded-full px-2 py-0.5 font-medium">Testing</span>
+        <span class="text-[10px] bg-emerald-100 text-emerald-700 rounded-full px-2 py-0.5 font-medium">Build</span>
+        <span class="text-[10px] bg-slate-100 text-slate-600 rounded-full px-2 py-0.5 font-medium">+6 more</span>
+      </div>
+    </a>
+
   </div>
 </section>
 
@@ -158,23 +225,29 @@
   </div>
 </section>
 
-<!-- COMING SOON -->
+<!-- STATS -->
 <section class="border-t border-slate-200">
-  <div class="max-w-5xl mx-auto px-6 py-16 text-center">
-    <h2 class="text-2xl font-bold text-slate-900 mb-3">More guides coming soon</h2>
-    <p class="text-slate-600 mb-8 max-w-xl mx-auto">We're building visual guides for every layer of the modern stack. Star the repo to get notified.</p>
-    <div class="flex items-center justify-center gap-4 flex-wrap">
-      <div class="rounded-xl border border-dashed border-slate-300 bg-slate-50 px-6 py-4 text-sm text-slate-500">
-        <div class="font-semibold text-slate-700">DevOps & Infra</div>
-        <div class="text-xs mt-1">CI/CD, IaC, Containers, Monitoring</div>
+  <div class="max-w-5xl mx-auto px-6 py-16">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+      <div>
+        <div class="text-3xl font-extrabold text-slate-900">5</div>
+        <div class="text-sm text-slate-500 mt-1">Interactive Guides</div>
       </div>
-      <div class="rounded-xl border border-dashed border-slate-300 bg-slate-50 px-6 py-4 text-sm text-slate-500">
-        <div class="font-semibold text-slate-700">AI / ML Stacks</div>
-        <div class="text-xs mt-1">LLMs, Vector DBs, RAG, Agents</div>
+      <div>
+        <div class="text-3xl font-extrabold text-slate-900">200+</div>
+        <div class="text-sm text-slate-500 mt-1">Technologies</div>
       </div>
-      <div class="rounded-xl border border-dashed border-slate-300 bg-slate-50 px-6 py-4 text-sm text-slate-500">
-        <div class="font-semibold text-slate-700">Mobile Stacks</div>
-        <div class="text-xs mt-1">React Native, Flutter, SwiftUI, KMP</div>
+      <div>
+        <div class="text-3xl font-extrabold text-slate-900">50</div>
+        <div class="text-sm text-slate-500 mt-1">Categories</div>
+      </div>
+      <div>
+        <div class="text-3xl font-extrabold text-slate-900">4</div>
+        <div class="text-sm text-slate-500 mt-1">Project Stages</div>
+      </div>
+      <div>
+        <div class="text-3xl font-extrabold text-slate-900">0</div>
+        <div class="text-sm text-slate-500 mt-1">Dependencies</div>
       </div>
     </div>
   </div>
