@@ -182,7 +182,7 @@ details[open] summary::before { transform: rotate(90deg); }
 // ========== TECHNOLOGY DATABASE (150+ technologies) ==========
 const TECHS = [
   // --- Frontend Frameworks ---
-  { name:"React", cat:"Frontend Framework", icon:"⚛️", patterns:{ html:[/__REACT/, /_reactRootContainer/, /data-reactroot/, /data-reactid/], scripts:[/react\.production\.min\.js/, /react-dom/, /react\.development\.js/], meta:{}, csp:[/unpkg\.com.*react/] }, guide:"Frontend-Stacks-Visual-Guide.html", why:"Detected React markers in HTML or script references" },
+  { name:"React", cat:"Frontend Framework", icon:"⚛️", patterns:{ html:[/__REACT/, /_reactRootContainer/, /data-reactroot/, /data-reactid/, /react-app/, /id="root"><\/div>/, /id="__next"/, /react\.version/], scripts:[/react\.production\.min\.js/, /react-dom/, /react\.development\.js/, /\/react@/, /\/react-dom@/, /_next\/static/], meta:{}, csp:[/unpkg\.com.*react/, /cdn\.jsdelivr\.net.*react/] }, guide:"Frontend-Stacks-Visual-Guide.html", why:"Detected React markers in HTML or script references" },
   { name:"Vue.js", cat:"Frontend Framework", icon:"💚", patterns:{ html:[/data-v-[a-f0-9]/, /__vue__/, /Vue\.js/, /\[Vue warn\]/], scripts:[/vue\.runtime/, /vue\.global/, /vue\.min\.js/, /vue@/], meta:{}, csp:[] }, guide:"Frontend-Stacks-Visual-Guide.html", why:"Found Vue.js data attributes or script references" },
   { name:"Angular", cat:"Frontend Framework", icon:"🅰️", patterns:{ html:[/ng-version=/, /ng-app/, /<app-root/, /ng-content/, /ng-reflect/], scripts:[/angular\.js/, /angular\.min\.js/, /@angular\/core/], meta:{}, csp:[] }, guide:"Frontend-Stacks-Visual-Guide.html", why:"Found Angular directives or ng-version attribute" },
   { name:"Svelte", cat:"Frontend Framework", icon:"🧡", patterns:{ html:[/svelte-[a-z0-9]/, /__svelte/, /class="svelte-/], scripts:[/svelte\/internal/, /svelte\.dev/], meta:{}, csp:[] }, guide:"Frontend-Stacks-Visual-Guide.html", why:"Found Svelte component class hashes or internal markers" },
@@ -197,7 +197,7 @@ const TECHS = [
   { name:"Turbo", cat:"Frontend Framework", icon:"🚀", patterns:{ html:[/data-turbo/, /turbo-frame/, /turbo-stream/], scripts:[/@hotwired\/turbo/, /turbo\.es2017/], meta:{}, csp:[] }, guide:"Frontend-Stacks-Visual-Guide.html", why:"Found Hotwire Turbo frames or streams" },
 
   // --- Meta-Frameworks ---
-  { name:"Next.js", cat:"Meta-Framework", icon:"▲", patterns:{ html:[/__NEXT_DATA__/, /__next/, /next\/dist/, /_next\/static/], scripts:[/_next\//, /next\/router/], meta:{"generator":/Next\.js/}, csp:[] }, guide:"Frontend-Stacks-Visual-Guide.html", why:"Found __NEXT_DATA__ or _next/ paths" },
+  { name:"Next.js", cat:"Meta-Framework", icon:"▲", patterns:{ html:[/__NEXT_DATA__/, /id="__next"/, /next\/dist/, /_next\/static/, /_next\/image/, /nextjs/, /_buildManifest\.js/], scripts:[/_next\//, /next\/router/, /_ssgManifest/, /_buildManifest/], meta:{"generator":/Next\.js/}, csp:[/vercel\.live/, /vercel-insights/] }, guide:"Frontend-Stacks-Visual-Guide.html", why:"Found __NEXT_DATA__ or _next/ paths" },
   { name:"Nuxt", cat:"Meta-Framework", icon:"💚", patterns:{ html:[/__NUXT__/, /_nuxt\//, /nuxt\.js/], scripts:[/_nuxt\//, /nuxt\.js/], meta:{"generator":/Nuxt/}, csp:[] }, guide:"Frontend-Stacks-Visual-Guide.html", why:"Found __NUXT__ payload or _nuxt/ paths" },
   { name:"Astro", cat:"Meta-Framework", icon:"🚀", patterns:{ html:[/astro-island/, /astro-slot/, /data-astro/, /client:load/, /client:visible/], scripts:[], meta:{"generator":/Astro/}, csp:[] }, guide:"Frontend-Stacks-Visual-Guide.html", why:"Found Astro island components or generator meta" },
   { name:"Gatsby", cat:"Meta-Framework", icon:"💜", patterns:{ html:[/___gatsby/, /gatsby-/, /gatsby\.js/], scripts:[/gatsby-/, /gatsby\.js/], meta:{"generator":/Gatsby/}, csp:[] }, guide:"Frontend-Stacks-Visual-Guide.html", why:"Found Gatsby root element or script bundles" },
@@ -206,7 +206,7 @@ const TECHS = [
   { name:"Qwik", cat:"Meta-Framework", icon:"⚡", patterns:{ html:[/q:container/, /qwik/, /q:id/], scripts:[/qwik/, /@builder\.io\/qwik/], meta:{}, csp:[] }, guide:"Frontend-Stacks-Visual-Guide.html", why:"Found Qwik container markers" },
 
   // --- CSS Frameworks ---
-  { name:"Tailwind CSS", cat:"CSS Framework", icon:"🌊", patterns:{ html:[/class="[^"]*(?:flex |p-\d|m-\d|bg-|text-|rounded|border|shadow|grid |gap-|w-|h-|min-|max-)[^"]*"/, /tailwindcss/], scripts:[/tailwindcss/, /tailwind\.min\.css/], meta:{}, csp:[/cdn\.tailwindcss\.com/] }, guide:"Frontend-Stacks-Visual-Guide.html", why:"Detected high density of Tailwind utility classes" },
+  { name:"Tailwind CSS", cat:"CSS Framework", icon:"🌊", patterns:{ html:[/class=["'][^"']*(?:flex |p-\d|m-\d|bg-\w|text-\w|rounded|shadow-|grid |gap-\d|w-\d|h-\d|min-w|max-w|space-[xy]|items-center|justify-)[^"']*["']/, /tailwindcss/, /tailwind\.css/, /tw-/], scripts:[/tailwindcss/, /tailwind\.min\.css/, /cdn\.tailwindcss\.com/], meta:{}, csp:[/cdn\.tailwindcss\.com/] }, guide:"Frontend-Stacks-Visual-Guide.html", why:"Detected high density of Tailwind utility classes" },
   { name:"Bootstrap", cat:"CSS Framework", icon:"🅱️", patterns:{ html:[/bootstrap\.min\.css/, /bootstrap\.min\.js/, /class="[^"]*btn btn-/, /class="[^"]*container/, /class="[^"]*navbar/], scripts:[/bootstrap\.bundle/, /bootstrap\.min\.js/], meta:{}, csp:[/cdn\.jsdelivr\.net.*bootstrap/, /stackpath\.bootstrapcdn\.com/] }, guide:"Frontend-Stacks-Visual-Guide.html", why:"Found Bootstrap CSS/JS references or class patterns" },
   { name:"Material UI / MUI", cat:"CSS Framework", icon:"🎨", patterns:{ html:[/MuiButton/, /MuiPaper/, /MuiTypography/, /css-[a-z0-9]{6,}-Mui/], scripts:[/@mui\//, /material-ui/], meta:{}, csp:[] }, guide:"Frontend-Stacks-Visual-Guide.html", why:"Found MUI component class prefixes" },
   { name:"Chakra UI", cat:"CSS Framework", icon:"⚡", patterns:{ html:[/chakra-ui/, /chakra-/, /css-[a-z0-9]+/], scripts:[/chakra-ui/, /@chakra-ui/], meta:{}, csp:[] }, guide:"Frontend-Stacks-Visual-Guide.html", why:"Found Chakra UI component references" },
@@ -425,35 +425,76 @@ let pathResponses = {};
 let stepsCompleted = 0;
 
 // ========== CORS PROXY FETCHING ==========
-const PROXIES = [
+
+// Strategy 1: allorigins /get returns JSON with headers info
+// Strategy 2: corsproxy.io for raw HTML
+// Strategy 3: headers.scrapeup.com for response headers (fallback)
+const RAW_PROXIES = [
   url => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
   url => `https://corsproxy.io/?${encodeURIComponent(url)}`,
 ];
 
-async function proxyFetch(url, getHeaders = false) {
-  if (getHeaders) {
-    // Use allorigins /get endpoint which returns headers
-    try {
-      const r = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`, { signal: AbortSignal.timeout(12000) });
-      if (r.ok) {
-        const data = await r.json();
-        return { content: data.contents || '', headers: data.status ? { 'x-status': String(data.status.http_code) } : {}, ok: true };
-      }
-    } catch(e) {}
-    return { content: '', headers: {}, ok: false };
-  }
-  for (const mkUrl of PROXIES) {
+async function fetchWithHeaders(url) {
+  // Primary: Use multiple header-inspection services in parallel
+  const results = await Promise.allSettled([
+    // Service 1: allorigins /get (returns content + some metadata)
+    (async () => {
+      const r = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`, { signal: AbortSignal.timeout(15000) });
+      if (!r.ok) throw new Error('not ok');
+      const data = await r.json();
+      return { content: data.contents || '', source: 'allorigins' };
+    })(),
+    // Service 2: Use a CORS proxy that may expose some headers
+    (async () => {
+      const r = await fetch(`https://corsproxy.io/?${encodeURIComponent(url)}`, { signal: AbortSignal.timeout(15000) });
+      if (!r.ok) throw new Error('not ok');
+      const hdrs = {};
+      r.headers.forEach((v, k) => { hdrs[k.toLowerCase()] = v; });
+      const text = await r.text();
+      return { content: text, headers: hdrs, source: 'corsproxy' };
+    })(),
+  ]);
+
+  let html = '';
+  let hdrs = {};
+
+  results.forEach(r => {
+    if (r.status === 'fulfilled') {
+      if (r.value.content && r.value.content.length > html.length) html = r.value.content;
+      if (r.value.headers) Object.assign(hdrs, r.value.headers);
+    }
+  });
+
+  return { content: html, headers: hdrs, ok: html.length > 0 };
+}
+
+async function proxyFetch(url) {
+  for (const mkUrl of RAW_PROXIES) {
     try {
       const r = await fetch(mkUrl(url), { signal: AbortSignal.timeout(12000) });
-      if (r.ok) {
-        const hdrs = {};
-        r.headers.forEach((v, k) => { hdrs[k.toLowerCase()] = v; });
-        const text = await r.text();
-        return { content: text, headers: hdrs, ok: true };
-      }
+      if (r.ok) return { content: await r.text(), ok: true };
     } catch(e) { continue; }
   }
-  return { content: '', headers: {}, ok: false };
+  return { content: '', ok: false };
+}
+
+// Extract headers from HTML itself — many sites embed server info
+function extractHeadersFromHtml(html) {
+  const extracted = {};
+  // Some proxies embed original headers in comments or meta tags
+  // Also detect from HTML patterns what headers WOULD have said
+
+  // Detect server from generator meta
+  const gen = html.match(/<meta[^>]+name=["']generator["'][^>]+content=["']([^"']+)["']/i)
+             || html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+name=["']generator["']/i);
+  if (gen) extracted['x-generator'] = gen[1];
+
+  // Detect X-Powered-By from common patterns
+  if (/__NEXT_DATA__|_next\/static/i.test(html)) extracted['x-meta-framework'] = 'Next.js';
+  if (/__NUXT__|_nuxt\//i.test(html)) extracted['x-meta-framework'] = 'Nuxt';
+  if (/___gatsby/i.test(html)) extracted['x-meta-framework'] = 'Gatsby';
+
+  return extracted;
 }
 
 // ========== DETECTION METHODS ==========
@@ -462,21 +503,33 @@ async function proxyFetch(url, getHeaders = false) {
 async function fetchHtmlAndHeaders(url) {
   updateStep('step-html', 'active');
   try {
-    const [rawResult, headerResult] = await Promise.all([
-      proxyFetch(url),
-      proxyFetch(url, true)
-    ]);
-    htmlContent = rawResult.content || '';
-    // Merge headers from both
-    responseHeaders = { ...rawResult.headers };
-    if (headerResult.headers) {
-      Object.assign(responseHeaders, headerResult.headers);
-    }
+    const result = await fetchWithHeaders(url);
+    htmlContent = result.content || '';
+    responseHeaders = result.headers || {};
+
+    // Also extract pseudo-headers from HTML content itself
+    const htmlHeaders = extractHeadersFromHtml(htmlContent);
+    Object.assign(responseHeaders, htmlHeaders);
+
     // Extract CSP
     const csp = responseHeaders['content-security-policy'] || '';
     if (csp) {
       cspDomains = csp.match(/[a-z0-9-]+\.[a-z0-9.-]+/gi) || [];
     }
+
+    // Extract ALL external domains from script src, link href, img src
+    const domainRx = /(?:src|href|action)=["'](?:https?:)?\/\/([a-z0-9][\w.-]+\.[a-z]{2,})/gi;
+    let m;
+    while ((m = domainRx.exec(htmlContent)) !== null) {
+      cspDomains.push(m[1].toLowerCase());
+    }
+    // Also from inline URLs and fetch/XMLHttpRequest patterns
+    const inlineUrls = htmlContent.match(/https?:\/\/[a-z0-9][\w.-]+\.[a-z]{2,}/gi) || [];
+    inlineUrls.forEach(u => {
+      try { cspDomains.push(new URL(u).hostname); } catch(e) {}
+    });
+    cspDomains = [...new Set(cspDomains)];
+
     updateStep('step-html', 'done');
     stepsCompleted++;
     updateProgress();
@@ -545,20 +598,125 @@ async function probePaths(url) {
   runPatternMatching();
 }
 
-// Method 4: CSP parsing (done as part of HTML fetch)
+// Method 4: CSP + Deep Domain Extraction
 function parseCspStep() {
   updateStep('step-csp', 'active');
-  // CSP was already parsed during HTML fetch
-  // Also extract domains from HTML script srcs
-  const scriptSrcs = htmlContent.match(/src=["'][^"']*["']/gi) || [];
-  const linkHrefs = htmlContent.match(/href=["'][^"']*["']/gi) || [];
-  const allRefs = [...scriptSrcs, ...linkHrefs];
-  const extraDomains = [];
-  allRefs.forEach(ref => {
-    const match = ref.match(/(?:src|href)=["'](?:https?:)?\/\/([a-z0-9.-]+)/i);
-    if (match) extraDomains.push(match[1]);
+
+  // Build a comprehensive domain-to-service map for CSP/script detection
+  const DOMAIN_MAP = {
+    // Analytics
+    'google-analytics.com': 'Google Analytics', 'www.google-analytics.com': 'Google Analytics',
+    'googletagmanager.com': 'Google Tag Manager', 'www.googletagmanager.com': 'Google Tag Manager',
+    'plausible.io': 'Plausible Analytics', 'analytics.google.com': 'Google Analytics',
+    'cdn.usefathom.com': 'Fathom Analytics', 'usefathom.com': 'Fathom Analytics',
+    'cdn.mxpnl.com': 'Mixpanel', 'mixpanel.com': 'Mixpanel',
+    'static.hotjar.com': 'Hotjar', 'script.hotjar.com': 'Hotjar',
+    'cdn.amplitude.com': 'Amplitude', 'api.amplitude.com': 'Amplitude',
+    'app.posthog.com': 'PostHog', 'us.posthog.com': 'PostHog',
+    'cdn.segment.com': 'Segment', 'api.segment.io': 'Segment',
+    'heapanalytics.com': 'Heap', 'cdn.heapanalytics.com': 'Heap',
+    'clarity.ms': 'Microsoft Clarity', 'www.clarity.ms': 'Microsoft Clarity',
+    'vitals.vercel-insights.com': 'Vercel Analytics', 'va.vercel-scripts.com': 'Vercel Analytics',
+    'cdn.matomo.cloud': 'Matomo', 'umami.is': 'Umami',
+    // Auth
+    'clerk.com': 'Clerk', 'accounts.dev': 'Clerk',
+    'cdn.auth0.com': 'Auth0', 'auth0.com': 'Auth0',
+    'identitytoolkit.googleapis.com': 'Firebase Auth',
+    'accounts.google.com': 'Google Sign-In',
+    // Payments
+    'js.stripe.com': 'Stripe', 'm.stripe.network': 'Stripe', 'r.stripe.com': 'Stripe',
+    'www.paypal.com': 'PayPal', 'www.paypalobjects.com': 'PayPal',
+    'cdn.paddle.com': 'Paddle', 'checkout.paddle.com': 'Paddle',
+    'assets.lemonsqueezy.com': 'Lemon Squeezy',
+    // Database/BaaS
+    'supabase.co': 'Supabase', 'supabase.com': 'Supabase',
+    'firebaseio.com': 'Firebase', 'firebaseapp.com': 'Firebase',
+    'googleapis.com': 'Google Cloud',
+    // Monitoring
+    'browser.sentry-cdn.com': 'Sentry', 'sentry.io': 'Sentry',
+    'cdn.lr-ingest.io': 'LogRocket', 'cdn.logrocket.io': 'LogRocket',
+    'js-agent.newrelic.com': 'New Relic', 'bam.nr-data.net': 'New Relic',
+    'd2wy8f7a9ursnm.cloudfront.net': 'Bugsnag',
+    'rum.datadog.com': 'Datadog', 'datadoghq.com': 'Datadog',
+    'rs.fullstory.com': 'FullStory', 'fullstory.com': 'FullStory',
+    // CDN
+    'cdn.jsdelivr.net': 'jsDelivr CDN', 'unpkg.com': 'unpkg CDN',
+    'cdnjs.cloudflare.com': 'Cloudflare CDN',
+    // Chat / Support
+    'widget.intercom.io': 'Intercom', 'js.intercomcdn.com': 'Intercom',
+    'client.crisp.chat': 'Crisp', 'static.zdassets.com': 'Zendesk',
+    'js.driftt.com': 'Drift', 'embed.tawk.to': 'Tawk.to',
+    'js.hs-scripts.com': 'HubSpot', 'js.hs-analytics.net': 'HubSpot',
+    // Fonts
+    'fonts.googleapis.com': 'Google Fonts', 'fonts.gstatic.com': 'Google Fonts',
+    'use.typekit.net': 'Adobe Fonts', 'p.typekit.net': 'Adobe Fonts',
+    // A/B Testing
+    'cdn.optimizely.com': 'Optimizely', 'cdn.split.io': 'Split.io',
+    'cdn.launchdarkly.com': 'LaunchDarkly',
+    // Privacy
+    'cdn.cookielaw.org': 'OneTrust', 'cookielaw.org': 'OneTrust',
+    'consent.cookiebot.com': 'Cookiebot',
+    // Images
+    'res.cloudinary.com': 'Cloudinary', 'images.unsplash.com': 'Unsplash',
+    // Maps
+    'maps.googleapis.com': 'Google Maps', 'api.mapbox.com': 'Mapbox',
+    // reCAPTCHA
+    'www.google.com/recaptcha': 'reCAPTCHA', 'www.gstatic.com/recaptcha': 'reCAPTCHA',
+    // Misc
+    'connect.facebook.net': 'Facebook SDK', 'platform.twitter.com': 'Twitter/X Widgets',
+    'platform.linkedin.com': 'LinkedIn SDK',
+  };
+
+  // Match detected domains against our map
+  const domainDetections = new Set();
+  cspDomains.forEach(domain => {
+    const d = domain.toLowerCase();
+    // Direct match
+    if (DOMAIN_MAP[d]) { domainDetections.add(DOMAIN_MAP[d]); return; }
+    // Subdomain match — check if any key is a suffix
+    for (const [key, service] of Object.entries(DOMAIN_MAP)) {
+      if (d.endsWith('.' + key) || d === key) { domainDetections.add(service); return; }
+    }
+    // Partial match for known patterns
+    if (d.includes('clerk')) domainDetections.add('Clerk');
+    if (d.includes('supabase')) domainDetections.add('Supabase');
+    if (d.includes('firebase')) domainDetections.add('Firebase');
+    if (d.includes('stripe')) domainDetections.add('Stripe');
+    if (d.includes('sentry')) domainDetections.add('Sentry');
+    if (d.includes('auth0')) domainDetections.add('Auth0');
+    if (d.includes('hotjar')) domainDetections.add('Hotjar');
+    if (d.includes('intercom')) domainDetections.add('Intercom');
+    if (d.includes('hubspot')) domainDetections.add('HubSpot');
+    if (d.includes('datadog')) domainDetections.add('Datadog');
+    if (d.includes('newrelic')) domainDetections.add('New Relic');
+    if (d.includes('posthog')) domainDetections.add('PostHog');
+    if (d.includes('mixpanel')) domainDetections.add('Mixpanel');
+    if (d.includes('amplitude')) domainDetections.add('Amplitude');
+    if (d.includes('segment')) domainDetections.add('Segment');
+    if (d.includes('cloudinary')) domainDetections.add('Cloudinary');
+    if (d.includes('mapbox')) domainDetections.add('Mapbox');
   });
-  cspDomains = [...new Set([...cspDomains, ...extraDomains])];
+
+  // Force-add domain-based detections to detectedTechs
+  domainDetections.forEach(serviceName => {
+    if (detectedTechs.find(d => d.name === serviceName)) return;
+    const tech = TECH_DB.find(t => t.name === serviceName);
+    if (tech) {
+      detectedTechs.push({ ...tech, confidence: 'high', signals: 2, maxSignals: 2, reasons: ['External domain reference found in page'] });
+    } else {
+      // Service detected but not in our DB — still show it
+      detectedTechs.push({
+        name: serviceName, cat: 'API / Other', icon: '🔗',
+        confidence: 'medium', signals: 1, maxSignals: 1,
+        reasons: ['Domain reference found in page scripts/links'],
+        guide: '', why: 'Detected from external domain reference'
+      });
+    }
+  });
+
+  // Store detected domains count for display
+  window._detectedDomains = cspDomains;
+
   updateStep('step-csp', 'done');
   stepsCompleted++;
   updateProgress();
@@ -568,7 +726,7 @@ function parseCspStep() {
 let matchRuns = 0;
 function runPatternMatching() {
   matchRuns++;
-  if (matchRuns < 2 && stepsCompleted < 3) return; // Wait for at least some data
+  if (matchRuns < 1 && stepsCompleted < 2) return; // Run sooner
   updateStep('step-pattern', 'active');
 
   const newDetections = [];
@@ -776,6 +934,32 @@ function renderResults() {
     html += `</div>`;
     idx++;
   });
+
+  // Add external domains section
+  if (cspDomains.length > 0) {
+    const uniqueDomains = [...new Set(cspDomains)].sort();
+    html += `<div class="md:col-span-2 lg:col-span-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 mt-2">`;
+    html += `<details><summary class="font-bold text-sm cursor-pointer">🌐 ${uniqueDomains.length} External Domains Detected <span class="text-xs font-normal text-slate-400">(click to expand)</span></summary>`;
+    html += `<div class="mt-3 flex flex-wrap gap-1.5">`;
+    uniqueDomains.forEach(d => {
+      html += `<span class="text-[11px] bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-full px-2 py-0.5">${d}</span>`;
+    });
+    html += `</div></details></div>`;
+  }
+
+  // Add DNS records section
+  const allDns = [...dnsRecords.a, ...dnsRecords.cname, ...dnsRecords.mx, ...dnsRecords.txt].filter(Boolean);
+  if (allDns.length > 0) {
+    html += `<div class="md:col-span-2 lg:col-span-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5">`;
+    html += `<details><summary class="font-bold text-sm cursor-pointer">📡 DNS Records <span class="text-xs font-normal text-slate-400">(click to expand)</span></summary>`;
+    html += `<div class="mt-3 text-xs text-slate-600 dark:text-slate-400 space-y-1">`;
+    if (dnsRecords.a.length) html += `<div><strong>A:</strong> ${dnsRecords.a.join(', ')}</div>`;
+    if (dnsRecords.cname.length) html += `<div><strong>CNAME:</strong> ${dnsRecords.cname.join(', ')}</div>`;
+    if (dnsRecords.mx.length) html += `<div><strong>MX:</strong> ${dnsRecords.mx.join(', ')}</div>`;
+    if (dnsRecords.txt.length) html += `<div><strong>TXT:</strong> ${dnsRecords.txt.slice(0, 10).join(', ')}${dnsRecords.txt.length > 10 ? '...' : ''}</div>`;
+    if (dnsRecords.ns.length) html += `<div><strong>NS:</strong> ${dnsRecords.ns.join(', ')}</div>`;
+    html += `</div></details></div>`;
+  }
 
   grid.innerHTML = html;
 
