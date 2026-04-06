@@ -1,0 +1,179 @@
+/* ═══════════════════════════════════════════════════════════════
+   Open TechStack — Dark Mode Styles
+   Applied when <html> has class="dark"
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Base ──────────────────────────────────────────────────── */
+.dark body { background: #0f172a; color: #e2e8f0; }
+
+/* ── Backgrounds ──────────────────────────────────────────── */
+.dark .bg-slate-50,
+.dark .bg-white { background: #1e293b !important; }
+
+.dark .bg-gradient-to-br { background: linear-gradient(to bottom right, #0f172a, #1e293b) !important; }
+
+.dark header.bg-gradient-to-br,
+.dark header .bg-gradient-to-br,
+.dark .from-white,
+.dark .from-indigo-50,
+.dark .via-white { background: #0f172a !important; }
+
+.dark header .absolute.inset-0 { background: linear-gradient(to bottom right, #1e1b4b, #0f172a, #164e63) !important; }
+
+/* ── Text ─────────────────────────────────────────────────── */
+.dark .text-slate-900 { color: #f1f5f9 !important; }
+.dark .text-slate-800 { color: #e2e8f0 !important; }
+.dark .text-slate-700 { color: #cbd5e1 !important; }
+.dark .text-slate-600 { color: #94a3b8 !important; }
+.dark .text-slate-500 { color: #64748b !important; }
+
+/* ── Borders ──────────────────────────────────────────────── */
+.dark .border-slate-200,
+.dark .border-slate-300 { border-color: #334155 !important; }
+
+.dark .divide-slate-100 > * + *,
+.dark .divide-slate-200 > * + * { border-color: #334155 !important; }
+
+/* ── Cards ────────────────────────────────────────────────── */
+.dark .card,
+.dark .card-hover,
+.dark [class*="rounded-2xl"].bg-white,
+.dark [class*="rounded-xl"].bg-white,
+.dark [class*="rounded-xl"].bg-slate-50,
+.dark [class*="rounded-lg"].bg-white {
+  background: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+.dark .card-hover:hover { box-shadow: 0 20px 40px rgba(0,0,0,.4) !important; }
+
+/* ── Cheat sheet / section backgrounds ────────────────────── */
+.dark .bg-slate-50 { background: #0f172a !important; }
+
+.dark section.bg-white,
+.dark .bg-white.border-t { background: #1e293b !important; }
+
+.dark .bg-rose-50 { background: #1c1017 !important; }
+.dark .border-rose-200 { border-color: #4a1d2e !important; }
+.dark .text-rose-900,
+.dark .text-rose-900\/90 { color: #fda4af !important; }
+
+/* ── Inputs ───────────────────────────────────────────────── */
+.dark input[type="text"],
+.dark input[type="search"],
+.dark select {
+  background: #0f172a !important;
+  border-color: #475569 !important;
+  color: #e2e8f0 !important;
+}
+.dark input::placeholder { color: #64748b !important; }
+
+/* ── Checkboxes ───────────────────────────────────────────── */
+.dark input[type="checkbox"] { border-color: #475569 !important; }
+
+/* ── Buttons ──────────────────────────────────────────────── */
+.dark .stage-btn {
+  background: #1e293b !important;
+  border-color: #475569 !important;
+  color: #e2e8f0 !important;
+}
+.dark .stage-btn.active {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+.dark .filter-chip:not(.active) {
+  background: color-mix(in srgb, var(--cs) 30%, #1e293b) !important;
+}
+.dark .filter-chip.active {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+/* ── Stage panel ──────────────────────────────────────────── */
+.dark #stagePanel,
+.dark .bg-gradient-to-br.from-white.to-slate-50 {
+  background: linear-gradient(to bottom right, #1e293b, #0f172a) !important;
+  border-color: #334155 !important;
+}
+
+.dark #stagePanel .rounded-xl,
+.dark #stagePanel .rounded-lg {
+  background: #0f172a !important;
+  border-color: #334155 !important;
+}
+
+/* ── Mind map SVG ─────────────────────────────────────────── */
+.dark #mindmap { background: #0f172a; }
+.dark .rounded-2xl:has(#mindmap) { background: #0f172a !important; }
+
+/* ── Tags / badges ────────────────────────────────────────── */
+.dark .bg-emerald-100 { background: #064e3b !important; color: #6ee7b7 !important; }
+.dark .bg-sky-100 { background: #0c4a6e !important; color: #7dd3fc !important; }
+.dark .bg-indigo-100 { background: #312e81 !important; color: #a5b4fc !important; }
+.dark .bg-violet-100 { background: #4c1d95 !important; color: #c4b5fd !important; }
+.dark .bg-cyan-100 { background: #164e63 !important; color: #67e8f9 !important; }
+.dark .bg-rose-100 { background: #4c0519 !important; color: #fda4af !important; }
+.dark .bg-amber-100 { background: #78350f !important; color: #fcd34d !important; }
+.dark .bg-pink-100 { background: #500724 !important; color: #f9a8d4 !important; }
+.dark .bg-orange-100 { background: #7c2d12 !important; color: #fdba74 !important; }
+.dark .bg-slate-100 { background: #334155 !important; color: #94a3b8 !important; }
+
+/* ── Keyboard shortcut badges ─────────────────────────────── */
+.dark kbd { background: #334155 !important; border-color: #475569 !important; color: #e2e8f0 !important; }
+
+/* ── Tables (comparison pages) ────────────────────────────── */
+.dark table { border-color: #334155; }
+.dark th { background: #0f172a !important; color: #e2e8f0 !important; border-color: #334155 !important; }
+.dark td { background: #1e293b !important; color: #cbd5e1 !important; border-color: #334155 !important; }
+.dark tr:nth-child(even) td { background: #172033 !important; }
+.dark .bg-emerald-50 { background: #022c22 !important; }
+.dark .bg-green-50 { background: #052e16 !important; }
+
+/* ── Sticky filter bar ────────────────────────────────────── */
+.dark .bg-white\/90 { background: rgba(30, 41, 59, 0.92) !important; }
+.dark .backdrop-blur { backdrop-filter: blur(12px); }
+
+/* ── Stack Picker option buttons ──────────────────────────── */
+.dark .option-btn {
+  background: #1e293b !important;
+  border-color: #334155 !important;
+}
+.dark .option-btn:hover { box-shadow: 0 8px 25px rgba(0,0,0,.3) !important; }
+.dark .option-btn.selected {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-color: #f1f5f9 !important;
+}
+.dark .option-btn .opt-desc { color: #64748b !important; }
+.dark .option-btn.selected .opt-desc { color: #475569 !important; }
+
+/* ── Progress dots (picker) ───────────────────────────────── */
+.dark .progress-dot { background: #475569; }
+.dark .progress-dot.done { background: #f1f5f9; }
+.dark .progress-dot.current { background: #818cf8; box-shadow: 0 0 0 4px #312e81; }
+
+/* ── Scrollbar ────────────────────────────────────────────── */
+.dark ::-webkit-scrollbar { width: 8px; }
+.dark ::-webkit-scrollbar-track { background: #0f172a; }
+.dark ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+.dark ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+/* ── Gradient text (index hero) ───────────────────────────── */
+.dark .gradient-text {
+  background: linear-gradient(135deg, #818cf8, #22d3ee) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* ── Pill / chip badges in guides ─────────────────────────── */
+.dark .chip {
+  background: color-mix(in srgb, var(--c) 20%, #1e293b) !important;
+  border-color: color-mix(in srgb, var(--c) 30%, transparent) !important;
+}
+
+/* ── Footer (already dark, but ensure consistency) ────────── */
+.dark footer { background: #020617 !important; }
+
+/* ── Combo cards / layer backgrounds ──────────────────────── */
+.dark [class*="layer-"] .rounded-xl { border-color: #334155 !important; }
