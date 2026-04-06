@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Stack Picker — Find Your Perfect Tech Stack in 60 Seconds</title>
+<meta name="description" content="Answer 5 questions, get a personalized tech stack recommendation. AI-powered stack picker for frontend, backend, AI/ML, DevOps, and mobile. Free, instant, no sign-up." />
+<meta name="keywords" content="tech stack picker, what tech stack should I use, stack recommendation, best tech stack 2026, choose tech stack, stack quiz, framework picker" />
+<link rel="canonical" href="https://opentechstack.stitchwebsite.com/stack-picker.html" />
+<meta property="og:title" content="Stack Picker — Find Your Perfect Tech Stack in 60 Seconds" />
+<meta property="og:description" content="Answer 5 questions, get a personalized full-stack recommendation with reasoning. Free, no sign-up." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://opentechstack.stitchwebsite.com/stack-picker.html" />
+<meta property="og:site_name" content="Open TechStack" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Stack Picker — Find Your Perfect Tech Stack in 60 Seconds" />
+<meta name="twitter:description" content="Answer 5 questions, get a personalized full-stack recommendation." />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Stack Picker","description":"Answer 5 questions, get a personalized tech stack recommendation for 2026.","url":"https://opentechstack.stitchwebsite.com/stack-picker.html","applicationCategory":"DeveloperApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"Open TechStack","url":"https://opentechstack.stitchwebsite.com"}}
+</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+
+  .option-btn { transition: all .2s ease; }
+  .option-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,.1); }
+  .option-btn.selected { background: #0f172a !important; color: white !important; border-color: #0f172a !important; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(15,23,42,.25); }
+  .option-btn.selected .opt-desc { color: #94a3b8 !important; }
+  .option-btn.selected .opt-icon { filter: brightness(0) invert(1); }
+
+  .step { display: none; }
+  .step.active { display: block; animation: fadeIn .4s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  .progress-dot { transition: all .3s ease; }
+  .progress-dot.done { background: #0f172a; }
+  .progress-dot.current { background: #6366f1; box-shadow: 0 0 0 4px #c7d2fe; }
+
+  .result-card { animation: slideUp .5s ease; }
+  @keyframes slideUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+  .layer-bar { height: 6px; border-radius: 3px; animation: growBar .8s ease forwards; transform-origin: left; }
+  @keyframes growBar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+<nav class="bg-slate-900 text-white text-sm">
+  <div class="max-w-5xl mx-auto px-6 py-2.5 flex items-center justify-between">
+    <a href="index.html" class="font-bold tracking-tight hover:text-slate-300 transition">⚡ Open TechStack</a>
+    <div class="flex items-center gap-4 flex-wrap">
+      <a href="index.html" class="hover:text-slate-300 transition">Home</a>
+      <a href="Frontend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Frontend</a>
+      <a href="Backend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Backend</a>
+      <a href="AIML-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">AI/ML</a>
+      <a href="AI-Coding-Tools-Visual-Guide.html" class="hover:text-slate-300 transition">AI Coding</a>
+      <a href="DevOps-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">DevOps</a>
+      <a href="Mobile-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Mobile</a>
+      <a href="compare/" class="hover:text-slate-300 transition">Compare</a>
+      <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="hover:text-slate-300 transition">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<div class="max-w-3xl mx-auto px-6 py-12">
+
+  <!-- Progress -->
+  <div class="flex items-center justify-center gap-3 mb-10" id="progressBar">
+    <div class="progress-dot w-3 h-3 rounded-full bg-slate-300 current" data-step="0"></div>
+    <div class="w-8 h-0.5 bg-slate-200"></div>
+    <div class="progress-dot w-3 h-3 rounded-full bg-slate-300" data-step="1"></div>
+    <div class="w-8 h-0.5 bg-slate-200"></div>
+    <div class="progress-dot w-3 h-3 rounded-full bg-slate-300" data-step="2"></div>
+    <div class="w-8 h-0.5 bg-slate-200"></div>
+    <div class="progress-dot w-3 h-3 rounded-full bg-slate-300" data-step="3"></div>
+    <div class="w-8 h-0.5 bg-slate-200"></div>
+    <div class="progress-dot w-3 h-3 rounded-full bg-slate-300" data-step="4"></div>
+  </div>
+
+  <!-- Step 0: Project Type -->
+  <div class="step active" data-step="0">
+    <div class="text-center mb-8">
+      <div class="text-xs uppercase tracking-wider text-indigo-600 font-semibold mb-2">Question 1 of 5</div>
+      <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900">What are you building?</h1>
+      <p class="mt-2 text-slate-500">Pick the closest match.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="opts-0">
+      <button class="option-btn text-left p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="saas">
+        <div class="text-lg font-bold text-slate-900">SaaS / Web App</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">Dashboard, auth, subscriptions, CRUD</div>
+      </button>
+      <button class="option-btn text-left p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="content">
+        <div class="text-lg font-bold text-slate-900">Content / Marketing</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">Blog, docs, landing pages, SEO-critical</div>
+      </button>
+      <button class="option-btn text-left p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="ai">
+        <div class="text-lg font-bold text-slate-900">AI / ML Product</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">Chatbot, RAG, agents, LLM-powered</div>
+      </button>
+      <button class="option-btn text-left p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="mobile">
+        <div class="text-lg font-bold text-slate-900">Mobile App</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">iOS, Android, or cross-platform</div>
+      </button>
+      <button class="option-btn text-left p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="ecommerce">
+        <div class="text-lg font-bold text-slate-900">E-commerce</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">Product catalog, cart, checkout, payments</div>
+      </button>
+      <button class="option-btn text-left p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="realtime">
+        <div class="text-lg font-bold text-slate-900">Realtime / Multiplayer</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">Chat, collaboration, live data, gaming</div>
+      </button>
+      <button class="option-btn text-left p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="internal">
+        <div class="text-lg font-bold text-slate-900">Internal Tool / Admin</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">Back-office, dashboards, workflows</div>
+      </button>
+      <button class="option-btn text-left p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="api">
+        <div class="text-lg font-bold text-slate-900">API / Backend Service</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">REST/GraphQL API, microservices, data pipeline</div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Step 1: Team Size -->
+  <div class="step" data-step="1">
+    <div class="text-center mb-8">
+      <div class="text-xs uppercase tracking-wider text-indigo-600 font-semibold mb-2">Question 2 of 5</div>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">How big is your team?</h2>
+      <p class="mt-2 text-slate-500">Developers who will work on this project.</p>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="opts-1">
+      <button class="option-btn text-center p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="solo">
+        <div class="text-3xl mb-2">🧑‍💻</div>
+        <div class="text-lg font-bold text-slate-900">Just me</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">Solo developer</div>
+      </button>
+      <button class="option-btn text-center p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="small">
+        <div class="text-3xl mb-2">👥</div>
+        <div class="text-lg font-bold text-slate-900">2–5</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">Small team</div>
+      </button>
+      <button class="option-btn text-center p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="medium">
+        <div class="text-3xl mb-2">👥👥</div>
+        <div class="text-lg font-bold text-slate-900">6–20</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">Growing team</div>
+      </button>
+      <button class="option-btn text-center p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="large">
+        <div class="text-3xl mb-2">🏢</div>
+        <div class="text-lg font-bold text-slate-900">20+</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">Enterprise</div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Step 2: Experience -->
+  <div class="step" data-step="2">
+    <div class="text-center mb-8">
+      <div class="text-xs uppercase tracking-wider text-indigo-600 font-semibold mb-2">Question 3 of 5</div>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">What's your experience level?</h2>
+      <p class="mt-2 text-slate-500">Be honest — it affects which tools will actually help you.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="opts-2">
+      <button class="option-btn text-center p-6 rounded-xl border-2 border-slate-200 bg-white" data-value="beginner">
+        <div class="text-3xl mb-2">🌱</div>
+        <div class="text-lg font-bold text-slate-900">Beginner</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">Learning, first projects, career switcher</div>
+      </button>
+      <button class="option-btn text-center p-6 rounded-xl border-2 border-slate-200 bg-white" data-value="intermediate">
+        <div class="text-3xl mb-2">🚀</div>
+        <div class="text-lg font-bold text-slate-900">Intermediate</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">1–4 years, shipped a few projects</div>
+      </button>
+      <button class="option-btn text-center p-6 rounded-xl border-2 border-slate-200 bg-white" data-value="expert">
+        <div class="text-3xl mb-2">⚡</div>
+        <div class="text-lg font-bold text-slate-900">Senior / Expert</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">5+ years, architected production systems</div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Step 3: Budget -->
+  <div class="step" data-step="3">
+    <div class="text-center mb-8">
+      <div class="text-xs uppercase tracking-wider text-indigo-600 font-semibold mb-2">Question 4 of 5</div>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">What's your monthly budget?</h2>
+      <p class="mt-2 text-slate-500">For hosting, services, and third-party tools.</p>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="opts-3">
+      <button class="option-btn text-center p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="free">
+        <div class="text-2xl font-extrabold text-slate-900">$0</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">Free tiers only</div>
+      </button>
+      <button class="option-btn text-center p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="low">
+        <div class="text-2xl font-extrabold text-slate-900">$25–$100</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">Side project / MVP</div>
+      </button>
+      <button class="option-btn text-center p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="medium">
+        <div class="text-2xl font-extrabold text-slate-900">$100–$500</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">Growing product</div>
+      </button>
+      <button class="option-btn text-center p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="high">
+        <div class="text-2xl font-extrabold text-slate-900">$500+</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">Scale / Enterprise</div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Step 4: Priority -->
+  <div class="step" data-step="4">
+    <div class="text-center mb-8">
+      <div class="text-xs uppercase tracking-wider text-indigo-600 font-semibold mb-2">Question 5 of 5</div>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">What matters most?</h2>
+      <p class="mt-2 text-slate-500">If you had to optimize for one thing.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="opts-4">
+      <button class="option-btn text-left p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="speed">
+        <div class="text-lg font-bold text-slate-900">Ship fast</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">Get to market ASAP. Speed over perfection.</div>
+      </button>
+      <button class="option-btn text-left p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="scale">
+        <div class="text-lg font-bold text-slate-900">Scale reliably</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">Handle millions of users. Performance and uptime.</div>
+      </button>
+      <button class="option-btn text-left p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="dx">
+        <div class="text-lg font-bold text-slate-900">Developer happiness</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">Great DX, fun to work with, easy to maintain.</div>
+      </button>
+      <button class="option-btn text-left p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="cost">
+        <div class="text-lg font-bold text-slate-900">Minimize cost</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">Run as cheaply as possible. Free tiers, open source.</div>
+      </button>
+      <button class="option-btn text-left p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="typesafe">
+        <div class="text-lg font-bold text-slate-900">Type safety end-to-end</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">TypeScript everywhere. Catch bugs at compile time.</div>
+      </button>
+      <button class="option-btn text-left p-5 rounded-xl border-2 border-slate-200 bg-white" data-value="learn">
+        <div class="text-lg font-bold text-slate-900">Learn modern tech</div>
+        <div class="opt-desc text-sm text-slate-500 mt-1">Use what's hot. Build resume-worthy experience.</div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Result -->
+  <div class="step" data-step="result" id="resultStep">
+    <!-- Filled by JS -->
+  </div>
+
+</div>
+
+<!-- FLOATING SHARE BAR -->
+<div id="shareBar" class="fixed bottom-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur border-t border-slate-700 transform translate-y-full" style="transition:transform .3s ease">
+  <div class="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+    <div class="text-white text-sm font-medium hidden sm:block">Share your result!</div>
+    <div class="flex items-center gap-2 flex-wrap">
+      <a id="shareTwitter" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#1DA1F2] text-white text-xs font-semibold rounded-lg hover:opacity-90 transition"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Tweet</a>
+      <a id="shareReddit" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#FF4500] text-white text-xs font-semibold rounded-lg hover:opacity-90 transition">Reddit</a>
+      <a id="shareLinkedin" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#0A66C2] text-white text-xs font-semibold rounded-lg hover:opacity-90 transition">LinkedIn</a>
+      <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white text-slate-900 text-xs font-semibold rounded-lg hover:bg-slate-100 transition">Star on GitHub</a>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ================================================================
+   STACK PICKER ENGINE
+   ================================================================ */
+
+const answers = {};
+let currentStep = 0;
+
+// ── Option click handler ──────────────────────────────────────────
+document.querySelectorAll('.option-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const step = btn.closest('.step');
+    const stepIdx = parseInt(step.dataset.step);
+    // deselect siblings
+    step.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    answers[stepIdx] = btn.dataset.value;
+
+    // auto-advance after short delay
+    setTimeout(() => {
+      if (stepIdx < 4) {
+        goToStep(stepIdx + 1);
+      } else {
+        showResult();
+      }
+    }, 350);
+  });
+});
+
+function goToStep(n) {
+  document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+  const target = document.querySelector(`.step[data-step="${n}"]`);
+  if (target) target.classList.add('active');
+  currentStep = n;
+  updateProgress();
+}
+
+function updateProgress() {
+  document.querySelectorAll('.progress-dot').forEach(d => {
+    const s = parseInt(d.dataset.step);
+    d.classList.remove('done', 'current');
+    if (s < currentStep) d.classList.add('done');
+    if (s === currentStep) d.classList.add('current');
+  });
+}
+
+/* ================================================================
+   RECOMMENDATION ENGINE
+   ================================================================ */
+
+const STACKS = {
+  // ── SaaS ──────────────────────────────────────────────────────
+  saas_speed: {
+    name: "The Indie Hacker Stack",
+    tagline: "Ship your SaaS this weekend",
+    frontend: { name: "Next.js 15", why: "App Router, RSC, fastest path to production SaaS" },
+    ui: { name: "shadcn/ui + Tailwind", why: "Beautiful, accessible, copy-paste components" },
+    backend: { name: "Supabase", why: "Auth, database, storage, realtime — all in one" },
+    database: { name: "PostgreSQL (Supabase)", why: "SQL, RLS, no separate DB to manage" },
+    auth: { name: "Supabase Auth", why: "Built-in, social logins, magic links" },
+    payments: { name: "Stripe", why: "Industry standard, Checkout + Billing portal" },
+    hosting: { name: "Vercel", why: "Zero-config Next.js deployment, edge functions" },
+    monitoring: { name: "Sentry", why: "Error tracking + performance, free tier" },
+    cost: "$0–$50/mo to start",
+    guide: "Backend-Stacks-Visual-Guide.html",
+  },
+  saas_scale: {
+    name: "The Scale-Ready SaaS Stack",
+    tagline: "Built to handle millions from day one",
+    frontend: { name: "Next.js 15", why: "RSC for performance, streaming for UX" },
+    ui: { name: "shadcn/ui + Tailwind", why: "Consistent design system, accessible" },
+    backend: { name: "Node.js + Fastify", why: "High throughput, TypeScript, mature ecosystem" },
+    database: { name: "PostgreSQL + Redis", why: "Postgres for data, Redis for cache + queues" },
+    auth: { name: "Clerk", why: "Drop-in auth with user management UI, MFA, SSO" },
+    payments: { name: "Stripe", why: "Billing, invoicing, revenue recognition" },
+    hosting: { name: "AWS (ECS/Lambda) + Vercel", why: "Frontend on Vercel, API on AWS for control" },
+    monitoring: { name: "Datadog + Sentry", why: "Full APM, infrastructure monitoring, error tracking" },
+    cost: "$200–$2000/mo",
+    guide: "Backend-Stacks-Visual-Guide.html",
+  },
+  saas_typesafe: {
+    name: "The TypeScript Purist Stack",
+    tagline: "End-to-end type safety, zero runtime errors",
+    frontend: { name: "Next.js 15", why: "React Server Components with full TypeScript" },
+    ui: { name: "shadcn/ui + Tailwind", why: "Typed components, Radix primitives" },
+    backend: { name: "tRPC + Drizzle ORM", why: "Type-safe API layer, type-safe SQL" },
+    database: { name: "PostgreSQL (Neon)", why: "Serverless Postgres with branching" },
+    auth: { name: "Auth.js (NextAuth)", why: "Framework-level, TypeScript-native" },
+    payments: { name: "Stripe", why: "Best typed SDK" },
+    hosting: { name: "Vercel", why: "Edge-optimized, zero-config" },
+    monitoring: { name: "Sentry + PostHog", why: "Errors + product analytics" },
+    cost: "$0–$100/mo",
+    guide: "Frontend-Stacks-Visual-Guide.html",
+  },
+  saas_default: {
+    name: "The Modern SaaS Stack",
+    tagline: "The most popular choice for SaaS in 2026",
+    frontend: { name: "Next.js 15", why: "Dominant meta-framework, huge ecosystem" },
+    ui: { name: "shadcn/ui + Tailwind", why: "Most popular UI approach in 2026" },
+    backend: { name: "Supabase", why: "Fastest backend setup, great free tier" },
+    database: { name: "PostgreSQL (Supabase)", why: "SQL, extensions, reliability" },
+    auth: { name: "Clerk or Supabase Auth", why: "Drop-in auth that just works" },
+    payments: { name: "Stripe", why: "No real alternative for payments" },
+    hosting: { name: "Vercel", why: "Best DX for Next.js" },
+    monitoring: { name: "Sentry", why: "Free tier, great error tracking" },
+    cost: "$0–$100/mo",
+    guide: "Stack-Combos.html",
+  },
+
+  // ── Content ───────────────────────────────────────────────────
+  content_speed: {
+    name: "The Content Speedrun Stack",
+    tagline: "Blog to production in an afternoon",
+    frontend: { name: "Astro 5", why: "Content-first, fastest static sites, any UI framework" },
+    ui: { name: "Tailwind CSS", why: "Utility-first, no JS overhead" },
+    backend: { name: "Markdown / MDX", why: "Content in repo, zero CMS cost" },
+    database: { name: "None needed", why: "Static generation from content collections" },
+    auth: { name: "N/A", why: "Public content, no auth needed" },
+    payments: { name: "N/A", why: "Monetize via ads/sponsors if needed" },
+    hosting: { name: "Cloudflare Pages", why: "Free, global CDN, fastest edge delivery" },
+    monitoring: { name: "Plausible or Umami", why: "Privacy-friendly analytics" },
+    cost: "$0",
+    guide: "Frontend-Stacks-Visual-Guide.html",
+  },
+  content_default: {
+    name: "The Content Empire Stack",
+    tagline: "SEO-optimized content at scale",
+    frontend: { name: "Astro 5", why: "Zero JS by default, island architecture, View Transitions" },
+    ui: { name: "Tailwind CSS", why: "Fast styling, small bundles" },
+    backend: { name: "Sanity or Contentful", why: "Headless CMS for editors, structured content" },
+    database: { name: "CMS-managed", why: "Content lives in the CMS" },
+    auth: { name: "N/A", why: "Public content" },
+    payments: { name: "N/A", why: "" },
+    hosting: { name: "Cloudflare Pages", why: "Edge-first, free SSL, fast" },
+    monitoring: { name: "Google Analytics + Search Console", why: "SEO tracking" },
+    cost: "$0–$50/mo",
+    guide: "Frontend-Stacks-Visual-Guide.html",
+  },
+
+  // ── AI ────────────────────────────────────────────────────────
+  ai_speed: {
+    name: "The AI Startup Stack",
+    tagline: "LLM-powered app, live this week",
+    frontend: { name: "Next.js 15 + Vercel AI SDK", why: "Streaming UI, best chat/AI UX" },
+    ui: { name: "shadcn/ui + Tailwind", why: "Pre-built chat components" },
+    backend: { name: "Python (FastAPI) + LangChain", why: "Best AI/ML ecosystem, async" },
+    database: { name: "Supabase + pgvector", why: "Postgres + vector search in one" },
+    auth: { name: "Clerk", why: "Drop-in, usage tracking per user" },
+    payments: { name: "Stripe (usage-based)", why: "Metered billing for AI usage" },
+    hosting: { name: "Vercel (frontend) + Modal (GPU)", why: "Edge UI + serverless GPU" },
+    monitoring: { name: "LangSmith + Sentry", why: "LLM tracing + error tracking" },
+    cost: "$50–$500/mo (mostly LLM API costs)",
+    guide: "AIML-Stacks-Visual-Guide.html",
+  },
+  ai_cost: {
+    name: "The Budget AI Stack",
+    tagline: "Build AI without the API bills",
+    frontend: { name: "Next.js 15", why: "Full-stack React" },
+    ui: { name: "shadcn/ui + Tailwind", why: "Free, beautiful" },
+    backend: { name: "Python + LlamaIndex", why: "RAG-optimized, data connectors" },
+    database: { name: "SQLite + ChromaDB", why: "Zero cost, local vector search" },
+    auth: { name: "Auth.js", why: "Free, framework-level" },
+    payments: { name: "Lemon Squeezy", why: "Simpler than Stripe, merchant of record" },
+    hosting: { name: "Cloudflare Workers + Ollama", why: "Free edge hosting + local LLM" },
+    monitoring: { name: "Langfuse (self-hosted)", why: "Open source LLM monitoring" },
+    cost: "$0–$20/mo",
+    guide: "AIML-Stacks-Visual-Guide.html",
+  },
+  ai_default: {
+    name: "The AI Product Stack",
+    tagline: "Production-grade AI application",
+    frontend: { name: "Next.js 15 + Vercel AI SDK", why: "Streaming, RSC, best AI UX" },
+    ui: { name: "shadcn/ui + Tailwind", why: "Consistent, accessible" },
+    backend: { name: "Python (FastAPI) + LangChain/LangGraph", why: "Agents, chains, tools" },
+    database: { name: "PostgreSQL + Pinecone", why: "Relational + vector search" },
+    auth: { name: "Clerk", why: "User management + usage tracking" },
+    payments: { name: "Stripe", why: "Usage-based billing" },
+    hosting: { name: "Vercel + Modal", why: "Edge UI + GPU inference" },
+    monitoring: { name: "LangSmith + Helicone + Sentry", why: "LLM tracing + cost tracking + errors" },
+    cost: "$100–$1000/mo",
+    guide: "AIML-Stacks-Visual-Guide.html",
+  },
+
+  // ── Mobile ────────────────────────────────────────────────────
+  mobile_speed: {
+    name: "The Cross-Platform Speed Stack",
+    tagline: "One codebase, both platforms, fast",
+    frontend: { name: "Expo (React Native)", why: "Best DX, managed workflow, OTA updates" },
+    ui: { name: "NativeWind (Tailwind)", why: "Tailwind for React Native" },
+    backend: { name: "Supabase", why: "Auth, DB, storage, realtime — all in one" },
+    database: { name: "PostgreSQL (Supabase)", why: "SQL from mobile" },
+    auth: { name: "Supabase Auth", why: "Social logins, built-in" },
+    payments: { name: "RevenueCat", why: "In-app purchases + subscriptions" },
+    hosting: { name: "EAS (Expo)", why: "Cloud builds, OTA updates, app store submission" },
+    monitoring: { name: "Sentry", why: "React Native crash reporting" },
+    cost: "$0–$50/mo",
+    guide: "Mobile-Stacks-Visual-Guide.html",
+  },
+  mobile_default: {
+    name: "The Mobile-First Stack",
+    tagline: "Cross-platform mobile done right",
+    frontend: { name: "Expo (React Native)", why: "Largest community, most libraries" },
+    ui: { name: "Tamagui", why: "Universal UI for mobile + web" },
+    backend: { name: "Supabase", why: "Realtime sync, offline support" },
+    database: { name: "PostgreSQL (Supabase)", why: "RLS for mobile security" },
+    auth: { name: "Clerk or Supabase Auth", why: "Mobile-optimized auth flows" },
+    payments: { name: "RevenueCat + Stripe", why: "IAP for mobile, Stripe for web" },
+    hosting: { name: "EAS + Vercel", why: "Mobile builds + web companion" },
+    monitoring: { name: "Sentry + PostHog", why: "Crashes + product analytics" },
+    cost: "$30–$200/mo",
+    guide: "Mobile-Stacks-Visual-Guide.html",
+  },
+
+  // ── E-commerce ────────────────────────────────────────────────
+  ecommerce_default: {
+    name: "The E-commerce Stack",
+    tagline: "Modern storefront with headless commerce",
+    frontend: { name: "Next.js 15", why: "SSR for SEO, streaming for speed" },
+    ui: { name: "shadcn/ui + Tailwind", why: "Custom storefront design" },
+    backend: { name: "Medusa.js or Shopify Storefront API", why: "Headless commerce engine" },
+    database: { name: "PostgreSQL (via Medusa) or Shopify", why: "Product catalog, orders" },
+    auth: { name: "Built-in (Medusa/Shopify)", why: "Customer accounts" },
+    payments: { name: "Stripe", why: "Checkout, subscriptions, invoicing" },
+    hosting: { name: "Vercel", why: "Edge-optimized product pages" },
+    monitoring: { name: "Sentry + Plausible", why: "Errors + privacy-friendly analytics" },
+    cost: "$50–$500/mo",
+    guide: "Stack-Combos.html",
+  },
+
+  // ── Realtime ──────────────────────────────────────────────────
+  realtime_default: {
+    name: "The Realtime Stack",
+    tagline: "Live data, instant updates, multiplayer",
+    frontend: { name: "Next.js 15", why: "WebSocket integration, streaming" },
+    ui: { name: "shadcn/ui + Tailwind", why: "Responsive, fast" },
+    backend: { name: "Elixir + Phoenix or Supabase Realtime", why: "Built for concurrency and live data" },
+    database: { name: "PostgreSQL + Redis", why: "Persistent data + pub/sub" },
+    auth: { name: "Clerk", why: "Presence, user identity for multiplayer" },
+    payments: { name: "Stripe", why: "If monetized" },
+    hosting: { name: "Fly.io", why: "Edge compute, WebSocket-friendly" },
+    monitoring: { name: "Sentry + Grafana", why: "Error tracking + realtime metrics" },
+    cost: "$50–$300/mo",
+    guide: "Backend-Stacks-Visual-Guide.html",
+  },
+
+  // ── Internal Tool ─────────────────────────────────────────────
+  internal_default: {
+    name: "The Internal Tool Stack",
+    tagline: "Admin panels and back-office apps",
+    frontend: { name: "Next.js 15 or Refine", why: "CRUD-optimized, data-heavy UIs" },
+    ui: { name: "shadcn/ui + Tailwind", why: "Clean admin UI" },
+    backend: { name: "Supabase or Node.js + Prisma", why: "Quick CRUD, type-safe queries" },
+    database: { name: "PostgreSQL", why: "Reliable, queryable, extensions" },
+    auth: { name: "Clerk (SSO)", why: "Enterprise SSO, RBAC" },
+    payments: { name: "N/A", why: "Internal tool" },
+    hosting: { name: "Vercel or self-hosted", why: "Private network if needed" },
+    monitoring: { name: "Sentry", why: "Error tracking" },
+    cost: "$0–$100/mo",
+    guide: "Backend-Stacks-Visual-Guide.html",
+  },
+
+  // ── API / Backend ─────────────────────────────────────────────
+  api_speed: {
+    name: "The Fast API Stack",
+    tagline: "Ship your API today",
+    frontend: { name: "N/A (API only)", why: "Headless backend" },
+    ui: { name: "N/A", why: "" },
+    backend: { name: "Node.js + Fastify or Hono", why: "Fastest Node frameworks, TypeScript" },
+    database: { name: "PostgreSQL (Neon)", why: "Serverless, branching, free tier" },
+    auth: { name: "JWT + Clerk", why: "API keys + user auth" },
+    payments: { name: "Stripe", why: "If monetized" },
+    hosting: { name: "Cloudflare Workers or Fly.io", why: "Edge-first, low latency" },
+    monitoring: { name: "Sentry + Grafana", why: "APM + metrics" },
+    cost: "$0–$50/mo",
+    guide: "Backend-Stacks-Visual-Guide.html",
+  },
+  api_scale: {
+    name: "The Enterprise API Stack",
+    tagline: "High-throughput, battle-tested backend",
+    frontend: { name: "N/A (API only)", why: "Headless" },
+    ui: { name: "N/A", why: "" },
+    backend: { name: "Go or Rust (Axum)", why: "Maximum performance, low memory" },
+    database: { name: "PostgreSQL + Redis", why: "OLTP + caching + queues" },
+    auth: { name: "Auth0 or Keycloak", why: "Enterprise SSO, RBAC, MFA" },
+    payments: { name: "Stripe", why: "Billing + invoicing" },
+    hosting: { name: "AWS (ECS/EKS) or GCP", why: "Full control, autoscaling" },
+    monitoring: { name: "Datadog + PagerDuty", why: "Full APM + alerting" },
+    cost: "$500–$5000/mo",
+    guide: "Backend-Stacks-Visual-Guide.html",
+  },
+  api_default: {
+    name: "The Backend Service Stack",
+    tagline: "Solid API foundation",
+    frontend: { name: "N/A (API only)", why: "Headless" },
+    ui: { name: "N/A", why: "" },
+    backend: { name: "Node.js + Fastify + Prisma", why: "TypeScript, type-safe ORM, fast" },
+    database: { name: "PostgreSQL", why: "The default database choice" },
+    auth: { name: "Clerk or Auth.js", why: "API key management + user auth" },
+    payments: { name: "Stripe", why: "If needed" },
+    hosting: { name: "Railway or Fly.io", why: "Easy deployment, good DX" },
+    monitoring: { name: "Sentry", why: "Error + performance tracking" },
+    cost: "$0–$100/mo",
+    guide: "Backend-Stacks-Visual-Guide.html",
+  },
+};
+
+function getStackKey() {
+  const project = answers[0];
+  const team = answers[1];
+  const exp = answers[2];
+  const budget = answers[3];
+  const priority = answers[4];
+
+  // Route to the best matching stack
+  let key = project + '_default';
+
+  if (project === 'saas') {
+    if (priority === 'speed' || (budget === 'free' || budget === 'low')) key = 'saas_speed';
+    else if (priority === 'scale' || team === 'large' || budget === 'high') key = 'saas_scale';
+    else if (priority === 'typesafe') key = 'saas_typesafe';
+    else key = 'saas_default';
+  }
+  else if (project === 'content') {
+    if (priority === 'speed' || budget === 'free') key = 'content_speed';
+    else key = 'content_default';
+  }
+  else if (project === 'ai') {
+    if (priority === 'speed') key = 'ai_speed';
+    else if (priority === 'cost' || budget === 'free') key = 'ai_cost';
+    else key = 'ai_default';
+  }
+  else if (project === 'mobile') {
+    if (priority === 'speed' || budget === 'free' || budget === 'low') key = 'mobile_speed';
+    else key = 'mobile_default';
+  }
+  else if (project === 'ecommerce') {
+    key = 'ecommerce_default';
+  }
+  else if (project === 'realtime') {
+    key = 'realtime_default';
+  }
+  else if (project === 'internal') {
+    key = 'internal_default';
+  }
+  else if (project === 'api') {
+    if (priority === 'speed') key = 'api_speed';
+    else if (priority === 'scale' || team === 'large' || budget === 'high') key = 'api_scale';
+    else key = 'api_default';
+  }
+
+  return STACKS[key] || STACKS[project + '_default'] || STACKS['saas_default'];
+}
+
+function showResult() {
+  const stack = getStackKey();
+  const layers = ['frontend','ui','backend','database','auth','payments','hosting','monitoring'];
+  const LAYER_COLORS = {
+    frontend: '#06b6d4', ui: '#ec4899', backend: '#6366f1', database: '#10b981',
+    auth: '#8b5cf6', payments: '#f59e0b', hosting: '#e11d48', monitoring: '#14b8a6'
+  };
+
+  const el = document.getElementById('resultStep');
+  const filteredLayers = layers.filter(l => stack[l] && stack[l].name && stack[l].name !== 'N/A');
+
+  el.innerHTML = `
+    <div class="result-card">
+      <div class="text-center mb-8">
+        <div class="text-xs uppercase tracking-wider text-emerald-600 font-semibold mb-2">Your result</div>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">${stack.name}</h2>
+        <p class="mt-2 text-lg text-slate-500">${stack.tagline}</p>
+        <div class="mt-3 inline-flex items-center gap-2 bg-slate-100 rounded-full px-4 py-1.5 text-sm text-slate-700">
+          <span class="font-semibold">Est. cost:</span> ${stack.cost}
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-6">
+        <div class="px-6 py-4 bg-slate-900 text-white">
+          <h3 class="font-bold text-lg">Your Stack</h3>
+          <p class="text-slate-400 text-sm">Each layer, and why it was chosen for you.</p>
+        </div>
+        <div class="divide-y divide-slate-100">
+          ${filteredLayers.map((l, i) => `
+            <div class="px-6 py-4 flex items-start gap-4">
+              <div class="flex-shrink-0 mt-1">
+                <div class="w-3 h-3 rounded-full" style="background:${LAYER_COLORS[l]}"></div>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="text-[10px] uppercase tracking-wider font-semibold text-slate-400">${l}</span>
+                </div>
+                <div class="text-base font-bold text-slate-900 mt-0.5">${stack[l].name}</div>
+                <div class="text-sm text-slate-500 mt-0.5">${stack[l].why}</div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center gap-3 flex-wrap mb-8">
+        <a href="${stack.guide}" class="inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 transition text-sm">
+          Explore this stack in detail
+        </a>
+        <button onclick="restart()" class="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-slate-300 text-slate-700 font-semibold rounded-xl hover:border-slate-900 transition text-sm">
+          Start over
+        </button>
+      </div>
+
+      <div class="text-center text-sm text-slate-400 mb-4">
+        Disagree with the result? <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks/issues/new" target="_blank" rel="noopener" class="text-indigo-500 hover:text-indigo-700 underline">Tell us why</a> — we'll improve the engine.
+      </div>
+    </div>
+  `;
+
+  goToStep('result');
+
+  // Show share bar
+  const bar = document.getElementById('shareBar');
+  bar.style.transform = 'translateY(0)';
+  const url = encodeURIComponent(location.href);
+  const text = encodeURIComponent(`I just found my perfect tech stack for 2026: "${stack.name}" — ${stack.tagline}. Try the Stack Picker:`);
+  document.getElementById('shareTwitter').href = `https://x.com/intent/tweet?text=${text}&url=${url}`;
+  document.getElementById('shareReddit').href = `https://reddit.com/submit?url=${url}&title=${encodeURIComponent('Stack Picker — Find your perfect tech stack in 60 seconds')}`;
+  document.getElementById('shareLinkedin').href = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+}
+
+function restart() {
+  Object.keys(answers).forEach(k => delete answers[k]);
+  document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+  document.getElementById('shareBar').style.transform = 'translateY(100%)';
+  goToStep(0);
+}
+
+// Keyboard shortcuts
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') restart();
+});
+</script>
+
+</body>
+</html>
