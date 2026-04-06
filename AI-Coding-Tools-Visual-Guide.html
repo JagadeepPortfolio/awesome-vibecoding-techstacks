@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>AI Coding Tools · Interactive Visual Guide 2026</title>
+<meta name="description" content="Interactive visual guide to 80+ AI coding and vibe coding tools in 2026. Compare AI code editors, coding agents, app builders, code review, testing, design-to-code, MCP, guardrails, and LLM ops." />
+<meta name="keywords" content="AI coding tools, vibe coding, 2026, Cursor, Claude Code, OpenAI Codex, GitHub Copilot, Windsurf, v0, Bolt, Lovable, Gemini CLI, MCP, AI code review, AI testing" />
+<meta property="og:title" content="AI Coding Tools · Visual Guide 2026" />
+<meta property="og:description" content="Mind-map view of the 2026 AI coding & vibe coding universe — 80+ tools across editors, agents, app builders, code review, testing, design-to-code, MCP, guardrails, and LLM ops." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://opentechstack.stitchwebsite.com/AI-Coding-Tools-Visual-Guide.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AI Coding Tools · Visual Guide 2026" />
+<meta name="twitter:description" content="Interactive guide to 80+ AI coding and vibe coding tools. Compare editors, agents, app builders, and more." />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<link rel="canonical" href="https://opentechstack.stitchwebsite.com/AI-Coding-Tools-Visual-Guide.html" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","name":"AI Coding Tools Visual Guide 2026","headline":"AI Coding & Vibe Coding Tools — Interactive Visual Guide 2026","description":"Interactive guide to 80+ AI coding tools: Cursor, Claude Code, OpenAI Codex, GitHub Copilot, Windsurf, v0, Bolt, Lovable, Gemini CLI, MCP ecosystem, and more.","url":"https://opentechstack.stitchwebsite.com/AI-Coding-Tools-Visual-Guide.html","publisher":{"@type":"Organization","name":"Open TechStack","url":"https://opentechstack.stitchwebsite.com"},"datePublished":"2026-04-06","dateModified":"2026-04-06","keywords":"AI coding tools, vibe coding, Cursor, Claude Code, OpenAI Codex, GitHub Copilot, MCP, 2026","isPartOf":{"@type":"WebSite","name":"Open TechStack","url":"https://opentechstack.stitchwebsite.com"}}
+</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .cat-editor  { --c:#6366f1; --cs:#eef2ff; }   /* AI Code Editors */
+  .cat-agent   { --c:#e11d48; --cs:#fff1f2; }   /* Coding Agents & CLI */
+  .cat-builder { --c:#f59e0b; --cs:#fffbeb; }   /* Vibe Coding / App Builders */
+  .cat-review  { --c:#10b981; --cs:#ecfdf5; }   /* Code Review */
+  .cat-test    { --c:#06b6d4; --cs:#ecfeff; }   /* Testing & QA */
+  .cat-design  { --c:#ec4899; --cs:#fdf2f8; }   /* Design-to-Code */
+  .cat-docs    { --c:#8b5cf6; --cs:#f5f3ff; }   /* Documentation */
+  .cat-mcp     { --c:#0ea5e9; --cs:#f0f9ff; }   /* MCP Ecosystem */
+  .cat-guard   { --c:#f97316; --cs:#fff7ed; }   /* Guardrails & Safety */
+  .cat-llmops  { --c:#14b8a6; --cs:#f0fdfa; }   /* LLM Ops & Prompt Eng */
+
+  .chip { background: var(--cs); color: var(--c); border: 1px solid color-mix(in srgb, var(--c) 25%, transparent); }
+
+  .node { cursor: pointer; transition: transform .2s ease, opacity .3s ease; transform-origin: center; transform-box: fill-box; }
+  .node:hover { transform: scale(1.08); }
+  .node.dim { opacity: .18; }
+  .link { transition: opacity .3s ease, stroke-width .2s ease; }
+  .link.dim { opacity: .1; }
+
+  .card { transition: opacity .25s ease, transform .25s ease, box-shadow .25s ease; }
+  .card.hidden-card { opacity: 0; transform: scale(.96); pointer-events: none; position: absolute; }
+  .card.flash { animation: flash 1.2s ease; }
+  @keyframes flash {
+    0%,100% { box-shadow: 0 1px 2px rgba(0,0,0,.05); }
+    30%     { box-shadow: 0 0 0 4px #fde68a, 0 10px 30px rgba(245,158,11,.25); }
+  }
+
+  .stage-btn.active { background: #0f172a; color: white; box-shadow: 0 8px 20px rgba(15,23,42,.25); }
+  .filter-chip.active { background: #0f172a !important; color: white !important; border-color: #0f172a !important; }
+
+  @media print {
+    .no-print { display: none !important; }
+    .card.hidden-card { display: none !important; }
+  }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+<!-- ============ NAV ============ -->
+<nav class="bg-slate-900 text-white text-sm">
+  <div class="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between">
+    <a href="index.html" class="font-bold tracking-tight hover:text-rose-300 transition">⚡ Open TechStack</a>
+    <div class="flex items-center gap-4 flex-wrap">
+      <a href="index.html" class="hover:text-slate-300 transition">Home</a>
+      <a href="Frontend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Frontend</a>
+      <a href="Backend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Backend</a>
+      <a href="AIML-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">AI/ML</a>
+      <a href="AI-Coding-Tools-Visual-Guide.html" class="text-rose-400 font-semibold">AI Coding</a>
+      <a href="DevOps-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">DevOps</a>
+      <a href="Mobile-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Mobile</a>
+      <a href="Stack-Combos.html" class="hover:text-slate-300 transition">Combos</a>
+      <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="inline-flex items-center gap-1 hover:text-slate-300 transition">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</nav>
+
+<header class="relative overflow-hidden border-b border-slate-200 bg-gradient-to-br from-white via-rose-50 to-indigo-50">
+  <div class="max-w-7xl mx-auto px-6 py-10">
+    <div class="flex items-start justify-between gap-6 flex-wrap">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 text-xs font-medium text-rose-700 bg-rose-100 rounded-full px-3 py-1 mb-3">
+          <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+          Interactive guide · 2026 edition · 80+ tools
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">AI Coding &amp; Vibe Coding Tools, Visualised</h1>
+        <p class="mt-3 text-slate-600 text-lg">
+          The complete landscape of AI-powered development tools in 2026 — code editors, coding agents, vibe coding app builders,
+          code review, testing, design-to-code, MCP ecosystem, guardrails, and LLM ops.
+          Pick your stage, filter by what matters, and find the tools that fit.
+        </p>
+      </div>
+      <div class="no-print flex items-center gap-2 text-xs text-slate-500">
+        <kbd class="px-2 py-1 bg-white border border-slate-300 rounded">/</kbd> search
+        <kbd class="px-2 py-1 bg-white border border-slate-300 rounded">1-4</kbd> stage
+        <kbd class="px-2 py-1 bg-white border border-slate-300 rounded">Esc</kbd> reset
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="no-print sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3">
+    <div class="flex items-center gap-3 flex-wrap">
+      <div class="relative flex-1 min-w-[220px]">
+        <svg class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input id="search" type="text" placeholder="Search Cursor, Copilot, Claude Code, v0, MCP…"
+          class="w-full pl-9 pr-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-rose-400 bg-white text-sm" />
+      </div>
+      <label class="inline-flex items-center gap-2 text-sm text-slate-600"><input type="checkbox" id="f-free" class="rounded border-slate-300"> Free tier</label>
+      <label class="inline-flex items-center gap-2 text-sm text-slate-600"><input type="checkbox" id="f-oss" class="rounded border-slate-300"> Open source</label>
+      <label class="inline-flex items-center gap-2 text-sm text-slate-600"><input type="checkbox" id="f-prod" class="rounded border-slate-300"> Production-proven</label>
+      <button id="reset" class="ml-auto text-xs text-slate-500 hover:text-slate-900 underline">Reset all</button>
+    </div>
+    <div id="catChips" class="flex items-center gap-2 flex-wrap text-xs"></div>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 pt-8">
+  <div class="flex items-center justify-between mb-3">
+    <h2 class="text-lg font-semibold text-slate-900">The landscape at a glance</h2>
+    <p class="text-xs text-slate-500"><span id="countLabel">—</span> · click a node to jump to its card</p>
+  </div>
+  <div class="rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+    <svg id="mindmap" viewBox="0 0 1200 760" class="w-full h-[560px]"></svg>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 py-10">
+  <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+    <div>
+      <h2 class="text-lg font-semibold text-slate-900">Which stage are you at?</h2>
+      <p class="text-sm text-slate-500">Pick one — the tools below adapt, and cards fade to only what fits.</p>
+    </div>
+    <div id="stageTabs" class="flex gap-2 flex-wrap"></div>
+  </div>
+  <div id="stagePanel" class="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 shadow-sm p-6"></div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 pb-10">
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-lg font-semibold text-slate-900">All tools</h2>
+    <p class="text-xs text-slate-500" id="gridCount"></p>
+  </div>
+  <div id="grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+</section>
+
+<section class="bg-white border-t border-slate-200">
+  <div class="max-w-7xl mx-auto px-6 py-12">
+    <h2 class="text-xl font-bold text-slate-900 mb-6">Decision cheat-sheet</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="rounded-xl border border-slate-200 p-5 bg-slate-50">
+        <h3 class="font-semibold text-slate-900 mb-3">Pick by scenario</h3>
+        <ul class="space-y-2 text-sm text-slate-700">
+          <li><b>Solo dev, quick prototype:</b> Cursor + v0 + Bolt. Fastest idea-to-app path.</li>
+          <li><b>CLI power user:</b> Claude Code or Gemini CLI. Terminal-native, agentic, deep codebase understanding.</li>
+          <li><b>Non-technical founder:</b> Lovable or Replit Agent. Describe what you want, get a working app.</li>
+          <li><b>Enterprise team:</b> GitHub Copilot Enterprise + CodeRabbit + Augment Code. Compliance, SSO, audit trails.</li>
+          <li><b>Open-source purist:</b> Zed + Aider + Kilo Code + Qodo. All open source, bring your own LLM.</li>
+          <li><b>Full autonomy:</b> Devin or Claude Code with Agent Teams. Plan, write, test, deploy end-to-end.</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-slate-200 p-5 bg-slate-50">
+        <h3 class="font-semibold text-slate-900 mb-3">Pick by constraint</h3>
+        <ul class="space-y-2 text-sm text-slate-700">
+          <li><b>Zero budget:</b> Gemini CLI (1,000 req/day free) + Zed + Cline. Completely free.</li>
+          <li><b>Privacy-first:</b> Tabnine (on-prem) + Dyad (local) + Ollama. Nothing leaves your machine.</li>
+          <li><b>Best code quality:</b> Claude Code (80.8% SWE-bench) + CodeRabbit. Highest accuracy.</li>
+          <li><b>Fastest output:</b> v0 for UI + Bolt for full-stack. Minutes to working app.</li>
+          <li><b>Existing IDE:</b> GitHub Copilot (any IDE) or JetBrains AI (JetBrains). Stay in your editor.</li>
+          <li><b>Team workflow:</b> Copilot Business + CodeRabbit + Mintlify. Integrated into PR flow.</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-rose-200 p-5 bg-rose-50">
+        <h3 class="font-semibold text-rose-900 mb-3">Anti-patterns to avoid</h3>
+        <ul class="space-y-2 text-sm text-rose-900/90">
+          <li>Using AI app builders for complex, custom business logic — they're great for MVPs, not enterprise backends.</li>
+          <li>Blindly accepting AI-generated code without review — AI makes confident mistakes.</li>
+          <li>Paying for 5 overlapping AI coding tools — pick one editor + one agent + one review tool.</li>
+          <li>Skipping MCP security — 1,000+ unprotected servers are exposed publicly.</li>
+          <li>Not setting up guardrails for AI-generated code in production — use Snyk or SonarQube.</li>
+          <li>Ignoring AI-generated test quality — AI writes tests that pass but don't catch real bugs.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-slate-900 text-slate-400 text-sm">
+  <div class="max-w-7xl mx-auto px-6 py-8">
+    <div class="flex items-center justify-between flex-wrap gap-4 mb-4">
+      <div class="font-semibold text-white">⚡ Open TechStack</div>
+      <div class="flex items-center gap-4 flex-wrap">
+        <a href="index.html" class="hover:text-white transition">Home</a>
+        <a href="Frontend-Stacks-Visual-Guide.html" class="hover:text-white transition">Frontend</a>
+        <a href="Backend-Stacks-Visual-Guide.html" class="hover:text-white transition">Backend</a>
+        <a href="AIML-Stacks-Visual-Guide.html" class="hover:text-white transition">AI/ML</a>
+        <a href="AI-Coding-Tools-Visual-Guide.html" class="text-slate-200">AI Coding</a>
+        <a href="DevOps-Stacks-Visual-Guide.html" class="hover:text-white transition">DevOps</a>
+        <a href="Mobile-Stacks-Visual-Guide.html" class="hover:text-white transition">Mobile</a>
+        <a href="Stack-Combos.html" class="hover:text-white transition">Combos</a>
+      </div>
+    </div>
+    <div class="flex items-center justify-between flex-wrap gap-3 pt-4 border-t border-slate-800">
+      <div>Open source · <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" class="text-rose-400 hover:text-rose-300 transition" target="_blank" rel="noopener">Star on GitHub</a> · Contributions welcome</div>
+      <div class="text-xs">Built with vanilla HTML, Tailwind CSS, and zero dependencies</div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING SHARE BAR -->
+<div id="shareBar" class="fixed bottom-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur border-t border-slate-700 transform translate-y-full" style="transition:transform .3s ease">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+    <div class="text-white text-sm font-medium hidden sm:block">Found this useful? Share it!</div>
+    <div class="flex items-center gap-2 flex-wrap">
+      <a id="shareTwitter" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#1DA1F2] text-white text-xs font-semibold rounded-lg hover:opacity-90 transition"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Tweet</a>
+      <a id="shareReddit" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#FF4500] text-white text-xs font-semibold rounded-lg hover:opacity-90 transition">Reddit</a>
+      <a id="shareLinkedin" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#0A66C2] text-white text-xs font-semibold rounded-lg hover:opacity-90 transition">LinkedIn</a>
+      <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white text-slate-900 text-xs font-semibold rounded-lg hover:bg-slate-100 transition">Star on GitHub</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  const bar=document.getElementById("shareBar");const url=encodeURIComponent(location.href);const title=encodeURIComponent(document.title);
+  const text=encodeURIComponent("Check out this interactive guide to 80+ AI coding & vibe coding tools for 2026 — editors, agents, app builders, MCP, and more");
+  document.getElementById("shareTwitter").href=`https://x.com/intent/tweet?text=${text}&url=${url}`;
+  document.getElementById("shareReddit").href=`https://reddit.com/submit?url=${url}&title=${title}`;
+  document.getElementById("shareLinkedin").href=`https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+  let shown=false;window.addEventListener("scroll",()=>{if(window.scrollY>400&&!shown){shown=true;bar.style.transform="translateY(0)";}if(window.scrollY<200&&shown){shown=false;bar.style.transform="translateY(100%)";}});
+})();
+</script>
+
+<script>
+/* ================= DATA ================= */
+const CATEGORIES = [
+  { id:"editor",  label:"AI Code Editors",       cls:"cat-editor" },
+  { id:"agent",   label:"Coding Agents & CLI",    cls:"cat-agent" },
+  { id:"builder", label:"Vibe Coding / Builders",  cls:"cat-builder" },
+  { id:"review",  label:"AI Code Review",         cls:"cat-review" },
+  { id:"test",    label:"AI Testing & QA",        cls:"cat-test" },
+  { id:"design",  label:"Design-to-Code",         cls:"cat-design" },
+  { id:"docs",    label:"AI Documentation",       cls:"cat-docs" },
+  { id:"mcp",     label:"MCP Ecosystem",          cls:"cat-mcp" },
+  { id:"guard",   label:"Guardrails & Safety",    cls:"cat-guard" },
+  { id:"llmops",  label:"LLM Ops & Prompt Eng",   cls:"cat-llmops" },
+];
+
+const STAGES = [
+  { id:"hobby",  label:"Hobby",  cost:"$0",        tag:"Side project", desc:"Free tiers, personal use, learning AI tools, local models." },
+  { id:"mvp",    label:"MVP",    cost:"$10–$50",   tag:"First users",  desc:"Pro subscriptions, team pilots, CI-integrated review, first automations." },
+  { id:"growth", label:"Growth", cost:"$50–$500",   tag:"Scaling",      desc:"Team licenses, multiple AI tools, guardrails, custom MCP servers." },
+  { id:"scale",  label:"Scale",  cost:"$500+",      tag:"Enterprise",   desc:"Enterprise plans, SSO, audit trails, on-prem deployment, compliance." },
+];
+
+const STAGE_STACKS = {
+  hobby:  { editor:"Cursor free / Zed", agent:"Gemini CLI (free) / Cline", builder:"v0 free / Bolt free", review:"Qodo OSS", testing:"Manual + AI assist", ops:"Helicone free" },
+  mvp:    { editor:"Cursor Pro / Copilot Pro", agent:"Claude Code / Codex CLI", builder:"Lovable / Bolt Pro", review:"CodeRabbit free", testing:"Checksum / Qodo", ops:"LangSmith / Langfuse" },
+  growth: { editor:"Cursor Business / Copilot Business", agent:"Claude Code + Devin", builder:"Replit Teams / v0 Pro", review:"CodeRabbit Pro + Greptile", testing:"Mabl / testRigor", ops:"LangSmith + Helicone + Snyk" },
+  scale:  { editor:"Copilot Enterprise / Augment Code", agent:"Devin / custom agents", builder:"Internal platforms", review:"CodeRabbit + SonarQube Enterprise", testing:"Enterprise QA pipeline", ops:"Full observability + NeMo Guardrails" },
+};
+
+const TECH = [
+  // ─── AI Code Editors ─────────────────────────────────────────────────
+  { id:"cursor", name:"Cursor", cat:"editor", summary:"AI-first code editor (VS Code fork). Supermaven-powered autocomplete, Composer mode for multi-file editing. Market leader with 1M+ users and $500M+ ARR.", pros:["Best AI autocomplete","Multi-file Composer","Huge ecosystem (VS Code extensions)"], cons:["$20/mo for Pro","Closed source","High memory usage"], bestFor:"Most developers — best all-round AI editor", free:true, oss:false, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"copilot", name:"GitHub Copilot", cat:"editor", summary:"AI pair programmer in VS Code, JetBrains, Neovim, and 14+ IDEs. Deepest GitHub integration. Agent mode for multi-step tasks. Most widely adopted AI coding tool.", pros:["Works in any IDE","GitHub integration","Agent mode","Cheapest pro tier ($10/mo)"], cons:["Less powerful than Cursor Composer","Generic completions sometimes","Microsoft lock-in"], bestFor:"Teams already on GitHub — widest IDE support", free:true, oss:false, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"windsurf", name:"Windsurf (Codeium)", cat:"editor", summary:"AI-native IDE with Cascade — an agentic system for autonomous multi-file edits. Live previews and deployment integration built-in.", pros:["Cascade agentic mode","Live preview","$15/mo (cheaper than Cursor)"], cons:["Smaller extension ecosystem","Newer community","Less battle-tested"], bestFor:"Developers wanting agentic editing at lower cost", free:true, oss:false, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"zed", name:"Zed", cat:"editor", summary:"Ultra-fast editor built from scratch in Rust. Open source. AI features + real-time multiplayer collaboration. Performance-focused.", pros:["Blazing fast (Rust-native)","Open source","Real-time collab","Free"], cons:["Smaller extension ecosystem","macOS/Linux only","Fewer AI features than Cursor"], bestFor:"Performance-obsessed devs who want open source", free:true, oss:true, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"antigravity", name:"Google Antigravity", cat:"editor", summary:"Google's agent-first IDE (VS Code fork). Powered by Gemini 3.1 Pro. Manager View for orchestrating multiple parallel AI agents. Free with Google account.", pros:["Free (Google account)","Multi-agent Manager View","Gemini 3.1 Pro built-in"], cons:["Google ecosystem lock-in","Very new (Nov 2025)","Smaller community"], bestFor:"Google Cloud teams, budget-conscious devs", free:true, oss:false, prod:false, stages:["hobby","mvp","growth"] },
+  { id:"kiro", name:"Kiro (AWS)", cat:"editor", summary:"Spec-driven AI IDE from AWS. Define requirements, design docs, and task lists first — then generate code. Uses Claude Sonnet. Structured methodology for production output.", pros:["Spec-driven approach","Production-quality output","AWS integration"], cons:["Opinionated workflow","New (July 2025)","Less freeform than Cursor"], bestFor:"Teams wanting structured, spec-driven AI development", free:true, oss:false, prod:false, stages:["hobby","mvp","growth"] },
+  { id:"jetbrainsai", name:"JetBrains AI Assistant", cat:"editor", summary:"AI features in all JetBrains IDEs (IntelliJ, PyCharm, WebStorm). Inline docs, refactoring, commit messages. Includes Junie autonomous agent.", pros:["Native in all JetBrains IDEs","Junie agent","Deep language support"], cons:["Requires JetBrains subscription","Less AI-focused than Cursor","Slower updates"], bestFor:"JetBrains loyalists — keeps your existing workflow", free:false, oss:false, prod:true, stages:["mvp","growth","scale"] },
+  { id:"augment", name:"Augment Code", cat:"editor", summary:"Enterprise AI coding platform with Context Engine indexing 500K+ files. Intent: standalone macOS workspace for multi-agent orchestration. First ISO/IEC 42001 certified AI coding tool.", pros:["500K file context","ISO certified","Multi-agent Intent workspace"], cons:["Enterprise pricing","New","macOS only (Intent)"], bestFor:"Enterprise teams needing compliance and large codebase support", free:false, oss:false, prod:true, stages:["growth","scale"] },
+
+  // ─── Coding Agents & CLI ─────────────────────────────────────────────
+  { id:"claudecode", name:"Claude Code", cat:"agent", summary:"Anthropic's agentic CLI tool. Powered by Opus 4.6. 80.8% SWE-bench Verified (highest). 1M token context, Agent Teams, deep git integration. Handles 30K+ line codebases.", pros:["#1 SWE-bench score (80.8%)","1M token context","Agent Teams","Deep git integration"], cons:["Usage-based pricing","Requires Claude subscription","Can be expensive at scale"], bestFor:"Power users wanting the best coding agent — highest accuracy", free:false, oss:false, prod:true, stages:["mvp","growth","scale"] },
+  { id:"codex", name:"OpenAI Codex CLI", cat:"agent", summary:"Open-source Rust-based terminal agent from OpenAI. Reads, changes, and runs code locally with human oversight. Powered by GPT-5-Codex.", pros:["Open source (Rust)","GPT-5-Codex model","Local execution","Human oversight"], cons:["Requires OpenAI API key","Newer than Claude Code","Lower SWE-bench than Claude"], bestFor:"OpenAI ecosystem users wanting an open-source agent", free:true, oss:true, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"geminicli", name:"Gemini CLI", cat:"agent", summary:"Google's open-source terminal agent. Gemini 3 with 1M token context. Built-in tools: Google Search, file ops, shell, web fetch. Best free tier: 1,000 req/day free.", pros:["1,000 req/day FREE","Open source","1M context","Built-in Google Search"], cons:["Lower accuracy than Claude Code","Google ecosystem","Newer"], bestFor:"Budget-conscious devs — best free coding agent", free:true, oss:true, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"aider", name:"Aider", cat:"agent", summary:"The OG open-source terminal AI pair programmer. 100+ languages, automatic git commits, multi-file coordination. Bring your own API key.", pros:["Truly open source","Any LLM provider","Auto git commits","100+ languages"], cons:["CLI only","No GUI","Depends on model quality"], bestFor:"Open-source purists who want full LLM flexibility", free:true, oss:true, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"cline", name:"Cline", cat:"agent", summary:"Autonomous agent in VS Code. Analyzes repos, proposes plans, executes step-by-step. Creates/edits files, runs commands, uses browser. Permission-based.", pros:["Full autonomy in VS Code","Browser automation","Permission controls","Free & open source"], cons:["Can be unpredictable","Token-hungry","VS Code only"], bestFor:"VS Code users wanting an autonomous agent", free:true, oss:true, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"kilocode", name:"Kilo Code", cat:"agent", summary:"'Superset of Cline' with better UX. Memory Bank, inline autocomplete, browser automation, visual app builder. 1.5M users, $8M raised.", pros:["Better UX than Cline","Memory Bank","Visual builder","1.5M users"], cons:["Fork of Cline","Newer project","Evolving fast"], bestFor:"Cline users wanting a more polished experience", free:true, oss:true, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"opencode", name:"OpenCode", cat:"agent", summary:"Open-source coding agent with 100K+ GitHub stars and 2.5M monthly devs. Official Copilot partnership. Growing 4.5x faster than Claude Code in star velocity.", pros:["100K+ GitHub stars","Copilot partnership","Massive community","Free"], cons:["Less mature than Claude Code","Community-driven quality","Hype-driven growth"], bestFor:"Community-driven open-source development", free:true, oss:true, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"devin", name:"Devin (Cognition)", cat:"agent", summary:"Most advanced autonomous coding agent. Full 'AI software engineer' — plans, writes, debugs, deploys. 67% PR merge rate on defined tasks.", pros:["Full autonomy","Plans end-to-end","67% PR merge rate","Handles complex tasks"], cons:["Expensive","Enterprise-focused","Not always reliable","Black box"], bestFor:"Teams wanting a fully autonomous AI engineer", free:false, oss:false, prod:true, stages:["growth","scale"] },
+  { id:"junie", name:"Junie (JetBrains)", cat:"agent", summary:"Autonomous agent within JetBrains IDEs. Plans, writes, refines, and tests. Available across 8 IDE products. 30% faster in 2025.2.", pros:["Native in JetBrains","Plans and tests","8 IDE support"], cons:["JetBrains only","Less autonomous than Devin","Subscription required"], bestFor:"JetBrains users wanting an integrated agent", free:false, oss:false, prod:true, stages:["mvp","growth","scale"] },
+  { id:"amazonq", name:"Amazon Q Developer", cat:"agent", summary:"AWS's AI assistant. Five products: code gen, testing, upgrading, troubleshooting, and AWS infra. Deep AWS integration.", pros:["AWS integration","Code upgrades","Free tier","Testing built-in"], cons:["AWS-centric","Less general purpose","Smaller community"], bestFor:"AWS shops — best for AWS-specific development", free:true, oss:false, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"geminiassist", name:"Gemini Code Assist", cat:"agent", summary:"Google's AI assistant in VS Code, JetBrains, and Android Studio. Inline suggestions, chat, deep Google Cloud integration.", pros:["Multi-IDE support","Google Cloud integration","Free tier"], cons:["Less capable than Claude Code","Google-centric"], bestFor:"Google Cloud teams", free:true, oss:false, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"tabnine", name:"Tabnine", cat:"agent", summary:"Privacy-first AI code assistant. Runs models locally or in private cloud/VPC. Air-gapped deployments for enterprises.", pros:["On-prem deployment","Air-gapped option","Privacy-first","14+ IDEs"], cons:["Less capable AI","Enterprise sales","Smaller models"], bestFor:"Enterprise teams with strict data privacy requirements", free:true, oss:false, prod:true, stages:["mvp","growth","scale"] },
+
+  // ─── Vibe Coding / App Builders ───────────────────────────────────────
+  { id:"v0", name:"v0 by Vercel", cat:"builder", summary:"Generates UI components and full pages from natural language. Produces React/Next.js + shadcn/ui + Tailwind. Quality leader for frontend/UI.", pros:["Best UI quality","React/Next.js output","shadcn/ui components","Fast iteration"], cons:["Frontend-focused","$20/mo for Pro","Vercel ecosystem"], bestFor:"Frontend developers — best AI-generated UI quality", free:true, oss:false, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"bolt", name:"Bolt.new (StackBlitz)", cat:"builder", summary:"Full Node.js dev environment in browser via WebContainer. Full app scaffolds, deployment pipelines, team workspaces. In-browser coding.", pros:["Full-stack in browser","Instant preview","Deploy pipelines","Team workspaces"], cons:["Browser-based limits","Node.js only","Can be slow on large apps"], bestFor:"Quick full-stack prototyping — no local setup needed", free:true, oss:false, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"lovable", name:"Lovable", cat:"builder", summary:"Production-ready full-stack code generation. GitHub integration, Supabase backend, code export. Conversational interface for iterating.", pros:["Production-quality code","GitHub sync","Supabase integration","Code ownership"], cons:["$20/mo Pro","Newer platform","Limited customization"], bestFor:"Non-technical founders wanting to own their code", free:true, oss:false, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"replit", name:"Replit Agent", cat:"builder", summary:"Full-stack platform with database, auth, hosting, and 30+ integrations (Stripe, Figma, Notion). Cloud IDE with AI agent v3.", pros:["All-in-one platform","30+ integrations","Built-in hosting","Collaborative"], cons:["Vendor lock-in","Performance limits","Code export friction"], bestFor:"Beginners and teams wanting zero-config full-stack", free:true, oss:false, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"createxyz", name:"Create.xyz", cat:"builder", summary:"Connect multiple services and APIs. Natural language to working app. Specializes in automation and tool creation.", pros:["Multi-service connections","Automation focus","Natural language"], cons:["Less customization","Newer","Smaller community"], bestFor:"Building internal tools and automations quickly", free:true, oss:false, prod:false, stages:["hobby","mvp"] },
+  { id:"tempo", name:"Tempo Labs", cat:"builder", summary:"Text-to-app platform for solo developers. Full-stack apps from natural language prompts.", pros:["Solo dev focused","Full-stack output","Fast iteration"], cons:["Paid only","Newer","Less ecosystem"], bestFor:"Solo developers who want speed over control", free:false, oss:false, prod:false, stages:["hobby","mvp"] },
+  { id:"mocha", name:"Mocha", cat:"builder", summary:"YC-backed zero-config platform. Auth, database, backend, hosting all work out of the box. Describe what you want, get a working app.", pros:["Zero config","YC-backed","Everything included","Fast"], cons:["New (2025)","Limited customization","Vendor lock-in"], bestFor:"'Just make it work' — fastest zero-config path", free:true, oss:false, prod:false, stages:["hobby","mvp"] },
+  { id:"base44", name:"Base44", cat:"builder", summary:"Speed-focused app builder. Full apps with backend and database. Targets the fastest idea-to-app experience.", pros:["Extremely fast","Full-stack","Easy to use"], cons:["New","Limited docs","Small community"], bestFor:"Hackathons and rapid prototyping", free:true, oss:false, prod:false, stages:["hobby","mvp"] },
+  { id:"dyad", name:"Dyad", cat:"builder", summary:"Open-source, locally-run AI app builder. No cloud dependency. All data stays on your machine. Alternative to v0/Lovable/Bolt that runs offline.", pros:["Open source","Runs locally","No cloud dependency","Privacy-first"], cons:["Local hardware limits","Newer","Smaller community"], bestFor:"Privacy-focused devs — AI app building without the cloud", free:true, oss:true, prod:false, stages:["hobby","mvp"] },
+  { id:"googleaistudio", name:"Google AI Studio + Firebase", cat:"builder", summary:"Full-stack vibe coding from Google. Firebase backend integrations, multiplayer, database, and real-world services. Free with Google account.", pros:["Free","Firebase integration","Full-stack","Google ecosystem"], cons:["Google lock-in","Less polished than v0","New workflow"], bestFor:"Firebase teams wanting AI-assisted app building", free:true, oss:false, prod:false, stages:["hobby","mvp","growth"] },
+
+  // ─── AI Code Review ──────────────────────────────────────────────────
+  { id:"coderabbit", name:"CodeRabbit", cat:"review", summary:"Most mature AI code reviewer. PR summaries, inline patches, Jira/Linear integration. GitHub and GitLab support.", pros:["Most mature","PR summaries","Jira/Linear integration","Inline patches"], cons:["$24/dev/mo for Pro","Can be noisy","Learning period"], bestFor:"Teams wanting the most complete AI code review", free:true, oss:false, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"qodo", name:"Qodo (CodiumAI)", cat:"review", summary:"Leading open-source AI code review. PR-Agent with ~10K GitHub stars. Self-hostable. Full control over data and LLM provider.", pros:["Open source","Self-hostable","Choose your LLM","~10K stars"], cons:["Self-hosting ops","Less polished UI","Smaller team"], bestFor:"Teams wanting open-source, self-hosted code review", free:true, oss:true, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"greptile", name:"Greptile", cat:"review", summary:"Highest bug catch rate in benchmarks (82%). Deep codebase understanding for contextual reviews. Catches bugs others miss.", pros:["82% bug catch rate","Deep context","Catches subtle bugs"], cons:["Paid only","Newer","Smaller user base"], bestFor:"Teams prioritizing bug detection accuracy", free:false, oss:false, prod:true, stages:["mvp","growth","scale"] },
+  { id:"sourcery", name:"Sourcery", cat:"review", summary:"Python-focused code review. Pythonic refactors, list comprehensions, conditional simplification. Most affordable.", pros:["Python-specialized","Affordable ($12/mo)","Good refactoring suggestions"], cons:["Python-only","Less comprehensive","Smaller scope"], bestFor:"Python teams wanting idiomatic code suggestions", free:true, oss:false, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"sonarqube", name:"SonarQube", cat:"review", summary:"Best open-source code quality and security analysis. Added AI-powered features. 70M+ downloads.", pros:["Open source","Security analysis","AI-enhanced","70M+ downloads"], cons:["Self-hosted complexity","Slower than AI-native tools","Java-centric"], bestFor:"Enterprise code quality gates — security + quality", free:true, oss:true, prod:true, stages:["mvp","growth","scale"] },
+  { id:"codeant", name:"CodeAnt AI", cat:"review", summary:"AI-powered SAST and code review. Competes with Snyk Code. Fast setup, focuses on security vulnerabilities.", pros:["Fast setup","Security focus","AI-powered SAST"], cons:["Newer","Smaller community","Less integrations"], bestFor:"Security-focused code review", free:true, oss:false, prod:false, stages:["hobby","mvp","growth"] },
+
+  // ─── AI Testing & QA ─────────────────────────────────────────────────
+  { id:"testrigor", name:"testRigor", cat:"test", summary:"AI test automation in plain English. No code required. Handles web, mobile, API, and database testing.", pros:["Plain English tests","No code needed","Web + mobile + API","Self-healing"], cons:["Enterprise pricing","Learning curve","Less control"], bestFor:"QA teams wanting no-code test automation", free:false, oss:false, prod:true, stages:["growth","scale"] },
+  { id:"mabl", name:"Mabl", cat:"test", summary:"Autonomous test generation and self-healing execution. Low-code test authoring with AI maintenance.", pros:["Self-healing tests","Autonomous generation","Low-code"], cons:["Enterprise pricing","Vendor lock-in"], bestFor:"Teams wanting tests that maintain themselves", free:false, oss:false, prod:true, stages:["growth","scale"] },
+  { id:"momentic", name:"Momentic", cat:"test", summary:"AI-powered testing for web and mobile. Natural language test creation. New entrant with strong NLP approach.", pros:["Natural language tests","Web + mobile","Modern approach"], cons:["New (2025)","Smaller user base","Paid"], bestFor:"Teams wanting modern, NLP-driven testing", free:false, oss:false, prod:false, stages:["mvp","growth"] },
+  { id:"applitools", name:"Applitools", cat:"test", summary:"Visual AI testing. Automated visual validation across browsers and devices. Industry leader in visual regression.", pros:["Visual AI leader","Cross-browser","Self-healing","Mature"], cons:["Expensive","Visual-only focus","Enterprise sales"], bestFor:"Teams with complex visual regression needs", free:true, oss:false, prod:true, stages:["mvp","growth","scale"] },
+  { id:"checksum", name:"Checksum", cat:"test", summary:"AI-generated test suites. Produces Playwright/Appium code from prompts. Outputs real test code you own.", pros:["Generates real test code","Playwright/Appium output","Code ownership"], cons:["Newer","Paid","Limited docs"], bestFor:"Devs wanting AI-generated but ownable test code", free:false, oss:false, prod:false, stages:["mvp","growth"] },
+  { id:"qawolf", name:"QA Wolf", cat:"test", summary:"Full QA service: AI automation + human QA engineers. End-to-end test coverage as a service.", pros:["Full service","Human + AI","High coverage"], cons:["Expensive (service model)","External dependency"], bestFor:"Startups wanting QA without hiring a QA team", free:false, oss:false, prod:true, stages:["mvp","growth","scale"] },
+  { id:"qodotest", name:"Qodo (Test Gen)", cat:"test", summary:"AI-powered test generation in your IDE. Generates meaningful tests for functions. Understands code context.", pros:["IDE-integrated","Context-aware tests","Free tier"], cons:["Quality varies","Not full E2E","Supplementary tool"], bestFor:"Developers wanting quick unit test scaffolding", free:true, oss:true, prod:true, stages:["hobby","mvp","growth"] },
+
+  // ─── Design-to-Code ──────────────────────────────────────────────────
+  { id:"builderio", name:"Builder.io Visual Copilot", cat:"design", summary:"Best-in-class Figma to code. Maps to YOUR components (Button, Card, etc). React, Vue, Svelte, Angular, React Native, HTML output.", pros:["Component mapping","Multi-framework output","Production quality"], cons:["Figma plugin required","Paid for pro features","Setup effort"], bestFor:"Teams with Figma designs wanting real component code", free:true, oss:false, prod:true, stages:["mvp","growth","scale"] },
+  { id:"figmamake", name:"Figma Make (AI)", cat:"design", summary:"Figma's native AI platform. Generates interactive prototypes from natural language. Note: exported code is div soup, not production-ready.", pros:["Native in Figma","Natural language","Interactive prototypes"], cons:["Code quality is poor","Div soup output","Not for production"], bestFor:"Designers prototyping — NOT for production code", free:false, oss:false, prod:false, stages:["hobby","mvp"] },
+  { id:"anima", name:"Anima", cat:"design", summary:"Figma to React/Vue/HTML. Responsive layouts with design-to-code pipeline.", pros:["Responsive output","Multi-framework","Good fidelity"], cons:["Code can be verbose","Limited customization","Paid"], bestFor:"Simple Figma-to-code conversions", free:true, oss:false, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"locofy", name:"Locofy", cat:"design", summary:"Converts Figma/Adobe XD to production frontend code. React, Next.js, React Native, Vue, Angular.", pros:["Multi-framework","Figma + Adobe XD","Production quality"], cons:["Paid","Learning curve","Can be verbose"], bestFor:"Teams with both Figma and Adobe XD designs", free:true, oss:false, prod:true, stages:["mvp","growth"] },
+  { id:"dhiwise", name:"DhiWise", cat:"design", summary:"Figma to Flutter, React, iOS (Swift), Android (Kotlin). Mobile-focused design-to-code.", pros:["Mobile-focused","Multi-platform","Flutter support"], cons:["Mobile-centric","Smaller community","Code quality varies"], bestFor:"Mobile teams with Figma designs", free:true, oss:false, prod:false, stages:["hobby","mvp","growth"] },
+
+  // ─── AI Documentation ────────────────────────────────────────────────
+  { id:"mintlify", name:"Mintlify", cat:"docs", summary:"Leading AI documentation platform. Auto-generates docs from codebase, keeps them synced. Beautiful, searchable developer portals.", pros:["Auto-sync with code","Beautiful output","AI search","Developer-loved"], cons:["Paid for pro","Opinionated design","Lock-in potential"], bestFor:"Developer docs that need to stay current with code", free:true, oss:false, prod:true, stages:["mvp","growth","scale"] },
+  { id:"fern", name:"Fern", cat:"docs", summary:"API tooling: generates SDKs and docs from API definitions. Keeps SDKs, API refs, and docs in sync.", pros:["SDK generation","API-first","Multi-language","Auto-sync"], cons:["API-focused only","Paid for pro","Setup effort"], bestFor:"API-first companies needing synced SDKs + docs", free:true, oss:true, prod:true, stages:["mvp","growth","scale"] },
+  { id:"gitbook", name:"GitBook", cat:"docs", summary:"Documentation platform with AI-powered search, writing assistance, and organization. Git-synced.", pros:["AI search","Git-synced","Good for teams","Nice UI"], cons:["Paid for teams","Less customizable","Slower builds"], bestFor:"Team knowledge bases and internal docs", free:true, oss:false, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"swimm", name:"Swimm", cat:"docs", summary:"Documentation that lives alongside code. Auto-updates when code changes. IDE-integrated.", pros:["Code-coupled docs","Auto-updates","IDE integration"], cons:["Paid for teams","Niche use case","Smaller adoption"], bestFor:"Teams where docs go stale — auto-updating docs", free:true, oss:false, prod:true, stages:["mvp","growth","scale"] },
+  { id:"readme", name:"ReadMe", cat:"docs", summary:"API documentation with AI content generation and interactive API explorer. Try-it-out functionality.", pros:["Interactive API explorer","AI writing","Try-it-out","Beautiful"], cons:["API docs only","Expensive at scale","Opinionated"], bestFor:"Public API documentation with interactive examples", free:true, oss:false, prod:true, stages:["mvp","growth","scale"] },
+
+  // ─── MCP Ecosystem ───────────────────────────────────────────────────
+  { id:"mcpgithub", name:"GitHub MCP Server", cat:"mcp", summary:"Official first-party MCP server (GitHub + Anthropic). 51 tools for repo management, issues, PRs, CI/CD. 28K+ stars.", pros:["Official (GitHub + Anthropic)","51 tools","28K+ stars","Production-ready"], cons:["GitHub-specific","Requires auth setup"], bestFor:"Any AI agent that needs GitHub access", free:true, oss:true, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"mcpfilesystem", name:"Filesystem MCP", cat:"mcp", summary:"Read/write local files from AI agents. Official Anthropic server. Foundation for local AI development.", pros:["Official","Simple","Essential for local AI","MIT license"], cons:["Security risks if misconfigured","Local only"], bestFor:"Every local AI agent setup — essential infrastructure", free:true, oss:true, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"mcppostgres", name:"PostgreSQL MCP", cat:"mcp", summary:"Query databases directly from AI agents. Official server. Natural language to SQL queries.", pros:["Official","Direct DB access","Natural language SQL"], cons:["Security risks","Read-only recommended","Setup needed"], bestFor:"AI agents that need database access", free:true, oss:true, prod:true, stages:["mvp","growth","scale"] },
+  { id:"mcpplaywright", name:"Playwright MCP", cat:"mcp", summary:"Browser automation from AI agents. Official server. Test, scrape, and interact with web pages.", pros:["Official","Full browser control","Testing integration"], cons:["Complex web interactions can fail","Resource-heavy"], bestFor:"AI agents that need browser automation", free:true, oss:true, prod:true, stages:["mvp","growth","scale"] },
+  { id:"mcpslack", name:"Slack MCP Server", cat:"mcp", summary:"Channel management, messaging, search from AI agents. Community-maintained.", pros:["Slack integration","Messaging automation","Search conversations"], cons:["Community-maintained","Auth complexity","Rate limits"], bestFor:"AI agents integrated into Slack workflows", free:true, oss:true, prod:true, stages:["mvp","growth","scale"] },
+  { id:"mcpregistry", name:"MCP Registries (Smithery/Glama)", cat:"mcp", summary:"12,000+ MCP servers indexed. Smithery, Glama, PulseMCP. Discovery and installation of MCP servers.", pros:["12,000+ servers","Easy discovery","Multiple registries"], cons:["Quality varies","Security concerns","Fragmented"], bestFor:"Finding and installing MCP servers", free:true, oss:true, prod:true, stages:["hobby","mvp","growth","scale"] },
+
+  // ─── Guardrails & Safety ─────────────────────────────────────────────
+  { id:"nemoguard", name:"NVIDIA NeMo Guardrails", cat:"guard", summary:"Open-source toolkit for programmable guardrails on LLM systems. Safety, security, accuracy, and topical relevance rails.", pros:["Open source","NVIDIA-backed","Programmable rails","Multi-layer safety"], cons:["Adds latency","Complex config","NVIDIA ecosystem"], bestFor:"Production LLM apps needing comprehensive guardrails", free:true, oss:true, prod:true, stages:["growth","scale"] },
+  { id:"guardrailsai", name:"Guardrails AI", cat:"guard", summary:"Guard object orchestrates validation workflows. 50+ pre-built validators in Hub. Auto-correct, retry, filter actions.", pros:["50+ validators","Auto-correct","Easy integration","Hub marketplace"], cons:["Adds latency","Python-focused","Learning curve"], bestFor:"Python LLM apps needing output validation", free:true, oss:true, prod:true, stages:["mvp","growth","scale"] },
+  { id:"snykaisec", name:"Snyk AI Security Fabric", cat:"guard", summary:"Security embedded in AI coding assistants. Scans AI-generated code for vulnerabilities. DeepCode AI, 14+ languages. 60-sec setup.", pros:["60-sec setup","14+ languages","AI code scanning","Integrates with Claude Code + Gemini CLI"], cons:["Paid for full features","Snyk ecosystem","Enterprise pricing at scale"], bestFor:"Securing AI-generated code — integrates into your workflow", free:true, oss:false, prod:true, stages:["mvp","growth","scale"] },
+  { id:"llamaguard", name:"Llama Guard (Meta)", cat:"guard", summary:"Open-source LLM-based content safety classifier from Meta. Input/output filtering for LLM apps.", pros:["Open source","Meta-backed","Self-hostable","Free"], cons:["Self-host required","Model size","GPU needed"], bestFor:"Self-hosted content safety filtering", free:true, oss:true, prod:true, stages:["mvp","growth","scale"] },
+  { id:"azuresafety", name:"Azure Content Safety", cat:"guard", summary:"Real-time detection: hallucinations, prompt injections, PII, toxicity. Luna-2 models. 98% lower cost than LLM-based eval.", pros:["98% cheaper than LLM eval","Real-time","Hallucination detection","PII detection"], cons:["Azure lock-in","Paid","Microsoft ecosystem"], bestFor:"Azure teams needing real-time content safety", free:true, oss:false, prod:true, stages:["growth","scale"] },
+
+  // ─── LLM Ops & Prompt Engineering ────────────────────────────────────
+  { id:"langsmith", name:"LangSmith", cat:"llmops", summary:"LangChain's observability platform. Prompt hub, deep tracing, automated evaluation, A/B testing. Industry standard for LLM ops.", pros:["Deep tracing","Prompt hub","A/B testing","Industry standard"], cons:["LangChain-centric","Pricing at scale","Vendor lock-in"], bestFor:"LangChain users — most comprehensive LLM ops", free:true, oss:false, prod:true, stages:["mvp","growth","scale"] },
+  { id:"langfuse", name:"Langfuse", cat:"llmops", summary:"Open-source LLM observability. Tracing, prompt management, evaluation. Self-hostable. Top OSS alternative to LangSmith.", pros:["Open source","Self-hostable","Framework-agnostic","Growing fast"], cons:["Newer","Fewer features than LangSmith","Self-host ops"], bestFor:"Teams wanting open-source LLM observability", free:true, oss:true, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"promptfoo", name:"Promptfoo", cat:"llmops", summary:"Open-source CLI for systematic prompt evaluation and testing. All major LLM providers. Custom metrics.", pros:["Open source","CLI-native","All providers","Custom metrics"], cons:["CLI only","No GUI","DIY setup"], bestFor:"Engineering teams wanting prompt testing in CI/CD", free:true, oss:true, prod:true, stages:["hobby","mvp","growth","scale"] },
+  { id:"helicone", name:"Helicone", cat:"llmops", summary:"Proxy-based LLM observability. Change base URL → instant logging of every request, cost, tokens. 2-minute setup.", pros:["2-minute setup","Proxy-based (no SDK)","Cost tracking","Caching"], cons:["Proxy adds latency","Newer","Less deep tracing"], bestFor:"Fastest LLM observability setup — just change your base URL", free:true, oss:true, prod:true, stages:["hobby","mvp","growth"] },
+  { id:"braintrustllm", name:"Braintrust", cat:"llmops", summary:"LLM eval, tracing, and prompt iteration. Strong evaluation framework with scoring and logging.", pros:["Strong eval framework","Good DX","Reasonable pricing"], cons:["Newer","Smaller community","Less tracing depth"], bestFor:"Teams focused on eval-driven LLM development", free:true, oss:false, prod:true, stages:["mvp","growth","scale"] },
+  { id:"wandb", name:"Weights & Biases", cat:"llmops", summary:"Mature ML platform expanded for LLMs. Experiment tracking, model eval, prompt management. The MLOps standard.", pros:["MLOps standard","Experiment tracking","LLM support","Mature"], cons:["Complex","ML-focused first","Enterprise pricing"], bestFor:"ML teams adding LLM workflows to existing MLOps", free:true, oss:false, prod:true, stages:["mvp","growth","scale"] },
+  { id:"arize", name:"Arize AI", cat:"llmops", summary:"AI observability platform. LLM tracing, evaluation, drift detection. Production monitoring for LLM apps.", pros:["Drift detection","Production monitoring","LLM + ML support"], cons:["Enterprise pricing","Complex setup","Newer LLM features"], bestFor:"Production LLM monitoring with drift detection", free:true, oss:false, prod:true, stages:["growth","scale"] },
+  { id:"deepeval", name:"DeepEval (Confident AI)", cat:"llmops", summary:"Open-source LLM evaluation framework. 14+ metrics, benchmarks, testing. CI/CD integration.", pros:["Open source","14+ metrics","CI/CD integration","Growing adoption"], cons:["Newer","Less enterprise support","Community-driven"], bestFor:"Open-source LLM evaluation in CI pipelines", free:true, oss:true, prod:true, stages:["hobby","mvp","growth"] },
+];
+
+/* ================= STATE ================= */
+const state = { q:"", cats:new Set(), free:false, oss:false, prod:false, stage:null };
+
+function catOf(id){return CATEGORIES.find(c=>c.id===id);}
+function matches(t){
+  if (state.q){
+    const q=state.q.toLowerCase();
+    const hay=(t.name+" "+t.summary+" "+t.bestFor+" "+t.cat).toLowerCase();
+    if (!hay.includes(q)) return false;
+  }
+  if (state.cats.size && !state.cats.has(t.cat)) return false;
+  if (state.free && !t.free) return false;
+  if (state.oss && !t.oss) return false;
+  if (state.prod && !t.prod) return false;
+  if (state.stage && !t.stages.includes(state.stage)) return false;
+  return true;
+}
+
+/* ================= CHIPS ================= */
+const chipsEl = document.getElementById("catChips");
+CATEGORIES.forEach(c=>{
+  const b=document.createElement("button");
+  b.className=`filter-chip ${c.cls} chip rounded-full px-3 py-1 font-medium`;
+  b.textContent=c.label; b.dataset.cat=c.id;
+  b.addEventListener("click",()=>{
+    if (state.cats.has(c.id)){state.cats.delete(c.id);b.classList.remove("active");}
+    else {state.cats.add(c.id);b.classList.add("active");}
+    render();
+  });
+  chipsEl.appendChild(b);
+});
+
+/* ================= MINDMAP ================= */
+const svg=document.getElementById("mindmap");
+const NS="http://www.w3.org/2000/svg";
+const CX=600, CY=380;
+const PRIMARY=[
+  {cat:"editor",  a:-Math.PI/2,                r:220},
+  {cat:"agent",   a:-Math.PI/2+(2*Math.PI/5),  r:220},
+  {cat:"builder", a:-Math.PI/2+(4*Math.PI/5),  r:220},
+  {cat:"review",  a:-Math.PI/2+(6*Math.PI/5),  r:220},
+  {cat:"llmops",  a:-Math.PI/2+(8*Math.PI/5),  r:220},
+];
+const SECONDARY=["test","design","docs","mcp","guard"];
+const COLORS={editor:"#6366f1",agent:"#e11d48",builder:"#f59e0b",review:"#10b981",test:"#06b6d4",design:"#ec4899",docs:"#8b5cf6",mcp:"#0ea5e9",guard:"#f97316",llmops:"#14b8a6"};
+
+function buildMindmap(){
+  svg.innerHTML="";
+  const defs=document.createElementNS(NS,"defs");
+  defs.innerHTML=`<radialGradient id="g1"><stop offset="0%" stop-color="#e11d48"/><stop offset="100%" stop-color="#e11d48" stop-opacity="0"/></radialGradient>`;
+  svg.appendChild(defs);
+  const bg=document.createElementNS(NS,"circle");
+  bg.setAttribute("cx",CX);bg.setAttribute("cy",CY);bg.setAttribute("r","260");
+  bg.setAttribute("fill","url(#g1)");bg.setAttribute("opacity","0.12");
+  svg.appendChild(bg);
+
+  const g=document.createElementNS(NS,"g");
+  const c=document.createElementNS(NS,"circle");
+  c.setAttribute("cx",CX);c.setAttribute("cy",CY);c.setAttribute("r","58");c.setAttribute("fill","#0f172a");
+  const t=document.createElementNS(NS,"text");
+  t.setAttribute("x",CX);t.setAttribute("y",CY-4);t.setAttribute("text-anchor","middle");t.setAttribute("fill","white");t.setAttribute("font-weight","700");t.setAttribute("font-size","16");t.textContent="AI Coding";
+  const s=document.createElementNS(NS,"text");
+  s.setAttribute("x",CX);s.setAttribute("y",CY+16);s.setAttribute("text-anchor","middle");s.setAttribute("fill","#94a3b8");s.setAttribute("font-size","11");s.textContent="2026";
+  g.appendChild(c);g.appendChild(t);g.appendChild(s);svg.appendChild(g);
+
+  PRIMARY.forEach(br=>{
+    const bx=CX+Math.cos(br.a)*br.r, by=CY+Math.sin(br.a)*br.r;
+    const line=document.createElementNS(NS,"line");
+    line.setAttribute("x1",CX);line.setAttribute("y1",CY);line.setAttribute("x2",bx);line.setAttribute("y2",by);
+    line.setAttribute("stroke",COLORS[br.cat]);line.setAttribute("stroke-width","3");line.setAttribute("opacity","0.5");
+    line.classList.add("link");line.dataset.cat=br.cat;svg.appendChild(line);
+
+    const hub=document.createElementNS(NS,"g");
+    hub.classList.add("node");hub.dataset.cat=br.cat;
+    const hc=document.createElementNS(NS,"circle");
+    hc.setAttribute("cx",bx);hc.setAttribute("cy",by);hc.setAttribute("r","38");hc.setAttribute("fill",COLORS[br.cat]);
+    const ht=document.createElementNS(NS,"text");
+    ht.setAttribute("x",bx);ht.setAttribute("y",by+4);ht.setAttribute("text-anchor","middle");ht.setAttribute("fill","white");ht.setAttribute("font-weight","700");ht.setAttribute("font-size","11");
+    ht.textContent=catOf(br.cat).label.split(" ")[0];
+    hub.appendChild(hc);hub.appendChild(ht);
+    hub.addEventListener("click",()=>{
+      if (state.cats.has(br.cat)) state.cats.delete(br.cat); else state.cats.add(br.cat);
+      document.querySelectorAll(".filter-chip").forEach(el=>{if(el.dataset.cat===br.cat) el.classList.toggle("active",state.cats.has(br.cat));});
+      render();
+    });
+    svg.appendChild(hub);
+
+    const items=TECH.filter(x=>x.cat===br.cat);
+    items.forEach((it,i)=>{
+      const spread=Math.min(items.length,8);
+      const off=(i-(spread-1)/2)*0.22;
+      const la=br.a+off;
+      const lr=br.r+125;
+      const lx=CX+Math.cos(la)*lr, ly=CY+Math.sin(la)*lr;
+
+      const ll=document.createElementNS(NS,"line");
+      ll.setAttribute("x1",bx);ll.setAttribute("y1",by);ll.setAttribute("x2",lx);ll.setAttribute("y2",ly);
+      ll.setAttribute("stroke",COLORS[br.cat]);ll.setAttribute("stroke-width","1.5");ll.setAttribute("opacity","0.4");
+      ll.classList.add("link");ll.dataset.tech=it.id;ll.dataset.cat=it.cat;svg.appendChild(ll);
+
+      const lg=document.createElementNS(NS,"g");
+      lg.classList.add("node");lg.dataset.tech=it.id;lg.dataset.cat=it.cat;
+      const w=Math.max(70,Math.min(150,it.name.length*6.3));
+      const r=document.createElementNS(NS,"rect");
+      r.setAttribute("x",lx-w/2);r.setAttribute("y",ly-14);r.setAttribute("rx","12");r.setAttribute("ry","12");
+      r.setAttribute("width",w);r.setAttribute("height","28");
+      r.setAttribute("fill","white");r.setAttribute("stroke",COLORS[br.cat]);r.setAttribute("stroke-width","2");
+      const tx=document.createElementNS(NS,"text");
+      tx.setAttribute("x",lx);tx.setAttribute("y",ly+4);tx.setAttribute("text-anchor","middle");
+      tx.setAttribute("fill","#0f172a");tx.setAttribute("font-size","10.5");tx.setAttribute("font-weight","600");
+      tx.textContent=it.name.length>20?it.name.slice(0,19)+"…":it.name;
+      lg.appendChild(r);lg.appendChild(tx);
+      lg.addEventListener("click",()=>{
+        const card=document.getElementById("card-"+it.id);
+        if (card){card.scrollIntoView({behavior:"smooth",block:"center"});card.classList.remove("flash");void card.offsetWidth;card.classList.add("flash");}
+      });
+      svg.appendChild(lg);
+    });
+  });
+
+  SECONDARY.forEach((cid,i)=>{
+    const angle=Math.PI*0.58+(i-(SECONDARY.length-1)/2)*0.17;
+    const r=340;
+    const x=CX+Math.cos(angle)*r, y=CY+Math.sin(angle)*r;
+    const line=document.createElementNS(NS,"line");
+    line.setAttribute("x1",CX);line.setAttribute("y1",CY);line.setAttribute("x2",x);line.setAttribute("y2",y);
+    line.setAttribute("stroke",COLORS[cid]);line.setAttribute("stroke-width","2");line.setAttribute("opacity","0.35");
+    line.classList.add("link");line.dataset.cat=cid;svg.appendChild(line);
+
+    const g=document.createElementNS(NS,"g");
+    g.classList.add("node");g.dataset.cat=cid;
+    const c=document.createElementNS(NS,"circle");
+    c.setAttribute("cx",x);c.setAttribute("cy",y);c.setAttribute("r","26");c.setAttribute("fill",COLORS[cid]);
+    const tx=document.createElementNS(NS,"text");
+    tx.setAttribute("x",x);tx.setAttribute("y",y+4);tx.setAttribute("text-anchor","middle");tx.setAttribute("fill","white");tx.setAttribute("font-weight","700");tx.setAttribute("font-size","10");
+    tx.textContent=catOf(cid).label.split(" ")[0];
+    g.appendChild(c);g.appendChild(tx);
+    g.addEventListener("click",()=>{
+      if (state.cats.has(cid)) state.cats.delete(cid); else state.cats.add(cid);
+      document.querySelectorAll(".filter-chip").forEach(el=>{if(el.dataset.cat===cid) el.classList.toggle("active",state.cats.has(cid));});
+      render();
+    });
+    svg.appendChild(g);
+  });
+}
+
+function updateMindmap(){
+  svg.querySelectorAll(".node").forEach(n=>{
+    const t=n.dataset.tech?TECH.find(x=>x.id===n.dataset.tech):null;
+    let visible=true;
+    if (t) visible=matches(t);
+    else if (n.dataset.cat) visible=TECH.some(x=>x.cat===n.dataset.cat&&matches(x));
+    n.classList.toggle("dim",!visible);
+  });
+  svg.querySelectorAll(".link").forEach(l=>{
+    const t=l.dataset.tech?TECH.find(x=>x.id===l.dataset.tech):null;
+    let visible=true;
+    if (t) visible=matches(t);
+    else if (l.dataset.cat) visible=TECH.some(x=>x.cat===l.dataset.cat&&matches(x));
+    l.classList.toggle("dim",!visible);
+  });
+}
+
+/* ================= STAGES ================= */
+const stageTabsEl=document.getElementById("stageTabs");
+STAGES.forEach((s,i)=>{
+  const b=document.createElement("button");
+  b.className="stage-btn px-4 py-2 rounded-full border border-slate-300 bg-white text-sm font-semibold hover:border-slate-900 transition";
+  b.innerHTML=`<span class="mr-1">${i+1}</span>${s.label} <span class="text-slate-400 font-normal ml-1">${s.cost}</span>`;
+  b.dataset.stage=s.id;
+  b.addEventListener("click",()=>{state.stage=state.stage===s.id?null:s.id;render();});
+  stageTabsEl.appendChild(b);
+});
+
+function renderStagePanel(){
+  const panel=document.getElementById("stagePanel");
+  const s=STAGES.find(x=>x.id===state.stage);
+  if (!s){
+    panel.innerHTML=`
+      <div class="text-center py-6">
+        <div class="text-slate-500 text-sm">Pick a stage above to see recommended tools and filter cards to what fits.</div>
+        <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto">
+          ${STAGES.map(st=>`
+            <div class="rounded-xl border border-slate-200 bg-white p-3 text-left">
+              <div class="text-xs text-slate-500">${st.tag}</div>
+              <div class="text-sm font-bold text-slate-900">${st.label}</div>
+              <div class="text-xs text-slate-500 mt-1">${st.cost}/mo</div>
+            </div>`).join("")}
+        </div>
+      </div>`;
+    return;
+  }
+  const stack=STAGE_STACKS[s.id];
+  panel.innerHTML=`
+    <div class="flex items-start justify-between gap-4 flex-wrap">
+      <div class="max-w-2xl">
+        <div class="text-xs uppercase tracking-wider text-rose-600 font-semibold">${s.tag}</div>
+        <h3 class="text-2xl font-bold text-slate-900 mt-1">${s.label} stage · ${s.cost}/month</h3>
+        <p class="text-slate-600 mt-2">${s.desc}</p>
+      </div>
+      <div class="text-right">
+        <div class="text-5xl font-extrabold text-slate-900">${s.cost}</div>
+        <div class="text-xs text-slate-500">typical monthly spend</div>
+      </div>
+    </div>
+    <div class="mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+      ${Object.entries(stack).map(([k,v])=>`
+        <div class="rounded-lg border border-slate-200 bg-white p-3">
+          <div class="text-[10px] uppercase tracking-wide text-slate-500 font-semibold">${k}</div>
+          <div class="text-sm font-semibold text-slate-900 mt-1">${v}</div>
+        </div>`).join("")}
+    </div>`;
+}
+
+function updateStageTabs(){
+  document.querySelectorAll(".stage-btn").forEach(b=>b.classList.toggle("active",b.dataset.stage===state.stage));
+}
+
+/* ================= GRID ================= */
+const grid=document.getElementById("grid");
+function buildGrid(){
+  grid.innerHTML="";
+  TECH.forEach(t=>{
+    const c=catOf(t.cat);
+    const el=document.createElement("div");
+    el.id="card-"+t.id;
+    el.className=`card ${c.cls} bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md`;
+    el.innerHTML=`
+      <div class="flex items-start justify-between gap-2 mb-2">
+        <h3 class="text-base font-bold text-slate-900">${t.name}</h3>
+        <span class="chip text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full whitespace-nowrap">${c.label}</span>
+      </div>
+      <p class="text-sm text-slate-600 leading-relaxed">${t.summary}</p>
+      <div class="mt-3 grid grid-cols-2 gap-3 text-xs">
+        <div>
+          <div class="font-semibold text-emerald-700 mb-1">Pros</div>
+          <ul class="text-slate-600 space-y-0.5">${t.pros.map(p=>`<li>• ${p}</li>`).join("")}</ul>
+        </div>
+        <div>
+          <div class="font-semibold text-rose-700 mb-1">Cons</div>
+          <ul class="text-slate-600 space-y-0.5">${t.cons.map(p=>`<li>• ${p}</li>`).join("")}</ul>
+        </div>
+      </div>
+      <div class="mt-3 text-xs text-slate-500"><b class="text-slate-700">Best for:</b> ${t.bestFor}</div>
+      <div class="mt-3 flex flex-wrap gap-1">
+        ${t.free ? '<span class="text-[10px] bg-emerald-100 text-emerald-700 rounded px-1.5 py-0.5 font-semibold">FREE TIER</span>' : ''}
+        ${t.oss  ? '<span class="text-[10px] bg-sky-100 text-sky-700 rounded px-1.5 py-0.5 font-semibold">OPEN SOURCE</span>' : ''}
+        ${t.prod ? '<span class="text-[10px] bg-indigo-100 text-indigo-700 rounded px-1.5 py-0.5 font-semibold">PROD-PROVEN</span>' : ''}
+      </div>
+      <div class="mt-2 flex gap-1">
+        ${STAGES.map(s=>{
+          const ok=t.stages.includes(s.id);
+          return `<span class="text-[10px] px-1.5 py-0.5 rounded ${ok?'bg-slate-900 text-white':'bg-slate-100 text-slate-400'}">${s.label}</span>`;
+        }).join("")}
+      </div>`;
+    grid.appendChild(el);
+  });
+}
+
+function updateGrid(){
+  let shown=0;
+  TECH.forEach(t=>{
+    const el=document.getElementById("card-"+t.id);
+    if (!el) return;
+    const ok=matches(t);
+    el.classList.toggle("hidden-card",!ok);
+    if (ok) shown++;
+  });
+  document.getElementById("gridCount").textContent=`${shown} of ${TECH.length} shown`;
+  document.getElementById("countLabel").textContent=`${shown} of ${TECH.length} tools`;
+}
+
+/* ================= RENDER ================= */
+function render(){
+  updateStageTabs();
+  renderStagePanel();
+  updateMindmap();
+  updateGrid();
+  const p=[];
+  if (state.stage) p.push("stage="+state.stage);
+  history.replaceState(null,"",p.length?"#"+p.join("&"):"#");
+}
+
+/* ================= EVENTS ================= */
+document.getElementById("search").addEventListener("input",e=>{state.q=e.target.value;render();});
+document.getElementById("f-free").addEventListener("change",e=>{state.free=e.target.checked;render();});
+document.getElementById("f-oss").addEventListener("change",e=>{state.oss=e.target.checked;render();});
+document.getElementById("f-prod").addEventListener("change",e=>{state.prod=e.target.checked;render();});
+document.getElementById("reset").addEventListener("click",()=>{
+  state.q="";state.cats.clear();state.free=false;state.oss=false;state.prod=false;state.stage=null;
+  document.getElementById("search").value="";
+  document.getElementById("f-free").checked=false;
+  document.getElementById("f-oss").checked=false;
+  document.getElementById("f-prod").checked=false;
+  document.querySelectorAll(".filter-chip").forEach(el=>el.classList.remove("active"));
+  render();
+});
+
+document.addEventListener("keydown",e=>{
+  if (e.key==="/"){e.preventDefault();document.getElementById("search").focus();}
+  if (e.key==="Escape"){document.getElementById("reset").click();}
+  if (["1","2","3","4"].includes(e.key)&&!e.ctrlKey&&!e.metaKey&&document.activeElement.tagName!=="INPUT"){
+    const sid=STAGES[parseInt(e.key)-1].id;
+    state.stage=state.stage===sid?null:sid;render();
+  }
+});
+
+/* ================= INIT ================= */
+buildMindmap();
+buildGrid();
+render();
+</script>
+</body>
+</html>
