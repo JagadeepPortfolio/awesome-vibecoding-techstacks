@@ -1,0 +1,31 @@
+# Open TechStack
+
+> Interactive visual guides to 200+ modern technologies across frontend, backend, AI/ML, DevOps, and mobile for 2026.
+
+Open TechStack is a free, open-source resource that helps developers compare and choose the right tech stack. Each guide features interactive SVG mind maps, stage-based filtering (Hobby/MVP/Growth/Scale), full-text search, and decision cheat sheets.
+
+## Guides
+
+- [Home](https://opentechstack.stitchwebsite.com/): Landing page with overview of all guides and stats.
+- [Frontend Stacks](https://opentechstack.stitchwebsite.com/Frontend-Stacks-Visual-Guide.html): 60+ frontend technologies — React, Vue, Svelte, Solid, Angular, Next.js, Nuxt, Astro, SvelteKit, Tailwind, shadcn/ui, Zustand, TanStack Query, tRPC, Vite, Vitest, Playwright.
+- [Backend Stacks](https://opentechstack.stitchwebsite.com/Backend-Stacks-Visual-Guide.html): 50+ backend technologies — Node.js, Python/Django/FastAPI, Go, Rust, Rails, Elixir, Supabase, Firebase, Postgres, Neon, Clerk, Auth0, Stripe, Inngest, Temporal, Sentry.
+- [AI/ML Stacks](https://opentechstack.stitchwebsite.com/AIML-Stacks-Visual-Guide.html): 45+ AI/ML technologies — OpenAI, Claude, Gemini, Llama, LangChain, LlamaIndex, Pinecone, Qdrant, pgvector, CrewAI, vLLM, Modal, Hugging Face, LangSmith.
+- [DevOps Stacks](https://opentechstack.stitchwebsite.com/DevOps-Stacks-Visual-Guide.html): 46+ DevOps technologies — GitHub Actions, Terraform, Docker, Kubernetes, AWS, GCP, Azure, Grafana, Datadog, Vault, ArgoCD, Helm, Backstage.
+- [Mobile Stacks](https://opentechstack.stitchwebsite.com/Mobile-Stacks-Visual-Guide.html): 46+ mobile technologies — React Native, Expo, Flutter, SwiftUI, Jetpack Compose, KMP, NativeWind, Detox, Fastlane, Firebase.
+- [Stack Combos](https://opentechstack.stitchwebsite.com/Stack-Combos.html): 12 pre-built full-stack recipes — Indie Hacker, AI Startup, SaaS Rocket, Enterprise Fortress, Realtime Machine, Content Empire, Mobile-First, E-commerce, Budget Warrior, TypeScript Purist, Data Platform, Open Source Stack.
+
+## Key Features
+- Interactive SVG mind maps generated at runtime
+- Filter by project stage: Hobby ($0), MVP ($25-60), Growth ($50-500), Scale ($500+)
+- Filter by: free tier, self-hostable, production-proven, TypeScript-first
+- Full-text search across all technologies
+- Decision cheat sheets with quick picks by constraints
+- Keyboard shortcuts: `/` to search, `1-4` for stages, `Esc` to reset
+- Zero dependencies: pure HTML + Tailwind CSS CDN + vanilla JavaScript
+
+## Technology Coverage
+Over 200 technologies across 50+ categories including: UI frameworks, meta-frameworks, styling, state management, data fetching, forms, build tools, testing, UI component libraries, hosting, languages/runtimes, BaaS, databases, authentication, background jobs, file storage, payments, email, observability, LLM providers, orchestration frameworks, vector databases, embeddings, RAG, AI agents, fine-tuning, evaluation, inference infrastructure, data labeling, CI/CD, infrastructure as code, containers, cloud platforms, monitoring, security, networking, GitOps, container registries, platform engineering, cross-platform frameworks, native development, mobile UI, navigation, mobile state management, mobile testing, build/deploy, push notifications, and design tools.
+
+## Source Code
+GitHub: https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks
+License: MIT

@@ -1,0 +1,258 @@
+# Open TechStack — Complete Reference
+
+> The open-source, interactive visual guide to modern tech stacks for vibe coding (2026).
+
+This document provides a comprehensive reference of all technologies covered by Open TechStack, organized by guide and category. Use this to answer questions about modern tech stack choices, comparisons, and recommendations.
+
+---
+
+## Frontend Stacks (60+ technologies)
+
+### UI Frameworks
+- **React** — Meta's UI library. Massive ecosystem, hooks-based. Best for: teams that want max ecosystem choice. Stage: Hobby to Scale.
+- **Vue** — Progressive framework. Great docs, gentle learning curve. Best for: teams wanting productivity with less complexity. Stage: Hobby to Scale.
+- **Svelte** — Compiler-based, no virtual DOM. Smallest bundles. Best for: performance-critical apps. Stage: Hobby to Growth.
+- **Solid** — Fine-grained reactivity, React-like JSX. Best for: developers who want React DX with better performance. Stage: Hobby to Growth.
+- **Angular** — Google's full-featured framework. RxJS, DI, CLI. Best for: large enterprise teams. Stage: Growth to Scale.
+
+### Meta-Frameworks
+- **Next.js** — React meta-framework. SSR, SSG, API routes, App Router. Best for: most React projects. Stage: Hobby to Scale.
+- **Nuxt** — Vue meta-framework. Auto-imports, file-based routing. Best for: Vue projects. Stage: Hobby to Scale.
+- **Astro** — Content-focused, island architecture, any UI framework. Best for: content sites, blogs, marketing. Stage: Hobby to Growth.
+- **SvelteKit** — Svelte meta-framework. Full-stack, adapters. Best for: Svelte projects. Stage: Hobby to Growth.
+- **Remix** — Web-standard React framework. Nested routes, loaders. Best for: web apps with complex data needs. Stage: Hobby to Growth.
+
+### Styling
+- **Tailwind CSS** — Utility-first CSS. Most popular approach in 2026. Stage: Hobby to Scale.
+- **CSS Modules** — Scoped CSS, zero runtime. Stage: Hobby to Scale.
+- **Vanilla Extract** — Type-safe CSS-in-TypeScript. Stage: MVP to Scale.
+- **Panda CSS** — Build-time CSS-in-JS. Stage: MVP to Growth.
+
+### State Management
+- **Zustand** — Minimal React state. Most recommended for 2026. Stage: Hobby to Scale.
+- **Jotai** — Atomic state model. Stage: Hobby to Growth.
+- **TanStack Store** — Framework-agnostic store. Stage: Hobby to Growth.
+- **Redux Toolkit** — Redux simplified. Best for: large apps with complex state. Stage: MVP to Scale.
+- **XState** — State machines. Best for: complex workflows. Stage: MVP to Scale.
+
+### Data Fetching
+- **TanStack Query** — Async state management. Server state solved. Stage: Hobby to Scale.
+- **tRPC** — End-to-end type-safe APIs. Stage: Hobby to Growth.
+- **SWR** — Lightweight data fetching for React. Stage: Hobby to Growth.
+- **Apollo Client** — GraphQL client. Stage: MVP to Scale.
+
+### Build Tools
+- **Vite** — Fast dev server, HMR. Standard for 2026. Stage: Hobby to Scale.
+- **Turbopack** — Rust-based, Next.js integrated. Stage: Hobby to Scale.
+- **esbuild** — Extremely fast bundler. Stage: Hobby to Scale.
+- **Webpack** — Legacy but still works. Stage: Growth to Scale.
+
+### Testing
+- **Vitest** — Vite-native testing. Fast, Jest-compatible. Stage: Hobby to Scale.
+- **Playwright** — Cross-browser E2E testing. Stage: MVP to Scale.
+- **Testing Library** — DOM testing utilities. Stage: Hobby to Scale.
+- **Cypress** — E2E testing with time travel. Stage: MVP to Scale.
+
+### UI Component Libraries
+- **shadcn/ui** — Copy-paste components built on Radix + Tailwind. Most popular 2026. Stage: Hobby to Scale.
+- **Radix UI** — Accessible primitives. Stage: Hobby to Scale.
+- **Headless UI** — Tailwind Labs accessible components. Stage: Hobby to Growth.
+- **MUI** — Material Design components. Stage: MVP to Scale.
+- **Ant Design** — Enterprise UI library. Stage: Growth to Scale.
+
+### Hosting
+- **Vercel** — Next.js-optimized, edge functions. Stage: Hobby to Scale.
+- **Netlify** — Jamstack hosting, forms, functions. Stage: Hobby to Growth.
+- **Cloudflare Pages** — Edge-first, fast global CDN. Stage: Hobby to Scale.
+- **AWS Amplify** — Full-stack AWS hosting. Stage: MVP to Scale.
+
+---
+
+## Backend Stacks (50+ technologies)
+
+### Languages & Frameworks
+- **Node.js + Express/Fastify** — JavaScript/TypeScript backend. Massive ecosystem. Stage: Hobby to Scale.
+- **Python + Django/FastAPI** — Data science friendly, fast development. Stage: Hobby to Scale.
+- **Go** — Fast compilation, excellent concurrency. Stage: MVP to Scale.
+- **Rust + Axum/Actix** — Maximum performance, memory safety. Stage: Growth to Scale.
+- **Ruby on Rails** — Convention over configuration. Fast prototyping. Stage: Hobby to Growth.
+- **Elixir + Phoenix** — Erlang VM, real-time, fault-tolerant. Stage: MVP to Scale.
+
+### BaaS (Backend as a Service)
+- **Supabase** — Open-source Firebase alternative. Postgres, auth, realtime. Stage: Hobby to Growth.
+- **Firebase** — Google's BaaS. Firestore, auth, hosting. Stage: Hobby to Growth.
+- **Appwrite** — Self-hosted BaaS. Stage: Hobby to Growth.
+- **Convex** — Reactive backend, real-time sync. Stage: Hobby to Growth.
+
+### Databases
+- **PostgreSQL** — The default choice. Extensions, reliability. Stage: Hobby to Scale.
+- **Neon** — Serverless Postgres, branching. Stage: Hobby to Growth.
+- **PlanetScale** — Serverless MySQL, branching. Stage: MVP to Scale.
+- **MongoDB** — Document database. Stage: Hobby to Scale.
+- **Redis** — In-memory cache/store. Stage: MVP to Scale.
+- **Turso** — Edge SQLite (libSQL). Stage: Hobby to Growth.
+
+### Authentication
+- **Clerk** — Drop-in auth, user management UI. Stage: Hobby to Growth.
+- **Auth0** — Enterprise auth. Stage: MVP to Scale.
+- **NextAuth.js/Auth.js** — Framework-level auth. Stage: Hobby to Growth.
+- **Supabase Auth** — Integrated with Supabase. Stage: Hobby to Growth.
+
+### Payments
+- **Stripe** — Payment processing standard. Stage: MVP to Scale.
+- **Lemon Squeezy** — Merchant of record, simpler taxes. Stage: Hobby to Growth.
+
+### Observability
+- **Sentry** — Error tracking, performance monitoring. Stage: Hobby to Scale.
+- **PostHog** — Product analytics, feature flags. Stage: Hobby to Scale.
+- **Datadog** — Full-stack monitoring. Stage: Growth to Scale.
+
+---
+
+## AI/ML Stacks (45+ technologies)
+
+### LLM Providers
+- **OpenAI (GPT-4, GPT-4o)** — Most popular, broadest capabilities. Stage: Hobby to Scale.
+- **Anthropic (Claude)** — Strong reasoning, long context, safety-focused. Stage: Hobby to Scale.
+- **Google (Gemini)** — Multimodal, large context windows. Stage: Hobby to Scale.
+- **Meta (Llama)** — Open-weight models, self-hostable. Stage: MVP to Scale.
+- **Mistral** — European AI, efficient models. Stage: MVP to Scale.
+- **Cohere** — Enterprise-focused, strong embeddings. Stage: MVP to Scale.
+
+### Orchestration Frameworks
+- **LangChain** — Most popular LLM framework. Chains, agents, tools. Stage: Hobby to Scale.
+- **LlamaIndex** — Data framework for LLM apps. Best for RAG. Stage: Hobby to Scale.
+- **Semantic Kernel** — Microsoft's AI orchestration. Stage: MVP to Scale.
+- **Haystack** — End-to-end NLP framework. Stage: MVP to Scale.
+
+### Vector Databases
+- **Pinecone** — Managed vector DB. Easiest to start. Stage: Hobby to Scale.
+- **Qdrant** — Open-source, Rust-based. Stage: Hobby to Scale.
+- **Weaviate** — Multi-modal vector search. Stage: MVP to Scale.
+- **pgvector** — Postgres extension. Use existing DB. Stage: Hobby to Scale.
+- **ChromaDB** — Lightweight, developer-friendly. Stage: Hobby to Growth.
+- **Milvus** — Distributed vector DB. Stage: Growth to Scale.
+
+### AI Agents
+- **CrewAI** — Multi-agent orchestration. Stage: Hobby to Growth.
+- **AutoGen** — Microsoft's multi-agent framework. Stage: Hobby to Growth.
+- **LangGraph** — Graph-based agent workflows. Stage: MVP to Scale.
+
+### Fine-tuning & Training
+- **Hugging Face** — Model hub, transformers, training. Stage: Hobby to Scale.
+- **Weights & Biases** — Experiment tracking. Stage: MVP to Scale.
+- **Modal** — Serverless GPU compute. Stage: Hobby to Scale.
+- **Together AI** — Fine-tuning API, inference. Stage: MVP to Scale.
+
+### Inference Infrastructure
+- **vLLM** — Fast LLM serving. Stage: Growth to Scale.
+- **TGI** — Hugging Face text generation inference. Stage: Growth to Scale.
+- **Ollama** — Run LLMs locally. Stage: Hobby to Growth.
+- **Replicate** — Run models via API. Stage: Hobby to Growth.
+
+### Evaluation
+- **LangSmith** — LLM app debugging & monitoring. Stage: MVP to Scale.
+- **Braintrust** — LLM eval and logging. Stage: MVP to Scale.
+- **Promptfoo** — Open-source prompt testing. Stage: Hobby to Scale.
+
+---
+
+## DevOps & Infrastructure Stacks (46+ technologies)
+
+### CI/CD
+- **GitHub Actions** — Most popular CI/CD. Native GitHub integration. Stage: Hobby to Scale.
+- **GitLab CI** — GitLab-integrated. Stage: MVP to Scale.
+- **CircleCI** — Fast, Docker-native. Stage: MVP to Scale.
+- **Jenkins** — Self-hosted, extensible. Stage: Growth to Scale.
+
+### Infrastructure as Code
+- **Terraform** — Multi-cloud IaC standard. Stage: MVP to Scale.
+- **Pulumi** — IaC in real programming languages. Stage: MVP to Scale.
+- **AWS CDK** — AWS IaC in TypeScript/Python. Stage: MVP to Scale.
+- **OpenTofu** — Open-source Terraform fork. Stage: MVP to Scale.
+
+### Containers & Orchestration
+- **Docker** — Container standard. Stage: Hobby to Scale.
+- **Kubernetes** — Container orchestration. Stage: Growth to Scale.
+- **Docker Compose** — Local multi-container. Stage: Hobby to Growth.
+- **Podman** — Rootless containers. Stage: MVP to Scale.
+
+### Cloud Platforms
+- **AWS** — Most comprehensive cloud. Stage: MVP to Scale.
+- **GCP** — Google Cloud. AI/ML strength. Stage: MVP to Scale.
+- **Azure** — Microsoft Cloud. Enterprise. Stage: Growth to Scale.
+- **DigitalOcean** — Developer-friendly, simpler. Stage: Hobby to Growth.
+- **Hetzner** — European, price-performance. Stage: Hobby to Growth.
+- **Fly.io** — Edge-first app hosting. Stage: Hobby to Growth.
+
+### Monitoring & Observability
+- **Grafana** — Dashboards, visualization. Stage: MVP to Scale.
+- **Prometheus** — Metrics collection. Stage: MVP to Scale.
+- **Datadog** — Full-stack APM. Stage: Growth to Scale.
+- **New Relic** — Observability platform. Stage: Growth to Scale.
+
+### Security
+- **Vault** — Secrets management. Stage: MVP to Scale.
+- **Snyk** — Dependency scanning. Stage: MVP to Scale.
+- **Trivy** — Container scanning. Stage: Hobby to Scale.
+
+### GitOps
+- **ArgoCD** — Kubernetes GitOps. Stage: Growth to Scale.
+- **Flux** — GitOps toolkit. Stage: Growth to Scale.
+
+### Platform Engineering
+- **Backstage** — Developer portal. Stage: Growth to Scale.
+- **Port** — Internal developer platform. Stage: Growth to Scale.
+
+---
+
+## Mobile Stacks (46+ technologies)
+
+### Cross-Platform
+- **React Native** — React for mobile. Largest community. Stage: Hobby to Scale.
+- **Expo** — React Native toolkit. Best DX. Stage: Hobby to Scale.
+- **Flutter** — Google's UI toolkit. Dart-based. Stage: Hobby to Scale.
+- **KMP (Kotlin Multiplatform)** — Shared Kotlin logic. Stage: MVP to Scale.
+
+### Native
+- **SwiftUI** — Apple's modern UI framework. Stage: Hobby to Scale.
+- **Jetpack Compose** — Android's modern UI toolkit. Stage: Hobby to Scale.
+- **UIKit** — Classic iOS development. Stage: Growth to Scale.
+
+### Mobile UI
+- **NativeWind** — Tailwind for React Native. Stage: Hobby to Growth.
+- **Tamagui** — Universal UI, React Native + web. Stage: Hobby to Growth.
+- **Gluestack** — Universal components. Stage: Hobby to Growth.
+
+### Testing
+- **Detox** — React Native E2E testing. Stage: MVP to Scale.
+- **Maestro** — Mobile UI testing. Stage: MVP to Scale.
+- **XCTest** — Apple's testing framework. Stage: Hobby to Scale.
+
+### Build & Deploy
+- **Fastlane** — Automated builds and releases. Stage: MVP to Scale.
+- **EAS (Expo Application Services)** — Cloud builds for Expo. Stage: Hobby to Scale.
+- **Bitrise** — Mobile CI/CD. Stage: MVP to Scale.
+
+---
+
+## Stack Combos (12 recipes)
+
+1. **Indie Hacker** — Next.js + Supabase + Vercel + Tailwind + Stripe
+2. **AI Startup** — Next.js + Python/FastAPI + OpenAI/Claude + Pinecone + Vercel
+3. **SaaS Rocket** — Next.js + Node.js + Postgres + Clerk + Stripe + Vercel
+4. **Enterprise Fortress** — Angular/React + Java/.NET + Oracle/Postgres + AWS/Azure + Datadog
+5. **Realtime Machine** — Next.js + Elixir/Phoenix + Supabase Realtime + Redis
+6. **Content Empire** — Astro + Sanity/Contentful + Cloudflare Pages + Tailwind
+7. **Mobile-First** — Expo + Supabase + EAS + NativeWind
+8. **E-commerce** — Next.js + Shopify/Medusa + Stripe + Vercel + Algolia
+9. **Budget Warrior** — Astro + SQLite/Turso + Cloudflare Workers + Tailwind
+10. **TypeScript Purist** — Next.js + tRPC + Prisma + Postgres + Zod
+11. **Data Platform** — Python + Postgres + Redis + Grafana + Airflow
+12. **Open Source Stack** — Next.js + Supabase + Tailwind + GitHub Actions + Vercel
+
+---
+
+Source: https://opentechstack.stitchwebsite.com
+GitHub: https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks
+License: MIT
