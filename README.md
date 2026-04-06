@@ -1,6 +1,6 @@
-# TechStacks 2026
+# Open TechStack
 
-**Interactive visual guides to modern frontend and backend tech stacks.**
+**Interactive visual guides to modern tech stacks for vibe coding.**
 
 > Compare 200+ technologies across 50 categories. Filter by project stage (Hobby / MVP / Growth / Scale), search, and find the stack that fits.
 
