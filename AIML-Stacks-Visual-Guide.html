@@ -199,6 +199,29 @@
   </div>
 </footer>
 
+<!-- FLOATING SHARE BAR -->
+<div id="shareBar" class="fixed bottom-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur border-t border-slate-700 transform translate-y-full" style="transition:transform .3s ease">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+    <div class="text-white text-sm font-medium hidden sm:block">Found this useful? Share it!</div>
+    <div class="flex items-center gap-2 flex-wrap">
+      <a id="shareTwitter" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#1DA1F2] text-white text-xs font-semibold rounded-lg hover:opacity-90 transition"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Tweet</a>
+      <a id="shareReddit" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#FF4500] text-white text-xs font-semibold rounded-lg hover:opacity-90 transition">Reddit</a>
+      <a id="shareLinkedin" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#0A66C2] text-white text-xs font-semibold rounded-lg hover:opacity-90 transition">LinkedIn</a>
+      <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white text-slate-900 text-xs font-semibold rounded-lg hover:bg-slate-100 transition">Star on GitHub</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  const bar=document.getElementById("shareBar");const url=encodeURIComponent(location.href);const title=encodeURIComponent(document.title);
+  const text=encodeURIComponent("Check out this interactive guide to modern tech stacks — 200+ technologies compared with mind maps and filters");
+  document.getElementById("shareTwitter").href=`https://x.com/intent/tweet?text=${text}&url=${url}`;
+  document.getElementById("shareReddit").href=`https://reddit.com/submit?url=${url}&title=${title}`;
+  document.getElementById("shareLinkedin").href=`https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+  let shown=false;window.addEventListener("scroll",()=>{if(window.scrollY>400&&!shown){shown=true;bar.style.transform="translateY(0)";}if(window.scrollY<200&&shown){shown=false;bar.style.transform="translateY(100%)";}});
+})();
+</script>
+
 <script>
 /* ================= DATA ================= */
 const CATEGORIES = [

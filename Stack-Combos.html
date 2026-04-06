@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Full-Stack Combos · Battle-Tested Stack Recipes 2026</title>
+<meta name="description" content="12+ battle-tested full-stack combinations for every scenario — solo founder, enterprise, AI startup, e-commerce, and more. Pick a combo, see exactly what to use, and why." />
+<meta name="keywords" content="full-stack, tech stack, combo, recipe, 2026, Next.js, Supabase, Vercel, SaaS, AI, enterprise, e-commerce" />
+<meta property="og:title" content="Full-Stack Combos · Battle-Tested Recipes 2026" />
+<meta property="og:description" content="12+ recommended full-stack combinations for every scenario. Pick a combo, see exactly what to use, and why." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://opentechstack.stitchwebsite.com/Stack-Combos.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Full-Stack Combos · Battle-Tested Recipes 2026" />
+<meta name="twitter:description" content="12+ recommended full-stack combinations for every scenario." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+
+  /* Layer color dots */
+  .layer-frontend  { --dot:#06b6d4; --bg:#ecfeff; --border:#a5f3fc; }
+  .layer-backend   { --dot:#8b5cf6; --bg:#f5f3ff; --border:#c4b5fd; }
+  .layer-database  { --dot:#10b981; --bg:#ecfdf5; --border:#6ee7b7; }
+  .layer-auth      { --dot:#f59e0b; --bg:#fffbeb; --border:#fcd34d; }
+  .layer-hosting   { --dot:#e11d48; --bg:#fff1f2; --border:#fda4af; }
+  .layer-extras    { --dot:#6366f1; --bg:#eef2ff; --border:#a5b4fc; }
+
+  .tech-chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 3px 10px; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;
+    background: var(--bg); color: #1e293b; border: 1px solid var(--border);
+  }
+  .tech-chip::before {
+    content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--dot); flex-shrink: 0;
+  }
+
+  .combo-card {
+    transition: opacity .3s ease, transform .3s ease;
+  }
+  .combo-card.hidden-card {
+    opacity: 0; transform: scale(.95); pointer-events: none; position: absolute; width: 0; height: 0; overflow: hidden;
+  }
+  .combo-card.visible-card {
+    opacity: 1; transform: scale(1);
+  }
+
+  .filter-btn.active {
+    background: #1e293b !important; color: white !important; border-color: #1e293b !important;
+  }
+
+  .combo-card:hover {
+    box-shadow: 0 12px 40px rgba(0,0,0,.08);
+    transform: translateY(-2px);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .combo-card.visible-card { animation: fadeIn .35s ease both; }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+<!-- ============ NAV ============ -->
+<nav class="bg-slate-900 text-white text-sm">
+  <div class="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between">
+    <a href="index.html" class="font-bold tracking-tight hover:text-cyan-300 transition">⚡ Open TechStack</a>
+    <div class="flex items-center gap-4 flex-wrap">
+      <a href="index.html" class="hover:text-slate-300 transition">Home</a>
+      <a href="Frontend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Frontend</a>
+      <a href="Backend-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Backend</a>
+      <a href="AIML-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">AI/ML</a>
+      <a href="DevOps-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">DevOps</a>
+      <a href="Mobile-Stacks-Visual-Guide.html" class="hover:text-slate-300 transition">Mobile</a>
+      <a href="Stack-Combos.html" class="text-amber-400 font-semibold">Stack Combos</a>
+      <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" target="_blank" rel="noopener" class="inline-flex items-center gap-1 hover:text-slate-300 transition">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="relative overflow-hidden border-b border-slate-200 bg-gradient-to-br from-white via-amber-50 to-orange-50">
+  <div class="max-w-7xl mx-auto px-6 py-10">
+    <div class="flex items-start justify-between gap-6 flex-wrap">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 text-xs font-medium text-amber-700 bg-amber-100 rounded-full px-3 py-1 mb-3">
+          <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+          Stack recipes · 2026 edition
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">Full-Stack Combos</h1>
+        <p class="mt-3 text-slate-600 text-lg">
+          Battle-tested stack recipes for every scenario. Pick a combo, see exactly what to use, and why.
+        </p>
+      </div>
+      <div class="flex items-center gap-2 text-xs text-slate-500">
+        <kbd class="px-2 py-1 bg-white border border-slate-300 rounded">/</kbd> search
+        <kbd class="px-2 py-1 bg-white border border-slate-300 rounded">Esc</kbd> reset
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ FILTER BAR ============ -->
+<section class="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3">
+    <div class="flex items-center gap-3 flex-wrap">
+      <div class="relative flex-1 min-w-[220px]">
+        <svg class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input id="search" type="text" placeholder="Search combo, technology, or use case..."
+          class="w-full pl-9 pr-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-400 bg-white text-sm" />
+      </div>
+      <span id="matchCount" class="text-xs text-slate-500">12 combos</span>
+    </div>
+    <div id="filterBar" class="flex items-center gap-2 flex-wrap text-xs"></div>
+  </div>
+</section>
+
+<!-- ============ COMBO GRID ============ -->
+<section class="max-w-7xl mx-auto px-6 py-8">
+  <div id="grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-slate-900 text-slate-400 text-sm">
+  <div class="max-w-7xl mx-auto px-6 py-8">
+    <div class="flex items-center justify-between flex-wrap gap-4 mb-4">
+      <div class="font-semibold text-white">⚡ Open TechStack</div>
+      <div class="flex items-center gap-4 flex-wrap">
+        <a href="index.html" class="hover:text-white transition">Home</a>
+        <a href="Frontend-Stacks-Visual-Guide.html" class="hover:text-white transition">Frontend Guide</a>
+        <a href="Backend-Stacks-Visual-Guide.html" class="hover:text-white transition">Backend Guide</a>
+        <a href="AIML-Stacks-Visual-Guide.html" class="hover:text-white transition">AI/ML Guide</a>
+        <a href="DevOps-Stacks-Visual-Guide.html" class="hover:text-white transition">DevOps Guide</a>
+        <a href="Mobile-Stacks-Visual-Guide.html" class="hover:text-white transition">Mobile Guide</a>
+        <a href="Stack-Combos.html" class="text-amber-400">Stack Combos</a>
+      </div>
+    </div>
+    <div class="flex items-center justify-between flex-wrap gap-3 pt-4 border-t border-slate-800">
+      <div>Open source · <a href="https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks" class="text-cyan-400 hover:text-cyan-300 transition" target="_blank" rel="noopener">Star on GitHub</a> · Contributions welcome</div>
+      <div class="text-xs">Built with vanilla HTML, Tailwind CSS, and zero dependencies</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ================= DATA ================= */
+const FILTERS = [
+  { id:"all",        label:"All" },
+  { id:"solo",       label:"Solo Founder" },
+  { id:"small",      label:"Small Team" },
+  { id:"enterprise", label:"Enterprise" },
+  { id:"ai",         label:"AI-First" },
+  { id:"content",    label:"Content" },
+  { id:"ecommerce",  label:"E-commerce" },
+  { id:"realtime",   label:"Realtime" },
+];
+
+const COMBOS = [
+  {
+    id:"indie-hacker", emoji:"🚀", name:"The Indie Hacker",
+    desc:"Ship fast, validate faster. Everything on free tiers until you have revenue.",
+    team:"Solo founder", cost:"$0\u2013$25/mo",
+    tags:["solo","small"],
+    budget:"Free / Low", complexity:"Low",
+    layers: {
+      frontend:  ["Next.js","Tailwind","shadcn/ui"],
+      backend:   ["Next.js API Routes","Supabase"],
+      database:  ["Supabase (Postgres)"],
+      auth:      ["Supabase Auth"],
+      hosting:   ["Vercel"],
+      extras:    ["Stripe","Resend","Sentry free"],
+    },
+    why:"Ship in a weekend, scale to $10k MRR without changing anything. Supabase handles auth, DB, and storage in one dashboard. Vercel deploys on git push. Stripe for payments, Resend for transactional email. Total cost on free tiers: $0.",
+    watchOut:"Supabase free tier pauses after 1 week of inactivity. Vercel Hobby has limited serverless execution time. Plan your upgrade path before launch."
+  },
+  {
+    id:"ai-startup", emoji:"🤖", name:"The AI Startup",
+    desc:"Best-in-class AI tooling married to a proven web stack.",
+    team:"2\u20135 devs", cost:"$100\u2013$500/mo",
+    tags:["ai","small"],
+    budget:"Medium", complexity:"Medium",
+    layers: {
+      frontend:  ["Next.js","Tailwind","shadcn/ui"],
+      backend:   ["FastAPI","LangChain"],
+      database:  ["Postgres (Supabase)","Pinecone"],
+      auth:      ["Clerk"],
+      hosting:   ["Vercel","Modal (GPU)"],
+      extras:    ["Claude API","LangSmith","Sentry"],
+    },
+    why:"FastAPI is the gold standard for ML serving. LangChain orchestrates LLM pipelines with tracing via LangSmith. Pinecone handles vector search without ops burden. Modal gives you on-demand GPUs without managing infrastructure. The Next.js frontend connects it all with a great UI.",
+    watchOut:"AI API costs can spike unpredictably. Set hard budget limits on Claude/OpenAI APIs. Pinecone free tier is limited \u2014 evaluate Supabase pgvector as a cheaper alternative."
+  },
+  {
+    id:"saas-rocket", emoji:"🎯", name:"The SaaS Rocket",
+    desc:"Type-safe end-to-end with incredible developer experience.",
+    team:"Small team (2\u20135)", cost:"$50\u2013$200/mo",
+    tags:["small","solo"],
+    budget:"Low / Medium", complexity:"Medium",
+    layers: {
+      frontend:  ["Next.js","Tailwind","shadcn/ui"],
+      backend:   ["Next.js","tRPC","Prisma"],
+      database:  ["Neon (Postgres)"],
+      auth:      ["Clerk"],
+      hosting:   ["Vercel"],
+      extras:    ["Inngest","Stripe","Resend","Sentry"],
+    },
+    why:"tRPC gives you end-to-end type safety without code generation. Prisma provides a beautiful ORM with migrations. Neon\u2019s serverless Postgres scales to zero. Inngest handles background jobs and cron without a queue. This is the 2026 SaaS meta.",
+    watchOut:"tRPC locks you into a TypeScript monorepo. If you ever need a public API, you\u2019ll want REST or GraphQL alongside it. Neon cold starts can add ~200ms on first query."
+  },
+  {
+    id:"enterprise-fortress", emoji:"🏰", name:"The Enterprise Fortress",
+    desc:"Battle-tested at scale. Compliance-ready with full audit trail.",
+    team:"Large team (10+)", cost:"$2k+/mo",
+    tags:["enterprise"],
+    budget:"High", complexity:"High",
+    layers: {
+      frontend:  ["Next.js or Angular","MUI"],
+      backend:   ["Spring Boot or .NET","Go microservices"],
+      database:  ["AWS RDS (Postgres)","Redis","ClickHouse"],
+      auth:      ["Auth0 / WorkOS"],
+      hosting:   ["AWS (EKS)","Terraform"],
+      extras:    ["Datadog","Temporal","Vault","ArgoCD"],
+    },
+    why:"Spring Boot/.NET are enterprise battle-tested with massive talent pools. Go microservices handle high-throughput services. AWS EKS with Terraform gives reproducible infra. Datadog for observability, Temporal for workflow orchestration, Vault for secrets. Auth0/WorkOS handle SSO and SCIM.",
+    watchOut:"Massive operational complexity. You need dedicated DevOps/Platform engineers. Costs grow fast with Datadog and AWS. Start with a monolith and extract microservices only when you have clear domain boundaries."
+  },
+  {
+    id:"realtime-machine", emoji:"⚡", name:"The Realtime Machine",
+    desc:"Millions of concurrent connections for chat, collab, and live dashboards.",
+    team:"2\u20134 devs", cost:"$50\u2013$300/mo",
+    tags:["realtime","small"],
+    budget:"Medium", complexity:"Medium\u2013High",
+    layers: {
+      frontend:  ["Next.js or SvelteKit","Tailwind"],
+      backend:   ["Elixir Phoenix or Convex"],
+      database:  ["Postgres","Redis"],
+      auth:      ["Clerk"],
+      hosting:   ["Fly.io (multi-region)"],
+      extras:    ["Sentry","Grafana"],
+    },
+    why:"Elixir/Phoenix handles millions of WebSocket connections on a single node thanks to the BEAM VM. Convex is the managed alternative with real-time sync built in. Fly.io deploys close to your users globally. Perfect for chat apps, collaborative editors, live dashboards, and multiplayer experiences.",
+    watchOut:"Elixir has a smaller hiring pool. If you go with Convex, you\u2019re locked into their platform. Fly.io pricing can surprise you at scale \u2014 monitor your bandwidth."
+  },
+  {
+    id:"content-empire", emoji:"📝", name:"The Content Empire",
+    desc:"Zero JS by default. Blazing fast, SEO-perfect, dirt cheap.",
+    team:"1\u20133 devs", cost:"$0\u2013$50/mo",
+    tags:["content","solo"],
+    budget:"Free / Low", complexity:"Low",
+    layers: {
+      frontend:  ["Astro","Tailwind","MDX"],
+      backend:   ["Astro SSG","Sanity or Contentful"],
+      database:  ["None (CMS handles it)"],
+      auth:      ["None needed"],
+      hosting:   ["Cloudflare Pages"],
+      extras:    ["Plausible analytics"],
+    },
+    why:"Astro ships zero JavaScript by default \u2014 just HTML and CSS. MDX lets you write interactive components inside Markdown. Sanity/Contentful give your content team a friendly editing UI. Cloudflare Pages is free for most sites with global CDN. Perfect Lighthouse scores out of the box.",
+    watchOut:"Not suited for highly interactive apps. If you need auth or user-generated content, Astro alone won\u2019t cut it. Sanity\u2019s free tier has usage limits. Contentful\u2019s free tier is generous but locked at 5 users."
+  },
+  {
+    id:"mobile-first", emoji:"📱", name:"The Mobile-First",
+    desc:"One codebase, both platforms, OTA updates, fast iteration.",
+    team:"2\u20134 devs", cost:"$50\u2013$200/mo",
+    tags:["small"],
+    budget:"Medium", complexity:"Medium",
+    layers: {
+      frontend:  ["Expo (React Native)","NativeWind"],
+      backend:   ["Supabase"],
+      database:  ["Supabase (Postgres)"],
+      auth:      ["Supabase Auth"],
+      hosting:   ["EAS Build","Vercel (API)"],
+      extras:    ["Firebase Messaging","Sentry","RevenueCat"],
+    },
+    why:"Expo\u2019s managed workflow handles 90% of native functionality without touching Xcode or Android Studio. NativeWind brings Tailwind to React Native. Supabase gives you auth + DB + realtime in one. EAS Build compiles native binaries in the cloud. RevenueCat handles in-app purchases across both platforms.",
+    watchOut:"Some native modules still require ejecting from Expo. NativeWind has occasional styling quirks vs web Tailwind. Push notifications require Apple Developer and Firebase setup. Test on real devices early and often."
+  },
+  {
+    id:"ecommerce-stack", emoji:"🛒", name:"The E-commerce Stack",
+    desc:"Headless commerce with full control over the shopping experience.",
+    team:"2\u20135 devs", cost:"$100\u2013$500/mo",
+    tags:["ecommerce","small"],
+    budget:"Medium", complexity:"Medium",
+    layers: {
+      frontend:  ["Next.js","Tailwind"],
+      backend:   ["Next.js","Shopify Storefront API or Medusa"],
+      database:  ["Postgres (Medusa) or Shopify"],
+      auth:      ["NextAuth"],
+      hosting:   ["Vercel"],
+      extras:    ["Stripe","Algolia","Cloudinary","Sentry"],
+    },
+    why:"Headless Shopify gives you the commerce engine without the Liquid templates. Medusa is the open-source alternative with full control. Algolia provides blazing-fast product search. Cloudinary handles image optimization and transformations. Next.js ISR keeps product pages fast and fresh.",
+    watchOut:"Shopify Storefront API has rate limits and costs per checkout. Medusa requires more setup and ops work. Image-heavy catalogs need careful CDN strategy. Don\u2019t underestimate the complexity of inventory, shipping, and tax integrations."
+  },
+  {
+    id:"budget-warrior", emoji:"💰", name:"The Budget Warrior",
+    desc:"Maximum value per dollar. Own your infra, zero vendor lock-in.",
+    team:"Solo / duo", cost:"$5\u2013$20/mo",
+    tags:["solo"],
+    budget:"Minimal", complexity:"Medium",
+    layers: {
+      frontend:  ["Astro or Rails Hotwire"],
+      backend:   ["Rails 8 or Go"],
+      database:  ["SQLite or Postgres container"],
+      auth:      ["Auth.js or Rails built-in"],
+      hosting:   ["Hetzner VPS","Coolify"],
+      extras:    ["PocketBase","UptimeRobot"],
+    },
+    why:"A Hetzner VPS costs \u20ac4/mo for 2 vCPUs and 4GB RAM \u2014 that\u2019s more power than most startups need. Coolify gives you a Vercel-like deploy experience on your own server. Rails 8 or Go are incredibly productive. SQLite eliminates an entire service. You own everything.",
+    watchOut:"You\u2019re responsible for security patches, backups, and uptime. No auto-scaling \u2014 you need to plan capacity. Coolify is great but less polished than Vercel. Single-server SQLite means no horizontal scaling of writes."
+  },
+  {
+    id:"typescript-purist", emoji:"🔷", name:"The TypeScript Purist",
+    desc:"TypeScript everywhere, edge-native, zero cold starts, low cost.",
+    team:"2\u20135 devs", cost:"$50\u2013$200/mo",
+    tags:["small"],
+    budget:"Low / Medium", complexity:"Medium",
+    layers: {
+      frontend:  ["Next.js","Tailwind","shadcn/ui"],
+      backend:   ["Hono on Cloudflare Workers"],
+      database:  ["Turso (SQLite at edge) or D1"],
+      auth:      ["Clerk"],
+      hosting:   ["Cloudflare (Workers + Pages)"],
+      extras:    ["Drizzle ORM","tRPC","Inngest","Sentry"],
+    },
+    why:"One language everywhere: frontend, backend, ORM, API layer. Cloudflare Workers run at the edge with zero cold starts. Turso/D1 put your database at the edge too. Drizzle ORM is type-safe and lightweight. The entire stack is optimized for edge computing and low latency.",
+    watchOut:"Edge runtimes have limited Node.js API compatibility. Some npm packages won\u2019t work on Workers. Turso/D1 are newer databases \u2014 evaluate carefully for your data needs. Cloudflare Workers have CPU time limits per request."
+  },
+  {
+    id:"data-platform", emoji:"📊", name:"The Data Platform",
+    desc:"Built for heavy data processing, dashboards, and analytics.",
+    team:"3\u20136 devs", cost:"$200\u2013$1k/mo",
+    tags:["enterprise","small"],
+    budget:"Medium / High", complexity:"High",
+    layers: {
+      frontend:  ["Next.js","Tailwind","Tremor / Recharts"],
+      backend:   ["FastAPI","Celery"],
+      database:  ["Postgres","ClickHouse","Redis"],
+      auth:      ["Auth0"],
+      hosting:   ["GCP Cloud Run","BigQuery"],
+      extras:    ["Grafana","dbt","Airflow"],
+    },
+    why:"FastAPI serves dashboards and APIs with high throughput. Celery handles heavy background data processing. ClickHouse is purpose-built for analytical queries on billions of rows. dbt transforms raw data into clean models. Airflow orchestrates complex data pipelines. Tremor/Recharts make beautiful dashboards.",
+    watchOut:"ClickHouse requires operational expertise. Airflow can be painful to maintain \u2014 consider managed alternatives like Astronomer. Data pipeline debugging is hard. Start with Postgres for everything, add ClickHouse only when query performance demands it."
+  },
+  {
+    id:"open-source-stack", emoji:"🌍", name:"The Open Source Stack",
+    desc:"100% open source, self-hosted, no vendor lock-in, privacy-first.",
+    team:"Any size", cost:"$0\u2013$100/mo",
+    tags:["solo","small"],
+    budget:"Free / Low", complexity:"Medium",
+    layers: {
+      frontend:  ["SvelteKit or Nuxt","Tailwind"],
+      backend:   ["PocketBase or Supabase (self-hosted)"],
+      database:  ["Postgres or SQLite"],
+      auth:      ["Better Auth / Lucia"],
+      hosting:   ["Coolify on Hetzner"],
+      extras:    ["Plausible (self-hosted)","Grafana","Uptime Kuma"],
+    },
+    why:"Every single piece is open source and self-hostable. No vendor lock-in, no surprise pricing, full data sovereignty. PocketBase is a single binary that handles auth + DB + file storage. Coolify automates deployments on your own server. Plausible gives you privacy-friendly analytics. Perfect for EU/GDPR-sensitive projects.",
+    watchOut:"Self-hosting means you own uptime, backups, and security. PocketBase is single-node only. Supabase self-hosted requires more setup than the managed version. Budget time for infrastructure maintenance."
+  },
+];
+
+/* ================= RENDER FILTERS ================= */
+const filterBar = document.getElementById('filterBar');
+const searchInput = document.getElementById('search');
+const grid = document.getElementById('grid');
+const matchCount = document.getElementById('matchCount');
+
+let activeFilter = 'all';
+
+FILTERS.forEach(f => {
+  const btn = document.createElement('button');
+  btn.className = 'filter-btn px-3 py-1.5 rounded-full border border-slate-300 bg-white text-slate-600 hover:bg-slate-100 transition cursor-pointer font-medium' + (f.id === 'all' ? ' active' : '');
+  btn.textContent = f.label;
+  btn.dataset.filter = f.id;
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = f.id;
+    applyFilters();
+  });
+  filterBar.appendChild(btn);
+});
+
+/* ================= RENDER CARDS ================= */
+function renderLayerChips(layers) {
+  const layerMeta = {
+    frontend:  { label:'Frontend',  cls:'layer-frontend' },
+    backend:   { label:'Backend',   cls:'layer-backend' },
+    database:  { label:'Database',  cls:'layer-database' },
+    auth:      { label:'Auth',      cls:'layer-auth' },
+    hosting:   { label:'Hosting',   cls:'layer-hosting' },
+    extras:    { label:'Extras',    cls:'layer-extras' },
+  };
+  let html = '';
+  for (const [key, techs] of Object.entries(layers)) {
+    const meta = layerMeta[key];
+    html += `<div class="flex items-start gap-2 mb-2">
+      <span class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider w-16 shrink-0 pt-0.5">${meta.label}</span>
+      <div class="flex flex-wrap gap-1.5">
+        ${techs.map(t => `<span class="tech-chip ${meta.cls}">${t}</span>`).join('')}
+      </div>
+    </div>`;
+  }
+  return html;
+}
+
+function renderCards() {
+  grid.innerHTML = COMBOS.map(c => `
+    <article class="combo-card visible-card rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden flex flex-col" data-id="${c.id}" data-tags="${c.tags.join(',')}" data-search="${(c.name + ' ' + c.desc + ' ' + Object.values(c.layers).flat().join(' ')).toLowerCase()}">
+      <!-- Header -->
+      <div class="px-5 pt-5 pb-3 border-b border-slate-100 bg-gradient-to-r from-amber-50/60 to-orange-50/40">
+        <div class="flex items-start justify-between gap-2">
+          <div>
+            <h3 class="text-lg font-bold text-slate-900">${c.emoji} ${c.name}</h3>
+            <p class="text-sm text-slate-600 mt-0.5">${c.desc}</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 mt-3 text-xs">
+          <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 font-medium">
+            <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            ${c.team}
+          </span>
+          <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-medium">
+            <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            ${c.cost}
+          </span>
+        </div>
+      </div>
+      <!-- Stack Layers -->
+      <div class="px-5 py-4 flex-1">
+        ${renderLayerChips(c.layers)}
+      </div>
+      <!-- Why & Warning -->
+      <div class="px-5 pb-4 space-y-3">
+        <div class="rounded-lg bg-emerald-50 border border-emerald-200 px-3 py-2.5">
+          <div class="text-[11px] font-bold text-emerald-700 uppercase tracking-wider mb-1">Why this works</div>
+          <p class="text-xs text-emerald-900 leading-relaxed">${c.why}</p>
+        </div>
+        <div class="rounded-lg bg-amber-50 border border-amber-200 px-3 py-2.5">
+          <div class="text-[11px] font-bold text-amber-700 uppercase tracking-wider mb-1">Watch out for</div>
+          <p class="text-xs text-amber-900 leading-relaxed">${c.watchOut}</p>
+        </div>
+      </div>
+      <!-- Tags -->
+      <div class="px-5 py-3 border-t border-slate-100 bg-slate-50/50 flex flex-wrap gap-1.5">
+        <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-200 text-slate-600 font-medium">${c.budget}</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-200 text-slate-600 font-medium">${c.team}</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-200 text-slate-600 font-medium">${c.complexity} complexity</span>
+      </div>
+    </article>
+  `).join('');
+}
+
+renderCards();
+
+/* ================= FILTERING ================= */
+function applyFilters() {
+  const query = searchInput.value.toLowerCase().trim();
+  let visible = 0;
+  document.querySelectorAll('.combo-card').forEach(card => {
+    const tags = card.dataset.tags;
+    const searchText = card.dataset.search;
+    const matchesFilter = activeFilter === 'all' || tags.includes(activeFilter);
+    const matchesSearch = !query || searchText.includes(query);
+    if (matchesFilter && matchesSearch) {
+      card.classList.remove('hidden-card');
+      card.classList.add('visible-card');
+      card.style.animationDelay = (visible * 0.05) + 's';
+      visible++;
+    } else {
+      card.classList.add('hidden-card');
+      card.classList.remove('visible-card');
+    }
+  });
+  matchCount.textContent = visible + ' combo' + (visible !== 1 ? 's' : '');
+}
+
+searchInput.addEventListener('input', applyFilters);
+
+/* ================= KEYBOARD SHORTCUTS ================= */
+document.addEventListener('keydown', e => {
+  if (e.key === '/' && document.activeElement !== searchInput) {
+    e.preventDefault();
+    searchInput.focus();
+  }
+  if (e.key === 'Escape') {
+    searchInput.value = '';
+    searchInput.blur();
+    activeFilter = 'all';
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
+    applyFilters();
+  }
+});
+</script>
+
+</body>
+</html>

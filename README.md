@@ -1,10 +1,18 @@
-# Open TechStack
+# ⚡ Open TechStack
 
-**Interactive visual guides to modern tech stacks for vibe coding.**
+[![GitHub stars](https://img.shields.io/github/stars/JagadeepPortfolio/awesome-vibecoding-techstacks?style=social)](https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://opentechstack.stitchwebsite.com)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks/pulls)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> Compare 200+ technologies across 50 categories. Filter by project stage (Hobby / MVP / Growth / Scale), search, and find the stack that fits.
+**The open-source, interactive visual guide to modern tech stacks for vibe coding.**
 
-**Live site:** [opentechstack.stitchwebsite.com](https://opentechstack.stitchwebsite.com)
+> Compare 200+ technologies across 50 categories. Filter by project stage (Hobby / MVP / Growth / Scale), search by keyword, and find the stack that fits your team. Zero dependencies. No sign-up. Just open and explore.
+
+**🌐 Live site:** [opentechstack.stitchwebsite.com](https://opentechstack.stitchwebsite.com)
+
+**⭐ If this is useful, star the repo — it helps others find it!**
 
 ---
 
@@ -74,7 +82,7 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 - [x] DevOps & Infrastructure Stacks Guide
 - [x] AI / ML Stacks Guide
 - [x] Mobile Stacks Guide
-- [ ] Full-Stack Combo Recommendations
+- [x] Full-Stack Combo Recommendations
 - [ ] Stack Comparison Tool (side-by-side)
 - [ ] Community voting on technologies
 
@@ -94,10 +102,47 @@ python3 -m http.server 8080
 
 ---
 
+## Share It
+
+Help others discover this resource! Here are ready-to-use posts:
+
+**Twitter/X:**
+> Just found Open TechStack — interactive visual guides comparing 200+ technologies across Frontend, Backend, AI/ML, DevOps, and Mobile for 2026.
+>
+> Mind maps, stage-based filtering, decision cheat sheets. Zero dependencies, fully open source.
+>
+> https://opentechstack.stitchwebsite.com
+>
+> #vibecoding #techstack #webdev #opensource #buildinpublic
+
+**Reddit (r/webdev, r/programming, r/reactjs):**
+> **Open TechStack — Interactive visual guides to 200+ modern technologies (2026)**
+>
+> I built an open-source, interactive guide covering Frontend, Backend, AI/ML, DevOps, and Mobile tech stacks. Each guide has a mind map, stage-based filtering (Hobby/MVP/Growth/Scale), search, and decision cheat sheets. Pure HTML, zero dependencies, no sign-up.
+>
+> Live: https://opentechstack.stitchwebsite.com
+> GitHub: https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks
+
+**Hacker News:**
+> Title: Show HN: Open TechStack – Interactive visual guides to 200+ technologies for 2026
+> URL: https://opentechstack.stitchwebsite.com
+
+**LinkedIn:**
+> Excited to share Open TechStack — an open-source project with interactive visual guides to 200+ modern technologies across Frontend, Backend, AI/ML, DevOps, and Mobile.
+>
+> Each guide features an interactive mind map, stage-based filtering (Hobby to Enterprise), full-text search, and decision cheat sheets to help you pick the right stack.
+>
+> Built with zero dependencies. Fully open source. Contributions welcome.
+>
+> Check it out: https://opentechstack.stitchwebsite.com
+> Star on GitHub: https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks
+
+---
+
 ## License
 
 [MIT](LICENSE) — use it however you want.
 
 ---
 
-**Found this useful? Give it a star!**
+**Found this useful? [Give it a star!](https://github.com/JagadeepPortfolio/awesome-vibecoding-techstacks)**
